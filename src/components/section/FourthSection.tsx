@@ -29,7 +29,7 @@ else {
   return (
     <section 
     ref={ref}
-    className="h-fit py-40 items-center 
+    className="h-fit py-20 items-center 
     lg:px-10 justify-center gap-20  lg:justify-between bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
 
 <div className="flex flex-col justify-center items-center lg:items-start  w-full gap-10">

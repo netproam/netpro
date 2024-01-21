@@ -1,15 +1,14 @@
 "use client"
-const thirdSection = () => {
+const FifthSection = () => {
   return (
-   <section className="w-full flex  bg-slate-50 py-20">
-    <div className="hidden justify-center   lg:flex flex-col w-full px-10 order-2">
+   <section className="w-full flex pb-10  bg-slate-50 ">
+    <div className="hidden lg:flex flex-col w-full px-10  justify-center ">
         <div>
         <img className="object-cover rounded-lg" src={
                 `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
 
          
         </div>
-        
     </div>
     <div className="flex flex-col w-full px-10 gap-4">
         <div className="flex flex-col gap-4">
@@ -28,4 +27,4 @@ const thirdSection = () => {
    </section>
   )
 }
-export default thirdSection
+export default FifthSection

@@ -5,6 +5,7 @@ import ThirdSection from "@/components/section/ThirdSection";
 import Image from "next/image";
 import FourthSection from "@/components/section/FourthSection";
 import ContactSection from "@/components/section/ContactSection";
+import FifthSection from "@/components/section/FithSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <ServicesSection/>
     </div>
     <ThirdSection/>
+    <FifthSection/>
     <FourthSection/>
     <ContactSection/>
     </main>
