@@ -46,8 +46,8 @@ const ContactComponent = () => {
 
     return (
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white border-2
-           shadow-lg rounded-lg py-8 px-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white lg:border-2
+           shadow-lg rounded-lg py-8 px-4 ">
             <FormField
               control={form.control}
               name="name"
