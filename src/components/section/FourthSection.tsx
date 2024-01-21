@@ -1,14 +1,39 @@
 "use client"
 import { Button } from "../ui/button"
 import { TbPlayerPlayFilled } from "react-icons/tb";
-
+import { useEffect ,useRef} from "react";
+import {useMotionValue,useTransform,animate,motion,useInView}from "framer-motion"
 const FourthSection = () => {
-  return (
-    <section className="h-[500px] items-center px-10 justify-between bg-[#F0F9F9] w-full flex">
 
-<div className="flex flex-col justify-center  w-full gap-4">
+    const count = useMotionValue(0)
+    const countEmployer = useMotionValue(0)
+
+const rounded = useTransform(count, latest => Math.round(latest))
+const roundedEmpl=useTransform(countEmployer,latest=>Math.round(latest))
+const ref = useRef(null)
+const isInView = useInView(ref)
+
+    useEffect(()=>{
+        if(isInView)
+        {
+ const animation = animate(count, 100, { duration: 3 });
+ const animationTest = animate(countEmployer, 2000, { duration: 5 });
+
+}
+else {
+    count.set(0)
+    countEmployer.set(0)
+}  
+   
+    },[isInView])
+  return (
+    <section 
+    ref={ref}
+    className="h-[500px] items-center lg:px-10 justify-center gap-20  lg:justify-between bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
+
+<div className="flex flex-col justify-center items-center lg:items-start  w-full gap-10">
 <h4>Ce que nous apportons</h4>
-<h3 className="font-semibold tracking-tighter text-5xl">Des solutions de netoyages pour les entreprises</h3>
+<h3 className="font-semibold tracking-tighter text-4xl lg:text-5xl text-center lg:text-start">Des solutions de netoyages pour les entreprises</h3>
 <p>{`Nous sommes en constante croissance`}</p>
 <div className="flex gap-20 items-center  ">
 <Button className="bg-[#A42503] rounded-full py-6">Nous contacter</Button>
@@ -21,13 +46,13 @@ const FourthSection = () => {
 </div>
 </div>
 
-<div className="flex flex-col justify-between w-full gap-10 ">
-    <div className="flex w-full gap-10 items-center ">
-        <p className="font-semibold text-5xl tracking-tighter">100+</p>
+<div className="flex flex-row lg:flex-col justify-between w-full gap-10 ">
+    <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 items-center ">
+        <motion.p className="font-semibold text-5xl tracking-tighter"><motion.span>{rounded}</motion.span><motion.span>+</motion.span></motion.p>
         <p className="font-bold text-lg">Clients</p>
     </div>
-    <div className="flex w-full gap-20 items-center">
-        <p className="font-semibold text-5xl tracking-tighter"> 2000</p>
+    <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 items-center">
+        <motion.p className="font-semibold text-5xl tracking-tighter"> <motion.span>{roundedEmpl}</motion.span></motion.p>
         <p className="font-bold text-lg ">Employées</p>
 
     </div>
