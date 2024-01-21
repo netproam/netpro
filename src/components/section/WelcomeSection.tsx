@@ -64,7 +64,7 @@ function relunchInterval(e:number)
 className="object-center  absolute w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage]}/>
   
-  <section className="flex flex-col relative z-50 gap-0 text-center ">
+  <section className="flex flex-col relative z-20 gap-0 text-center ">
     <h4 className="text-center text-lg text-slate-300 font-semibold tracking-tighter">professionel cleanning</h4>
     <h3 className="text-slate-200 text-5xl lg:text-8xl  leading-relaxed  lg:leading-tight font-semibold tracking-tighter">Commercial Cleaning</h3>
     <div className="flex gap-8 justify-center text-lg pt-4">
