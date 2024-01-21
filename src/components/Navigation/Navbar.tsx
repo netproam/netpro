@@ -19,24 +19,33 @@ const Navbar = () => {
     const path=usePathname()
     const [isOpen,setIsOpen]=useState(false)
   return (
-   <nav className={`absolute  justify-between px-10 py-2 top-0 z-50 flex pt-5 w-full text-current  gap-20 items-center lg:justify-center ${path==="/contact"? "text-slate-800" : "text-slate-100"}`}>
+   <nav className={`absolute   justify-between px-10 py-2 top-0 z-50 flex 
+   pt-5 w-full text-current  gap-20 items-center lg:justify-center ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 <Link href={"/"}>
-<p className={`text-lg brightness-150  text-clip font-bold  ${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>Accueil</p>
+<p className={`text-lg brightness-150  text-clip font-bold   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>Accueil</p>
 </Link>
-<NavigationMenu className={`gap-20 hidden lg:flex z-50 text-lg brightness-150 
-text-current font-semibold relative  ${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>
+<NavigationMenu className={`gap-20 hidden lg:flex z-50 brightness-150 
+text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 
 
-  <NavigationMenuList className={`${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>
+  <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
     <NavigationMenuItem className="text-current" >
       <NavigationMenuTrigger className="bg-transparent text-current text-lg  font-semibold">Services</NavigationMenuTrigger>
-      <NavigationMenuContent className=" flex justify-center">
+      <NavigationMenuContent className=" flex justify-center  ">
         <ul
         
-        className="flex bg-slate-100 flex-col gap-10 w-[200px] text-current h-40 justify-center items-center ">
-        <NavigationMenuLink>Entretien</NavigationMenuLink>
-        <NavigationMenuLink >Débarras</NavigationMenuLink>
-
+        className="flex text-md bg-slate-400  flex-col gap-10 w-fit
+        text-current p-8">
+        <Link href="/services/menage" passHref legacyBehavior>
+    <NavigationMenuLink className="whitespace-nowrap " >
+    {`Entretien Ménagés`}
+    </NavigationMenuLink>
+    </Link>
+        <Link href="/services/debarras" passHref legacyBehavior>
+    <NavigationMenuLink >
+    {`Débarrassage`}
+    </NavigationMenuLink>
+  </Link>
         </ul>
       </NavigationMenuContent>
     </NavigationMenuItem>

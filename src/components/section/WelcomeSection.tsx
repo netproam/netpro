@@ -36,7 +36,7 @@ const isInView=useInView(refWelcome,{amount:0.5})
             }
         })
         
-    },5000)
+    },7000)
     setIsIntervalId(clearInterValId)
 }
 else {
@@ -68,16 +68,16 @@ return (
     key={e.id}
     className="flex flex-col justify-center">
           <motion.h4 
-              animate={{opacity:[0,1],transition:{duration:1.5,delay:0.75}}}
+              animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
 
           className="text-center hidden lg:flex self-center  text-slate-300
-           font-semibold tracking-tighter">{e.sousDescription}</motion.h4>
+           font-semibold ">{e.sousDescription}</motion.h4>
     <motion.h3
     animate={{opacity:[0,1],transition:{duration:3,delay:1.25}}}
     className="text-slate-200 text-2xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</motion.h3>
     <motion.div 
-                  animate={{opacity:[0,1],transition:{duration:1.75,delay:2}}}
+                  animate={{opacity:[0,1],transition:{duration:2,delay:2}}}
 
     className="flex gap-8 justify-center text-lg pt-10">
         <Button className="bg-blue-900 text-slate-100 p-4 rounded-full text-lg">Voir plus</Button>
@@ -104,7 +104,7 @@ function relunchInterval(e:number)
             return 0
         }
     })
-    },5000)
+    },7000)
     setIsIntervalId(intervalIdRelunch)
 
 }
