@@ -4,12 +4,18 @@ import Navbar from "../Navigation/Navbar"
 import { Button } from "../ui/button"
 import {motion ,AnimatePresence} from "framer-motion"
 import { v4 } from "uuid"
+import {useMediaQuery} from "react-responsive"
 const WelcomeSection = () => {
 const [isChangingImage,setIsChangingImage]=useState(0)
 const [isInterValId,setIsIntervalId]=useState<NodeJS.Timeout>()
-const allImageData=["https://images.pexels.com/photos/6195273/pexels-photo-6195273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-`https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800`
-,`https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`]
+const isTabletOrMobile = useMediaQuery({ query: '(max-width: 604px)' })
+
+const allImageData=[{isDesktop:"https://images.pexels.com/photos/6195273/pexels-photo-6195273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+isMobile:`https://images.pexels.com/photos/209271/pexels-photo-209271.jpeg?auto=compress&cs=tinysrgb&w=800`},{isDesktop:`https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800`
+
+,isMobile:"https://images.pexels.com/photos/4107107/pexels-photo-4107107.jpeg?auto=compress&cs=tinysrgb&w=800"}
+,{isDesktop:`https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=ti
+nysrgb&w=1260&h=750&dpr=2`,isMobile:"https://images.pexels.com/photos/3287162/pexels-photo-3287162.jpeg?auto=compress&cs=tinysrgb&w=800"}]
 
 
     useEffect(()=>{
@@ -52,9 +58,9 @@ const allCompnent=allText.map((e)=>{
 return (
     <div 
     key={e.id}
-    className="flex flex-col">
-          <h4 className="text-center  text-slate-300 font-semibold tracking-tighter">{e.sousDescription}</h4>
-    <h3 className="text-slate-200 text-4xl   leading-relaxed  lg:leading-tight 
+    className="flex flex-col justify-center">
+          <h4 className="text-center hidden lg:flex self-center  text-slate-300 font-semibold tracking-tighter">{e.sousDescription}</h4>
+    <h3 className="text-slate-200 text-2xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</h3>
     <div className="flex gap-8 justify-center text-lg pt-10">
         <Button className="bg-blue-900 text-slate-100 p-4 rounded-full text-lg">Voir plus</Button>
@@ -96,14 +102,15 @@ function relunchInterval(e:number)
 key={"firstImg"}
 
 className="object-center  absolute w-full h-full  brightness-50 " 
-src={allImageData[isChangingImage]}/>
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 : isChangingImage===1? 
 <motion.img 
 
 key={"secondImg"}
 
 className="object-center  absolute w-full h-full  brightness-50 " 
-src={allImageData[isChangingImage]}/> :
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+:
 isChangingImage===2&&<motion.img 
 
 
@@ -111,7 +118,7 @@ key={"thirdImg"}
 
 
 className="object-center  absolute w-full h-full  brightness-50 " 
-src={allImageData[isChangingImage]}/>
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 }
 </AnimatePresence>
   <section className="flex flex-col relative z-20 gap-0 text-center ">
