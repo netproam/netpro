@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily:{
+     
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

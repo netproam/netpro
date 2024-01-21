@@ -74,10 +74,10 @@ return (
            font-semibold ">{e.sousDescription}</motion.h4>
     <motion.h3
     animate={{opacity:[0,1],transition:{duration:3,delay:1.25}}}
-    className="text-slate-200 text-2xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
+    className="text-slate-200 font-noto text-2xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</motion.h3>
     <motion.div 
-                  animate={{opacity:[0,1],transition:{duration:2,delay:2}}}
+                  animate={{opacity:[0,1],transition:{duration:2,delay:1.75}}}
 
     className="flex gap-8 justify-center text-lg pt-10">
         <Button className="bg-blue-900 text-slate-100 p-4 rounded-full text-lg">Voir plus</Button>
@@ -115,7 +115,7 @@ function relunchInterval(e:number)
   className="w-screen  h-screen relative flex flex-col  items-center justify-center">
    
     <Navbar/>
-    <div className="flex absolute w-screen h-screen bg-black">
+    <div className="flex absolute w-screen h-screen bg-black overflow-hidden">
 
 <AnimatePresence>
 {isChangingImage===0?<motion.img 
@@ -148,12 +148,12 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
   <section className="flex flex-col relative z-20 gap-0 text-center ">
   {allCompnent[isChangingImage]}
   </section>
-  <div className="grid grid-cols-3 z-50 place-items-center absolute bottom-0 mb-10 w-[3/5] gap-20">
+  <div className="grid grid-cols-3 z-50 place-items-center absolute bottom-0 mb-20 lg:mb-8 w-[3/5] gap-20">
     <div
     onClick={()=>{
         relunchInterval(0)
     }}
-    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3  cursor-pointer rounded-full`}>
+    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-1  cursor-pointer rounded-full`}>
 
     </div>
     <div
@@ -161,14 +161,14 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
        onClick={()=>{
         relunchInterval(1)
        }}
-       className={`${isChangingImage===1? "bg-white":" bg-[#88CBCE] "} w-4 h-4  cursor-pointer p-3 rounded-full`}>
+       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4  cursor-pointer p-1 rounded-full`}>
 
 </div>
 <div
 onClick={()=>{
    relunchInterval(2)
 }}
-className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3 cursor-pointer rounded-full`}>
+className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-1 cursor-pointer rounded-full`}>
 
 </div>
   </div>
