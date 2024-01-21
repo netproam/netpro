@@ -66,15 +66,16 @@ const allCompnent=allText.map((e)=>{
 return (
     <div 
     key={e.id}
-    className="flex flex-col justify-center">
+    className="flex flex-col lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
               animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
 
-          className="text-center hidden lg:flex self-center  text-slate-300
+          className="lg:flex lg:self-center  text-slate-300
            font-semibold ">{e.sousDescription}</motion.h4>
     <motion.h3
     animate={{opacity:[0,1],transition:{duration:3,delay:1.25}}}
-    className="text-slate-200 font-noto text-xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
+    className="text-slate-200 font-noto text-xl  text-left lg:text-center lg:text-4xl 
+     lg:w-fit  leading-relaxed break-words  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</motion.h3>
     <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:1.85}}}
@@ -157,7 +158,7 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
     onClick={()=>{
         relunchInterval(0)
     }}
-    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-2  cursor-pointer rounded-full`}>
+    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3  cursor-pointer rounded-full`}>
 
     </div>
     <div
@@ -165,14 +166,14 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
        onClick={()=>{
         relunchInterval(1)
        }}
-       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4  cursor-pointer p-2 rounded-full`}>
+       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4  cursor-pointer p-3 rounded-full`}>
 
 </div>
 <div
 onClick={()=>{
    relunchInterval(2)
 }}
-className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-2 cursor-pointer rounded-full`}>
+className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3 cursor-pointer rounded-full`}>
 
 </div>
   </div>
