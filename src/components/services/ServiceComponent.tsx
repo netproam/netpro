@@ -22,7 +22,7 @@ setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
 
 // setIsAnime(`#explores`,{display:"flex",opacity:[0,1]},{duration:2})
    }}
-   onTouchStart={async()=>{
+   onTapStart={async()=>{
     setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
  setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
  
@@ -35,12 +35,7 @@ setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
 
 
 }}
-onTouchEnd={()=>{
-    setIsAnime(`#childrenHolder`,{color:"#88CBCE"},{duration:1})
-    setIsAnime(`#containerTest`,{x:[null,-100]},{duration:0.5})
 
-
-}}
   >
 <h2 className="font-semibold text-lg">{title}</h2>
 <div style={{color:"#88CBCE"}} id={"childrenHolder"}>
