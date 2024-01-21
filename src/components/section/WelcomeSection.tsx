@@ -74,10 +74,10 @@ return (
            font-semibold ">{e.sousDescription}</motion.h4>
     <motion.h3
     animate={{opacity:[0,1],transition:{duration:3,delay:1.25}}}
-    className="text-slate-200 font-noto text-2xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
+    className="text-slate-200 font-noto text-xl text-center lg:text-4xl   leading-relaxed  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</motion.h3>
     <motion.div 
-                  animate={{opacity:[0,1],transition:{duration:2,delay:1.75}}}
+                  animate={{opacity:[0,1],transition:{duration:2,delay:1.85}}}
 
     className="flex gap-8 justify-center text-lg pt-10">
         <Button className="bg-blue-900 text-slate-100 p-4 rounded-full text-lg">Voir plus</Button>
@@ -119,7 +119,7 @@ function relunchInterval(e:number)
 
 <AnimatePresence>
 {isChangingImage===0?<motion.img 
-initial={false}
+
 
 animate={{scale:[1,1.1]}} transition={{duration:1.5}}
  
@@ -129,7 +129,7 @@ className="object-center  relative w-full h-full  brightness-50 "
 src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 : isChangingImage===1? 
 <motion.img 
-initial={false}
+
 animate={{scale:[1,1.1]}} transition={{duration:1.5}}
 key={"secondImg"}
 
@@ -137,7 +137,7 @@ className="object-center  relative w-full h-full  brightness-50 "
 src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 :
 isChangingImage===2&&<motion.img 
-initial={false}
+
 
 animate={{scale:[1,1.1]}} transition={{duration:1.5}}
 
