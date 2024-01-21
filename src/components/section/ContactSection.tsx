@@ -1,8 +1,10 @@
 "use client"
 
 import ContactComponent from "../ContactComponent"
-import MapComponent from "../MapComponent"
-
+import dynamic from "next/dynamic";
+const MapComponent = dynamic(() => import('../MapComponent'), {
+    ssr: false,
+  });
 const ContactSection = () => {
   return (
   <section className="flex flex-col lg:flex-row w-full pt-10 lg:p-10 h-screen bg-white brightness-25">

@@ -10,21 +10,25 @@ import {
     NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
   import Link from "next/link"
+  import { usePathname } from "next/navigation"
 const Navbar = () => {
+    const path=usePathname()
   return (
-   <nav className="absolute top-0 z-50 flex pt-5 text-slate-50 w-full  gap-20 items-center justify-center">
-<p className="text-xl brightness-150 text-slate-50 font-bold">Accueil</p>
+   <nav className={`absolute border-b-[0.5px] border-slate-50  py-2 top-0 z-50 flex pt-5 w-full text-current  gap-20 items-center justify-center ${path==="/contact"? "text-slate-800" : "text-slate-100"}`}>
+<Link href={"/"}>
+<p className={`text-lg brightness-150  text-clip font-bold  ${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>Accueil</p>
+</Link>
+<NavigationMenu className={`gap-20 hidden lg:flex z-50 text-lg brightness-150 
+text-current font-semibold relative  ${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>
 
-<NavigationMenu className="gap-20 hidden lg:flex z-50 text-xl brightness-150  text-slate-50 font-bold relative">
 
-
-  <NavigationMenuList>
-    <NavigationMenuItem className="" >
-      <NavigationMenuTrigger className="bg-transparent text-xl brightness-150 font-bold">Services</NavigationMenuTrigger>
+  <NavigationMenuList className={`${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>
+    <NavigationMenuItem className="text-current" >
+      <NavigationMenuTrigger className="bg-transparent text-current text-lg  font-semibold">Services</NavigationMenuTrigger>
       <NavigationMenuContent className=" flex justify-center">
         <ul
         
-        className="flex bg-slate-100 flex-col gap-10 w-[200px] h-40 justify-center items-center ">
+        className="flex bg-slate-100 flex-col gap-10 w-[200px] text-current h-40 justify-center items-center ">
         <NavigationMenuLink>Entretien</NavigationMenuLink>
         <NavigationMenuLink >Débarras</NavigationMenuLink>
 
@@ -34,7 +38,7 @@ const Navbar = () => {
   </NavigationMenuList>
 
   <NavigationMenuItem className="list-none">
-  <Link href="/docs" passHref legacyBehavior>
+  <Link href="/contact" passHref legacyBehavior>
     <NavigationMenuLink >
       Contact
     </NavigationMenuLink>
