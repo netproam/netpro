@@ -119,6 +119,8 @@ function relunchInterval(e:number)
 
 <AnimatePresence>
 {isChangingImage===0?<motion.img 
+initial={false}
+
 animate={{scale:[1,1.1]}} transition={{duration:1.5}}
  
 key={"firstImg"}
@@ -127,6 +129,7 @@ className="object-center  relative w-full h-full  brightness-50 "
 src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 : isChangingImage===1? 
 <motion.img 
+initial={false}
 animate={{scale:[1,1.1]}} transition={{duration:1.5}}
 key={"secondImg"}
 
@@ -134,6 +137,7 @@ className="object-center  relative w-full h-full  brightness-50 "
 src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 :
 isChangingImage===2&&<motion.img 
+initial={false}
 
 animate={{scale:[1,1.1]}} transition={{duration:1.5}}
 
@@ -153,7 +157,7 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
     onClick={()=>{
         relunchInterval(0)
     }}
-    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-1  cursor-pointer rounded-full`}>
+    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-2  cursor-pointer rounded-full`}>
 
     </div>
     <div
@@ -161,14 +165,14 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
        onClick={()=>{
         relunchInterval(1)
        }}
-       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4  cursor-pointer p-1 rounded-full`}>
+       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4  cursor-pointer p-2 rounded-full`}>
 
 </div>
 <div
 onClick={()=>{
    relunchInterval(2)
 }}
-className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-1 cursor-pointer rounded-full`}>
+className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-2 cursor-pointer rounded-full`}>
 
 </div>
   </div>
