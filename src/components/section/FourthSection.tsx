@@ -17,7 +17,7 @@ const isInView = useInView(ref,{once:true})
         if(isInView)
         {
  const animation = animate(count, 100, { duration: 3 });
- const animationTest = animate(countEmployer, 2000, { duration: 5 });
+ const animationTest = animate(countEmployer, 20, { duration: 5 });
 
 }
 else {
@@ -29,11 +29,12 @@ else {
   return (
     <section 
     ref={ref}
-    className="h-[600px] py-20 items-center lg:px-10 justify-center gap-20  lg:justify-between bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
+    className="h-[600px] py-20 items-center 
+    lg:px-10 justify-center gap-20  lg:justify-between bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
 
-<div className="flex flex-col justify-center items-center lg:items-start  w-full gap-10">
-<h4>Ce que nous apportons</h4>
-<h3 className="font-semibold tracking-tighter text-4xl lg:text-5xl text-center lg:text-start">Des solutions de netoyages pour les entreprises</h3>
+<div className="flex flex-col justify-center items-center lg:items-start  w-full gap-4">
+<h4 className="text-sm font-semibold">Ce que nous apportons</h4>
+<h3 className="font-semibold tracking-tighter text-4xl  lg:text-6xl text-center lg:text-start">Des solutions de nettoyages pour tous</h3>
 <p>{`Nous sommes en constante croissance`}</p>
 <div className="flex gap-20 items-center  ">
 <Button className="bg-[#A42503] rounded-full py-6">Nous contacter</Button>
@@ -46,14 +47,25 @@ else {
 </div>
 </div>
 
-<div className="flex flex-row lg:flex-col justify-between w-full gap-10 ">
-    <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 items-center ">
-        <motion.p className="font-semibold text-5xl tracking-tighter"><motion.span>{rounded}</motion.span><motion.span>+</motion.span></motion.p>
+<div className="flex flex-row lg:flex-col justify-center  lg:justify-between w-full gap-20 lg:gap-10 items-center  ">
+    <div className="flex 
+     
+    flex-col lg:flex-row w-full gap-4 lg:gap-10 items-end justify-end  ">
+     <div className="flex flex-col lg:flex-row w-fit lg:w-full items-start">
+        <motion.p className="font-semibold lg:w-full   w-fit text-5xl tracking-tighter"><motion.span>{rounded}</motion.span><motion.span className="relative -inset-y-6">+</motion.span></motion.p>
+        <div className="flex flex-col  gap-2  pt-8 w-full ">
         <p className="font-bold text-lg">Clients</p>
+        <p>Nous ont fais confiances</p>
+        </div>
+        </div>
     </div>
-    <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 items-center">
-        <motion.p className="font-semibold text-5xl tracking-tighter"> <motion.span>{roundedEmpl}</motion.span></motion.p>
-        <p className="font-bold text-lg ">Employées</p>
+    <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 items-center ">
+        <motion.p className=" w-full font-semibold text-5xl tracking-tighter"> <motion.span>{roundedEmpl}</motion.span><motion.span className="-inset-y-6 relative"> +</motion.span></motion.p>
+        <div className="flex flex-col  gap-2 pt-8 justify-center w-full">
+
+        <p className="font-bold text-xl">{`Employés`}</p>
+        <p>{`À votre services`}</p>
+        </div>
 
     </div>
 </div>
