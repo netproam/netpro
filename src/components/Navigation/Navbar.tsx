@@ -12,10 +12,10 @@ import {
   import Link from "next/link"
 const Navbar = () => {
   return (
-   <nav className="absolute top-0 z-50 flex pt-5 text-slate-50  gap-20 items-center">
+   <nav className="absolute top-0 z-50 flex pt-5 text-slate-50 w-full  gap-20 items-center justify-center">
 <p className="text-xl brightness-150 text-slate-50 font-bold">Accueil</p>
 
-<NavigationMenu className="gap-20  z-50 text-xl brightness-150  text-slate-50 font-bold relative">
+<NavigationMenu className="gap-20 hidden lg:flex z-50 text-xl brightness-150  text-slate-50 font-bold relative">
 
 
   <NavigationMenuList>
