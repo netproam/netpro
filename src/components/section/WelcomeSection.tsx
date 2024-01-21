@@ -78,7 +78,7 @@ src={allImageData[isChangingImage]}/>
     onClick={()=>{
         relunchInterval(0)
     }}
-    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 rounded-full`}>
+    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3  cursor-pointer rounded-full`}>
 
     </div>
     <div
@@ -86,14 +86,14 @@ src={allImageData[isChangingImage]}/>
        onClick={()=>{
         relunchInterval(1)
        }}
-       className={`${isChangingImage===1? "bg-white":" bg-[#88CBCE] "} w-4 h-4 rounded-full`}>
+       className={`${isChangingImage===1? "bg-white":" bg-[#88CBCE] "} w-4 h-4  cursor-pointer p-3 rounded-full`}>
 
 </div>
 <div
 onClick={()=>{
    relunchInterval(2)
 }}
-className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 rounded-full`}>
+className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3 cursor-pointer rounded-full`}>
 
 </div>
   </div>

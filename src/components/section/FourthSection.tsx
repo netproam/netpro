@@ -59,15 +59,18 @@ else {
         </div>
         </div>
     </div>
-    <div className="flex flex-col lg:flex-row w-full gap-4 lg:gap-10 items-center ">
-        <motion.p className=" w-full font-semibold text-5xl tracking-tighter"> <motion.span>{roundedEmpl}</motion.span><motion.span className="-inset-y-6 relative"> +</motion.span></motion.p>
-        <div className="flex flex-col  gap-2 pt-8 justify-center w-full">
-
-        <p className="font-bold text-xl">{`Employés`}</p>
-        <p>{`À votre services`}</p>
-        </div>
-
-    </div>
+ 
+    <div className="flex 
+     
+     flex-col lg:flex-row w-full gap-4 lg:gap-10 items-end justify-end  ">
+      <div className="flex flex-col lg:flex-row w-fit lg:w-full items-start ">
+         <motion.p className="font-semibold lg:w-full   w-fit text-5xl tracking-tighter"><motion.span>{countEmployer}</motion.span><motion.span className="relative -inset-y-6">+</motion.span></motion.p>
+         <div className="flex flex-col  gap-2  pt-8 w-full ">
+         <p className="font-bold text-lg">Employes</p>
+         <p>En tout temps disponibles pour convenir à vos besoins</p>
+         </div>
+         </div>
+     </div>
 </div>
     </section>
   )
