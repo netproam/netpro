@@ -50,7 +50,9 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
 ]
 const allCompnent=allText.map((e)=>{
 return (
-    <div className="flex flex-col">
+    <div 
+    key={e.id}
+    className="flex flex-col">
           <h4 className="text-center  text-slate-300 font-semibold tracking-tighter">{e.sousDescription}</h4>
     <h3 className="text-slate-200 text-4xl   leading-relaxed  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</h3>
