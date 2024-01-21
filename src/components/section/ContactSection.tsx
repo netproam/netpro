@@ -7,7 +7,7 @@ const MapComponent = dynamic(() => import('../MapComponent'), {
   });
 const ContactSection = () => {
   return (
-  <section className="flex flex-col lg:flex-row w-full pt-10 lg:p-10 h-screen bg-white brightness-25">
+  <section className="flex   flex-col lg:flex-row w-full pt-10 lg:p-10 h-screen bg-white brightness-25">
     <div className="w-full flex flex-col gap-4   h-full   justify-center  ">
         
         <div className="h-fit lg:w-4/5 w-full  gap-4 flex flex-col text-center lg:text-start">

@@ -23,7 +23,7 @@ const ServicesSection = () => {
     }]
     const allDataDisplay=allServices.map((e)=>{
        return <div 
-       className="  "
+       className=" "
        key={v4()}>
         
         <ServiceComponent title={e.titre}>
@@ -34,7 +34,7 @@ const ServicesSection = () => {
         </div>
     })
   return (
-   <section className="w-full h-screen bg-[#F0F9F9] pt-10 
+   <section className="w-full h-fit bg-[#F0F9F9] py-20
     flex flex-col justify-center items-center  gap-10  lg:px-10">
 
 <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
@@ -49,7 +49,8 @@ const ServicesSection = () => {
 <div>
 
 </div>
-<div className=" grid grid-cols-2 flex-wrap  gap-10 divided-none lg:flex lg:divide-x-[1px] divide-slate-300 ">
+<div className=" grid grid-cols-2 flex-wrap   
+gap-10  lg:gap-20 divided-none lg:flex lg:divide-x-[1px] divide-slate-300 ">
 {allDataDisplay}
 </div>
    </section>

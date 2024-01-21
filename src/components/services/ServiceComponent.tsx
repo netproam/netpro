@@ -15,7 +15,7 @@ const ServiceComponent = ({title,children}:ServiceComponentProps) => {
     const idHmtl=useId()
     console.log(idHmtl)
   return (
-   <motion.div  className="flex p-4 flex-col gap-4 lg:p-20"
+   <motion.div  className="flex p-4 flex-col gap-4 "
   onHoverStart={async()=>{
    setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
 setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
