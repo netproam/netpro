@@ -66,23 +66,23 @@ const allCompnent=allText.map((e)=>{
 return (
     <div 
     key={e.id}
-    className="flex flex-col lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
+    className="flex text-left flex-col lg:items-center lg:text-center  lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
-              animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
+              animate={{opacity:[0,1],transition:{duration:3,delay:0.75}}}
 
-          className="lg:flex lg:self-center  text-slate-300
+          className="lg:flex  lg:text-center  w-fit text-slate-300
            font-semibold ">{e.sousDescription}</motion.h4>
     <motion.h3
-    animate={{opacity:[0,1],transition:{duration:3,delay:1.25}}}
-    className="text-slate-200 font-noto text-xl  text-left lg:text-center lg:text-4xl 
+    animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
+    className="text-slate-200 font-noto text-2xl  text-left lg:text-center lg:text-4xl 
      lg:w-fit  leading-relaxed break-words  lg:leading-tight 
     font-semibold tracking-tighter">{e.title}</motion.h3>
     <motion.div 
-                  animate={{opacity:[0,1],transition:{duration:2,delay:1.85}}}
+                  animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
 
-    className="flex gap-8 justify-center text-lg pt-10">
-        <Button className="bg-blue-900 text-slate-100 p-4 rounded-full text-lg">Voir plus</Button>
-        <Button className="bg-[#88CBCE] p-4 rounded-full text-lg ">Notre service</Button>
+    className="flex gap-8 justify-center  text-slate-200 text-lg pt-10">
+        <Button className="bg-blue-900 p-4 rounded-full font-semibold ">En savoir plus</Button>
+        <Button className="bg-[#39a2a7] p-4 rounded-full font-semibold ">Nous contacter</Button>
 
     </motion.div>
     </div>
@@ -122,7 +122,7 @@ function relunchInterval(e:number)
 {isChangingImage===0?<motion.img 
 
 
-animate={{scale:[1,1.1]}} transition={{duration:1.5}}
+animate={{scale:[1,1.1]}} transition={{duration:2}}
  
 key={"firstImg"}
 
@@ -131,7 +131,7 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
 : isChangingImage===1? 
 <motion.img 
 
-animate={{scale:[1,1.1]}} transition={{duration:1.5}}
+animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"secondImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
@@ -140,7 +140,7 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
 isChangingImage===2&&<motion.img 
 
 
-animate={{scale:[1,1.1]}} transition={{duration:1.5}}
+animate={{scale:[1,1.1]}} transition={{duration:2}}
 
 key={"thirdImg"}
 
@@ -158,7 +158,7 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
     onClick={()=>{
         relunchInterval(0)
     }}
-    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3  cursor-pointer rounded-full`}>
+    className={`${isChangingImage===0? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3 lg:p-0 cursor-pointer rounded-full`}>
 
     </div>
     <div
@@ -166,14 +166,14 @@ src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isCh
        onClick={()=>{
         relunchInterval(1)
        }}
-       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4  cursor-pointer p-3 rounded-full`}>
+       className={`${isChangingImage===1? "bg-white":" bg-[#9edde1] "} w-4 h-4 lg:p-0  cursor-pointer p-3 rounded-full`}>
 
 </div>
 <div
 onClick={()=>{
    relunchInterval(2)
 }}
-className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3 cursor-pointer rounded-full`}>
+className={`${isChangingImage===2? "bg-white":" bg-[#88CBCE] "} w-4 h-4 p-3 lg:p-0 cursor-pointer rounded-full`}>
 
 </div>
   </div>
