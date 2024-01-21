@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react"
 import Navbar from "../Navigation/Navbar"
 import { Button } from "../ui/button"
-import {motion } from "framer-motion"
+import {motion ,AnimatePresence} from "framer-motion"
+import { v4 } from "uuid"
 const WelcomeSection = () => {
 const [isChangingImage,setIsChangingImage]=useState(0)
 const [isInterValId,setIsIntervalId]=useState<NodeJS.Timeout>()
@@ -33,6 +34,34 @@ const allImageData=["https://images.pexels.com/photos/6195273/pexels-photo-61952
     }
 },[])
 
+const allText=[{title:`Entretien et nettoyage de bureaux et locaux professionnels`,
+id:v4(),
+sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
+,{
+    title:`Entretien et nettoyage de parties communes`,
+    id:v4(),
+    sousDescription:`COPROPRIÉTÉS `
+},{
+    title:`Débarrassage pour particulier et professionnels `,
+
+    sousDescription:"Débarras",
+    id:v4(),
+}
+]
+const allCompnent=allText.map((e)=>{
+return (
+    <div className="flex flex-col">
+          <h4 className="text-center  text-slate-300 font-semibold tracking-tighter">{e.sousDescription}</h4>
+    <h3 className="text-slate-200 text-4xl   leading-relaxed  lg:leading-tight 
+    font-semibold tracking-tighter">{e.title}</h3>
+    <div className="flex gap-8 justify-center text-lg pt-10">
+        <Button className="bg-blue-900 text-slate-100 p-4 rounded-full text-lg">Voir plus</Button>
+        <Button className="bg-[#88CBCE] p-4 rounded-full text-lg ">Notre service</Button>
+
+    </div>
+    </div>
+)
+})
 function relunchInterval(e:number)
 {
     clearInterval(isInterValId)
@@ -54,24 +83,37 @@ function relunchInterval(e:number)
     setIsIntervalId(intervalIdRelunch)
 
 }
+
   return (
   <section className="w-screen  h-screen relative flex flex-col  items-center justify-center">
    
     <Navbar/>
-
-<motion.img 
+<AnimatePresence>
+{isChangingImage===0?<motion.img 
+ 
+key={"firstImg"}
 
 className="object-center  absolute w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage]}/>
-  
-  <section className="flex flex-col relative z-20 gap-0 text-center ">
-    <h4 className="text-center text-lg text-slate-300 font-semibold tracking-tighter">professionel cleanning</h4>
-    <h3 className="text-slate-200 text-5xl lg:text-8xl  leading-relaxed  lg:leading-tight font-semibold tracking-tighter">Commercial Cleaning</h3>
-    <div className="flex gap-8 justify-center text-lg pt-4">
-        <Button className="bg-blue-900 text-slate-100 px-4 rounded-full text-lg">Voir plus</Button>
-        <Button className="bg-[#88CBCE] p-4 rounded-full text-lg ">Notre service</Button>
+: isChangingImage===1? 
+<motion.img 
 
-    </div>
+key={"secondImg"}
+
+className="object-center  absolute w-full h-full  brightness-50 " 
+src={allImageData[isChangingImage]}/> :
+isChangingImage===2&&<motion.img 
+
+
+key={"thirdImg"}
+
+
+className="object-center  absolute w-full h-full  brightness-50 " 
+src={allImageData[isChangingImage]}/>
+}
+</AnimatePresence>
+  <section className="flex flex-col relative z-20 gap-0 text-center ">
+  {allCompnent[isChangingImage]}
   </section>
   <div className="grid grid-cols-3 z-50 place-items-center absolute bottom-0 mb-10 w-[3/5] gap-20">
     <div
