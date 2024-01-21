@@ -14,7 +14,7 @@ import {
 const Navbar = () => {
     const path=usePathname()
   return (
-   <nav className={`absolute border-b-[0.5px] border-slate-50  py-2 top-0 z-50 flex pt-5 w-full text-current  gap-20 items-center justify-center ${path==="/contact"? "text-slate-800" : "text-slate-100"}`}>
+   <nav className={`absolute  py-2 top-0 z-50 flex pt-5 w-full text-current  gap-20 items-center justify-center ${path==="/contact"? "text-slate-800" : "text-slate-100"}`}>
 <Link href={"/"}>
 <p className={`text-lg brightness-150  text-clip font-bold  ${path==="/contact"? "text-slate-800" : "text-slate-300"}`}>Accueil</p>
 </Link>
