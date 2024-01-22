@@ -38,28 +38,29 @@ const isInView=useInView(refWelcome,{amount:0.5})
         
     },7000)
     setIsIntervalId(clearInterValId)
-}
-else {
 
+}
+else if(isInView===false) {
+clearInterval(isInterValId)
 }
     return ()=>{
         clearInterval(isInterValId)
 
     }
 },[isInView,isInterValId])
-
+console.log(isInterValId,isInView)
 const allText=[{title:`Entretien et nettoyage de bureaux et locaux professionnels`,
-id:v4(),
+id:"idTest",
 sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
 ,{
     title:`Entretien et nettoyage de parties communes`,
-    id:v4(),
+    id:"idtest2b",
     sousDescription:`COPROPRIÉTÉS `
 },{
     title:`Débarrassage pour particulier et professionnels `,
 
     sousDescription:"Débarras",
-    id:v4(),
+    id:"idtest2bbbbb",
 }
 ]
 const allCompnent=allText.map((e)=>{
@@ -68,11 +69,12 @@ return (
     key={e.id}
     className="flex text-left flex-col lg:items-center lg:text-center  lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
-              animate={{opacity:[0,1],transition:{duration:3,delay:0.75}}}
-
+         animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
+     
+              key={e.id+"subtitle"}
           className="lg:flex  lg:text-center  w-fit text-slate-300
            font-semibold ">{e.sousDescription}</motion.h4>
-    <motion.h3
+    <motion.h3 key={e.id+"title"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
     className="text-slate-200 font-noto text-2xl  text-left lg:text-center lg:text-4xl 
      lg:w-fit  leading-relaxed break-words  lg:leading-tight 
@@ -146,7 +148,8 @@ key={"thirdImg"}
 
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile
+ :allImageData[isChangingImage].isDesktop}/>
 }
 </AnimatePresence>
 </div>

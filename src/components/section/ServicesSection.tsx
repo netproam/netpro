@@ -4,6 +4,10 @@ import { Button } from "../ui/button"
 import { FaArrowRight } from "react-icons/fa";
 import {motion } from "framer-motion"
 import YourSvg from '../../../public/cleaning-mop.svg'
+import MovinSvg from "../../../public/SVG/moving.svg"
+import DesinfectSVG from "../../../public/SVG/sanitaze.svg"
+import GlovesSVG from "../../../public/SVG/cleaning-gloves.svg"
+
 import ServiceComponent from "../services/ServiceComponent";
 
 const ServicesSection = () => {
@@ -13,21 +17,23 @@ const ServicesSection = () => {
     et la propreté professionnelle avec nos services de nettoyage commercial.`}]
 
     const allServices=[{
-        titre:"Debarras",description:"the best thing over"
+       titre:"Nettoyages en profondeur",svg:<YourSvg />
     },{
-        titre:"Debarras",description:"the best thing over"
+        titre:"Entretien",description:"Désinfection",svg:<DesinfectSVG/>
     },{
-        titre:"Debarras",description:"the best thing over"
+        titre:"Nettoyage générale",description:"the best thing over",svg:<GlovesSVG/>
     },{
-        titre:"Debarras",description:"the best thing over"
+        titre:"Debarrassage",description:"the best thing over",svg:<MovinSvg/>
     }]
     const allDataDisplay=allServices.map((e)=>{
        return <div 
-       className=" "
+       className=""
        key={v4()}>
         
         <ServiceComponent title={e.titre}>
-        <YourSvg  style={{fill:"currentColor"}}  />
+          <div className="text-current">
+        {e.svg}
+        </div>
         </ServiceComponent>
       
       

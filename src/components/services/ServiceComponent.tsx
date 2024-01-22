@@ -37,10 +37,11 @@ setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
 }}
 
   >
-<h2 className="font-semibold text-lg">{title}</h2>
-<div style={{color:"#88CBCE"}} id={"childrenHolder"}>
+    <div  className="text-[#88CBCE]" id={"childrenHolder"}>
 {children}
 </div>
+<h2 className="font-semibold w-3/5">{title}</h2>
+
 <motion.div
 layout
 className="flex justify-start overflow-hidden">
