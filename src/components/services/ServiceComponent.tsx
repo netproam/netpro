@@ -1,6 +1,6 @@
 "use client"
 import {motion,useAnimate} from "framer-motion"
-import { useId } from "react"
+import { useId, useState } from "react"
 import {FaArrowRight} from "react-icons/fa"
 import {ReactNode} from "react"
 interface ServiceComponentProps{
@@ -14,6 +14,7 @@ const ServiceComponent = ({title,children}:ServiceComponentProps) => {
     const [isScope,setIsAnime]=useAnimate()
     const idHmtl=useId()
     console.log(idHmtl)
+    const [isTouched,setIsTouched]=useState(false)
   return (
    <motion.div  className="flex p-4 flex-col gap-4 cursor-pointer "
   onHoverStart={async()=>{
@@ -23,10 +24,19 @@ setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
 // setIsAnime(`#explores`,{display:"flex",opacity:[0,1]},{duration:2})
    }}
    onTapStart={async()=>{
-    setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
- setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
- 
- // setIsAnime(`#explores`,{display:"flex",opacity:[0,1]},{duration:2})
+   
+    if(isTouched===false)
+    {
+   setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
+setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
+setIsTouched(true)
+}
+else {
+    setIsAnime(`#childrenHolder`,{color:"#88CBCE"},{duration:1})
+    setIsAnime(`#containerTest`,{x:[0,-100]},{duration:0.5})
+    setIsTouched(false)
+}
+
     }}
    ref={isScope}
  onHoverEnd={()=>{

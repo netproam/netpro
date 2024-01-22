@@ -119,7 +119,9 @@ function relunchInterval(e:number)
   className="w-screen  h-screen relative flex flex-col  items-center justify-center">
    
     <Navbar/>
-    <div className="flex absolute w-screen h-screen bg-black overflow-hidden">
+{/**mobile */   }
+
+<div className="flex lg:hidden absolute w-screen h-screen bg-black overflow-hidden">
 
 <AnimatePresence>
 {isChangingImage===0?<motion.img 
@@ -130,7 +132,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"firstImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={allImageData[isChangingImage].isMobile}/>
 : isChangingImage===1? 
 <motion.img 
 
@@ -138,7 +140,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"secondImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={allImageData[isChangingImage].isMobile}/>
 :
 isChangingImage===2&&<motion.img 
 
@@ -149,8 +151,42 @@ key={"thirdImg"}
 
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile
- :allImageData[isChangingImage].isDesktop}/>
+src={allImageData[isChangingImage].isMobile
+}/>
+}
+</AnimatePresence>
+</div>
+<div className="hidden lg:flex absolute w-screen h-screen bg-black overflow-hidden">
+
+<AnimatePresence>
+{isChangingImage===0?<motion.img 
+
+
+animate={{scale:[1,1.1]}} transition={{duration:2}}
+ 
+key={"firstImg"}
+
+className="object-center  relative w-full h-full  brightness-50 " 
+src={allImageData[isChangingImage].isDesktop}/>
+: isChangingImage===1? 
+<motion.img 
+
+animate={{scale:[1,1.1]}} transition={{duration:2}}
+key={"secondImg"}
+
+className="object-center  relative w-full h-full  brightness-50 " 
+src={allImageData[isChangingImage].isDesktop}/>
+:
+isChangingImage===2&&<motion.img 
+
+
+animate={{scale:[1,1.1]}} transition={{duration:2}}
+
+key={"thirdImg"}
+
+
+className="object-center  relative w-full h-full  brightness-50 " 
+src={allImageData[isChangingImage].isDesktop}/>
 }
 </AnimatePresence>
 </div>
