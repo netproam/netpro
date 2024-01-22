@@ -9,7 +9,7 @@ import { isMobile } from "react-device-detect"
 const WelcomeSection = () => {
 const [isChangingImage,setIsChangingImage]=useState(0)
 const [isInterValId,setIsIntervalId]=useState<NodeJS.Timeout>()
-const isTabletOrMobile = useMediaQuery({ query: '(max-width: 604px)' })
+const isTabletOrMobile = useMediaQuery({ query: '(max-width: 804px)' })
 
 const allImageData=[{isDesktop:"https://images.pexels.com/photos/6195273/pexels-photo-6195273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 isMobile:`https://images.pexels.com/photos/209271/pexels-photo-209271.jpeg?auto=compress&cs=tinysrgb&w=800`},{isDesktop:`https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800`
@@ -130,7 +130,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"firstImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 : isChangingImage===1? 
 <motion.img 
 
@@ -138,7 +138,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"secondImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 :
 isChangingImage===2&&<motion.img 
 
@@ -149,7 +149,7 @@ key={"thirdImg"}
 
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isMobile? allImageData[isChangingImage].isMobile
+src={isTabletOrMobile? allImageData[isChangingImage].isMobile
  :allImageData[isChangingImage].isDesktop}/>
 }
 </AnimatePresence>
