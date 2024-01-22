@@ -5,6 +5,7 @@ import { Button } from "../ui/button"
 import {motion ,AnimatePresence,useInView} from "framer-motion"
 import { v4 } from "uuid"
 import {useMediaQuery} from "react-responsive"
+import { isMobile } from "react-device-detect"
 const WelcomeSection = () => {
 const [isChangingImage,setIsChangingImage]=useState(0)
 const [isInterValId,setIsIntervalId]=useState<NodeJS.Timeout>()
@@ -129,7 +130,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"firstImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={isMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 : isChangingImage===1? 
 <motion.img 
 
@@ -137,7 +138,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"secondImg"}
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
+src={isMobile? allImageData[isChangingImage].isMobile :allImageData[isChangingImage].isDesktop}/>
 :
 isChangingImage===2&&<motion.img 
 
@@ -148,7 +149,7 @@ key={"thirdImg"}
 
 
 className="object-center  relative w-full h-full  brightness-50 " 
-src={isTabletOrMobile? allImageData[isChangingImage].isMobile
+src={isMobile? allImageData[isChangingImage].isMobile
  :allImageData[isChangingImage].isDesktop}/>
 }
 </AnimatePresence>
