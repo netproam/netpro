@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       fontFamily:{
-     
+     stolzl:["stolzl"],
+        test:["DM Sans"]
       },
       keyframes: {
         "accordion-down": {

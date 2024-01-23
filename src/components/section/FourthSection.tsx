@@ -29,7 +29,7 @@ else {
   return (
     <section 
     ref={ref}
-    className="h-fit py-20 items-center 
+    className="h-fit py-20 items-center  px-4
     lg:px-10 justify-center gap-20  lg:justify-between bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
 
 <div className="flex flex-col lg:px-8 justify-center items-center lg:items-start  w-full gap-10">
@@ -68,7 +68,7 @@ else {
 
 
     </section>
-<div className="flex gap-10 pb-8   lg:gap-20 items-center  lg:py-0 lg:pt0 ">
+<div className="flex gap-10 pb-8  flex-col lg:flex-row  lg:gap-20 items-center  lg:py-0 lg:pt0 ">
 <Button className="bg-[#A42503] text-white text-md rounded-full  font-semibold py-8 px-6 shadow-lg">Nous contacter</Button>
 <div className="flex items-center gap-2">
     <div className="w-fit p-2 rounded-full border-2 border-slate-300">

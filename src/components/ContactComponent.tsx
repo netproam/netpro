@@ -18,6 +18,7 @@ import { Input } from "@/components/ui/input"
  
 import * as z from "zod"
 import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
+import { FaPaperPlane, FaRegPaperPlane } from "react-icons/fa"
 const formSchema = z.object({
     name: z.string().min(2, {
       message: "Vous devez indiquer un nom",
@@ -47,9 +48,10 @@ const ContactComponent = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white lg:border-2
-           shadow-lg rounded-lg py-8 px-4 ">
-                        <h2 className="text-2xl font-semibold">Contactez-nous</h2>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white 
+           shadow-lg rounded-xl py-8 px-10 ">
+                        <h2 className="text-lg pl-2 pt-4 
+                         font-stolzl leading-relaxed">Contactez nous</h2>
 
             <FormField
               control={form.control}
@@ -102,30 +104,34 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Textarea placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  
-                    className="resize-none outline-none  "/>
+                    <input placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  
+                    className="resize-none border-b-2  border-b-[#D3E1E0] w-full outline-none  "/>
                   </FormControl>
              
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <div className="flex w-full justify-center">
-            <Button className="self-center" type="submit">Envoyer</Button>
+            <div className="flex w-full ">
+            <Button className="bg-[#88CBCE] gapa-4 flex items-cente
+            r justify-center rounded-full px-12 py-6 font-semibold shadow-lg" type="submit"
+            ><FaRegPaperPlane className="mr-2" size={20}/>envoyer</Button>
             </div>
-            <div className="flex flex-col w-full h-fit gap-4 text-sm text-slate-400">
-            <h3 className="text-2xl text-slate-800">Contact info</h3>
-                <div className="flex gap-4 w-full ">
-                    <IoLocationSharp size={30} color="#B1442C"/>
-                <p className="w-32">785 15h Street, Office 478
+            <div className="flex flex-col pl-4 w-full font-light text-slate-500 text-lg
+             h-fit gap-4 ">
+            <h3 className="text-lg  py-4 font-stolzl text-slate-800 pl-2 pt-6 
+             leading-relaxed t" >Contact info</h3>
+                <div className="flex gap-4 w-full  ">
+                    <IoLocationSharp size={25} color="#B1442C"/>
+                <p className="w-48">785 15h Street, Office 478
 Berlin, De 81566</p>
                 </div>
-                <div className="flex gap-4 w-full">
-                    <IoMail size={30} color="#B1442C"/>
+                <div className="flex gap-4 w-full items-center ">
+                    <IoMail size={25} color="#B1442C"/>
                 <p>email@gmail.com</p>
                 </div>
-                <div className="flex gap-4 w-full">
-                    <IoPhonePortrait size={30} color="#B1442C"/>
+                <div className="flex gap-4 w-full items-center ">
+                    <IoPhonePortrait size={25} color="#B1442C"/>
                 <p>+1 840 841 25 69</p>
                 </div>
           </div>

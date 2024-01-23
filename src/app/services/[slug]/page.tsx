@@ -1,17 +1,19 @@
 import ContactComponent from "@/components/ContactComponent"
+import { useRouter} from "next/router";
 import { IoIosArrowDown } from "react-icons/io";
 
-const page = () => {
+const page = ({ params }: { params: { slug: string } }) => {
+
   return (
-    <main className="flex  flex-col h-fit w-screen bg-[#F0F9F9] overscroll-auto  ">
+    <main className="flex  flex-col  w-screen bg-[#F0F9F9] overscroll-auto  ">
         <div className="flex flex-col w-full items-center gap-4">
-        <h2 className="text-6xl font-semibold text-center pt-10 h-fit relative z-50">Debarassage </h2>
+        <h2 className="text-6xl font-semibold text-center pt-10 h-fit relative z-50">{params.slug==="debarassage"? "Débarrassage" : "Entretien ménagés"}</h2>
         <IoIosArrowDown size={30}/>
         </div>
 <div className="flex h-full pt-10 bg-[#F0F9F9] w-2/3 px-10  ">
 
 
-    <section className="  gap-20  bg-[#F0F9F9] scroll-b  ">
+    <section className="  gap-20 h-full  bg-[#F0F9F9] scroll-b  ">
 <div className="h-full flex flex-col gap-10 text-[#62656E] bg-[#F0F9F9] ">
 <p>auris eu nisi eget nisi imperdiet vestibulum. Nunc sodales vehicula risus. Suspendisse id mauris sodales, blandit tortor eu, sodales justo. Morbi tincidunt, ante vel suscipit volutpat, turpis enim volutpSectetur adipiscing elit, sed do eiusm onsectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore. Ut vel placerat eros, eu tincidunt velit. Consectetur adipiscing elit, adipiscing elit, sed do.
 
@@ -36,7 +38,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     src={`https://images.pexels.com/photos/625279/pexels-photo-625279.jpeg?auto=compress&cs=tinysrgb&w=800`}/>
     </div>
 </div>
-<div className="flex flex-col gap-8 bg-[#F0F9F9] w-ful h-fulll">
+<div className="flex flex-col gap-8 bg-[#F0F9F9] w-ful h-full">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
@@ -57,7 +59,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
 </div>
 
     </section>
-<div className=" px-4 bg-[#F0F9F9]  w-[450px]  h-full absolute     right-0 ">
+<div className=" p-4 bg-[#F0F9F9]  w-[450px]  h-full absolute     right-0  mr-6">
 <ContactComponent/>
 </div>
     </div>

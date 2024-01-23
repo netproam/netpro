@@ -29,19 +29,19 @@ text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-sla
 
 
   <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
-    <NavigationMenuItem className="text-current" >
+    <NavigationMenuItem className="text-current " >
       <NavigationMenuTrigger className="bg-transparent text-current text-lg  font-semibold">Services</NavigationMenuTrigger>
-      <NavigationMenuContent className=" flex justify-center  ">
+      <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
         
-        className="flex text-md bg-slate-400  flex-col gap-10 w-fit
+        className="flex text-md bg-slate-400  relative z-50 flex-col gap-10 w-fit
         text-current p-8">
         <Link href="/services/menage" passHref legacyBehavior>
     <NavigationMenuLink className="whitespace-nowrap " >
     {`Entretien Ménagés`}
     </NavigationMenuLink>
     </Link>
-        <Link href="/services/debarras" passHref legacyBehavior>
+        <Link href="/services/debarassage" passHref legacyBehavior>
     <NavigationMenuLink >
     {`Débarrassage`}
     </NavigationMenuLink>
@@ -79,7 +79,8 @@ onClick={()=>{
 <ul className="flex flex-col font-semibold gap-4 text-lg pl-4">
 <Link href={"/"}>Accueil</Link>
 
-<Link href={"/contact"}>Services</Link>
+<Link href={"/services/menage"}>{`Ménage`}</Link>
+<Link href={"/services/debarassage"}>{`Debarassage`}</Link>
 
 <Link href={"/contact"}>Contact</Link>
 </ul>
