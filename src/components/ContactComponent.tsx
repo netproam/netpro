@@ -48,14 +48,17 @@ const ContactComponent = () => {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white lg:border-2
            shadow-lg rounded-lg py-8 px-4 ">
+                        <h2 className="text-2xl font-semibold">Contactez-nous</h2>
+
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nom</FormLabel>
                   <FormControl>
-                    <Input placeholder="Inscrire votre nom ou celle de votre compagnie" {...field} />
+                  <input
+                    className=" outline-none w-full border-b-2 border-b-[#D3E1E0]"
+                    placeholder="Nom" {...field} />
                   </FormControl>
                
                   <FormMessage />
@@ -67,9 +70,10 @@ const ContactComponent = () => {
               name="adresseEmail"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Adresse email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Inscrire votre adresse email" {...field} />
+                  <input
+                    className=" outline-none w-full border-b-2 border-b-[#D3E1E0]"
+                    placeholder="Email" {...field} />
                   </FormControl>
             
                   <FormMessage />
@@ -81,9 +85,10 @@ const ContactComponent = () => {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{`Numéro de téléphone`}</FormLabel>
                   <FormControl>
-                    <Input placeholder="numéro de téléphone" {...field} />
+                    <input
+                    className=" w-full outline-none border-b-2 border-b-[#D3E1E0]"
+                    placeholder="Téléphone" {...field} />
                   </FormControl>
                 
                   <FormMessage />
@@ -95,9 +100,9 @@ const ContactComponent = () => {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  className="resize-none"/>
+                    <Textarea placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  
+                    className="resize-none outline-none  "/>
                   </FormControl>
              
                   <FormMessage />
