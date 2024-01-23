@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
  
 import * as z from "zod"
+import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
 const formSchema = z.object({
     name: z.string().min(2, {
       message: "Vous devez indiquer un nom",
@@ -45,7 +46,7 @@ const ContactComponent = () => {
     
 
     return (
-        <Form {...form}>
+        <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white lg:border-2
            shadow-lg rounded-lg py-8 px-4 ">
                         <h2 className="text-2xl font-semibold">Contactez-nous</h2>
@@ -112,7 +113,24 @@ const ContactComponent = () => {
             <div className="flex w-full justify-center">
             <Button className="self-center" type="submit">Envoyer</Button>
             </div>
+            <div className="flex flex-col w-full h-fit gap-4 text-sm text-slate-400">
+            <h3 className="text-2xl text-slate-800">Contact info</h3>
+                <div className="flex gap-4 w-full ">
+                    <IoLocationSharp size={30} color="#B1442C"/>
+                <p className="w-32">785 15h Street, Office 478
+Berlin, De 81566</p>
+                </div>
+                <div className="flex gap-4 w-full">
+                    <IoMail size={30} color="#B1442C"/>
+                <p>email@gmail.com</p>
+                </div>
+                <div className="flex gap-4 w-full">
+                    <IoPhonePortrait size={30} color="#B1442C"/>
+                <p>+1 840 841 25 69</p>
+                </div>
+          </div>
           </form>
+       
         </Form>
       )
   

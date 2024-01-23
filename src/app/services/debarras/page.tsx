@@ -57,7 +57,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
 </div>
 
     </section>
-<div className=" px-4 bg-[#F0F9F9]  justify-end w-[450px]  h-full  fixed   right-0 ">
+<div className=" px-4 bg-[#F0F9F9]  w-[450px]  h-full absolute     right-0 ">
 <ContactComponent/>
 </div>
     </div>
