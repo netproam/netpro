@@ -30,7 +30,7 @@ else {
     <section 
     ref={ref}
     className="h-fit py-20 items-center  px-4
-    lg:px-10 justify-center gap-20  lg:justify-between bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
+    lg:px-10 justify-center gap-20  lg:justify-between  bg-slate-50 w-full flex flex-col lg:flex-row">
 
 <div className="flex flex-col lg:px-8 justify-center items-center lg:items-start  w-full gap-10">
 <div className="flex flex-col gap-2 ">

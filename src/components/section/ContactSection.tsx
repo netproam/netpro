@@ -7,11 +7,10 @@ const MapComponent = dynamic(() => import('../MapComponent'), {
   });
 const ContactSection = () => {
   return (
-  <section className="flex   flex-col lg:flex-row w-full pt-10 lg:p-10  bg-[#F0F9F9] brightness-25">
+  <section className="flex   flex-col lg:flex-row w-full pt-10 lg:p-10  brightness-25">
     <div className="w-full flex flex-col gap-4   h-full   justify-center   ">
         
         <div className=" w-full  gap-4 flex flex-col text-center lg:text-start py-10">
-    <p className="font-semibold text-sm ">{`Contacter nous`.toLocaleUpperCase()}</p>
     <h3 className="text-3xl   self-center lg:self-start
     leading-loose  lg:w-4/5 lg:text-5xl font-stolzl  text-slate-800">{`Besoin d'un`} <span className="text-[#88CBCE]">Netoyage?</span>Prennez contacte avec nous!</h3>
     </div>

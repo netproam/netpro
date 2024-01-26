@@ -6,6 +6,7 @@ import Image from "next/image";
 import FourthSection from "@/components/section/FourthSection";
 import ContactSection from "@/components/section/ContactSection";
 import FifthSection from "@/components/section/FithSection";
+import TestimonialSection from "@/components/section/TestimonialSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
     <ThirdSection/>
     <FifthSection/>
     <FourthSection/>
+    <TestimonialSection/>
     <ContactSection/>
     </main>
   );
