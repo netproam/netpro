@@ -6,8 +6,9 @@ interface CardTestimonalProps{
 id:string
 description:string
 name:string
+url:string
 }
-const CardTestimonialComponent = ({id,name,description}:CardTestimonalProps) => {
+const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps) => {
    
 
     const [scope,anime]=useAnimate()
@@ -34,7 +35,7 @@ onHoverEnd={()=>{
 }}
    
          ref={scope}
-        className="bg-white flex flex-col    hover:bg-[#A42503] text-black hover:text-white
+        className="bg-white flex flex-col cursor-pointer    hover:bg-[#A42503] text-black hover:text-white
         shadow-md  
         items-center  gap-16 rounded-xl
           min-w-[400px]  p-10 min-h-[270px]
@@ -50,8 +51,8 @@ onHoverEnd={()=>{
         </motion.div>
       <div className="flex flex-col items-center gap-2 ">
 
-        <div className="bg-slate-100 rounded-full h-20 w-20">
-
+        <div className="bg-slate-100 rounded-full h-20 w-20 relative">
+            <img src={url} className="object-cover h-20 w-20 rounded-full absolute "/>
         </div>
         <p className="font-semibold text-sm">{name}</p>
 
