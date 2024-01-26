@@ -8,7 +8,7 @@ const MapComponent = dynamic(() => import('../MapComponent'), {
 const ContactSection = () => {
   return (
   <section className="flex   flex-col lg:flex-row w-full pt-10 lg:p-10  brightness-25">
-    <div className="w-full flex flex-col gap-4   h-full   justify-center   ">
+    <div className="w-full hidden lg:flex flex-col gap-4   h-full   justify-center   ">
         
         <div className=" w-full  gap-4 flex flex-col text-center lg:text-start py-10">
     <h3 className="text-3xl   self-center lg:self-start
@@ -21,7 +21,9 @@ const ContactSection = () => {
     </div>
     </div>
 
-    <div className=" relative -inset-x-28 h-full w-[825px] flex-col justify-center flex self-center ">
+    <div className=" relative lg:-inset-x-28 h-full 
+    w-full
+    lg:w-[825px] flex-col justify-center flex self-center ">
         <ContactComponent/>
     </div>
   </section>
