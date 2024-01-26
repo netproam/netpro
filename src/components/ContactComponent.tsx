@@ -117,22 +117,24 @@ const ContactComponent = () => {
             r justify-center rounded-full px-12 py-6 font-semibold shadow-lg" type="submit"
             ><FaRegPaperPlane className="mr-2" size={20}/>envoyer</Button>
             </div>
-            <div className="flex flex-col w-full font-light text-slate-500 text-lg
+            <div className="flex flex-col w-full font-light text-slate-600  text-lg
              h-fit gap-4 ">
             <h3 className="text-lg  py-4 font-stolzl text-slate-800  pt-6 
              leading-relaxed t" >Contact info</h3>
-                <div className="flex gap-4 w-full  ">
-                    <IoLocationSharp size={25} color="#B1442C"/>
-                <p className="w-48  font-extralight">785 15h Street, Office 478
+                <div className="flex gap-4 w-full items-center justify-center  ">
+                    <IoLocationSharp size={30} color="#B1442C"/>
+                <p className="w-fit lg:w-full  text-base font-light">785 15h Street, Office 478
 Berlin, De 81566</p>
                 </div>
+                <div className="flex flex-col lg:flex-row w-full gap-4 ">
                 <div className="flex gap-4 w-full items-center ">
                     <IoMail size={25} color="#B1442C"/>
-                <p className="font font-extralight">email@gmail.com</p>
+                <p className="font font-light text-base">email@gmail.com</p>
                 </div>
                 <div className="flex gap-4 w-full items-center ">
                     <IoPhonePortrait size={25} color="#B1442C"/>
-                <p className="font-extralight">+1 840 841 25 69</p>
+                <p className="font-light text-base">+1 840 841 25 69</p>
+                </div>
                 </div>
           </div>
           </form>
