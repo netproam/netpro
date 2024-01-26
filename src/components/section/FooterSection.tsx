@@ -2,7 +2,7 @@
 const FooterSection = () => {
   return (
   <footer className="w-screen bg-black h-[400px] text-slate-100 
-  flex justify-between p-20 ">
+  lg:flex lg:justify-between grid grid-cols-2 place-items-center lg:p-20 ">
 <div className="flex flex-col  text-slate-400 gap-10">
 <h4 className="font-semibold text-slate-50">Bureau</h4>
 <div className="flex flex-col justify-between h-full">
@@ -25,7 +25,7 @@ Berlin, De 81566</p>
 </div>
 </div>
 
-<div className="flex flex-col text-slate-400 gap-10">
+<div className="flex flex-col text-slate-400 gap-10 items-start w-full ">
 <p className="text-slate-50 font-semibold"> Liens</p>
 <div className="flex flex-col justify-between h-full">
 <p>Facebook</p>
@@ -36,7 +36,7 @@ Berlin, De 81566</p>
 <p>Facebook</p>
 </div>
 </div>
-<div className="flex flex-col text-slate-400 gap-10">
+<div className="flex flex-col text-slate-400 gap-10 items-end w-full">
 <p className="text-slate-50 font-semibold"> Liens</p>
 <div className="flex flex-col justify-between h-full">
 <p>Facebook</p>
