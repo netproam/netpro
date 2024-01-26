@@ -39,7 +39,7 @@ from-[#F0F9F9] to-slate-white overflow-scroll
     flex flex-col gap-2 justify-center items-center">
 <p className="font-semibold text-5xl tracking-tighter">Ce que nos clients disent de nous </p>
 <div className="flex   py-10 
-gap-20 overflow-x-scroll pl-[1450px] ">
+gap-20 overflow-x-scroll pl-72 lg:pl-[1450px] ">
 {allTemoignages}
 </div>
    </section>
