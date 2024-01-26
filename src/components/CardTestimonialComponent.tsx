@@ -17,8 +17,22 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
     const escapedId = idOfIcon.replace(/:/g, '\\:');
     const [scopeTwo,animeSecond]=useAnimate()
   return (
-    <motion.div 
+    <motion.div  transition={{duration:0.25}}
+onHoverStart={()=>{
+    anime("#momo",{color:"white"})
+    anime("#paragraphe",{color:"rgb(248 250 252)"})
+    anime("#testname",{color:"rgb(248 250 252)"})
+ 
 
+    anime(scope.current,{backgroundColor:"#A42503"})
+}}
+onHoverEnd={()=>{
+    anime("#momo",{color:"#A42503"})
+    anime("#paragraphe",{color:"rgb(71 85 105)"})
+    anime("#testname",{color:"rgb(71 85 105)"})
+
+    anime(scope.current,{backgroundColor:"white"})
+}}
             
  className="flex flex-col  justify-center 
      items-center gap-4
@@ -34,7 +48,7 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
         className="bg-white flex flex-col cursor-pointer  
         text-black 
         shadow-md   select-none
-        items-center  gap-4 rounded-xl 
+        items-center  gap-4 rounded-xl  
           p-10 lg:min-h-[220px] w-[250px]  lg:w-[320px]
        ">
             <motion.div className=" text-[#A42503] f "
@@ -52,7 +66,7 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
 <div className="bg-slate-800 rounded-full h-20 w-20 relative">
     <img src={url} className="object-cover h-20 w-20 rounded-full absolute "/>
 </div>
-<p className="font-semibold text-sm">{name}</p>
+<p id="testname" className="font-semibold text-sm">{name}</p>
 
 </div>
         </motion.div>
