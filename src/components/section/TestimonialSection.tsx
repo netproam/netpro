@@ -6,10 +6,11 @@ import {motion} from "framer-motion"
 import CardTestimonialComponent from "../CardTestimonialComponent";
 const TestimonialSection = () => {
 
-    const temoign=[{name:"Raphael",description:"Magnifique compagnie",id:v4(),
+    const temoign=[{name:"Raphael morticis"
+    ,description:"Magnifique compagnie elle m'a permit de multiplier tout",id:v4(),
 url:`https://images.pexels.com/photos/258174/pexels-photo-258174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
 }
-,{name:"Raphael",description:"Magnifique compagnie",id:v4()
+,{name:"Raphael",description:"Magnifique compagnie je la recommande vivement",id:v4()
 ,url:`https://www.pexels.com/fr-fr/photo/homme-en-chemise-boutonnee-marron-3785079`
 },
 {name:"Raphael",description:"Magnifique compagnie",id:v4()
@@ -33,11 +34,12 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
         )
     })
   return (
-   <section className="w-full h-[700px] bg-gradient-to-b
+   <section className=" h-[600px] bg-gradient-to-b
 from-[#F0F9F9] to-slate-white overflow-scroll
     flex flex-col gap-2 justify-center items-center">
 <p className="font-semibold text-5xl tracking-tighter">Ce que nos clients disent de nous </p>
-<div className="flex overflow-x-scroll   gap-20 py-20">
+<div className="flex   py-10 
+gap-20 overflow-x-scroll pl-[1450px] ">
 {allTemoignages}
 </div>
    </section>

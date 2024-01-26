@@ -10,7 +10,7 @@ import TestimonialSection from "@/components/section/TestimonialSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between   ">
+    <main className="flex min-h-screen flex-col items-center justify-between  overflow-hidden  ">
    
     <WelcomeSection/>
     <div>
@@ -22,7 +22,9 @@ export default function Home() {
     <ThirdSection/>
     </div>
     <FourthSection/>
+    <div className="overflow-scroll w-screen">
     <TestimonialSection/>
+    </div>
     <ContactSection/>
     </main>
   );
