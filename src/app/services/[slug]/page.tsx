@@ -6,7 +6,7 @@ import { useRouter} from "next/router";
 import { useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-const page = ({ params }: { params: { slug: string } }) => {
+const Page = ({ params }: { params: { slug: string } }) => {
 
     const refForm=useRef<HTMLDivElement>(null)
     const {scrollYProgress}=useScroll({
@@ -102,4 +102,4 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     </main>
   )
 }
-export default page
+export default Page
