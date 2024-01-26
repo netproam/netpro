@@ -49,8 +49,8 @@ const ContactComponent = () => {
     return (
         <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white 
-           shadow-lg rounded-xl py-8 px-10 ">
-                        <h2 className="text-lg pl-2 pt-4 
+           shadow-xl rounded-xl py-8 px-10 ">
+                        <h2 className="text-lg  pt-4 
                          font-stolzl leading-relaxed">Contactez nous</h2>
 
             <FormField
@@ -104,7 +104,7 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <input placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  
+                    <textarea placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  
                     className="resize-none border-b-2  border-b-[#D3E1E0] w-full outline-none  "/>
                   </FormControl>
              
@@ -117,22 +117,22 @@ const ContactComponent = () => {
             r justify-center rounded-full px-12 py-6 font-semibold shadow-lg" type="submit"
             ><FaRegPaperPlane className="mr-2" size={20}/>envoyer</Button>
             </div>
-            <div className="flex flex-col pl-4 w-full font-light text-slate-500 text-lg
+            <div className="flex flex-col w-full font-light text-slate-500 text-lg
              h-fit gap-4 ">
-            <h3 className="text-lg  py-4 font-stolzl text-slate-800 pl-2 pt-6 
+            <h3 className="text-lg  py-4 font-stolzl text-slate-800  pt-6 
              leading-relaxed t" >Contact info</h3>
                 <div className="flex gap-4 w-full  ">
                     <IoLocationSharp size={25} color="#B1442C"/>
-                <p className="w-48">785 15h Street, Office 478
+                <p className="w-48  font-extralight">785 15h Street, Office 478
 Berlin, De 81566</p>
                 </div>
                 <div className="flex gap-4 w-full items-center ">
                     <IoMail size={25} color="#B1442C"/>
-                <p>email@gmail.com</p>
+                <p className="font font-extralight">email@gmail.com</p>
                 </div>
                 <div className="flex gap-4 w-full items-center ">
                     <IoPhonePortrait size={25} color="#B1442C"/>
-                <p>+1 840 841 25 69</p>
+                <p className="font-extralight">+1 840 841 25 69</p>
                 </div>
           </div>
           </form>

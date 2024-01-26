@@ -10,3 +10,6 @@
 * {
   min-width: 0px;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

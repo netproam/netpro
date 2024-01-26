@@ -28,13 +28,13 @@ const Navbar = () => {
 text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 
 
-  <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
-    <NavigationMenuItem className="text-current " >
+  <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900 bg-transparent"}`}>
+    <NavigationMenuItem className="text-current bg-transparent " >
       <NavigationMenuTrigger className="bg-transparent text-current text-lg  font-semibold">Services</NavigationMenuTrigger>
       <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
         
-        className="flex text-md bg-slate-400  relative z-50 flex-col gap-10 w-fit
+        className="flex text-md bg-slate-300  relative z-50 flex-col gap-10 w-fit
         text-current p-8">
         <Link href="/services/menage" passHref legacyBehavior>
     <NavigationMenuLink className="whitespace-nowrap " >

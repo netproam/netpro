@@ -7,20 +7,22 @@ const MapComponent = dynamic(() => import('../MapComponent'), {
   });
 const ContactSection = () => {
   return (
-  <section className="flex   flex-col lg:flex-row w-full pt-10 lg:p-10 h-screen bg-white brightness-25">
-    <div className="w-full flex flex-col gap-4   h-full   justify-center  ">
+  <section className="flex   flex-col lg:flex-row w-full pt-10 lg:p-10  bg-[#F0F9F9] brightness-25">
+    <div className="w-full flex flex-col gap-4   h-full   justify-center   ">
         
-        <div className="h-fit  w-full  gap-4 flex flex-col text-center lg:text-start">
+        <div className=" w-full  gap-4 flex flex-col text-center lg:text-start py-10">
     <p className="font-semibold text-sm ">{`Contacter nous`.toLocaleUpperCase()}</p>
-    <h3 className="text-3xl  tracking-tighter  self-center lg:self-start
-    leading-relaxed lg:w-4/5 lg:text-5xl    font-semibold">{`Besoin d'un`} <span className="text-[#88CBCE]">Netoyage?</span>Prennez contacte avec nous!</h3>
+    <h3 className="text-3xl   self-center lg:self-start
+    leading-loose  lg:w-4/5 lg:text-5xl font-stolzl  text-slate-800">{`Besoin d'un`} <span className="text-[#88CBCE]">Netoyage?</span>Prennez contacte avec nous!</h3>
     </div>
-    <div className="p-4">
-        <MapComponent/>
+    <div className="p-4 h-[600px] w-[800px] relative rounded-lg">
+      <img className="object-cover absolute w-full h-full rounded-lg"
+      src={`https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=800`}
+      />
     </div>
     </div>
 
-    <div className="w-full lg:p-10 h-full ">
+    <div className=" relative -inset-x-28 h-full w-[825px] flex-col justify-center flex self-center ">
         <ContactComponent/>
     </div>
   </section>
