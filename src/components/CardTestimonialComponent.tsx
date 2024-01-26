@@ -18,7 +18,7 @@ const CardTestimonialComponent = ({id,name,description}:CardTestimonalProps) => 
     <motion.div 
 
             
-    key={id} className="flex flex-col  justify-center 
+ className="flex flex-col  justify-center 
      items-center gap-4
    h-fit
      

@@ -15,7 +15,7 @@ const TestimonialSection = () => {
 ]
     const allTemoignages=temoign.map((element)=>{
         return (
-          <CardTestimonialComponent description={element.description}
+          <CardTestimonialComponent key={element.id} description={element.description}
           id={element.id} name={element.name}/>
         )
     })
