@@ -5,7 +5,7 @@ import { useScroll,useMotionValueEvent } from "framer-motion";
 import { useRouter} from "next/router";
 import { useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-
+import {motion} from "framer-motion"
 const Page = ({ params }: { params: { slug: string } }) => {
 
     const refForm=useRef<HTMLDivElement>(null)
@@ -14,17 +14,30 @@ const Page = ({ params }: { params: { slug: string } }) => {
     })
   
 useMotionValueEvent(scrollYProgress,"change",(e)=>{
-       if((e>0.2&&e<0.7)&&refForm.current)
+       if((e<0.3)&&refForm.current)
        {
-        refForm.current.style.position="fixed"
+        refForm.current.style.position="absolute"
         refForm.current.style.top="0px"
+        refForm.current.style.right="0px"
+
 
        }
        
 
-       else if(refForm.current) {
-        refForm.current.style.position="absolute"
+else if((e>=0.3&&e<0.7)&&refForm.current){
+    refForm.current.style.position="fixed"
+ 
 
+
+}
+       else if(e>0.7&&refForm.current) {
+        
+
+
+        refForm.current.style.position="absolute"
+        refForm.current.style.top=""
+
+        refForm.current.style.right="0px"
         refForm.current.style.bottom="0px"
 
 
@@ -97,13 +110,13 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
   
 
     </div>
-    <div
+    <motion.div
          ref={refForm}
-    className=" absolute z-50 right-0 p-8 bg-[#F0F9F9] bottom-0     w-1/3   h-fit">
+    className=" absolute z-50 right-0 p-8 bg-[#F0F9F9]     w-1/3   h-fit">
 
     <ContactComponent/>
 
-</div>
+</motion.div>
 </section> 
     </main>
   )
