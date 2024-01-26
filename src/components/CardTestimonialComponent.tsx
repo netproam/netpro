@@ -18,6 +18,25 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
     const [scopeTwo,animeSecond]=useAnimate()
   return (
     <motion.div  transition={{duration:0.25}}
+
+    onTouchStart={()=>{
+        anime("#momo",{color:"white"})
+        anime("#paragraphe",{color:"rgb(248 250 252)"})
+        anime("#testname",{color:"rgb(248 250 252)"})
+     
+    
+        anime(scope.current,{backgroundColor:"#A42503"})
+    }}
+    onTouchEnd={()=>{
+        anime("#momo",{color:"#A42503"})
+        anime("#paragraphe",{color:"rgb(71 85 105)"})
+        anime("#testname",{color:"rgb(71 85 105)"})
+    
+        anime(scope.current,{backgroundColor:"white"})
+    }}
+                
+
+
 onHoverStart={()=>{
     anime("#momo",{color:"white"})
     anime("#paragraphe",{color:"rgb(248 250 252)"})
