@@ -3,10 +3,8 @@ import ContactSection from "@/components/section/ContactSection"
 
 const page = () => {
   return (
-   <main className="flex flex-col  ">
-    <div className="text-slate-50">
-            <Navbar/>
-    </div>
+   <main className="flex flex-col pt-10  ">
+   
 
     <ContactSection/>
    </main>

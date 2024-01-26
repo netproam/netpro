@@ -19,7 +19,7 @@ const Navbar = () => {
     const path=usePathname()
     const [isOpen,setIsOpen]=useState(false)
   return (
-   <nav className={`fixed mt-6  w-fit bg-[#F0F9F9] bg-opacity-80  rounded-full  justify-between 
+   <nav className={` mt-6  w-fit bg-[#F0F9F9] bg-opacity-80  rounded-full  justify-between 
    px-8 py-1 top-0 z-50 flex 
     text-current  gap-10 items-center lg:justify-center ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
 <Link href={"/"}>

@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navigation/Navbar";
 import FooterSection from "@/components/section/FooterSection";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
+        <div className="fixed self-center z-50 flex justify-center w-full">
+        <Navbar/>
+        </div>
+        {children}
       <FooterSection/>
       </body>
     

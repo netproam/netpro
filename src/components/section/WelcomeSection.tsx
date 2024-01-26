@@ -118,7 +118,6 @@ function relunchInterval(e:number)
   ref={refWelcome}
   className="w-screen  h-screen relative flex flex-col  items-center justify-center">
    
-    <Navbar/>
 {/**mobile */   }
 
 <div className="flex lg:hidden absolute w-screen h-screen bg-black overflow-hidden">
