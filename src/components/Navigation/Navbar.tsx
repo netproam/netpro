@@ -19,18 +19,19 @@ const Navbar = () => {
     const path=usePathname()
     const [isOpen,setIsOpen]=useState(false)
   return (
-   <nav className={`absolute   justify-between px-10 py-2 top-0 z-50 flex 
-   pt-5 w-full text-current  gap-20 items-center lg:justify-center ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
+   <nav className={`fixed mt-6  w-fit bg-[#F0F9F9] bg-opacity-80  rounded-full  justify-between 
+   px-8 py-1 top-0 z-50 flex 
+    text-current  gap-10 items-center lg:justify-center ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
 <Link href={"/"}>
-<p className={`text-lg brightness-150  text-clip font-bold   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>Accueil</p>
+<p className={`text-base brightness-150  text-clip font-bold   ${path==="/"? "text-slate-900" : "text-slate-900"}`}>Accueil</p>
 </Link>
-<NavigationMenu className={`gap-20 hidden lg:flex z-50 brightness-150 
-text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
+<NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150 
+text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
 
 
-  <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900 bg-transparent"}`}>
+  <NavigationMenuList className={` ${path==="/"? "text-slate-900" : "text-slate-900 bg-transparent"}`}>
     <NavigationMenuItem className="text-current bg-transparent " >
-      <NavigationMenuTrigger className="bg-transparent text-current text-lg  font-semibold">Services</NavigationMenuTrigger>
+      <NavigationMenuTrigger className="bg-transparent text-current text-base  font-semibold">Services</NavigationMenuTrigger>
       <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
         
@@ -51,7 +52,7 @@ text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-sla
     </NavigationMenuItem>
   </NavigationMenuList>
 
-  <NavigationMenuItem className="list-none">
+  <NavigationMenuItem className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
     <NavigationMenuLink >
       Contact
@@ -67,7 +68,7 @@ text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-sla
 
 {isOpen&&<section className="flex flex-col fixed
 inset-0 z-50 w-screen h-screen bg-opacity-100
-bg-slate-100  text-slate-800 gap-10">
+bg-slate-100  text-slate-900 gap-10">
 
 <div 
 className="flex justify-end p-4"

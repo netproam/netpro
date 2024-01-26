@@ -131,7 +131,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
  
 key={"firstImg"}
 
-className="object-center  relative w-full h-full  brightness-50 " 
+className="object-center blur-sm  relative w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage].isMobile}/>
 : isChangingImage===1? 
 <motion.img 
@@ -139,7 +139,7 @@ src={allImageData[isChangingImage].isMobile}/>
 animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"secondImg"}
 
-className="object-center  relative w-full h-full  brightness-50 " 
+className="object-center  blur-sm  relative w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage].isMobile}/>
 :
 isChangingImage===2&&<motion.img 
@@ -150,7 +150,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"thirdImg"}
 
 
-className="object-center  relative w-full h-full  brightness-50 " 
+className="object-center blur-sm  relative w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage].isMobile
 }/>
 }
@@ -166,7 +166,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
  
 key={"firstImg"}
 
-className="object-center  relative w-full h-full  brightness-50 " 
+className="object-center blur-sm  relative w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage].isDesktop}/>
 : isChangingImage===1? 
 <motion.img 
@@ -174,7 +174,7 @@ src={allImageData[isChangingImage].isDesktop}/>
 animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"secondImg"}
 
-className="object-center  relative w-full h-full  brightness-50 " 
+className="object-center blur-sm  relative w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage].isDesktop}/>
 :
 isChangingImage===2&&<motion.img 
@@ -185,7 +185,7 @@ animate={{scale:[1,1.1]}} transition={{duration:2}}
 key={"thirdImg"}
 
 
-className="object-center  relative w-full h-full  brightness-50 " 
+className="object-center blur-sm  relative w-full h-full  brightness-50 " 
 src={allImageData[isChangingImage].isDesktop}/>
 }
 </AnimatePresence>
