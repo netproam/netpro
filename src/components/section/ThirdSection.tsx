@@ -1,7 +1,7 @@
 "use client"
 const thirdSection = () => {
   return (
-   <section className="w-full flex  bg-slate-50 py-20">
+   <section className="w-full flex px-10  bg-slate-50 ">
     <div className="hidden justify-center   lg:flex flex-col w-full px-10 order-2">
         <div>
         <img className="object-cover rounded-lg" src={
@@ -25,6 +25,7 @@ const thirdSection = () => {
             />
         </div>
     </div>
+    
    </section>
   )
 }
