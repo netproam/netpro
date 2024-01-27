@@ -1,7 +1,7 @@
 "use client"
 const FifthSection = () => {
   return (
-   <section className="w-full flex  bg-slate-50  px-10 ">
+   <section className="w-full flex  bg-slate-50  px-4 ">
     <div className="hidden lg:flex flex-col w-full px-10  justify-center ">
         <div>
         <img className="object-cover rounded-lg" src={
@@ -10,10 +10,10 @@ const FifthSection = () => {
          
         </div>
     </div>
-    <div className="flex flex-col w-full px-10 gap-4">
-        <div className="flex flex-col gap-4">
+    <div className="flex flex-col w-full px-8 gap-4">
+        <div className="flex flex-col gap-4 text-center lg:text-start">
             <p className="font-semibold text-sm">{"Une approche innovante".toLocaleUpperCase()}</p>
-            <h3 className="tracking-tighter text-5xl font-semibold">Les tâches compliquées deviennent facile</h3>
+            <h3 className="tracking-tighter text-2xl text-center lg:text-5xl font-semibold">Les tâches compliquées deviennent facile</h3>
             <p className="tracking-wide">{`Avec nous, tout est dans l'ordre : du nettoyage minutieux aux détails méticuleux, nous assurons un environnement impeccable. Notre engagement envers l'excellence fait de chaque espace un reflet de propreté et d'organisation, créant ainsi une atmosphère harmonieuse pour tous.`}</p>
         </div>
         <div>
