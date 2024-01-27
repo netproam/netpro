@@ -118,7 +118,7 @@ const ContactComponent = () => {
             ><FaRegPaperPlane className="mr-2" size={20}/>envoyer</Button>
             </div>
             <div className="flex flex-col w-full font-light text-slate-600  text-lg
-             h-fit gap-4  border-t-[1px] border-t-[#88CBCE] pt-10">
+             h-fit gap-4  ">
            
                 <div className="flex gap-4 w-full items-center lg:justify-center  ">
                     <IoLocationSharp size={30} color="#B1442C"/>
