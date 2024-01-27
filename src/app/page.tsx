@@ -16,7 +16,7 @@ export default function Home() {
     <div>
     <ServicesSection/>
     </div>
-    <div className="flex flex-col py-16 gap-4 bg-slate-50">
+    <div className="flex flex-col py-16 gap-8 bg-slate-50">
     <ThirdSection/>
     <FifthSection/>
     <ThirdSection/>
