@@ -118,13 +118,14 @@ const ContactComponent = () => {
             ><FaRegPaperPlane className="mr-2" size={20}/>envoyer</Button>
             </div>
             <div className="flex flex-col w-full font-light text-slate-600  text-lg
-             h-fit gap-4 ">
-            <h3 className="text-lg  py-4 font-stolzl text-slate-800  pt-6 
-             leading-relaxed t" >Contact info</h3>
+             h-fit gap-4  border-t-[1px] border-t-[#88CBCE] pt-10">
+           
                 <div className="flex gap-4 w-full items-center lg:justify-center  ">
                     <IoLocationSharp size={30} color="#B1442C"/>
                 <p className="w-fit lg:w-full  text-base font-light">785 15h Street, Office 478
 Berlin, De 81566</p>
+<a href="geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA">1600 Amphitheatre Parkway, Mountain View, CA</a>
+
                 </div>
                 <div className="flex flex-col lg:flex-row w-full gap-4 ">
                 <div className="flex gap-4 w-full items-center ">
