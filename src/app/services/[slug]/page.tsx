@@ -5,6 +5,7 @@ import { useScroll,useMotionValueEvent } from "framer-motion";
 import { useRouter} from "next/router";
 import { useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 import {motion} from "framer-motion"
 const Page = ({ params }: { params: { slug: string } }) => {
 
@@ -12,8 +13,12 @@ const Page = ({ params }: { params: { slug: string } }) => {
     const {scrollYProgress}=useScroll({
        
     })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 804px)' })
+
   
 useMotionValueEvent(scrollYProgress,"change",(e)=>{
+    if(isTabletOrMobile===false)
+    {
        if((e<0.3)&&refForm.current)
        {
         refForm.current.style.position="absolute"
@@ -43,23 +48,24 @@ else if((e>=0.3&&e<0.7)&&refForm.current){
 
 
        }
+    }
     })
   return (
     <main 
     className="flex  flex-col     w-screen bg-[#F0F9F9] overscroll-auto overflow-scroll  ">
         <div className="flex flex-col w-full items-center gap-4 py-10">
-        <h2 className="text-6xl font-semibold text-center  h-fit relative z-50">{params.slug==="debarassage"? "Débarrassage" : "Entretien ménagés"}</h2>
+        <h2 className=" text-4xl tracking-tighter lg:text-6xl font-semibold text-center  h-fit relative z-50">{params.slug==="debaras"? "Débarras" : "Entretien ménagés"}</h2>
         <IoIosArrowDown size={30}/>
         </div>
 
      <section 
 
-     className="w-screen flex overflow-scroll relative">  
+     className="w-screen flex flex-col lg:flex-row overflow-scroll relative">  
 <div className="flex  relative  pt-10 w-full   bg-[#F0F9F9] overflow-scroll
   px-10   ">
 
 
-    <section className=" w-2/3  
+    <section className=" lg:w-2/3  
      overflow-scroll  overscroll-auto scrollbar-hide gap-20  flex flex-col bg-[#F0F9F9]   
       ">
 <div className="h-full  flex flex-col gap-10 text-[#62656E] bg-[#F0F9F9] overscroll-auto ">
@@ -71,8 +77,8 @@ else if((e>=0.3&&e<0.7)&&refForm.current){
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viverra erat bibendum. Cras turpis urna, vulputate at est vitae, posuere lobortis erat.</p>
-<div className="flex gap-10 w-full   bg-[#F0F9F9]">
-    <div className=" rounded-lg h-[300px] w-[600px]">
+<div className="flex flex-col lg:flex-row gap-10 w-full   bg-[#F0F9F9]">
+    <div className=" rounded-lg lg:h-[300px] lg:w-[600px]">
 
     <img 
         className="object-cover rounded-lg"
@@ -80,7 +86,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     src={`https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=800`}/>
 
     </div>
-    <div className=" rounded-lg h-[300px] w-[600px] ">
+    <div className=" rounded-lg lg:h-[300px] lg:w-[600px] ">
     <img 
     className="object-cover rounded-lg"
     src={`https://images.pexels.com/photos/625279/pexels-photo-625279.jpeg?auto=compress&cs=tinysrgb&w=800`}/>
@@ -112,7 +118,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     </div>
     <motion.div
          ref={refForm}
-    className=" absolute z-50 right-0 p-8 bg-[#F0F9F9]     w-1/3   h-fit">
+    className=" lg:absolute z-50 right-0 lg:p-8 bg-[#F0F9F9]     lg:w-1/3   h-fit">
 
     <ContactComponent/>
 

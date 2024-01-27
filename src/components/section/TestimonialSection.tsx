@@ -35,12 +35,14 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
     })
   return (
    <section className=" h-[600px] bg-gradient-to-b
-from-[#F0F9F9] to-slate-white overflow-scroll
+from-[#F0F9F9] to-slate-white w-screen overflow-hidden
     flex flex-col gap-2 justify-center items-center">
-<p className="font-semibold text-5xl tracking-tighter">Ce que nos clients disent de nous </p>
-<div className="flex   py-10  pl-[2000px]
-gap-20 overflow-x-scroll  lg:pl-[1450px] ">
+<p className="font-semibold text-2xl w-1/2 text-center lg:w-fit lg:text-5xl tracking-tighter">Ce que nos clients disent de nous </p>
+<div className=" w-screen pt-8 overflow-x-scroll">
+<div className="flex w-fit  py-10  pl-[50px]
+gap-20  lg:pl-[50px] ">
 {allTemoignages}
+</div>
 </div>
    </section>
   )

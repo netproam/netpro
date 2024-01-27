@@ -58,7 +58,7 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
     id:"idtest2b",
     sousDescription:`COPROPRIÉTÉS `
 },{
-    title:`Débarrassage pour particulier et professionnels `,
+    title:`Débarras pour particulier et professionnels `,
 
     sousDescription:"Débarras",
     id:"idtest2bbbbb",

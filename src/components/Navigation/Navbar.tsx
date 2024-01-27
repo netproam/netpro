@@ -42,7 +42,7 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
     {`Entretien Ménagés`}
     </NavigationMenuLink>
     </Link>
-        <Link href="/services/debarassage" passHref legacyBehavior>
+        <Link href="/services/debaras" passHref legacyBehavior>
     <NavigationMenuLink >
     {`Débarrassage`}
     </NavigationMenuLink>
@@ -78,12 +78,20 @@ onClick={()=>{
     <IoIosClose size={30}/>
 </div>
 <ul className="flex flex-col font-semibold gap-4 text-lg pl-4">
-<Link href={"/"}>Accueil</Link>
+<Link onClick={()=>{
+    setIsOpen(false)
+}} href={"/"}>Accueil</Link>
 
-<Link href={"/services/menage"}>{`Ménage`}</Link>
-<Link href={"/services/debarassage"}>{`Debarassage`}</Link>
+<Link  onClick={()=>{
+    setIsOpen(false)
+}} href={"/services/menage"}>{`Ménage`}</Link>
+<Link onClick={()=>{
+    setIsOpen(false)
+}} href={"/services/debaras"}>{`Debaras`}</Link>
 
-<Link href={"/contact"}>Contact</Link>
+<Link onClick={()=>{
+    setIsOpen(false)
+}} href={"/contact"}>Contact</Link>
 </ul>
 </section>}
    </nav>

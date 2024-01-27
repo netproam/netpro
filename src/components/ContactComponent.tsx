@@ -121,7 +121,7 @@ const ContactComponent = () => {
              h-fit gap-4 ">
             <h3 className="text-lg  py-4 font-stolzl text-slate-800  pt-6 
              leading-relaxed t" >Contact info</h3>
-                <div className="flex gap-4 w-full items-center justify-center  ">
+                <div className="flex gap-4 w-full items-center lg:justify-center  ">
                     <IoLocationSharp size={30} color="#B1442C"/>
                 <p className="w-fit lg:w-full  text-base font-light">785 15h Street, Office 478
 Berlin, De 81566</p>
