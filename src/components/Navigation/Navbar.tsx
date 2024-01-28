@@ -22,7 +22,7 @@ const Navbar = () => {
     const router=useRouter()
   return (
    <nav className={`  w-screen bg-white   relative    justify-between 
-   px-8 py-2 top-0 z-50 flex  h-16
+   px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
      ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
 <div
@@ -85,11 +85,11 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
 rounded-full bg-[#7abebe]  gap-2
 items-center justify-center">
-    <a
-    className="pointer-events-auto lg:pointer-events-none"
+    <a 
+    className="pointer-events-auto lg:pointer-events-none p-1"
     href="tel:+338408412569">
 <FaPhoneAlt
-size={12}
+size={15}
 color="rgb(248,250,252)"/>
 </a>
 <p className="font-semibold text-sm text-slate-100 hidden lg:flex" >+33 840 841 25 69</p>
