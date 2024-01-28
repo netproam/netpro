@@ -21,16 +21,19 @@ const Navbar = () => {
     const [isOpen,setIsOpen]=useState(false)
     const router=useRouter()
   return (
-   <nav className={`  w-screen bg-gradient-to-r from-white to-slate-100 relative    justify-between 
-   px-8 py-1 top-0 z-50 flex  h-20
+   <nav className={`  w-screen bg-white   relative    justify-between 
+   px-8 py-2 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
      ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
 <div
 onClick={()=>{
     router.push("/")
 }}
-className="w-20 bg-transparent cursor-pointer left-0  bg-blue-800">
-<img src="/logo.png"/>
+className=" bg-transparent cursor-pointer left-0 ">
+
+<img  className=""
+width={70}
+src="/logo.png"/>
 </div>
 
 <NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150 
@@ -79,7 +82,7 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
 
 </NavigationMenu>
 <div className="flex gap-10 justify-center items-center">
-<div className="flex w-fit py-3 px-5 shadow-lg
+<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
 rounded-full bg-[#7abebe]  gap-2
 items-center justify-center">
     <a
