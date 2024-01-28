@@ -10,21 +10,29 @@ import {
     NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
   import Link from "next/link"
-  import { usePathname } from "next/navigation"
+  import { usePathname, useRouter } from "next/navigation"
 import { useState } from "react";
   import { IoMenu } from "react-icons/io5";
   import { IoIosClose } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Navbar = () => {
     const path=usePathname()
     const [isOpen,setIsOpen]=useState(false)
+    const router=useRouter()
   return (
-   <nav className={` mt-6  w-fit bg-[#F0F9F9] bg-opacity-80  rounded-full  justify-between 
-   px-8 py-1 top-0 z-50 flex 
-    text-current  gap-10 items-center lg:justify-center ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
-<Link href={"/"}>
-<p className={`text-base brightness-150  text-clip font-bold   ${path==="/"? "text-slate-900" : "text-slate-900"}`}>Accueil</p>
-</Link>
+   <nav className={`  w-screen bg-gradient-to-r from-white to-slate-100 relative    justify-between 
+   px-8 py-1 top-0 z-50 flex  h-20
+    text-current  gap-10 items-center 
+     ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
+<div
+onClick={()=>{
+    router.push("/")
+}}
+className="w-20 bg-transparent cursor-pointer left-0  bg-blue-800">
+<img src="/logo.png"/>
+</div>
+
 <NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150 
 text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
 
@@ -59,11 +67,38 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
+<NavigationMenuItem className="list-none text-base">
+  <Link href="/contact" passHref legacyBehavior>
+    <NavigationMenuLink >
+      A propos
+    </NavigationMenuLink>
+  </Link>
+</NavigationMenuItem>
+
+
+
 </NavigationMenu>
+<div className="flex gap-10 justify-center items-center">
+<div className="flex w-fit py-3 px-5 shadow-lg
+rounded-full bg-[#7abebe]  gap-2
+items-center justify-center">
+    <a
+    className="pointer-events-auto lg:pointer-events-none"
+    href="tel:+338408412569">
+<FaPhoneAlt
+size={12}
+color="rgb(248,250,252)"/>
+</a>
+<p className="font-semibold text-sm text-slate-100 hidden lg:flex" >+33 840 841 25 69</p>
+</div>
+
+
+
 <div onClick={()=>{
     setIsOpen(true)
 }} className="lg:hidden cursor-pointer">
 <IoMenu size={30}/>
+</div>
 </div>
 
 {isOpen&&<section className="flex flex-col fixed
