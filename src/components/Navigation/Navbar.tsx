@@ -11,17 +11,48 @@ import {
   } from "@/components/ui/navigation-menu"
   import Link from "next/link"
   import { usePathname, useRouter } from "next/navigation"
-import { useState } from "react";
+import { useRef, useState } from "react";
   import { IoMenu } from "react-icons/io5";
   import { IoIosClose } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 const Navbar = () => {
     const path=usePathname()
     const [isOpen,setIsOpen]=useState(false)
     const router=useRouter()
+    const {scrollYProgress}=useScroll()
+    const refNav =useRef<HTMLElement>(null)
+    const refServices =useRef<HTMLParagraphElement>(null)
+    const refAbout =useRef<HTMLParagraphElement>(null)
+
+    const refContact =useRef<HTMLParagraphElement>(null)
+
+    useMotionValueEvent(scrollYProgress,"change",(e)=>{
+        if(refNav.current&&refAbout.current&&refContact.current&&refServices.current)
+        {
+        if(e>0.15)
+        {
+            console.log(e)
+            refNav.current.style.backgroundColor="#F0F9F9"
+
+            refAbout.current.style.color="black"
+            refServices.current.style.color="black"
+            refContact.current.style.color="black"
+        }
+        else {
+            refAbout.current.style.color="white"
+            refServices.current.style.color="white"
+            refContact.current.style.color="white"
+            refNav.current.style.backgroundColor="transparent"
+
+        }
+    }
+    })
   return (
-   <nav className={`  w-screen bg-[#F0F9F9]   relative    justify-between 
+   <nav 
+  ref={refNav}
+   className={`  w-screen   relative  bg-opacity-50    justify-between 
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
      ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
@@ -37,12 +68,14 @@ src="/logo.png"/>
 </div>
 
 <NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150 
-text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
+text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 
 
-  <NavigationMenuList className={` ${path==="/"? "text-slate-900" : "text-slate-900 bg-transparent"}`}>
+  <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900 bg-transparent"}`}>
     <NavigationMenuItem className="text-current bg-transparent " >
-      <NavigationMenuTrigger className="bg-transparent text-current text-sm  font-semibold">SERVICES</NavigationMenuTrigger>
+      <NavigationMenuTrigger className="bg-transparent text-current text-sm  font-semibold">
+        
+        <p ref={refServices}>SERVICES </p></NavigationMenuTrigger>
       <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
         
@@ -63,17 +96,17 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
     </NavigationMenuItem>
   </NavigationMenuList>
 
-  <NavigationMenuItem className="list-none text-base">
+  <NavigationMenuItem  className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
-    <NavigationMenuLink className="text-sm" >
-     CONTACT
+    <NavigationMenuLink   className="text-sm" >
+     <p ref={refContact}>CONTACT</p>
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
 <NavigationMenuItem className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
     <NavigationMenuLink className="text-sm">
-      A PROPOS
+     <p  ref={refAbout}>  A PROPOS</p>
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
