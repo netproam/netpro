@@ -22,12 +22,12 @@ const Navbar = () => {
     const [isOpen,setIsOpen]=useState(false)
     const router=useRouter()
     const {scrollYProgress}=useScroll()
-    const refNav =useRef<HTMLDivElement>(null)
+    const refNav =useRef<HTMLElement>(null)
     const refServices =useRef<HTMLParagraphElement>(null)
     const refAbout =useRef<HTMLParagraphElement>(null)
 
     const refContact =useRef<HTMLParagraphElement>(null)
-    const refToggle =useRef<HTMLElement>(null)
+    const refToggle =useRef<HTMLDivElement>(null)
 
     useMotionValueEvent(scrollYProgress,"change",(e)=>{
         if(refNav.current&&refAbout.current&&refContact.current&&refServices.current&&refToggle.current)
