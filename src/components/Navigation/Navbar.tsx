@@ -21,10 +21,10 @@ const Navbar = () => {
     const [isOpen,setIsOpen]=useState(false)
     const router=useRouter()
   return (
-   <nav className={`  w-screen bg-white   relative    justify-between 
+   <nav className={`  w-screen bg-[#F0F9F9]   relative    justify-between 
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
-     ${path==="/"? "text-slate-900" : "text-slate-900"}`}>
+     ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 <div
 onClick={()=>{
     router.push("/")
@@ -42,7 +42,7 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
 
   <NavigationMenuList className={` ${path==="/"? "text-slate-900" : "text-slate-900 bg-transparent"}`}>
     <NavigationMenuItem className="text-current bg-transparent " >
-      <NavigationMenuTrigger className="bg-transparent text-current text-base  font-semibold">Services</NavigationMenuTrigger>
+      <NavigationMenuTrigger className="bg-transparent text-current text-sm  font-semibold">SERVICES</NavigationMenuTrigger>
       <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
         
@@ -65,15 +65,15 @@ text-current font-semibold relative   ${path==="/"? "text-slate-900" : "text-sla
 
   <NavigationMenuItem className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
-    <NavigationMenuLink >
-      Contact
+    <NavigationMenuLink className="text-sm" >
+     CONTACT
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
 <NavigationMenuItem className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
-    <NavigationMenuLink >
-      A propos
+    <NavigationMenuLink className="text-sm">
+      A PROPOS
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
@@ -100,7 +100,7 @@ color="rgb(248,250,252)"/>
 <div onClick={()=>{
     setIsOpen(true)
 }} className="lg:hidden cursor-pointer">
-<IoMenu size={30}/>
+<IoMenu size={30} color="black"/>
 </div>
 </div>
 
