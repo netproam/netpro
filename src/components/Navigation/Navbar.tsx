@@ -22,14 +22,15 @@ const Navbar = () => {
     const [isOpen,setIsOpen]=useState(false)
     const router=useRouter()
     const {scrollYProgress}=useScroll()
-    const refNav =useRef<HTMLElement>(null)
+    const refNav =useRef<HTMLDivElement>(null)
     const refServices =useRef<HTMLParagraphElement>(null)
     const refAbout =useRef<HTMLParagraphElement>(null)
 
     const refContact =useRef<HTMLParagraphElement>(null)
+    const refToggle =useRef<HTMLElement>(null)
 
     useMotionValueEvent(scrollYProgress,"change",(e)=>{
-        if(refNav.current&&refAbout.current&&refContact.current&&refServices.current)
+        if(refNav.current&&refAbout.current&&refContact.current&&refServices.current&&refToggle.current)
         {
         if(e>0.15)
         {
@@ -38,6 +39,8 @@ const Navbar = () => {
 
             refAbout.current.style.color="black"
             refServices.current.style.color="black"
+            refToggle.current.style.color="black"
+
             refContact.current.style.color="black"
         }
         else {
@@ -45,6 +48,8 @@ const Navbar = () => {
             refServices.current.style.color="white"
             refContact.current.style.color="white"
             refNav.current.style.backgroundColor="transparent"
+            refToggle.current.style.color="white"
+
 
         }
     }
@@ -132,8 +137,8 @@ color="rgb(248,250,252)"/>
 
 <div onClick={()=>{
     setIsOpen(true)
-}} className="lg:hidden cursor-pointer">
-<IoMenu size={30} color="black"/>
+}} className="lg:hidden cursor-pointer" ref={refToggle}>
+<IoMenu size={30} />
 </div>
 </div>
 
