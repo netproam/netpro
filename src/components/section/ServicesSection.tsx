@@ -17,17 +17,17 @@ const ServicesSection = () => {
     et la propreté professionnelle avec nos services de nettoyage commercial.`}]
 
     const allServices=[{
-       titre:"Nettoyages en profondeur",svg:<YourSvg style={{width:"100%",heigth:"100%"}}  />
+       titre:"Nettoyages ",svg:<YourSvg style={{width:"100%",heigth:"100%"}}  />
     },{
         titre:"Entretien",description:"Désinfection",svg:<DesinfectSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:"Nettoyage générale",description:"the best thing over",svg:<GlovesSVG style={{width:"100%",heigth:"100%"}}/>
+        titre:"Copropriété",description:"the best thing over",svg:<GlovesSVG style={{width:"100%",heigth:"100%"}}/>
     },{
         titre:"Debarrassage",description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
     }]
     const allDataDisplay=allServices.map((e)=>{
        return <div 
-       className=""
+       className="flex  justify-center lg:w-1/4"
        key={v4()}>
         
         <ServiceComponent title={e.titre}>
@@ -55,8 +55,8 @@ const ServicesSection = () => {
 <div>
 
 </div>
-<div className=" grid grid-cols-2 flex-wrap   
-gap-10  lg:gap-20 divided-none lg:flex lg:divide-x-[1px] divide-slate-300 ">
+<div className=" grid grid-cols-2 flex-wrap    w-full lg:justify-center
+gap-10  lg:gap-0 divided-none lg:flex lg:divide-x-[1px] divide-slate-300 ">
 {allDataDisplay}
 </div>
    </section>
