@@ -80,7 +80,9 @@ width={70}
 src="/logo.png"/>
 </div>
 
-<div className="w-full justify-end items-center hidden lg:flex">
+<div className={`w-full justify-end items-center hidden lg:flex
+${path==="/"? "text-slate-100 " : "text-slate-900 bg-transparent"}
+`}>
 <NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150  
 text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 
