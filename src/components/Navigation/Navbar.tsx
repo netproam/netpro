@@ -65,10 +65,10 @@ const Navbar = () => {
   return (
    <nav 
   ref={refNav}
-   className={`  w-screen  justify-between     bg-opacity-50     
+   className={`   w-screen  justify-between     bg-opacity-50     
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
-    text-slate-100 ${path==="/"? "fixed":"relative"}`}>
+    text-slate-100 ${path==="/"? "fixed text-slate-100":"fixed text-slate-800"}`}>
 <div
 onClick={()=>{
     router.push("/")
@@ -80,8 +80,8 @@ width={70}
 src="/logo.png"/>
 </div>
 
-<div className={`w-full justify-end items-center hidden lg:flex
-${path==="/"? "text-slate-100 " : "text-slate-900 bg-transparent"}
+<div className={`w-full justify-end relative z-50 items-center hidden lg:flex
+${path==="/"? "text-slate-800 " : "text-slate-900 bg-transparent"}
 `}>
 <NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150  
 text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
