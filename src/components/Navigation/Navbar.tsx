@@ -12,7 +12,7 @@ import {
   import Link from "next/link"
   import { usePathname, useRouter } from "next/navigation"
 import { useRef, useState } from "react";
-  import { IoMenu } from "react-icons/io5";
+  import { IoMail, IoMenu } from "react-icons/io5";
   import { IoIosClose } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useMotionValueEvent, useScroll } from "framer-motion";
@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
    <nav 
   ref={refNav}
-   className={`  w-screen      bg-opacity-50    justify-between 
+   className={`  w-screen  justify-between     bg-opacity-50     
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
     text-slate-100 ${path==="/"? "fixed":"relative"}`}>
@@ -73,26 +73,27 @@ const Navbar = () => {
 onClick={()=>{
     router.push("/")
 }}
-className=" bg-transparent cursor-pointer left-0 ">
+className=" bg-transparent cursor-pointer left-0 w-fit ">
 
 <img  className=""
 width={70}
 src="/logo.png"/>
 </div>
 
-<NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150 
-text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
+<div className="w-full justify-end items-center hidden lg:flex">
+<NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150  
+text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 
 
-  <NavigationMenuList className={` ${path==="/"? "text-slate-100" : "text-slate-900 bg-transparent"}`}>
-    <NavigationMenuItem className="text-current bg-transparent " >
+  <NavigationMenuList className={` ${path==="/"? "text-slate-100 " : "text-slate-900 bg-transparent"}`}>
+    <NavigationMenuItem className="text-current bg-transparent  " >
       <NavigationMenuTrigger className="bg-transparent text-current text-sm  font-semibold">
         
         <p ref={refServices}>SERVICES </p></NavigationMenuTrigger>
       <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
         
-        className="flex text-md bg-slate-300  relative z-50 flex-col gap-10 w-fit
+        className="flex text-md bg-slate-300  relative z-50 flex-col gap-10 w-full
         text-current p-8">
         <Link href="/services/menage" passHref legacyBehavior>
     <NavigationMenuLink className="whitespace-nowrap " >
@@ -127,18 +128,32 @@ text-current font-semibold relative   ${path==="/"? "text-slate-100" : "text-sla
 
 
 </NavigationMenu>
-<div className="flex gap-10 justify-center items-center">
+</div>
+<div className="flex gap-4 justify-center items-center lg:w-6/12 ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full bg-[#7abebe]  gap-2
-items-center justify-center">
+rounded-full bg-[#7abebe]  gap-2  items-center justify-center
+">
     <a 
-    className="pointer-events-auto lg:pointer-events-none p-1"
+    className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
     href="tel:+338408412569">
 <FaPhoneAlt
 size={15}
 color="rgb(248,250,252)"/>
 </a>
-<p className="font-semibold text-sm text-slate-100 hidden lg:flex" >+33 840 841 25 69</p>
+<p className="font-semibold text-sm text-slate-100 hidden  
+lg:flex w-fit h-fit  whitespace-nowrap " >+33 840 841 25 69</p>
+</div>
+<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
+rounded-full bg-[#0E2954]  gap-2
+items-center justify-center">
+    <a 
+    className="pointer-events-auto lg:pointer-events-none p-1"
+  >
+<IoMail
+size={15}
+color="rgb(248,250,252)"/>
+</a>
+<p className="font-semibold text-sm text-slate-100 hidden lg:flex" >info@gmail.com</p>
 </div>
 
 
