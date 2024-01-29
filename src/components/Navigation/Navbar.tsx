@@ -104,7 +104,7 @@ text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" :
     </Link>
         <Link href="/services/debaras" passHref legacyBehavior>
     <NavigationMenuLink >
-    {`Débarrassage`}
+    {`Débarras`}
     </NavigationMenuLink>
   </Link>
         </ul>
@@ -163,7 +163,7 @@ color="rgb(248,250,252)"/>
 
 <div onClick={()=>{
     setIsOpen(true)
-}} className="lg:hidden cursor-pointer" ref={refToggle}>
+}} className={`lg:hidden cursor-pointer ${path!=="/"&&"text-slate-600"}}`} ref={refToggle}>
 <IoMenu size={30} />
 </div>
 </div>
@@ -189,7 +189,7 @@ onClick={()=>{
 }} href={"/services/menage"}>{`Ménage`}</Link>
 <Link onClick={()=>{
     setIsOpen(false)
-}} href={"/services/debaras"}>{`Debaras`}</Link>
+}} href={"/services/debaras"}>{`Débarras`}</Link>
 
 <Link onClick={()=>{
     setIsOpen(false)
