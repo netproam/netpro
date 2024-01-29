@@ -147,6 +147,7 @@ lg:flex w-fit h-fit  whitespace-nowrap " >+33 840 841 25 69</p>
 rounded-full bg-[#0E2954]  gap-2
 items-center justify-center">
     <a 
+    href="mailto:info@gmail.com"
     className="pointer-events-auto lg:pointer-events-none p-1"
   >
 <IoMail

@@ -51,9 +51,12 @@ const ContactComponent = () => {
         <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white 
            shadow-xl rounded-xl py-8 px-10 ">
-                        <h2 className="text-2xl  pt-4 
+                        <h2 className="text-2xl  pt-4  hidden lg:flex
                          font-stolzl leading-relaxed">Contactez nous</h2>
-
+ <div className=" w-full  gap-4 flex flex-col   py-10 lg:hidden">
+    <h3 className="text-2xl   self-center lg:self-start
+    leading-loose  lg:w-4/5 lg:text-5xl font-stolzl  text-slate-800">{`Besoin d'un`} <span className="text-[#88CBCE]">Nettoyage?</span>Prennez contacte avec nous!</h3>
+    </div>
             <FormField
               control={form.control}
               name="name"
