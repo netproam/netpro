@@ -31,7 +31,7 @@ useMotionValueEvent(scrollYProgress,"change",(e)=>{
 
 else if((e>=0.15 &&e<0.7)&&refForm.current){
     refForm.current.style.position="fixed"
-    refForm.current.style.top="100px"
+    refForm.current.style.top="50px"
 
 
 }
@@ -118,7 +118,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     </div>
     <motion.div
          ref={refForm}
-    className=" lg:absolute z-50 right-0 lg:p-8 bg-[#F0F9F9]     lg:w-1/3   h-fit">
+    className=" lg:absolute z-50 right-0 lg:p-8 bg-transparent     lg:w-1/3   h-fit">
 
     <ContactComponent/>
 
