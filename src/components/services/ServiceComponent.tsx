@@ -24,7 +24,7 @@ console.log(isTabletOrMobile)
     justify-center lg:items-center lg:justify-start w-full"
   onHoverStart={async()=>{
    setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
-setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
+// setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
 
 // setIsAnime(`#explores`,{display:"flex",opacity:[0,1]},{duration:2})
    }}

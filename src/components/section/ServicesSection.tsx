@@ -7,6 +7,8 @@ import YourSvg from '../../../public/cleaning-mop.svg'
 import MovinSvg from "../../../public/SVG/moving.svg"
 import DesinfectSVG from "../../../public/SVG/sanitaze.svg"
 import GlovesSVG from "../../../public/SVG/cleaning-gloves.svg"
+import OfficeSVG from "../../../public/SVG/office.svg"
+import CoproprieteSVG from "../../../public/SVG/copropriete.svg"
 
 import ServiceComponent from "../services/ServiceComponent";
 
@@ -17,21 +19,24 @@ const ServicesSection = () => {
     et la propreté professionnelle avec nos services de nettoyage commercial.`}]
 
     const allServices=[{
-       titre:`Nettoyage des parties communes d’immeubles`,svg:<YourSvg style={{width:"100%",heigth:"100%"}}  />
+       titre:`Parties communes d’immeubles`,svg:<YourSvg style={{width:"100%",heigth:"100%"}}  />
     },{
-        titre:`Nettoyage des copropriétés`,description:"Désinfection",svg:<DesinfectSVG style={{width:"100%",heigth:"100%"}}/>
+        titre:`Copropriétés`,description:"Désinfection",svg:<CoproprieteSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:`⁠⁠Nettoyage de bureaux`,description:"the best thing over",svg:<GlovesSVG style={{width:"100%",heigth:"100%"}}/>
+        titre:`⁠⁠Bureaux`,description:"the best thing over",svg:<OfficeSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:`Nettoyage de commerce`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`Commerce`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:`Nettoyage de parking`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`Parking`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
     },
     {
+        titre:`Avant ou après déménagement `,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+    },
+
+    {
         titre:`⁠⁠Décapage des sols`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
-    },{
-        titre:`Nettoyage avant ou après déménagement `,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
-    },{
+    },
+    {
         titre:`Débarras`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
     }
 
@@ -52,8 +57,8 @@ const ServicesSection = () => {
         </div>
     })
   return (
-   <section className="w-screen h-fit bg-[#F0F9F9] py-20
-    flex flex-col justify-center items-center  gap-20  lg:px-10">
+   <section className="w-screen h-fit bg-[#F0F9F9] py-10 lg:py-20
+    flex flex-col justify-center items-center  gap-10 lg:gap-20  lg:px-10">
 
 <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
     <div className="flex text-sm flex-col w-full gap-4">
@@ -76,7 +81,7 @@ gap-2  divided-none lg:grid-cols-3 lg:divide-x-[1px] divide-slate-300 ">
 <h2 className=" relative  font-semibold text-5xl">{`Débarras`}</h2>
 <div className=" grid grid-cols-2       w-screen lg:justify-center
 gap-2  lg:gap-0 divided-none lg:grid-cols-2 place-items-center lg:divide-x-[1px] divide-slate-300 ">
-{allDataDisplay.slice(4,6)}
+{allDataDisplay.slice(6)}
 </div>
    </section>
   )
