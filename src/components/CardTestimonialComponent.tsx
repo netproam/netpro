@@ -78,7 +78,7 @@ onHoverEnd={()=>{
      size={40}  className=" text-current"/>
 </motion.div>
 
-        <p id="paragraphe" className="text-sm text-center
+        <p id="paragraphe" className=" text-xs lg:text-sm text-center
          font-semibold text-slate-600">{description}</p>
         <div className="flex flex-col items-center gap-2 pt-4 ">
 
