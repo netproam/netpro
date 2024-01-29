@@ -4,6 +4,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
+import {MdOutlinePhone}from "react-icons/md"
 import { Textarea } from "./ui/textarea"
 import {
   Form,
@@ -17,8 +18,8 @@ import {
 import { Input } from "@/components/ui/input"
  
 import * as z from "zod"
-import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
-import { FaPaperPlane, FaRegPaperPlane } from "react-icons/fa"
+import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPaperPlane, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
+import { FaPaperPlane, FaPen, FaRegPaperPlane, FaUser } from "react-icons/fa"
 const formSchema = z.object({
     name: z.string().min(2, {
       message: "Vous devez indiquer un nom",
@@ -58,10 +59,14 @@ const ContactComponent = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormControl>
+                 <FormControl>
+                    <div className="flex gap-2 items-center bg-slate-50 p-2 rounded-md w-full">
+                    <FaUser size={20} className="text-slate-600"/>
                   <input
-                    className=" outline-none w-full border-b-2 border-b-[#D3E1E0]"
+                    className="  w-full outline-none   bg-transparent 
+                     px-4 rounded-md  hover:border-slate-800 duration-500"
                     placeholder="Nom" {...field} />
+                    </div>
                   </FormControl>
                
                   <FormMessage />
@@ -74,9 +79,13 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
+                    <div className="flex gap-2 items-center bg-slate-50 p-2 rounded-md w-full">
+                    <IoMail size={20} className="text-slate-600"/>
                   <input
-                    className=" outline-none w-full border-b-2 border-b-[#D3E1E0]"
+                    className="  w-full outline-none   bg-transparent 
+                     px-4 rounded-md  hover:border-slate-800 duration-500"
                     placeholder="Email" {...field} />
+                    </div>
                   </FormControl>
             
                   <FormMessage />
@@ -88,10 +97,14 @@ const ContactComponent = () => {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormControl>
-                    <input
-                    className=" w-full outline-none border-b-2 border-b-[#D3E1E0]"
+                 <FormControl>
+                    <div className="flex gap-2 items-center bg-slate-50 p-2 rounded-md w-full">
+                    <MdOutlinePhone size={20} className="text-slate-600"/>
+                  <input
+                    className="  w-full outline-none   bg-transparent 
+                     px-4 rounded-md  hover:border-slate-800 duration-500"
                     placeholder="Téléphone" {...field} />
+                    </div>
                   </FormControl>
                 
                   <FormMessage />
@@ -103,39 +116,47 @@ const ContactComponent = () => {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormControl>
-                    <textarea placeholder="Nous sommes à votre écoutes, ecrivez nous" {...field}  
-                    className="resize-none border-b-2  border-b-[#D3E1E0] w-full outline-none  "/>
+                 
+                 <FormControl>
+                    <div className="flex gap-2   bg-slate-50 p-2 rounded-md w-full">
+                    <FaPen size={20} className="text-slate-600"/>
+                  <textarea rows={4}
+                    className="  w-full outline-none resize-none   bg-transparent 
+                     px-4 rounded-md  hover:border-slate-800 duration-500"
+                    placeholder="Inscrire votre message, où appelez nous directement" {...field} />
+                    </div>
                   </FormControl>
              
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <div className="flex w-full ">
-            <Button className="bg-[#88CBCE] gapa-4 flex items-cente
-            r justify-center rounded-full px-12 py-6 font-semibold shadow-lg" type="submit"
-            ><FaRegPaperPlane className="mr-2" size={20}/>envoyer</Button>
+            <div className="flex w-full justify-center ">
+            <button className="w-fit" type="submit"
+            ><IoPaperPlane
+            color="" className=" text-slate-700 duration-500 hover:text-[#88CBCE]" size={30}/></button>
             </div>
-            <div className="flex flex-col w-full font-light text-slate-600  text-lg
+            <div className="flex hidden flex-col w-full font-light text-slate-600  text-lg
              h-fit gap-4  ">
            
-                <div className="flex gap-4 w-full items-center lg:justify-center  ">
-                    <IoLocationSharp size={30} color="#B1442C"/>
-                <p className="w-fit lg:w-full  text-base font-light">785 15h Street, Office 478
+            
+                <div className="flex flex-col w-full gap-4 ">
+                <div className="flex gap-4 w-full items-center ">
+                    <IoMail size={25} color="#88CBCE"/>
+                <p className="font  text-base">email@gmail.com</p>
+                </div>
+                <div className="flex gap-4 w-full items-center ">
+                    <IoPhonePortrait size={25} color="#88CBCE"/>
+                <p className="font-light text-base">+1 840 841 25 69</p>
+                </div>
+                
+                </div>
+                <div className="flex gap-4 w-full   ">
+                    <IoLocationSharp size={30} color="#88CBCE"/>
+                <p className=" text-base font-light w-1/2 ">785 15h Street, Office 478
 Berlin, De 81566</p>
 
 
-                </div>
-                <div className="flex flex-col lg:flex-row w-full gap-4 ">
-                <div className="flex gap-4 w-full items-center ">
-                    <IoMail size={25} color="#B1442C"/>
-                <p className="font font-light text-base">email@gmail.com</p>
-                </div>
-                <div className="flex gap-4 w-full items-center ">
-                    <IoPhonePortrait size={25} color="#B1442C"/>
-                <p className="font-light text-base">+1 840 841 25 69</p>
-                </div>
                 </div>
           </div>
           </form>

@@ -35,7 +35,7 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
     })
   return (
    <section className=" h-[500px] bg-gradient-to-b pt-10
-from-[#F0F9F9] to-slate-white w-screen overflow-hidden
+from-[#F0F9F9] to-[#F0F9F9]  w-screen overflow-hidden
     flex flex-col gap-2 justify-center items-center">
 <p className="font-semibold text-3xl leading-relaxed  text-center lg:w-fit lg:text-5xl tracking-tighter">Ils nous ont fait confiance</p>
 <div className=" w-screen pt-8 overflow-x-scroll h-full">
