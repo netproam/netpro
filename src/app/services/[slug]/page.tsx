@@ -19,7 +19,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
 useMotionValueEvent(scrollYProgress,"change",(e)=>{
     if(isTabletOrMobile===false)
     {
-       if((e<0.3)&&refForm.current)
+       if((e<0.1)&&refForm.current)
        {
         refForm.current.style.position="absolute"
         refForm.current.style.top="0px"
@@ -29,9 +29,9 @@ useMotionValueEvent(scrollYProgress,"change",(e)=>{
        }
        
 
-else if((e>=0.3&&e<0.7)&&refForm.current){
+else if((e>=0.15 &&e<0.7)&&refForm.current){
     refForm.current.style.position="fixed"
- 
+    refForm.current.style.top="100px"
 
 
 }

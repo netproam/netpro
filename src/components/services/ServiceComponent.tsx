@@ -2,6 +2,7 @@
 import {motion,useAnimate} from "framer-motion"
 import { useId, useState } from "react"
 import {FaArrowRight} from "react-icons/fa"
+import { useMediaQuery } from "react-responsive"
 import {ReactNode} from "react"
 interface ServiceComponentProps{
     title:string
@@ -15,6 +16,8 @@ const ServiceComponent = ({title,children}:ServiceComponentProps) => {
     const idHmtl=useId()
     console.log(idHmtl)
     const [isTouched,setIsTouched]=useState(false)
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 804px)' })
+console.log(isTabletOrMobile)
   return (
    <motion.div  className="flex p-4 flex-col gap-4 cursor-pointer "
   onHoverStart={async()=>{
@@ -47,7 +50,7 @@ else {
 }}
 
   >
-    <div  className="text-[#88CBCE]" id={"childrenHolder"}>
+    <div  className={`text-[#88CBCE] w-16 lg:w-20 `} id={"childrenHolder"}>
 {children}
 </div>
 <h2 className="font-semibold w-3/5">{title}</h2>

@@ -17,13 +17,13 @@ const ServicesSection = () => {
     et la propreté professionnelle avec nos services de nettoyage commercial.`}]
 
     const allServices=[{
-       titre:"Nettoyages en profondeur",svg:<YourSvg />
+       titre:"Nettoyages en profondeur",svg:<YourSvg style={{width:"100%",heigth:"100%"}}  />
     },{
-        titre:"Entretien",description:"Désinfection",svg:<DesinfectSVG/>
+        titre:"Entretien",description:"Désinfection",svg:<DesinfectSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:"Nettoyage générale",description:"the best thing over",svg:<GlovesSVG/>
+        titre:"Nettoyage générale",description:"the best thing over",svg:<GlovesSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:"Debarrassage",description:"the best thing over",svg:<MovinSvg/>
+        titre:"Debarrassage",description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
     }]
     const allDataDisplay=allServices.map((e)=>{
        return <div 

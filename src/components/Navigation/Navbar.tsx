@@ -30,10 +30,14 @@ const Navbar = () => {
     const refToggle =useRef<HTMLDivElement>(null)
 
     useMotionValueEvent(scrollYProgress,"change",(e)=>{
-        if(refNav.current&&refAbout.current&&refContact.current&&refServices.current&&refToggle.current)
+        if(path==="/"&&refNav.current&&refAbout.current&&refContact.current&&refServices.current&&refToggle.current)
         {
         if(e>0.15)
-        {
+        {            
+            
+            
+
+
             console.log(e)
             refNav.current.style.backgroundColor="#F0F9F9"
 
@@ -44,6 +48,10 @@ const Navbar = () => {
             refContact.current.style.color="black"
         }
         else {
+
+
+
+
             refAbout.current.style.color="white"
             refServices.current.style.color="white"
             refContact.current.style.color="white"
@@ -57,10 +65,10 @@ const Navbar = () => {
   return (
    <nav 
   ref={refNav}
-   className={`  w-screen   relative  bg-opacity-50    justify-between 
+   className={`  w-screen      bg-opacity-50    justify-between 
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
-     ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
+    text-slate-100 ${path==="/"? "fixed":"relative"}`}>
 <div
 onClick={()=>{
     router.push("/")
