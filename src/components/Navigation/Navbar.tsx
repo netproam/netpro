@@ -32,7 +32,7 @@ const Navbar = () => {
     useMotionValueEvent(scrollYProgress,"change",(e)=>{
         if(path==="/"&&refNav.current&&refAbout.current&&refContact.current&&refServices.current&&refToggle.current)
         {
-        if(e>0.15)
+        if(e>0.1)
         {            
             
             
@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
    <nav 
   ref={refNav}
-   className={`   w-screen  justify-between     bg-opacity-50     
+   className={`   w-screen  justify-between   lg:justify-end   bg-opacity-50     
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
     text-slate-100 ${path==="/"? "fixed text-slate-100":"fixed text-slate-800"}`}>
@@ -73,17 +73,17 @@ const Navbar = () => {
 onClick={()=>{
     router.push("/")
 }}
-className=" bg-transparent cursor-pointer left-0 w-fit ">
+className=" bg-transparent cursor-pointer left-0 w-fit mr-auto ">
 
 <img  className=""
 width={70}
 src="/logo.png"/>
 </div>
 
-<div className={`w-full justify-end relative z-50 items-center hidden lg:flex
+<div className={` justify-end relative z-50 items-center hidden lg:flex
 ${path==="/"? "text-slate-800 " : "text-slate-900 bg-transparent"}
 `}>
-<NavigationMenu className={`gap-10 hidden lg:flex z-50 brightness-150  
+<NavigationMenu className={`gap-10 hidden  lg:flex z-50 brightness-150  
 text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
 
 
@@ -131,9 +131,9 @@ text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" :
 
 </NavigationMenu>
 </div>
-<div className="flex gap-4 justify-center items-center lg:w-6/12 ">
+<div className="flex gap-4 justify-center items-center lg:w-fit ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full bg-[#7abebe]  gap-2  items-center justify-center
+rounded-full bg-[#7abebe] w-fit  gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
@@ -163,7 +163,7 @@ color="rgb(248,250,252)"/>
 
 <div onClick={()=>{
     setIsOpen(true)
-}} className={`lg:hidden cursor-pointer ${path!=="/"&&"text-slate-600"}}`} ref={refToggle}>
+}} className={`lg:hidden cursor-pointer ${"text-slate-600"}}`} ref={refToggle}>
 <IoMenu size={30} />
 </div>
 </div>

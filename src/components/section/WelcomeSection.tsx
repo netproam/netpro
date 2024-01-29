@@ -192,7 +192,7 @@ src={allImageData[isChangingImage].isDesktop}/>
   <section className="flex flex-col relative z-20 gap-0 text-center ">
   {allCompnent[isChangingImage]}
   </section>
-  <div className="grid grid-cols-3 z-50 place-items-center absolute bottom-0 mb-20 lg:mb-8 w-[3/5] gap-20">
+  <div className="grid grid-cols-3 z-20 place-items-center absolute bottom-0 mb-20 lg:mb-8 w-[3/5] gap-20">
     <div
     onClick={()=>{
         relunchInterval(0)

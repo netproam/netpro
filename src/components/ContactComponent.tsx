@@ -50,7 +50,7 @@ const ContactComponent = () => {
     return (
         <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white 
-           shadow-xl rounded-xl py-8 px-10 ">
+           shadow-xl rounded-xl py-8 px-4 lg:px-8 ">
                         <h2 className="text-2xl  pt-4  hidden lg:flex
                          font-stolzl leading-relaxed">Contactez nous</h2>
  <div className=" w-full  gap-4 flex flex-col   py-10 lg:hidden">
@@ -63,8 +63,8 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                    <div className="flex gap-2 items-center bg-slate-50 p-2 rounded-md w-full">
-                    <FaUser size={20} className="text-slate-600"/>
+                    <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                    <FaUser size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -82,8 +82,8 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <div className="flex gap-2 items-center bg-slate-50 p-2 rounded-md w-full">
-                    <IoMail size={20} className="text-slate-600"/>
+                  <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                    <IoMail size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -101,8 +101,8 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                    <div className="flex gap-2 items-center bg-slate-50 p-2 rounded-md w-full">
-                    <MdOutlinePhone size={20} className="text-slate-600"/>
+                 <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                    <MdOutlinePhone size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -121,8 +121,8 @@ const ContactComponent = () => {
                 <FormItem>
                  
                  <FormControl>
-                    <div className="flex gap-2   bg-slate-50 p-2 rounded-md w-full">
-                    <FaPen size={20} className="text-slate-600"/>
+                 <div className="flex gap-2 justify-center  bg-slate-50 p-4 rounded-md w-full">
+                    <FaPen size={15} className="text-slate-600"/>
                   <textarea rows={4}
                     className="  w-full outline-none resize-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"

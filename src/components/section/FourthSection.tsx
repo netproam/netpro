@@ -45,7 +45,7 @@ else {
     <div className="w-full flex justify-end p-4">
 <div className="w-fit lg:hidden 
  self-end lg:w-full gap-4 lg:gap-0 flex flex-col  lg:self-start relative ">
-    <motion.p className="font-semibold text-3xl lg:text-5xl  lg:hidden tracking-tighter w-fit relative "><motion.span>{rounded}</motion.span>
+    <motion.p className="font-semibold text-4xl lg:text-5xl  lg:hidden tracking-tighter w-fit relative "><motion.span>{rounded}</motion.span>
     <motion.span className="-inset-y-4 absolute">+</motion.span>
     </motion.p>
 
@@ -58,7 +58,7 @@ else {
     <div className="w-full flex justify-end">
     <div className="w-fit
     lg:w-full gap-4 lg:gap-0 flex flex-col  lg:self-start relative ">
-    <motion.p className="font-semibold text-3xl lg:text-5xl  lg:hidden tracking-tighter w-fit "><motion.span>{roundedEmpl}</motion.span>
+    <motion.p className="font-semibold text-4xl lg:text-5xl  lg:hidden tracking-tighter w-fit "><motion.span>{roundedEmpl}</motion.span>
     
     </motion.p>
 
@@ -79,6 +79,8 @@ else {
 </div>
 </div>
 </div>
+
+
 
 <div className="w-full px-10 flex flex-row justify-center items-center lg:flex-col gap-0 lg:gap-10 hidden lg:flex">
 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 w-full  justify-end">
