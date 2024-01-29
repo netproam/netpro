@@ -9,32 +9,36 @@ import DesinfectSVG from "../../../public/SVG/sanitaze.svg"
 import GlovesSVG from "../../../public/SVG/cleaning-gloves.svg"
 import OfficeSVG from "../../../public/SVG/office.svg"
 import CoproprieteSVG from "../../../public/SVG/copropriete.svg"
+import HouseMoveSVG from "../../../public/SVG/housemoving.svg"
+import ParkingSVG from "../../../public/SVG/parking.svg"
+import StoreSVG from "../../../public/SVG/commerce.svg"
+import DecapSVG from "../../../public/SVG/decapage.svg"
+import CommunSVG from "../../../public/SVG/partiecommune.svg"
 
 import ServiceComponent from "../services/ServiceComponent";
 
 const ServicesSection = () => {
     const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Ce que nous offrons',
-    description:`Notre équipe dédiée met en œuvre des solutions personnalisées pour 
-    répondre aux besoins uniques de votre entreprise, assurant un environnement impeccable. Choisissez la tranquillité d'esprit
-    et la propreté professionnelle avec nos services de nettoyage commercial.`}]
+    description:`Nous sommes connus pour nos services de qualité car nous allons dans chaque recoin et sommes dans la précision.
+    `}]
 
     const allServices=[{
-       titre:`Parties communes d’immeubles`,svg:<YourSvg style={{width:"100%",heigth:"100%"}}  />
+       titre:`Parties communes`,svg:<CommunSVG style={{width:"100%",heigth:"100%"}}  />
     },{
         titre:`Copropriétés`,description:"Désinfection",svg:<CoproprieteSVG style={{width:"100%",heigth:"100%"}}/>
     },{
         titre:`⁠⁠Bureaux`,description:"the best thing over",svg:<OfficeSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:`Commerce`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`Commerce`,description:"the best thing over",svg:<StoreSVG style={{width:"100%",heigth:"100%"}}/>
     },{
-        titre:`Parking`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`Parking`,description:"the best thing over",svg:<ParkingSVG style={{width:"100%",heigth:"100%"}}/>
     },
     {
-        titre:`Avant ou après déménagement `,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`Déménagement `,description:"the best thing over",svg:<HouseMoveSVG style={{width:"100%",heigth:"100%"}}/>
     },
 
     {
-        titre:`⁠⁠Décapage des sols`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`⁠⁠Décapage des sols`,description:"the best thing over",svg:<DecapSVG style={{width:"100%",heigth:"100%"}}/>
     },
     {
         titre:`Débarras`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>

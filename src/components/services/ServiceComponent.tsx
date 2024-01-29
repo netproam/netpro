@@ -50,7 +50,7 @@ else {
 
   >
     <div  className={`text-[#88CBCE] lg:justify-start 
-     w-20 lg:w-fit  flex items-center justify-center `} id={"childrenHolder"}>
+     w-14 lg:w-24  flex items-center justify-center `} id={"childrenHolder"}>
 {children}
 </div>
 <h2 className="font-semibold text-sm   self-center  w-2/3 ">{title}</h2>
