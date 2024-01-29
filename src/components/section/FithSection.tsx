@@ -16,7 +16,7 @@ const FifthSection = () => {
             <h3 className="tracking-tighter text-2xl  lg:text-5xl font-semibold">Les tâches compliquées deviennent facile</h3>
             <p className="tracking-wide">{`Avec nous, tout est dans l'ordre : du nettoyage minutieux aux détails méticuleux, nous assurons un environnement impeccable. Notre engagement envers l'excellence fait de chaque espace un reflet de propreté et d'organisation, créant ainsi une atmosphère harmonieuse pour tous.`}</p>
         </div>
-        <div className=" px-8 lg:px-0 ">
+        <div className=" p-2 lg:px-0 ">
         <img className="object-cover rounded-lg "
             src={
                 `https://img.freepik.com/photos-gratuite/plein-coup-homme-poussant-bouton-ascenseur_23-2149345535.jpg?w=1800&t=st=1705798707~exp=1705799307~hmac=dc88fdc5de25317284826a26180c27d5d1994703856501650956dddf178a50f5`

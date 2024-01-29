@@ -50,7 +50,7 @@ const ContactComponent = () => {
         <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white 
            shadow-xl rounded-xl py-8 px-10 ">
-                        <h2 className="text-lg  pt-4 
+                        <h2 className="text-2xl  pt-4 
                          font-stolzl leading-relaxed">Contactez nous</h2>
 
             <FormField

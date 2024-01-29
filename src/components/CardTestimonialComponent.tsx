@@ -55,7 +55,7 @@ onHoverEnd={()=>{
             
  className="flex flex-col  justify-center 
      items-center gap-4
-   h-fit relative
+   h-[200px] relative
      
     border-none rounded-2xl">
         <motion.div 
@@ -68,7 +68,7 @@ onHoverEnd={()=>{
         text-black 
         shadow-md   select-none
         items-center  gap-4 rounded-xl  
-          p-10 lg:min-h-[220px] w-[250px]  lg:w-[320px]
+          p-10  w-[250px]  lg:w-[320px]
        ">
             <motion.div className=" text-[#A42503] f "
             id={"momo"}
@@ -85,7 +85,7 @@ onHoverEnd={()=>{
 <div className="bg-slate-800 rounded-full h-20 w-20 relative">
     <img src={url} className="object-cover h-20 w-20 rounded-full absolute "/>
 </div>
-<p id="testname" className="font-semibold text-sm">{name}</p>
+<p id="testname" className="font-semibold text-xs lg:text-sm">{name}</p>
 
 </div>
         </motion.div>
