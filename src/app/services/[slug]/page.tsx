@@ -23,7 +23,7 @@ useMotionValueEvent(scrollYProgress,"change",(e)=>{
        {
         refForm.current.style.position="absolute"
         refForm.current.style.top="0px"
-        refForm.current.style.right="0px"
+        refForm.current.style.right="20px"
 
         refForm.current.style.marginTop="0px"
 
@@ -34,7 +34,7 @@ else if((e>=0.15 &&e<0.8)&&refForm.current){
     refForm.current.style.position="fixed"
     refForm.current.style.top="0px"
     refForm.current.style.margin="0px"
-    refForm.current.style.right="0px"
+    refForm.current.style.right="20px"
 
    
 
@@ -45,11 +45,11 @@ else if((e>=0.15 &&e<0.8)&&refForm.current){
         
 
 
-        refForm.current.style.position="relative"
+        refForm.current.style.position="absolute"
         refForm.current.style.top=""
         refForm.current.style.marginTop="auto"
 
-        refForm.current.style.right="0px"
+        refForm.current.style.right="20px"
         refForm.current.style.bottom="0px"
 
 
@@ -125,7 +125,8 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     </div>
     <motion.div
          ref={refForm}
-    className=" relative z-50  lg:p-8 bg-transparent    right-0   lg:w-[500px]   h-fit">
+    className=" flex z-50 relative lg:absolute lg:p-2   lg:right-[20px]
+     lg:w-[400px]   h-fit">
 
     <ContactComponent/>
 
