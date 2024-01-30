@@ -19,7 +19,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
 useMotionValueEvent(scrollYProgress,"change",(e)=>{
     if(isTabletOrMobile===false)
     {
-       if((e<0.1)&&refForm.current)
+       if((e<0.2)&&refForm.current)
        {
         refForm.current.style.position="absolute"
         refForm.current.style.top="0px"
@@ -30,7 +30,7 @@ useMotionValueEvent(scrollYProgress,"change",(e)=>{
        }
        
 
-else if((e>=0.15 &&e<0.8)&&refForm.current){
+else if((e>=0.2 &&e<0.8)&&refForm.current){
     refForm.current.style.position="fixed"
     refForm.current.style.top="0px"
     refForm.current.style.margin="0px"
@@ -126,7 +126,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     <motion.div
          ref={refForm}
     className=" flex z-50 relative lg:absolute lg:p-2   lg:right-[20px]
-     lg:w-[400px]   h-fit">
+     lg:w-[450px]   h-fit">
 
     <ContactComponent/>
 
