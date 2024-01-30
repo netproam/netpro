@@ -32,8 +32,8 @@ useMotionValueEvent(scrollYProgress,"change",(e)=>{
 
 else if((e>=0.15 &&e<0.7)&&refForm.current){
     refForm.current.style.position="fixed"
-    refForm.current.style.top="50px"
-    refForm.current.style.marginTop="0px"
+    refForm.current.style.top="0px"
+    refForm.current.style.margin="0px"
 
 
 
