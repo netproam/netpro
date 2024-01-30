@@ -25,6 +25,7 @@ useMotionValueEvent(scrollYProgress,"change",(e)=>{
         refForm.current.style.top="0px"
         refForm.current.style.right="0px"
 
+        refForm.current.style.marginTop="0px"
 
        }
        
@@ -39,8 +40,9 @@ else if((e>=0.15 &&e<0.7)&&refForm.current){
         
 
 
-        refForm.current.style.position="absolute"
+        refForm.current.style.position="relative"
         refForm.current.style.top=""
+        refForm.current.style.marginTop="auto"
 
         refForm.current.style.right="0px"
         refForm.current.style.bottom="0px"
@@ -52,7 +54,7 @@ else if((e>=0.15 &&e<0.7)&&refForm.current){
     })
   return (
     <main 
-    className="flex  flex-col     w-screen bg-[#F0F9F9] overscroll-auto overflow-scroll  ">
+    className="flex  flex-col     w-full bg-[#F0F9F9]   ">
         <div className="flex flex-col w-full items-center gap-4 py-10">
         <h2 className=" text-4xl tracking-tighter lg:text-6xl font-semibold text-center  h-fit relative z-50">{params.slug==="debaras"? "Débarras" : "Entretien ménagés"}</h2>
         <IoIosArrowDown size={30}/>
@@ -60,13 +62,13 @@ else if((e>=0.15 &&e<0.7)&&refForm.current){
 
      <section 
 
-     className="w-screen flex flex-col lg:flex-row overflow-scroll relative">  
-<div className="flex  relative  pt-10 w-full   bg-[#F0F9F9] overflow-scroll
+     className="w-screen flex flex-col lg:flex-row  relative">  
+<div className="flex  relative  pt-10  w-2/3  bg-[#F0F9F9] 
   px-10   ">
 
 
-    <section className=" lg:w-2/3  
-     overflow-scroll  overscroll-auto scrollbar-hide gap-20  flex flex-col bg-[#F0F9F9]   
+    <section className=" 
+   gap-20  flex flex-col bg-[#F0F9F9]   
       ">
 <div className="h-full  flex flex-col gap-10 text-[#62656E] bg-[#F0F9F9] overscroll-auto ">
 <p>auris eu nisi eget nisi imperdiet vestibulum. Nunc sodales vehicula risus. Suspendisse id mauris sodales, blandit tortor eu, sodales justo. Morbi tincidunt, ante vel suscipit volutpat, turpis enim volutpSectetur adipiscing elit, sed do eiusm onsectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore. Ut vel placerat eros, eu tincidunt velit. Consectetur adipiscing elit, adipiscing elit, sed do.
@@ -118,7 +120,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     </div>
     <motion.div
          ref={refForm}
-    className=" lg:absolute z-50 right-0 lg:p-8 bg-transparent     lg:w-1/3   h-fit">
+    className=" relative z-50 right-0 lg:p-8 bg-transparent     w-1/3   h-fit">
 
     <ContactComponent/>
 
