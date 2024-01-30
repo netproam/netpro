@@ -116,7 +116,7 @@ function relunchInterval(e:number)
   return (
   <section 
   ref={refWelcome}
-  className="w-screen  h-screen relative flex flex-col  items-center justify-center">
+  className="w-full  h-screen relative flex flex-col  items-center justify-center">
    
 {/**mobile */   }
 

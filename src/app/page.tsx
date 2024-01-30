@@ -10,7 +10,7 @@ import TestimonialSection from "@/components/section/TestimonialSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between  overflow-hidden  ">
+    <main className="flex min-h-screen flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
     <div>
