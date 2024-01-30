@@ -126,7 +126,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     <motion.div
          ref={refForm}
     className=" flex z-50 relative lg:absolute lg:p-2   lg:right-[20px]
-     lg:w-[450px]   h-fit">
+     lg:w-[400px]   h-fit">
 
     <ContactComponent/>
 
