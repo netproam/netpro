@@ -18,7 +18,7 @@ import CommunSVG from "../../../public/SVG/partiecommune.svg"
 import ServiceComponent from "../services/ServiceComponent";
 
 const ServicesSection = () => {
-    const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Découvrez notre large gamme de service',
+    const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Des services qui correspondent à vos besoins',
     description:`Nous sommes connus pour nos services de qualité car nous allons dans chaque recoin et sommes dans la précision.
     `}]
 
@@ -61,35 +61,38 @@ const ServicesSection = () => {
         </div>
     })
   return (
-   <section className="w-screen h-fit bg-[#F0F9F9] py-10 lg:py-20
-    flex flex-col justify-center items-center px-4 lg:px-10  gap-10 lg:gap-4  ">
+   <section className="w-screen h-fit bg-slate-50 py-10 lg:py-20
+    flex flex-col justify-center items-center px-4 lg:px-10  gap-10 lg:gap-20  ">
 
 <div className="flex flex-col lg:flex-row  w-full  justify-center items-center gap-10 lg:gap-0">
     <div className="flex text-sm flex-col w-full gap-4 justify-center ">
-    <h2 className="text-center lg:text-start text-4xl lg:w-4/5 
-     lg:text-4xl font-semibold  tracking-tighter">{allData[0].titre}</h2>
+    <h2 className="text-center lg:text-start text-4xl lg:w-[700px]
+     lg:text-5xl font-semibold  tracking-tighter">{allData[0].soustitre}</h2>
 
-    <h2 className="text-center lg:text-start text-xl lg:w-4/5 
+    <h2 className="text-center lg:text-start text-xl lg:w-3/5 
      lg:text-2xl  tracking-tighter">{allData[0].description}</h2>
     </div>
    
 </div>
 
 
-<div>
+<div className="flex flex-col lg:flex-row  divide-x-2 divide-slate-200  w-full gap-8 ">
 
-</div>
-<div className="flex flex-col   w-full gap-8">
-<h2 className=" font-semibold text-left self-center lg:self-start text-3xl">{`Nettoyages`}</h2>
 
-<div className=" grid grid-cols-2 lg:gap-10    w-screen lg:justify-center
+    <div className="flex flex-col w-full text-center gap-4 ">
+<h2 className=" font-semibold text-left self-center lg:self-center text-3xl">{`Nettoyages`}</h2>
+
+<div className=" grid grid-cols-2 lg:gap-2   place-items-center   lg:justify-center
 gap-2  divided-none lg:grid-cols-3  ">
 {allDataDisplay.slice(0,6)}
 </div>
-<h2 className=" relative  font-semibold text-3xl self-center lg:self-start">{`Débarras`}</h2>
-<div className=" grid grid-cols-2       w-screen lg:justify-center
+</div>
+<div className="flex flex-col  w-full gap-4 ">
+<h2 className=" relative  font-semibold text-3xl self-center lg:self-center">{`Débarras`}</h2>
+<div className=" grid grid-cols-2   lg:justify-center
 gap-2  lg:gap-0 divided-none lg:grid-cols-2 place-items-center ">
 {allDataDisplay.slice(6)}
+</div>
 </div>
 </div>
    </section>
