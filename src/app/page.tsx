@@ -19,7 +19,6 @@ export default function Home() {
     <div className="flex flex-col py-16 gap-8 bg-slate-50">
     <ThirdSection/>
     <FifthSection/>
-    <ThirdSection/>
     </div>
     <FourthSection/>
     <div className=" bg-[#F0F9F9] flex flex-col justify-center items-center ">
