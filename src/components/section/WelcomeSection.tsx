@@ -43,7 +43,7 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
   return (
   <section 
   ref={refWelcome}
-  className="w-full min-h-screen  overflow-hidden bg-[#F0F9F9] 
+  className="w-full h-screen  overflow-hidden bg-[#F0F9F9] 
     relative flex flex-col  items-center justify-center">
    
 {/**mobile */   }
@@ -52,13 +52,12 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
 <img src="/photo_welcome-min.jpeg" className="object-cover  w-full   brightness-50
     h-full   "/>
 </div>
-<div className="flex lg:hidden absolute w-screen h-screen bg-black overflow-hidden">
 
 
-</div>
-
-  <section className="flex flex-col lg:flex-row  z-20 gap-0 text-left  items-center justify-center w-full h-full ">
-    <div className="flex flex-col w-full pl-10">
+  <section className="flex flex-col lg:flex-row  pt-20 lg:pt-10
+  
+  z-20 gap-0 text-left  items-center justify-center w-full h-full ">
+    <div className="flex  flex-col w-full lg:pl-10 h-full items-center justify-center">
     <div 
     key={allText[0].id}
     className="flex text-left flex-col 
@@ -74,6 +73,11 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
     className="text-slate-100 font-noto text-2xl  lg:w-[600px]  text-left  lg:text-4xl 
    leading-relaxed   lg:leading-tight 
     font-semibold tracking-tighter">{allText[0].title}</motion.h3>
+        <motion.h3 key={allText[0].id+"title"}
+    animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
+    className="text-slate-100 font-noto text-xl  lg:w-[600px]  text-left  lg:text-2xl 
+   leading-relaxed   lg:leading-tight 
+    font-semibold tracking-tighter">{allText[0].title}</motion.h3>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
 
@@ -84,14 +88,15 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
     </motion.div> */}
     </div>
   </div>
-  <div className=" w-full flex justify-center w-full  flex-col h-full items-center gap-2 ">
+  <div className=" w-full flex justify-center 
+    flex-col h-full items-center gap-2 ">
    
     {/* <div className="rounded-full gap-4  items-center justify-center bg-blue-200 z-20 relative
      text-slate-100 flex flex-col p-10 w-[300px] h-[300px] border-2 border-slate-100">
             <Button> <Link href={'/contact'}>Obtenir une estimation gratuite </Link></Button>
     </div> */}
-    <div className="  w-[300px] h-[300px]  z-40 flex 
-      relative  lg:bg-blue-400 lg:rounded-full items-center justify-center">
+    <div className=" w-fit h-fit  my-auto   lg:w-[300px] lg:h-[300px]  z-40 flex 
+      relative  lg:bg-blue-50 lg:rounded-full items-center justify-center">
     <Button className="w-fit bg-blue-100 text-slate-800">
         <Link href={'/contact'}>Estimation gratuite</Link>
     </Button>
