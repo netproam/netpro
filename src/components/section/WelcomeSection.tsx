@@ -26,7 +26,7 @@ console.log(isInterValId,isInView)
 const allText=[{
 id:"idTest",
 firstTitle:"L'entretien réinventer",
-title:`Net pro le choix de la qualité
+title:`NET PRO le choix de la qualité
 `,
 sousDescription:`car chaque entreprise à ses spécificités, nous vous offrons des services sur mesures, afin
 que vous n'ayez à payer que pour ceux que vous auriez besoin`}
@@ -60,7 +60,7 @@ className="w-full h-full absolute  bg-transparent     ">
 
 src="/photo_welcome-min.jpeg" 
 
-className="object-cover bg-transparent brightness-[65%]  w-full  backdrop-blur-lg
+className="object-cover bg-transparent brightness-50  w-full  backdrop-blur-lg
     h-full   "/>
 </div>
 
@@ -71,7 +71,7 @@ className="object-cover bg-transparent brightness-[65%]  w-full  backdrop-blur-l
     <div className="flex  flex-col w-full lg:pl-10 h-full items-center justify-center">
     <div 
     key={allText[0].id}
-    className="flex text-left flex-col 
+    className="flex text-left flex-col   brightness-95
      lg:text-left  lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
           viewport={{once:true}}
@@ -85,7 +85,7 @@ className="object-cover bg-transparent brightness-[65%]  w-full  backdrop-blur-l
 
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-100 font-noto text-3xl font-stolzl  lg:w-[600px]  text-left  lg:text-4xl 
+    className="text-slate-100 font-noto text-4xl font-stolzl  lg:w-[600px]  text-left  lg:text-4xl 
    leading-relaxed   lg:leading-tight 
     font-semibold tracking-tighter">{allText[0].title}</motion.h3>
         <motion.p
@@ -93,7 +93,7 @@ className="object-cover bg-transparent brightness-[65%]  w-full  backdrop-blur-l
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-300 leading-relaxed font-noto   lg:w-[600px]  text-left  lg:text-2xl 
+    className="text-slate-200 leading-relaxed font-noto   lg:w-[600px]  text-left  lg:text-2xl 
     font-thin font-stolzl text-base  lg:leading-tight 
      tracking-tighter">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
@@ -115,7 +115,7 @@ className="object-cover bg-transparent brightness-[65%]  w-full  backdrop-blur-l
     </div> */}
     <div className=" w-fit h-fit  my-auto   lg:w-[300px] lg:h-[300px]  z-40 flex 
       relative  lg:bg-blue-50 lg:rounded-full items-center justify-center">
-    <Button className="w-fit bg-blue-100 text-slate-800">
+    <Button className="w-fit bg-[#7abebe] text-slate-200 font-semibold">
         <Link href={'/contact'}>Estimation gratuite</Link>
     </Button>
     </div>
