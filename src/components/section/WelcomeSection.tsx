@@ -23,11 +23,16 @@ const refWelcome=useRef(null)
 const isInView=useInView(refWelcome,{amount:0.5})
 
 console.log(isInterValId,isInView)
-const allText=[{title:`Entretien et nettoyage de bureaux et locaux professionnels`,
+const allText=[{
 id:"idTest",
-sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
+firstTitle:"L'entretien réinventer",
+title:`Net pro le choix de la qualité
+`,
+sousDescription:`car chaque entreprise à ses spécificités, nous vous offrons des services sur mesures, afin
+que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 ,{
-    title:`Entretien et nettoyage de parties communes`,
+    title:`Net pro vous offre une collection de services qui seront s'adapter à vos besoins,
+    car chaque entreprise à ses spécificités`,
     id:"idtest2b",
     sousDescription:`COPROPRIÉTÉS `
 },{
@@ -43,13 +48,19 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
   return (
   <section 
   ref={refWelcome}
-  className="w-full h-screen  overflow-hidden bg-[#F0F9F9] 
+  className="w-full h-screen  overflow-hidden
     relative flex flex-col  items-center justify-center">
    
 {/**mobile */   }
 
-<div className="w-full h-full absolute z-10 ">
-<img src="/photo_welcome-min.jpeg" className="object-cover  w-full   brightness-50
+<div
+
+className="w-full h-full absolute  bg-transparent     ">
+<img 
+
+src="/photo_welcome-min.jpeg" 
+
+className="object-cover bg-transparent brightness-[65%]  w-full  backdrop-blur-lg
     h-full   "/>
 </div>
 
@@ -63,21 +74,28 @@ sousDescription:`BUREAUX ET LOCAUX PROFESSIONNELS`}
     className="flex text-left flex-col 
      lg:text-left  lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
+          viewport={{once:true}}
          animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
      
               key={allText[0].id+"subtitle"}
           className="lg:flex    w-fit text-slate-200
-           font-semibold ">{allText[0].sousDescription}</motion.h4>
-    <motion.h3 key={allText[0].id+"title"}
+           font-semibold ">{allText[0].firstTitle}</motion.h4>
+    <motion.h3
+              viewport={{once:true}}
+
+    key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-100 font-noto text-2xl  lg:w-[600px]  text-left  lg:text-4xl 
+    className="text-slate-100 font-noto text-3xl font-stolzl  lg:w-[600px]  text-left  lg:text-4xl 
    leading-relaxed   lg:leading-tight 
     font-semibold tracking-tighter">{allText[0].title}</motion.h3>
-        <motion.h3 key={allText[0].id+"title"}
+        <motion.p
+                  viewport={{once:true}}
+
+        key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-100 font-noto text-xl  lg:w-[600px]  text-left  lg:text-2xl 
-   leading-relaxed   lg:leading-tight 
-    font-semibold tracking-tighter">{allText[0].title}</motion.h3>
+    className="text-slate-300 leading-relaxed font-noto   lg:w-[600px]  text-left  lg:text-2xl 
+    font-thin font-stolzl text-base  lg:leading-tight 
+     tracking-tighter">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
 

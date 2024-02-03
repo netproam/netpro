@@ -68,7 +68,7 @@ const Navbar = () => {
    className={`   w-full  justify-between   lg:justify-end   bg-opacity-50     
    px-8 py-10 top-0 z-50 flex  h-16
     text-current  gap-10 items-center 
-    text-slate-100 ${path==="/"? "fixed text-slate-100":"fixed lg:relative text-slate-800"}`}>
+   ${path==="/"? "fixed text-slate-100":"fixed lg:relative text-slate-800"}`}>
 <div
 onClick={()=>{
     router.push("/")
