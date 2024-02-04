@@ -7,8 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NET Pros",
-  description: "la référence en e ntiretien menager en ile de france",
+  title: "NET'PROS",
+  description: "la référence en entiretien ménager en ile de france",
 };
 
 export default function RootLayout({

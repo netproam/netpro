@@ -7,10 +7,9 @@ const FooterSection = () => {
 <h4 className="font-semibold text-slate-50 text-lg w-4/5 lg:w-fit">Bureau</h4>
 <div className="flex flex-col justify-between h-full text-sm lg:text-md gap-4 w-4/5 lg:w-full">
 
-<p className="w-4/5 "> 785 15h Street, Office 478
-Berlin, De 81566</p>
-<p>info@example.com</p>
-<p className="font-bold">+1 800 123 45 67</p>
+<p className="w-4/5 ">14 Avenue Lhomond - 93370 - Montfermeil</p>
+<p>sasu.netpros@gmail.com</p>
+<p className="font-bold">+33 651 605 207</p>
 </div>
 </div>
 <div className="flex flex-col text-slate-400 gap-4 
