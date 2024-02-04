@@ -133,16 +133,16 @@ text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" :
 </div>
 <div className="flex gap-4 justify-center items-center lg:w-fit ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full bg-[#7abebe] w-fit  gap-2  items-center justify-center
+rounded-full bg-amber-300 w-fit  gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
     href="tel:+338408412569">
 <FaPhoneAlt
 size={15}
-color="rgb(248,250,252)"/>
+className="text-slate-800"/>
 </a>
-<p className="font-semibold text-sm text-slate-100 hidden  
+<p className="font-semibold text-sm text-slate-800 hidden  
 lg:flex w-fit h-fit  whitespace-nowrap " >+33 840 841 25 69</p>
 </div>
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md

@@ -7,6 +7,7 @@ import { v4 } from "uuid"
 import {useMediaQuery} from "react-responsive"
 import { isMobile } from "react-device-detect"
 import Link from "next/link"
+import { DialogEstimation } from "../Navigation/DialogEstimation"
 const WelcomeSection = () => {
 const [isChangingImage,setIsChangingImage]=useState(0)
 const [isInterValId,setIsIntervalId]=useState<NodeJS.Timeout>()
@@ -113,11 +114,14 @@ className="object-cover bg-transparent brightness-50  w-full  backdrop-blur-lg
      text-slate-100 flex flex-col p-10 w-[300px] h-[300px] border-2 border-slate-100">
             <Button> <Link href={'/contact'}>Obtenir une estimation gratuite </Link></Button>
     </div> */}
-    <div className=" w-fit h-fit  my-auto   lg:w-[300px] lg:h-[300px]  z-40 flex 
-      relative  lg:bg-blue-50 lg:rounded-full items-center justify-center">
-    <Button className="w-fit bg-[#7abebe] text-slate-200 font-semibold">
-        <Link href={'/contact'}>Estimation gratuite</Link>
-    </Button>
+    <div className=" w-fit h-fit  my-auto  lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
+     lg:w-[300px] lg:h-[300px]  z-40 flex 
+      relative  lg:rounded-full  items-center justify-center flex flex-col">
+  <div className="  bg-[#7abebe] p-2 px-4 rounded-full lg:h-[150px] lg:w-[150px] 
+  items-center justify-center flex
+  lg:bg-slate-50 w-full lg:bg-opacity-50 py-2 ">
+   <DialogEstimation />
+    </div>
     </div>
 
 
