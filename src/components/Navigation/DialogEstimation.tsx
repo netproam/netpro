@@ -16,13 +16,16 @@ import { Label } from "@/components/ui/label"
 import { useState } from "react"
 import ContactOnDialog from "../forms/ContactOnDialog"
 import EstimationForm from "../forms/EstimationForm"
-
-export function DialogEstimation() {
+interface DialogProps{
+    styleBtn:string
+}
+export function DialogEstimation({styleBtn}:DialogProps) {
     const [isChanging,setIsChanging]=useState(false)
   return (
     <Dialog >
       <DialogTrigger asChild>
-        <Button className="bg-transparent hover:bg-transparent text-current font-semibold text-sm" >Estimation gratuite</Button>
+        <Button className={`  text-slate-200 px-8 py-6 rounded-lg
+           font-semibold text-sm ${styleBtn}`} >Estimation gratuite</Button>
       </DialogTrigger>
       <DialogContent className="w-full h-full p-0 overflow-scroll ">
         <DialogHeader>

@@ -3,6 +3,8 @@ import { Button } from "../ui/button"
 import { TbPlayerPlayFilled } from "react-icons/tb";
 import { useEffect ,useRef} from "react";
 import {useMotionValue,useTransform,animate,motion,useInView}from "framer-motion"
+import EstimationForm from "../forms/EstimationForm";
+import { DialogEstimation } from "../Navigation/DialogEstimation";
 const FourthSection = () => {
 
     const count = useMotionValue(0)
@@ -43,7 +45,7 @@ else {
 {/**Version mobile */}
 <section className="w-full flex items-center justify-center lg:hidden  px-4 gap-4">
     <div className="w-full flex justify-end p-4">
-<div className="w-fit lg:hidden 
+<div className="w-fit lg:hidden  items-center
  self-end lg:w-full gap-4 lg:gap-0 flex flex-col  lg:self-start relative ">
     <motion.p className="font-semibold text-5xl  lg:hidden tracking-tighter w-fit relative "><motion.span>{rounded}</motion.span>
     <motion.span className="-inset-y-4 absolute">+</motion.span>
@@ -55,22 +57,24 @@ else {
 
     </div>
 
-    <div className="w-full flex justify-end">
-    <div className="w-fit
+    <div className="w-full flex justify-center  ">
+    <div className="w-full justify-center text-center  items-center
     lg:w-full gap-4 lg:gap-0 flex flex-col  lg:self-start relative ">
-    <motion.p className="font-semibold text-5xl  lg:hidden tracking-tighter w-fit "><motion.span>{roundedEmpl}</motion.span>
+    <motion.p className="font-semibold text-5xl
+    
+    lg:hidden tracking-tighter w-fit "><motion.span>{roundedEmpl}</motion.span>
     
     </motion.p>
 
         <h3 className="font-semibold text-lg text-start relative  ">{`Employés`}</h3>
-        <p className="">{`Compétant, discret à votre services`}</p>
+        <p className="">{`À votre services`}</p>
     </div>
     </div>
 
 
     </section>
 <div className="flex gap-10 pb-8  flex-col lg:flex-row  lg:gap-20 items-center  lg:py-0 lg:pt0 ">
-<Button className="bg-[#A42503] text-white text-md rounded-full  font-semibold py-8 px-6 shadow-lg">Nous contacter</Button>
+<DialogEstimation styleBtn="bg-[#A42503] hover:bg-[#A42503] text-slate-100"/>
 <div className="flex items-center gap-2">
     <div className="w-fit p-2 rounded-full border-2 border-slate-300">
         <TbPlayerPlayFilled size={20}/>

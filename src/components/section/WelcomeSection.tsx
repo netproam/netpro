@@ -122,7 +122,7 @@ className="object-cover bg-transparent brightness-50  w-full  backdrop-blur-lg
   lg:hover:text-slate-800 duration-150  rounded-full  lg:h-[200px] lg:w-[200px] 
   items-center justify-center flex
   lg:bg-slate-50 w-full lg:bg-opacity-20 py-2 ">
-   <DialogEstimation />
+   <DialogEstimation styleBtn="bg-transparent hover:bg-transparent  text-current" />
     </div>
     </div>
 

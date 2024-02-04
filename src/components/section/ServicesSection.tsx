@@ -82,7 +82,7 @@ const ServicesSection = () => {
     <div className="flex flex-col w-full text-center gap-4 ">
 <h2 className=" font-semibold text-left self-center lg:self-center text-3xl">{`Nettoyages`}</h2>
 
-<div className=" grid grid-cols-2 lg:gap-2   place-items-center   lg:justify-center
+<div className=" grid grid-cols-3 lg:gap-2   place-items-center   lg:justify-center
 gap-2  divided-none lg:grid-cols-3  ">
 {allDataDisplay.slice(0,6)}
 </div>
