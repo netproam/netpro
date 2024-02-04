@@ -80,8 +80,7 @@ const EstimationForm= () => {
                         <SelectLabel className="font-semibold pl-8  py-2">{`Débarras`}</SelectLabel>
                   <SelectItem value="décapage">{`Décapages des sols`}</SelectItem>
                   <SelectItem value="débarras">{`Débarras`}</SelectItem>
-                  <SelectItem value="débarras">{`Débarras`}</SelectItem>
-                  <SelectItem value="débarras">{`Débarras`}</SelectItem>
+         
 
                   </SelectGroup>
                 </SelectContent>
