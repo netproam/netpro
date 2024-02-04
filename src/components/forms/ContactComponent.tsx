@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import {MdOutlinePhone}from "react-icons/md"
-import { Textarea } from "./ui/textarea"
+import { Textarea } from "../ui/textarea"
 import {
   Form,
   FormControl,

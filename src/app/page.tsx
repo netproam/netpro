@@ -4,7 +4,7 @@ import WelcomeSection from "@/components/section/WelcomeSection";
 import ThirdSection from "@/components/section/ThirdSection";
 import Image from "next/image";
 import FourthSection from "@/components/section/FourthSection";
-import ContactSection from "@/components/section/ContactSection";
+import ContactSection from "../components/section/ContactSection";
 import FifthSection from "@/components/section/FithSection";
 import TestimonialSection from "@/components/section/TestimonialSection";
 
