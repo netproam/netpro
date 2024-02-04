@@ -104,13 +104,13 @@ const EstimationForm= () => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">Ile de France</SelectItem>
-                  <SelectItem value="m@google.com">Hauts-de-france</SelectItem>
-                  <SelectItem value="m@support.com">Normandie</SelectItem>
+                  <SelectItem value="Ile de france">Ile de France</SelectItem>
+                  <SelectItem value="Hauts-de-france">Hauts-de-france</SelectItem>
+                  <SelectItem value="Normandie">Normandie</SelectItem>
 
-                  <SelectItem value="m@support.com">Centre-Val de Loire</SelectItem>
-                  <SelectItem value="m@support.com">Bourgogne France-Comté</SelectItem>
-                  <SelectItem value="m@support.com">Grand Est</SelectItem>
+                  <SelectItem value="Centre Val de loire">Centre-Val de Loire</SelectItem>
+                  <SelectItem value="Bourgogne">Bourgogne France-Comté</SelectItem>
+                  <SelectItem value="Grand est">Grand Est</SelectItem>
 
 
                 </SelectContent>
@@ -133,9 +133,9 @@ const EstimationForm= () => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">50-200 m2</SelectItem>
-                  <SelectItem value="m@google.com">200-350 m2</SelectItem>
-                  <SelectItem value="m@support.com">{`Supérieur à 350 m2`}</SelectItem>
+                  <SelectItem value="50-200">50-200 m2</SelectItem>
+                  <SelectItem value="200-350">200-350 m2</SelectItem>
+                  <SelectItem value=">350">{`Supérieur à 350 m2`}</SelectItem>
                 </SelectContent>
               </Select>
           
