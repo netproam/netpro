@@ -48,7 +48,8 @@ const EstimationForm= () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-4 p-4 bg-white  w-full  flex flex-col
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full 
+           gap-4 p-4 bg-white  w-full  flex flex-col
            shadow-xl rounded-xl  ">
    
 
@@ -58,13 +59,14 @@ const EstimationForm= () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Service</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select 
+               onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Selectionner un service" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
+                <SelectContent className="overflow-y-auto">
                     <SelectGroup>
                         <SelectLabel className="font-semibold pl-8  py-2">Nettoyages</SelectLabel>
                   <SelectItem value="parties communes">Partie commune</SelectItem>
@@ -78,7 +80,9 @@ const EstimationForm= () => {
                         <SelectLabel className="font-semibold pl-8  py-2">{`Débarras`}</SelectLabel>
                   <SelectItem value="décapage">{`Décapages des sols`}</SelectItem>
                   <SelectItem value="débarras">{`Débarras`}</SelectItem>
-               
+                  <SelectItem value="débarras">{`Débarras`}</SelectItem>
+                  <SelectItem value="débarras">{`Débarras`}</SelectItem>
+
                   </SelectGroup>
                 </SelectContent>
               </Select>
