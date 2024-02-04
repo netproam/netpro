@@ -111,7 +111,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. S
      tet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
      </p>
-     <div className="rounded-lg h-[500px] w-[700px] self-center">
+     <div className="rounded-lg lg:h-[500px] lg:w-[700px] self-center">
         <img 
         className="rounded-lg object-cover"
         src="https://images.pexels.com/photos/5331118/pexels-photo-5331118.jpeg?auto=compress&cs=tinysrgb&w=800"/>

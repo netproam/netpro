@@ -49,7 +49,7 @@ const ContactComponent = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full gap-4 bg-white  w-full
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  bg-white p-4 gap-8  flex flex-col w-full
            shadow-xl rounded-xl  ">
                         <h2 className="text-2xl  pt-2  hidden lg:flex
                          font-stolzl leading-relaxed">Contactez nous</h2>

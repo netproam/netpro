@@ -22,7 +22,7 @@ export function DialogEstimation() {
   return (
     <Dialog >
       <DialogTrigger asChild>
-        <Button className="bg-transparent hover:bg-transparent text-current" >Estimation gratuite</Button>
+        <Button className="bg-transparent hover:bg-transparent text-current font-semibold text-sm" >Estimation gratuite</Button>
       </DialogTrigger>
       <DialogContent className="w-full h-full p-0 overflow-scroll ">
         <DialogHeader>
