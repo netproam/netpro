@@ -24,16 +24,16 @@ import { FaPaperPlane, FaPen, FaRegPaperPlane, FaUser } from "react-icons/fa"
 import { SelectLabel } from "@radix-ui/react-select"
 const formSchema = z.object({
  
-      email:z.string().min(1,{message:"services invalide"}),
-      size:z.string().min(1,{message:"services invalide"}),
-     region:z.string().min(1,{message:"services invalide"}),
+      service:z.string().min(1,{message:"Vous devez sélectionner un service"}),
+      size:z.string().min(1,{message:"Vous devez sélectionner une taille pour votre entreprise"}),
+     region:z.string().min(1,{message:"Vous devez sélectionner une région"}),
 
   })
    
 const EstimationForm= () => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
-        defaultValues: {email:"",
+        defaultValues: {service:"",
          region:"",size:""
         },
       })
@@ -49,13 +49,13 @@ const EstimationForm= () => {
     return (
         <Form {...form} >
           <form onSubmit={form.handleSubmit(onSubmit)} className="h-full 
-           gap-4 p-4 bg-white  w-full  flex flex-col
+           gap-8 p-4 bg-white  w-full  flex flex-col
            shadow-xl rounded-xl  ">
    
 
    <FormField
           control={form.control}
-          name="email"
+          name="service"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Service</FormLabel>
