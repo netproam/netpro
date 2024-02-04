@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
 import ContactComponent from "../ContactComponent"
+import ContactOnDialog from "../ui/ContactOnDialog"
 
 export function DialogEstimation() {
     const [isChanging,setIsChanging]=useState(false)
@@ -23,9 +24,9 @@ export function DialogEstimation() {
       <DialogTrigger asChild>
         <Button className="bg-transparent hover:bg-transparent" >Estimation grauite</Button>
       </DialogTrigger>
-      <DialogContent className="w-full h-full p-4 ">
+      <DialogContent className="w-full h-full p-0 overflow-scroll ">
         <DialogHeader>
-          <DialogTitle>Outils de simulation</DialogTitle>
+          <DialogTitle className="text-center text-lg py-4">Outils de simulation</DialogTitle>
         
           <div className="flex  w-full justify-center p-0 py-4 ">
                 <div className="w-fit rounded-2xl bg-slate-100 gap-10  ">
@@ -54,7 +55,7 @@ export function DialogEstimation() {
             <Copy className="h-4 w-4" />
           </Button>
         </div> :<div className="flex  flex-col  w-full">
-            <ContactComponent/>
+            <ContactOnDialog/>
         </div> }
 
       </DialogContent>
