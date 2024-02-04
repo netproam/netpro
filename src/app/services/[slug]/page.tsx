@@ -1,12 +1,12 @@
 
 "use client"
-import ContactComponent from "@/components/ContactComponent"
 import { useScroll,useMotionValueEvent } from "framer-motion";
 import { useRouter} from "next/router";
 import { useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useMediaQuery } from "react-responsive";
 import {motion} from "framer-motion"
+import ContactComponent from "@/components/forms/ContactComponent";
 const Page = ({ params }: { params: { slug: string } }) => {
 
     const refForm=useRef<HTMLDivElement>(null)
@@ -128,7 +128,7 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     className=" flex z-50 relative lg:absolute lg:p-2   lg:right-[20px]
      lg:w-[400px]   h-fit">
 
-    <ContactComponent/>
+<ContactComponent/>
 
 </motion.div>
 </section> 
