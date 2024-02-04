@@ -27,12 +27,12 @@ console.log(isInterValId,isInView)
 const allText=[{
 id:"idTest",
 firstTitle:"L'entretien réinventer",
-title:`NET PRO le choix de la qualité
+title:`NET PROS le choix de la qualité
 `,
 sousDescription:`car chaque entreprise à ses spécificités, nous vous offrons des services sur mesures, afin
 que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 ,{
-    title:`Net pro vous offre une collection de services qui seront s'adapter à vos besoins,
+    title:`Net pros vous offre une collection de services qui seront s'adapter à vos besoins,
     car chaque entreprise à ses spécificités`,
     id:"idtest2b",
     sousDescription:`COPROPRIÉTÉS `

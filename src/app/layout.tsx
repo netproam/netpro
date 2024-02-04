@@ -7,7 +7,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Net Pros",
+  title: "NET Pros",
   description: "la référence en e ntiretien menager en ile de france",
 };
 
