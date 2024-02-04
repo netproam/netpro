@@ -117,9 +117,11 @@ className="object-cover bg-transparent brightness-50  w-full  backdrop-blur-lg
     <div className=" w-fit h-fit  my-auto  lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex 
       relative  lg:rounded-full  items-center justify-center flex flex-col">
-  <div className="  bg-[#7abebe] p-2 px-4 rounded-full lg:h-[150px] lg:w-[150px] 
+  <div className="  bg-[#7abebe] p-2 px-4 lg:hover:bg-slate-300
+  text-slate-100 cursor-pointer
+  lg:hover:text-slate-800 duration-150  rounded-full  lg:h-[200px] lg:w-[200px] 
   items-center justify-center flex
-  lg:bg-slate-50 w-full lg:bg-opacity-50 py-2 ">
+  lg:bg-slate-50 w-full lg:bg-opacity-20 py-2 ">
    <DialogEstimation />
     </div>
     </div>

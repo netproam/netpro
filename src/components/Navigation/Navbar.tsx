@@ -133,23 +133,23 @@ text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" :
 </div>
 <div className="flex gap-4 justify-center items-center lg:w-fit ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full bg-amber-300 w-fit  gap-2  items-center justify-center
+rounded-full bg-[#88CBCE] bg-opacity-90 w-fit  gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
-    href="tel:+338408412569">
+    href="+338408412569">
 <FaPhoneAlt
 size={15}
-className="text-slate-800"/>
+className="text-slate-100"/>
 </a>
-<p className="font-semibold text-sm text-slate-800 hidden  
+<p className="font-semibold text-sm text-slate-100  hidden  
 lg:flex w-fit h-fit  whitespace-nowrap " >+33 840 841 25 69</p>
 </div>
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
 rounded-full bg-[#0E2954]  gap-2
 items-center justify-center">
     <a 
-    href="mailto:info@gmail.com"
+    href="info@gmail.com"
     className="pointer-events-auto lg:pointer-events-none p-1"
   >
 <IoMail
