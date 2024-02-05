@@ -34,7 +34,7 @@ const ServicesSection = () => {
         titre:`Parking`,description:"the best thing over",svg:<ParkingSVG style={{width:"100%",heigth:"100%"}}/>
     },
     {
-        titre:`Déménagement `,description:"the best thing over",svg:<HouseMoveSVG style={{width:"100%",heigth:"100%"}}/>
+        titre:`Déménagement`,description:"the best thing over",svg:<HouseMoveSVG style={{width:"100%",heigth:"100%"}}/>
     },
 
     {
@@ -48,7 +48,7 @@ const ServicesSection = () => {
 ]
     const allDataDisplay=allServices.map((e)=>{
        return <div 
-       className="flex  flex-col w-full justify-start"
+       className="flex  flex-col w-full items-center justify-center"
        key={v4()}>
         
         <ServiceComponent title={e.titre}>
