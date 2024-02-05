@@ -73,7 +73,7 @@ className="object-cover bg-transparent brightness-[35%]  w-full  backdrop-blur-l
     <div 
     key={allText[0].id}
     className="flex text-left flex-col   brightness-95
-     lg:text-left  lg:justify-center gap-10 lg:gap-0 px-10 lg:px-0">
+     lg:text-left  lg:justify-center gap-2 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
           viewport={{once:true}}
          animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
