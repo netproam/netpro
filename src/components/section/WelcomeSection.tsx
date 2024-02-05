@@ -61,18 +61,18 @@ className="w-full h-full absolute  bg-transparent     ">
 
 src="/photo_welcome-min.jpeg" 
 
-className="object-cover bg-transparent brightness-[35%]  w-full  backdrop-blur-lg
+className="object-cover bg-transparent brightness-[27%]  w-full  backdrop-blur-lg
     h-full   "/>
 </div>
 
 
-  <section className="flex flex-col lg:flex-row  pt-20 lg:pt-10
+  <section className="flex flex-col lg:flex-row  my-auto lg:pt-10
   
-  z-20 gap-0 text-left  items-center justify-center w-full h-full ">
-    <div className="flex  flex-col w-full lg:pl-10 h-full items-center justify-center">
+  z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
+    <div className="flex flex-col   w-full lg:pl-10 h-full  my-auto lg:my-0 relative   items-center justify-center">
     <div 
     key={allText[0].id}
-    className="flex text-left flex-col   brightness-95
+    className="flex text-left flex-col    brightness-95
      lg:text-left  lg:justify-center gap-4 lg:gap-0 px-10 lg:px-0">
      
     <motion.h3
@@ -115,13 +115,9 @@ t  flex flex-col gap-0
     </motion.div> */}
     </div>
   </div>
-  <div className=" w-full flex justify-center 
-    flex-col h-full items-center gap-2 ">
-   
-    {/* <div className="rounded-full gap-4  items-center justify-center bg-blue-200 z-20 relative
-     text-slate-100 flex flex-col p-10 w-[300px] h-[300px] border-2 border-slate-100">
-            <Button> <Link href={'/contact'}>Obtenir une estimation gratuite </Link></Button>
-    </div> */}
+  <div className=" w-full  flex justify-center 
+    flex-col h-fit pb-10 items-center gap-2 ">
+
     <div className=" w-fit h-fit  my-auto  lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex 
       relative  lg:rounded-full  items-center justify-center flex flex-col">

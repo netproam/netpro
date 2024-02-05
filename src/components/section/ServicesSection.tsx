@@ -70,7 +70,7 @@ const ServicesSection = () => {
  {/**Ceci c'est pour le texte qui s'affiche */}
 <div className="flex flex-col h-fit   w-full  justify-center items-center  lg:gap-0 lg:px-10">
     <div className="flex text-sm px-4 text-center lg:px-0 flex-col w-full gap-6 justify-center items-center lg:items-start ">
-    <h2 className="text-center lg:text-start text-2xl
+    <h2 className="text-center lg:text-start text-3xl  pt-4 
      lg:text-5xl font-semibold  tracking-tight ">{allData[0].soustitre}</h2>
 
     <h2 className="text-center lg:text-start  w-4/5 lg:w-3/5 
