@@ -68,7 +68,7 @@ const ServicesSection = () => {
 
 
  {/**Ceci c'est pour le texte qui s'affiche */}
-<div className="flex flex-col h-fit  w-full  justify-center items-center gap-10 lg:gap-0">
+<div className="flex flex-col h-fit  w-full  justify-center items-center  lg:gap-0">
     <div className="flex text-sm flex-col w-full gap-4 justify-center ">
     <h2 className="text-center lg:text-start text-2xl lg:w-[700px]
      lg:text-5xl font-semibold  tracking-tighter">{allData[0].soustitre}</h2>
@@ -82,14 +82,15 @@ const ServicesSection = () => {
  {/**Ceci c'est pour les icones */}
 
 
-<div className="flex flex-col lg:flex-row h-fit w-full  gap-8 lg:gap-2 ">
+<div className="flex flex-col lg:flex-row h-fit w-full  gap-4 lg:gap-2 ">
 
 
     <div className="flex flex-col h-full  w-full text-center gap-2 ">
 <h2 className=" font-semibold text-left self-center
  lg:self-center text-xl lg:text-3xl">{`Nettoyages`}</h2>
 
-<div className=" grid grid-cols-3 lg:gap-2  h-full w-full  place-items-center   lg:justify-center
+<div className=" grid grid-cols-3 lg:gap-2 
+ h-full w-full  place-items-center   lg:justify-center
 gap-2  divided-none lg:grid-cols-3  ">
 {allDataDisplay.slice(0,6)}
 </div>
