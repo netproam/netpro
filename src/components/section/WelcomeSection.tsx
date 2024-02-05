@@ -54,25 +54,23 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
    
 {/**mobile */   }
 
-<div
 
-className="w-full h-full absolute  bg-transparent     ">
 <img 
 
 src="/photo_welcome-min.jpeg" 
 
-className="object-cover bg-transparent brightness-[27%]  w-full  backdrop-blur-lg
+className="object-cover  absolute  brightness-[45%] w-full  
     h-full   "/>
-</div>
 
 
-  <section className="flex flex-col lg:flex-row  my-auto lg:pt-10
+
+  <section className="flex flex-col lg:flex-row  backdrop-blur-sm  my-auto lg:pt-10
   
   z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
     <div className="flex flex-col   w-full lg:pl-10 h-full  my-auto lg:my-0 relative   items-center justify-center">
     <div 
     key={allText[0].id}
-    className="flex text-left flex-col    brightness-95
+    className="flex text-left flex-col     brightness-95
      lg:text-left  lg:justify-center gap-4 lg:gap-0 px-10 lg:px-0">
      
     <motion.h3
