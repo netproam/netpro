@@ -89,9 +89,7 @@ const ServicesSection = () => {
 <h2 className=" font-semibold text-left self-center
  lg:self-center text-xl lg:text-3xl">{`Nettoyages`}</h2>
 
-<div className=" grid grid-cols-3 lg:gap-2 
- h-full w-full  place-items-center   lg:justify-center
-gap-2  divided-none lg:grid-cols-3  ">
+<div className=" grid grid-cols-3 w-full ">
 {allDataDisplay.slice(0,6)}
 </div>
 </div>
@@ -99,8 +97,7 @@ gap-2  divided-none lg:grid-cols-3  ">
 <div className="flex flex-col w-full h-full   lg:w-1/3 gap-2 ">
 <h2 className=" relative  font-semibold text-xl lg:text-3xl self-center lg:self-center">{`Débarras`}</h2>
 
-<div className=" grid grid-cols-2  pt-4 lg:pt-0  lg:justify-center w-full  
-gap-2  divided-none lg:flex lg:flex-col lg:items-center h-full place-items-center ">
+<div className=" grid grid-cols-2 ">
 {allDataDisplay.slice(6)}
 </div>
 </div>
