@@ -11,10 +11,10 @@ const FifthSection = () => {
         </div>
     </div>
     <div className="flex flex-col w-full px-2 lg:px-8 gap-4">
-        <div className="flex flex-col gap-4 text-left">
+        <div className="flex flex-col gap-0 text-left">
             <p className="font-semibold text-sm">{"Une approche innovante".toLocaleUpperCase()}</p>
             <h3 className="tracking-tighter text-2xl  lg:text-5xl font-semibold">Les tâches compliquées deviennent facile</h3>
-            <p className="tracking-wide">{`Avec nous, tout est dans l'ordre : du nettoyage minutieux aux détails méticuleux, nous assurons un environnement impeccable. Notre engagement envers l'excellence fait de chaque espace un reflet de propreté et d'organisation, créant ainsi une atmosphère harmonieuse pour tous.`}</p>
+            <p className="tracking-wide pt-2">{`Avec nous, tout est dans l'ordre : du nettoyage minutieux aux détails méticuleux, nous assurons un environnement impeccable. Notre engagement envers l'excellence fait de chaque espace un reflet de propreté et d'organisation, créant ainsi une atmosphère harmonieuse pour tous.`}</p>
         </div>
         <div className=" p-2 lg:px-0 ">
         <img className="object-cover rounded-lg "

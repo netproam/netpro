@@ -71,7 +71,7 @@ className="object-cover  absolute  brightness-[45%] w-full
     <div 
     key={allText[0].id}
     className="flex text-left flex-col     brightness-95
-     lg:text-left  lg:justify-center gap-4 lg:gap-0 px-10 lg:px-0">
+     lg:text-left  lg:justify-center  lg:gap-0 px-10 lg:px-0">
      
     <motion.h3
           initial={{opacity:0}}
