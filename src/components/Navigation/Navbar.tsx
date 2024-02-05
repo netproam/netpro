@@ -61,7 +61,7 @@ const Navbar = () => {
 
         }
     }
-    else {
+    else if(refNav.current&&path!="/"&&refAbout.current&&refServices.current&&refToggle.current&&refContact.current) {
         refNav.current.style.backgroundColor="#F0F9F9"
 
         refAbout.current.style.color="black"

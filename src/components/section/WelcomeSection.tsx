@@ -119,7 +119,7 @@ t  flex flex-col gap-0
     </div>
   </div>
   <div className=" w-full  flex justify-center 
-    flex-col h-[300px]   items-center gap-2 ">
+    flex-col h-[250px]   items-center gap-2 ">
 
     <div className=" w-fit h-full   lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex  gap-4
@@ -141,7 +141,7 @@ t  flex flex-col gap-0
     animate={{opacity:[0,1],x:[100,0]}}
     transition={{duration:1.25,delay:2.25}}
     className="w-full h-full flex flex-col lg:hidden">
-        <Link href={"/contact"} className="px-14 rounded-full bg-[#0E2954] text-slate-50 w-fit py-4">Nous contacter</Link>
+        <Link href={"/contact"} className="px-14 rounded-full  text-sm font-semibold bg-[#0E2954] text-white w-fit py-4">Nous contacter</Link>
     </motion.div>
     </div>
 
