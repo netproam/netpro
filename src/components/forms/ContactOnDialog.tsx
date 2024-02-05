@@ -148,7 +148,7 @@ const ContactOnDialog = () => {
                  <div className="flex gap-2 border-[1px] justify-center items-center bg-white p-2 rounded-md
                      w-full">
                     <FaPen size={20} className="text-slate-800"/>
-                  <textarea rows={3}
+                  <textarea rows={4}
                     className="  w-full outline-none resize-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
                     placeholder="Inscrire votre message, où appelez nous directement" {...field} />
