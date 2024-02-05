@@ -121,19 +121,19 @@ t  flex flex-col gap-0
   <div className=" w-full  flex justify-center 
     flex-col h-[250px]   items-center gap-2 ">
 
-    <div className=" w-fit h-full   lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
+    <div className=" w-fit h-full    p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex  gap-4
       relative  lg:rounded-full  items-center justify-e   flex flex-col">
   <motion.div 
       initial={{opacity:0}}
       animate={{opacity:[0,1],x:[-100,0]}}
   transition={{duration:1.25,delay:2.25}}
-  className="  bg-[#7abebe] p-2 px-4 lg:hover:bg-slate-300
-  text-slate-100 cursor-pointer
+  className="  p-2 px-4 lg:hover:bg-slate-300
+  text-slate-100 cursor-pointer backdrop-blur-sm
   lg:hover:text-slate-800 duration-150  rounded-full  lg:h-[200px] lg:w-[200px] 
   items-center justify-center flex
-  lg:bg-slate-50 w-full lg:bg-opacity-20 py-2 ">
-   <DialogEstimation styleBtn="bg-transparent hover:bg-transparent  text-current" />
+  lg:bg-amber-200 w-full lg:bg-opacity-20 py-2 ">
+   <DialogEstimation styleBtn="bg-transparent  hover:bg-transparent  text-current" />
     </motion.div>
     <motion.div
       initial={{opacity:0}}
