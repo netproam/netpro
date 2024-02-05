@@ -61,7 +61,7 @@ className="w-full h-full absolute  bg-transparent     ">
 
 src="/photo_welcome-min.jpeg" 
 
-className="object-cover bg-transparent brightness-[40%]  w-full  backdrop-blur-lg
+className="object-cover bg-transparent brightness-[35%]  w-full  backdrop-blur-lg
     h-full   "/>
 </div>
 
@@ -79,14 +79,14 @@ className="object-cover bg-transparent brightness-[40%]  w-full  backdrop-blur-l
          animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
      
               key={allText[0].id+"subtitle"}
-          className="lg:flex    w-fit text-slate-200
+          className="lg:flex    w-fit text-slate-300
            font-semibold ">{allText[0].firstTitle}</motion.h4>
     <motion.h3
               viewport={{once:true}}
 
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-100 font-noto text-4xl font-stolzl  lg:w-[600px]  text-left  lg:text-4xl 
+    className="text-slate-50 font-stolzl text-4xl font-stolzl  lg:w-[600px]  text-left  lg:text-4xl 
    leading-relaxed   lg:leading-tight 
     font-semibold tracking-tighter">{allText[0].title}</motion.h3>
         <motion.p
@@ -94,9 +94,8 @@ className="object-cover bg-transparent brightness-[40%]  w-full  backdrop-blur-l
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-300  leading-relaxed    lg:w-[600px]  text-left  lg:text-2xl 
-     text-base  lg:leading-tight 
-     tracking-tighter">{allText[0].sousDescription}</motion.p>
+    className="text-slate-200  leading-relaxed  pt-4   lg:w-[600px]  text-left  lg:text-lg 
+      lg:leading-tight  font-normal">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
 
