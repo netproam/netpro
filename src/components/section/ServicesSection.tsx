@@ -61,8 +61,8 @@ const ServicesSection = () => {
         </div>
     })
   return (
-   <section className="  flex flex-col justify-center items-centr 
-   w-full h-full  
+   <section className="  flex flex-col justify-center items-center
+   w-full min-h-screen
     py-4 lg:py-10 bg-slate-50
     px-0 lg:px-10  gap-4 lg:gap-10  ">
 
@@ -82,7 +82,7 @@ const ServicesSection = () => {
  {/**Ceci c'est pour les icones */}
 
 
-<div className="flex flex-col lg:flex-row h-full w-full  gap-8 lg:gap-2 ">
+<div className="flex flex-col lg:flex-row h-fit w-full  gap-8 lg:gap-2 ">
 
 
     <div className="flex flex-col h-full  w-full text-center gap-2 ">
