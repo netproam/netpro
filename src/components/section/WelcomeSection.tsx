@@ -67,7 +67,8 @@ className="object-cover  absolute  brightness-[45%] w-full
   <section className="flex flex-col lg:flex-row  backdrop-blur-sm   lg:pt-10
   
   z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
-    <div className="flex flex-col   w-full lg:pl-10 h-full  my-auto lg:my-0 relative   items-center justify-center">
+    <div className="flex flex-col 
+      w-full lg:pl-10 h-full  relative   items-center justify-center">
     <div 
     key={allText[0].id}
     className="flex text-left flex-col     brightness-95
@@ -118,11 +119,11 @@ t  flex flex-col gap-0
     </div>
   </div>
   <div className=" w-full  flex justify-center 
-    flex-col h-fit pb-10 items-center gap-2 ">
+    flex-col h-1/3  items-center gap-2 ">
 
-    <div className=" w-fit h-fit   lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
+    <div className=" w-fit h-1/3   lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex  gap-4
-      relative  lg:rounded-full  items-center justify-center flex flex-col">
+      relative  lg:rounded-full  items-center justify-end  flex flex-col">
   <motion.div 
       initial={{opacity:0}}
       animate={{opacity:[0,1],x:[-100,0]}}
