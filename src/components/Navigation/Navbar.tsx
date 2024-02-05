@@ -163,7 +163,7 @@ color="rgb(248,250,252)"/>
 
 <div onClick={()=>{
     setIsOpen(true)
-}} className={`lg:hidden cursor-pointer ${"text-slate-600"}}`} ref={refToggle}>
+}} className={`lg:hidden cursor-pointer ${path==="/"? "text-slate-600" : "text-slate-800"}}`} ref={refToggle}>
 <IoMenu size={30} />
 </div>
 </div>

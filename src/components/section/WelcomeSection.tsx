@@ -119,7 +119,7 @@ t  flex flex-col gap-0
     </div>
   </div>
   <div className=" w-full  flex justify-center 
-    flex-col h-[320px]   items-center gap-2 ">
+    flex-col h-[300px]   items-center gap-2 ">
 
     <div className=" w-fit h-full   lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex  gap-4
