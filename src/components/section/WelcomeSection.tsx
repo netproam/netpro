@@ -120,7 +120,7 @@ t  flex flex-col gap-0
   <div className=" w-full  flex justify-center 
     flex-col h-fit pb-10 items-center gap-2 ">
 
-    <div className=" w-fit h-fit  my-auto  lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
+    <div className=" w-fit h-fit   lg:bg-[#7abebe] lg:bg-opacity-50 p-1 
      lg:w-[300px] lg:h-[300px]  z-40 flex  gap-4
       relative  lg:rounded-full  items-center justify-center flex flex-col">
   <motion.div 
