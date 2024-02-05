@@ -38,7 +38,7 @@ else {
 <div className="flex flex-col gap-2 items-center justify-center lg:items-start ">
 <h4 className="text-sm font-semibold text-center  lg:text-start">Ce que nous apportons</h4>
 <h3 className="font-semibold tracking-tighter text-2xl w-4/5 lg:w-fit 
- lg:text-5xl leading-relaxed text-center lg:text-start">Des solutions adaptés à vos besoins</h3>
+ lg:text-5xl leading-relaxed text-center lg:text-start">Des solutions adaptées à vos besoins</h3>
 <p className="pt-0 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
 </div>
 
