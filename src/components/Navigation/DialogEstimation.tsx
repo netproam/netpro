@@ -20,7 +20,7 @@ interface DialogProps{
     styleBtn:string
 }
 export function DialogEstimation({styleBtn}:DialogProps) {
-    const [isChanging,setIsChanging]=useState(false)
+    const [isChanging,setIsChanging]=useState(true)
   return (
     <Dialog >
       <DialogTrigger asChild>

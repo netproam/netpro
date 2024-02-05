@@ -62,14 +62,14 @@ const ServicesSection = () => {
     })
   return (
    <section className="  flex flex-col justify-center items-center
-   w-full min-h-screen
+   w-full 
     py-4 lg:py-10 bg-slate-50
-    px-0 lg:px-10  gap-4 lg:gap-10  ">
+    px-0 lg:px-10  gap-8 lg:gap-10  ">
 
 
  {/**Ceci c'est pour le texte qui s'affiche */}
 <div className="flex flex-col h-fit  w-full  justify-center items-center  lg:gap-0">
-    <div className="flex text-sm flex-col w-full gap-4 justify-center ">
+    <div className="flex text-sm flex-col w-full gap-6 justify-center ">
     <h2 className="text-center lg:text-start text-2xl lg:w-[700px]
      lg:text-5xl font-semibold  tracking-tighter">{allData[0].soustitre}</h2>
 
@@ -82,19 +82,19 @@ const ServicesSection = () => {
  {/**Ceci c'est pour les icones */}
 
 
-<div className="flex flex-col lg:flex-row h-fit w-full  gap-4 lg:gap-2 ">
+<div className="flex flex-col lg:flex-row h-fit w-full  gap-8 lg:gap-2 ">
 
 
-    <div className="flex flex-col h-full  w-full text-center gap-2 ">
+    <div className="flex flex-col h-full  w-full text-center gap-4 ">
 <h2 className=" font-semibold text-left self-center
- lg:self-center text-xl lg:text-3xl">{`Nettoyages`}</h2>
+ lg:self-center text-xl lg:text-3xl py-4 pt-6">{`Nettoyages`}</h2>
 
-<div className=" grid grid-cols-3 w-full ">
+<div className=" grid grid-cols-3 gap-y-4 w-full ">
 {allDataDisplay.slice(0,6)}
 </div>
 </div>
 
-<div className="flex flex-col w-full h-full   lg:w-1/3 gap-2 ">
+<div className="flex flex-col w-full h-full  py-4 pt-6  lg:w-1/3 gap-2 ">
 <h2 className=" relative  font-semibold text-xl lg:text-3xl self-center lg:self-center">{`Débarras`}</h2>
 
 <div className=" grid grid-cols-2 ">

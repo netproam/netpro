@@ -53,7 +53,7 @@ else {
      w-12 lg:w-24  flex items-center justify-center `} id={"childrenHolder"}>
 {children}
 </div>
-<h2 className="font-semibold text-sm   self-center  whitespace-nowrap  ">{title}</h2>
+<h2 className="font-semibold text-xs   self-center  whitespace-nowrap  ">{title}</h2>
 
 <motion.div
 layout
