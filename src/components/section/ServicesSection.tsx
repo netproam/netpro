@@ -61,7 +61,7 @@ const ServicesSection = () => {
         </div>
     })
   return (
-   <section className="w-full h-full py-10 lg:py-10 bg-slate-50
+   <section className="w-full h-full min-h-screen py-10 lg:py-10 bg-slate-50
     flex flex-col justify-center items-center px-4 lg:px-10  gap-4 lg:gap-10  ">
 
 <div className="flex flex-col lg:flex-row  w-full  justify-center items-center gap-10 lg:gap-0">
