@@ -61,9 +61,9 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                    <div className="flex gap-2 border-2 justify-center items-center bg-white p-2 rounded-md
+                    <div className="flex gap-2 border-[1px] justify-center items-center bg-white p-2 rounded-md
                      w-full">
-                    <FaUser size={20} className="text-slate-600"/>
+                    <FaUser size={20} className="text-slate-800"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -81,9 +81,9 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                  <div className="flex gap-2 border-2 justify-center items-center bg-white p-2 rounded-md
+                  <div className="flex gap-2 border-[1px] justify-center items-center bg-white p-2 rounded-md
                      w-full">
-                                            <IoMail size={20} className="text-slate-600"/>
+                                            <IoMail size={20} className="text-slate-800"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -101,9 +101,9 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                 <div className="flex gap-2 border-2 justify-center items-center bg-white p-2 rounded-md
+                 <div className="flex gap-2 border-[1px] justify-center items-center bg-white p-2 rounded-md
                      w-full">
-                    <MdOutlinePhone size={20} className="text-slate-600"/>
+                    <MdOutlinePhone size={20} className="text-slate-800"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -121,9 +121,9 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                 <div className="flex gap-2 border-2 justify-center items-center bg-white p-2 rounded-md
+                 <div className="flex gap-2 border-[1px] justify-center items-center bg-white p-2 rounded-md
                      w-full">
-                    <MdOutlineLocationCity size={20} className="text-slate-600"/>
+                    <MdOutlineLocationCity size={20} className="text-slate-800"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -145,9 +145,9 @@ const ContactOnDialog = () => {
                  
                  <FormControl>
 
-                 <div className="flex gap-2 border-2 justify-center items-center bg-white p-2 rounded-md
+                 <div className="flex gap-2 border-[1px] justify-center items-center bg-white p-2 rounded-md
                      w-full">
-                    <FaPen size={20} className="text-slate-600"/>
+                    <FaPen size={20} className="text-slate-800"/>
                   <textarea rows={3}
                     className="  w-full outline-none resize-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
@@ -162,9 +162,9 @@ const ContactOnDialog = () => {
             <div className="flex w-full justify-center ">
             <button className="w-fit" type="submit"
             ><IoPaperPlane
-            color="" className=" text-slate-700 duration-500 hover:text-[#88CBCE]" size={30}/></button>
+            color="" className=" text-slate-800 duration-500 hover:text-[#88CBCE]" size={30}/></button>
             </div>
-            <div className="flex hidden flex-col w-full font-light text-slate-600  text-lg
+            <div className="flex hidden flex-col w-full font-light text-slate-800  text-lg
              h-fit gap-4  ">
            
             

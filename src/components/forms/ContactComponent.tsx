@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import {MdOutlinePhone}from "react-icons/md"
 import { Textarea } from "../ui/textarea"
+import { GrCircleInformation } from "react-icons/gr";
+
 import {
   Form,
   FormControl,
@@ -23,7 +25,7 @@ import { FaPaperPlane, FaPen, FaRegPaperPlane, FaUser } from "react-icons/fa"
 const formSchema = z.object({
     name: z.string().min(2, {
       message: "Vous devez indiquer un nom",
-    }),
+    }),topic:z.string().min(2,{message:"Vous devez indiquez un objet"}),
     phoneNumber:z.string().length(10,{message:"Numéro de téléphone invalide"}),
     adresseEmail:z.string().email({message:"Adresse email non valide"}),
     subject:z.string().min(2,{message:"Vous devez indiquez un sujet"}).max(100),description:z.string().min(10,{
@@ -35,7 +37,7 @@ const ContactComponent = () => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-          name: "",phoneNumber:"",adresseEmail:"",subject:"",description:""
+          name: "",phoneNumber:"",adresseEmail:"",subject:"",description:"",topic:""
         },
       })
      
@@ -110,6 +112,27 @@ const ContactComponent = () => {
                     </div>
                   </FormControl>
                 
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+
+<FormField
+              control={form.control}
+              name="topic"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                  <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                    <GrCircleInformation size={15} className="text-slate-600"/>
+                  <input
+                    className="  w-full outline-none   bg-transparent 
+                     px-4 rounded-md  hover:border-slate-800 duration-500"
+                    placeholder="objet" {...field} />
+                    </div>
+                  </FormControl>
+            
                   <FormMessage />
                 </FormItem>
               )}
