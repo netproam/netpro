@@ -27,16 +27,16 @@ export function DialogEstimation({styleBtn}:DialogProps) {
         <Button className={`  text-slate-200 px-8 py-6 rounded-lg
            font-semibold text-sm ${styleBtn}`} >Estimation gratuite</Button>
       </DialogTrigger>
-      <DialogContent className="w-full h-full p-0 overflow-scroll ">
+      <DialogContent className="w-full h-full p-0 overflow-scroll bg-slate-50 ">
         <DialogHeader>
           <DialogTitle className="text-center text-lg py-4">Outils de simulation</DialogTitle>
         
           <div className="flex  w-full justify-center p-0 py-4 ">
-                <div className="w-fit rounded-2xl  bg-slate-200 gap-10  ">
-                <button className={`${isChanging? "bg-white rounded-2xl font-semibold " : "bg-transparent"} p-2`} onClick={()=>setIsChanging(true)}>Estimation gratuite </button>
+                <div className="w-fit rounded-2xl  bg-slate-200 text-sm  text-slate-800 gap-10  ">
+                <button className={`${isChanging? "bg-white rounded-2xl font-semibold text-slate-800 " : "bg-transparent"} p-2`} onClick={()=>setIsChanging(true)}>Estimation gratuite </button>
 
                 <button 
-                className={`${isChanging===false? "bg-white rounded-2xl font-semibold " : "bg-transparent"} p-2`} 
+                className={`${isChanging===false? "bg-white rounded-2xl font-semibold text-slate-800 " : "bg-transparent"} p-2`} 
                 onClick={()=>setIsChanging(false)}>Contactez nous </button>
                 </div>
                 </div>

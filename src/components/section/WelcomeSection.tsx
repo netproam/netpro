@@ -61,7 +61,7 @@ className="w-full h-full absolute  bg-transparent     ">
 
 src="/photo_welcome-min.jpeg" 
 
-className="object-cover bg-transparent brightness-50  w-full  backdrop-blur-lg
+className="object-cover bg-transparent brightness-[40%]  w-full  backdrop-blur-lg
     h-full   "/>
 </div>
 
@@ -94,8 +94,8 @@ className="object-cover bg-transparent brightness-50  w-full  backdrop-blur-lg
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-200 leading-relaxed font-noto   lg:w-[600px]  text-left  lg:text-2xl 
-    font-thin font-stolzl text-base  lg:leading-tight 
+    className="text-slate-300  leading-relaxed    lg:w-[600px]  text-left  lg:text-2xl 
+     text-base  lg:leading-tight 
      tracking-tighter">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
