@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NET'PROS",
-  description: "la référence en entiretien ménager en ile de france",
+  description: "la référence en entretien ménager en ile de france",
 };
 
 export default function RootLayout({
