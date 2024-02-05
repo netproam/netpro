@@ -66,21 +66,21 @@ const ServicesSection = () => {
 
 <div className="flex flex-col lg:flex-row  w-full  justify-center items-center gap-10 lg:gap-0">
     <div className="flex text-sm flex-col w-full gap-4 justify-center ">
-    <h2 className="text-center lg:text-start text-4xl lg:w-[700px]
+    <h2 className="text-center lg:text-start text-2xl lg:w-[700px]
      lg:text-5xl font-semibold  tracking-tighter">{allData[0].soustitre}</h2>
 
-    <h2 className="text-center lg:text-start text-xl lg:w-3/5 
-     lg:text-2xl  tracking-tighter">{allData[0].description}</h2>
+    <h2 className="text-center lg:text-start text-lg lg:w-3/5 
+     lg:text-2xl  ">{allData[0].description}</h2>
     </div>
    
 </div>
 
 
-<div className="flex flex-col lg:flex-row  lg:divide-x-2 lg:divide-slate-200  w-full lg:gap-8 ">
+<div className="flex flex-col lg:flex-row  gap-8 lg:divide-x-2 lg:divide-slate-200  w-full lg:gap-8 ">
 
 
-    <div className="flex flex-col w-full text-center gap-4 ">
-<h2 className=" font-semibold text-left self-center lg:self-center text-3xl">{`Nettoyages`}</h2>
+    <div className="flex flex-col w-full text-center gap-8 ">
+<h2 className=" font-semibold text-left self-center lg:self-center text-xl lg:text-3xl">{`Nettoyages`}</h2>
 
 <div className=" grid grid-cols-3 lg:gap-2   place-items-center   lg:justify-center
 gap-2  divided-none lg:grid-cols-3  ">
@@ -88,7 +88,7 @@ gap-2  divided-none lg:grid-cols-3  ">
 </div>
 </div>
 <div className="flex flex-col  w-full gap-4 ">
-<h2 className=" relative  font-semibold text-3xl self-center lg:self-center">{`Débarras`}</h2>
+<h2 className=" relative  font-semibold text-xl lg:text-3xl self-center lg:self-center">{`Débarras`}</h2>
 <div className=" grid grid-cols-2   lg:justify-center
 gap-2  lg:gap-0 divided-none lg:grid-cols-2 place-items-center ">
 {allDataDisplay.slice(6)}

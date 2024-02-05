@@ -52,7 +52,7 @@ else {
     </motion.p>
 
         <h3 className="font-semibold text-lg text-start relative  ">Clients</h3>
-        <p className="">Nous ont fais confiance</p>
+        <p className=" whitespace-nowrap">Nous ont fais confiance</p>
     </div>
 
     </div>
