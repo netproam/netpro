@@ -61,8 +61,8 @@ const ServicesSection = () => {
         </div>
     })
   return (
-   <section className="w-full h-fit py-10 lg:py-20 bg-slate-50
-    flex flex-col justify-center items-center px-4 lg:px-10  gap-10 lg:gap-20  ">
+   <section className="w-full h-fit py-10 lg:py-10 bg-slate-50
+    flex flex-col justify-center items-center px-4 lg:px-10  gap-10 lg:gap-10  ">
 
 <div className="flex flex-col lg:flex-row  w-full  justify-center items-center gap-10 lg:gap-0">
     <div className="flex text-sm flex-col w-full gap-4 justify-center ">
@@ -76,21 +76,21 @@ const ServicesSection = () => {
 </div>
 
 
-<div className="flex flex-col lg:flex-row  gap-8 lg:divide-x-2 lg:divide-slate-200  w-full lg:gap-8 ">
+<div className="flex flex-col lg:flex-row  gap-8  w-full lg:gap-2 ">
 
 
     <div className="flex flex-col w-full text-center gap-8 ">
 <h2 className=" font-semibold text-left self-center lg:self-center text-xl lg:text-3xl">{`Nettoyages`}</h2>
 
-<div className=" grid grid-cols-3 lg:gap-2   place-items-center   lg:justify-center
+<div className=" grid grid-cols-3 lg:gap-2  h-full  place-items-center   lg:justify-center
 gap-2  divided-none lg:grid-cols-3  ">
 {allDataDisplay.slice(0,6)}
 </div>
 </div>
-<div className="flex flex-col  w-full gap-4 ">
+<div className="flex flex-col   lg:w-1/3 gap-4 ">
 <h2 className=" relative  font-semibold text-xl lg:text-3xl self-center lg:self-center">{`Débarras`}</h2>
-<div className=" grid grid-cols-2   lg:justify-center
-gap-2  lg:gap-0 divided-none lg:grid-cols-2 place-items-center ">
+<div className=" grid grid-cols-2  pt-4 lg:pt-0  lg:justify-center
+gap-2  divided-none lg:flex lg:flex-col lg:items-center h-full place-items-center ">
 {allDataDisplay.slice(6)}
 </div>
 </div>
