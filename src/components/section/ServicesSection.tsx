@@ -76,7 +76,7 @@ const ServicesSection = () => {
 </div>
 
 
-<div className="flex flex-col lg:flex-row  gap-8  w-full lg:gap-2 ">
+<div className="flex flex-col lg:flex-row  gap-8  h-full w-full lg:gap-2 ">
 
 
     <div className="flex flex-col h-full  w-full text-center gap-8 ">
