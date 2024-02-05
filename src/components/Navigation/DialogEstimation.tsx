@@ -24,7 +24,7 @@ export function DialogEstimation({styleBtn}:DialogProps) {
   return (
     <Dialog >
       <DialogTrigger asChild>
-        <Button className={`  text-slate-200 px-8 py-6 rounded-lg
+        <Button className={`  text-slate-200 px-8 py-4 rounded-lg
            font-semibold text-sm ${styleBtn}`} >Estimation gratuite</Button>
       </DialogTrigger>
       <DialogContent className="w-full h-full p-0 overflow-scroll bg-slate-50 ">
