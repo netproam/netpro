@@ -73,11 +73,12 @@ className="object-cover bg-transparent brightness-[35%]  w-full  backdrop-blur-l
     <div 
     key={allText[0].id}
     className="flex text-left flex-col   brightness-95
-     lg:text-left  lg:justify-center gap-2 lg:gap-0 px-10 lg:px-0">
+     lg:text-left  lg:justify-center gap-4 lg:gap-0 px-10 lg:px-0">
           <motion.h4 
           viewport={{once:true}}
          animate={{opacity:[0,1],transition:{duration:2,delay:0.75}}}
      
+
               key={allText[0].id+"subtitle"}
           className="lg:flex    w-fit text-slate-300
            font-semibold ">{allText[0].firstTitle}</motion.h4>
@@ -86,9 +87,11 @@ className="object-cover bg-transparent brightness-[35%]  w-full  backdrop-blur-l
 
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:3.5}}}
-    className="text-slate-50 font-stolzl text-4xl font-stolzl  lg:w-[600px]  text-left  lg:text-4xl 
-   leading-relaxed   lg:leading-tight 
-    font-semibold tracking-tighter">{allText[0].title}</motion.h3>
+    className="text-slate-50 font-stolzl text-4xl   lg:w-[600px]  text-left  lg:text-4xl 
+   leading-none   lg:leading-tight 
+    font-semibold tracking-tighter">{allText[0].title.split(" ")[0]} <br/><span className="text-sm text-slate-300 font-sans tracking-normal">{allText[0].title.split(" ").slice(1).join(" ")}</span></motion.h3>
+
+
         <motion.p
                   viewport={{once:true}}
 
