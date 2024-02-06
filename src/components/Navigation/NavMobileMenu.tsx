@@ -19,11 +19,11 @@ const NavMobileMenu = () => {
      <div className="w-full  justify-center  flex    relative  items-center p-4">
         {isSelectService&&<MdKeyboardArrowLeft 
         onClick={()=>setIsSelectService(false)}
-        size={20} className=" absolute left-0 text-slate-800"/>}
-        <p className="font-semibold text-base self-center  relative">Services</p>
-     <IoClose
+        size={25} className=" absolute left-0 text-slate-800"/>}
+{isSelectService&&        <p className="font-semibold text-base self-center  relative">Services</p>
+}     <IoClose
      onClick={closeNavBar}
-     size={20} className="absolute right-0   text-slate-800"/>
+     size={25} className="absolute right-0   text-slate-800"/>
 
      </div>
     <div className="flex flex-col  text-md relative z-50 cursor-pointer font-semibold text-md  text-left"

@@ -36,9 +36,9 @@ else {
 
 <div className="flex flex-col lg:px-8 justify-center items-center lg:items-start  w-full gap-10">
 <div className="flex flex-col  items-center justify-center lg:items-start ">
-<h4 className="text-sm font-semibold text-center  lg:text-start">Ce que nous apportons</h4>
-<h3 className="font-semibold tracking-tighter text-2xl w-4/5 lg:w-fit 
- lg:text-5xl  text-center lg:text-start">Des solutions adaptées à vos besoins</h3>
+<h4 className="text-sm font-semibold text-center pl-1 leading-[12px] lg:text-start">Ce que nous apportons</h4>
+<h3 className="font-semibold tracking-tighter text-2xl pb-2 lg:pt-1 lg:w-fit  
+ lg:text-5xl  text-center lg:text-start">{`Une équipe méticuleuse`}</h3>
 <p className="pt-1 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
 </div>
 
