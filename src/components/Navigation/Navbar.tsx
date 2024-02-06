@@ -11,7 +11,7 @@ import {
   } from "@/components/ui/navigation-menu"
   import Link from "next/link"
   import { usePathname, useRouter } from "next/navigation"
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
   import { IoMail, IoMenu } from "react-icons/io5";
   import { IoIosClose } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -42,18 +42,32 @@ const [scope,animate]=useAnimate()
         animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
 
     }
+    
 
     })
-    console.log(scrollYProgress.get)
+    useEffect(()=>{
+if(path==="/")
+{
+
+    animate(scope.current,{color:"white",backgroundColor:"transparent"})
+
+}
+else {
+    animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+
+}
+console.log("slt")
+    },[path])
   return (
    <motion.nav 
   ref={scope}
-   className={`   w-full   justify-between     bg-opacity-50     
+   className={`   w-full   justify-between bg-[#F0F9F9]     bg-opacity-50     
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16
     text-current  gap-10 items-center 
-   ${path==="/"? "fixed text-slate-100  flex  ":"fixed lg:relative bg-[#F0F9F9] "}`}>
+   ${path==="/"? "fixed text-slate-100  flex  ":"fixed lg:relative  bg-opacity-100 "}`}>
 <div
 onClick={()=>{
+    animate(scope.current,{color:"white",backgroundColor:"transparent"})
     router.push("/")
 }}
 className=" cursor-pointer left-0 w-fit  relative ">
@@ -89,12 +103,16 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
         
         className="flex text-md bg-slate-300  relative z-50 flex-col gap-10 w-full
         text-current p-8">
-        <Link href="/services/menage" passHref legacyBehavior>
+        <Link onClick={()=>        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+} href="/services/menage" passHref legacyBehavior>
     <NavigationMenuLink className="whitespace-nowrap " >
     {`Entretien Ménagés`}
     </NavigationMenuLink>
     </Link>
-        <Link href="/services/debaras" passHref legacyBehavior>
+        <Link
+        onClick={()=>        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+    } 
+        href="/services/debaras" passHref legacyBehavior>
     <NavigationMenuLink >
     {`Débarras`}
     </NavigationMenuLink>
@@ -104,14 +122,21 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
     </NavigationMenuItem>
   </NavigationMenuList>
 <NavigationMenuItem className="list-none text-base">
-  <Link href="/contact" passHref legacyBehavior>
-    <NavigationMenuLink className="text-sm">
+  <Link
+      
+  href="/contact" passHref legacyBehavior>
+    <NavigationMenuLink
+
+    className="text-sm">
      <p  >FAQ</p>
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
   <NavigationMenuItem  className="list-none text-base">
-  <Link href="/contact" passHref legacyBehavior>
+  <Link
+  onClick={()=>        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+} 
+  href="/contact" passHref legacyBehavior>
     <NavigationMenuLink   className="text-sm" >
      <p >CONTACT</p>
     </NavigationMenuLink>
