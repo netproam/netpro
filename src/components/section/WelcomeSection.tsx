@@ -49,7 +49,7 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
   return (
   <section 
   ref={refWelcome}
-  className="w-full h-[800px] lg:h-screen  overflow-hidden bg-[#29677b]
+  className="w-full h-[600px] lg:h-screen  overflow-hidden bg-[#29677b]
     relative flex flex-col lg:flex-row  items-center justify-center">
    
 {/**mobile */   }
