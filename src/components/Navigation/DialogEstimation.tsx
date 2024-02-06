@@ -27,7 +27,7 @@ export function DialogEstimation({styleBtn}:DialogProps) {
         <Button className={`  text-slate-200 px-8 py-4 rounded-lg
            font-semibold text-sm ${styleBtn}`} >Estimation gratuite</Button>
       </DialogTrigger>
-      <DialogContent className="w-full h-full p-0 overflow-scroll bg-slate-50 ">
+      <DialogContent className="w-full h-full p-0 overflow-scroll bg-white ">
         <DialogHeader>
           <DialogTitle className="text-center text-lg py-4">Outils de simulation</DialogTitle>
         
