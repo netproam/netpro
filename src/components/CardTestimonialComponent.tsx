@@ -54,7 +54,7 @@ onHoverEnd={()=>{
 }}
             
  className="flex flex-col  justify-center 
-     items-center gap-4
+     items-center gap-4 w-full
    h-[200px] relative
      
     border-none rounded-2xl">

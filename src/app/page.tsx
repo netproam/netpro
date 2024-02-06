@@ -23,7 +23,7 @@ export default function Home() {
     <FourthSection/>
     <div className=" bg-white  flex flex-col justify-center items-center ">
     <p className="font-semibold text-3xl leading-relaxed  text-center pt-4 lg:pt-8 lg:w-fit 
-lg:text-5xl tracking-tighter">Ils nous ont fait confiance</p>
+lg:text-5xl tracking-tighter ">Ils nous ont fait confiance</p>
     <TestimonialSection/>
     </div>
     <ContactSection/>
