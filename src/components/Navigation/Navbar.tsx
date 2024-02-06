@@ -29,7 +29,7 @@ const [scope,animate]=useAnimate()
     useMotionValueEvent(scrollYProgress,"change",async(e)=>{
         if(path==="/")
         {
-     if(e>0.1)
+     if(e>0.2)
      {
         animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
      }
@@ -38,17 +38,20 @@ const [scope,animate]=useAnimate()
 
      }
     }
+    else {
+        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+
+    }
 
     })
     console.log(scrollYProgress.get)
   return (
    <motion.nav 
-   initial={{background:path==="/"?"transparent" : "#F0F9F9",color: path==="/"?"white" :"black"}}
   ref={scope}
    className={`   w-full   justify-between     bg-opacity-50     
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16
     text-current  gap-10 items-center 
-   ${path==="/"? "fixed text-slate-100  flex  ":"fixed lg:relative bg-[#F0F9F9] text-slate-800"}`}>
+   ${path==="/"? "fixed text-slate-100  flex  ":"fixed lg:relative bg-[#F0F9F9] "}`}>
 <div
 onClick={()=>{
     router.push("/")
@@ -70,7 +73,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 
   <NavigationMenuList 
   
-  className={` ${path==="/"? "text-current " : "text-slate-900 bg-transparent"}`}>
+  className={` ${path==="/"? "text-current " : " bg-transparent"}`}>
     <NavigationMenuItem className="text-current bg-transparent  " >
         <motion.div ref={scope}>
       <NavigationMenuTrigger
