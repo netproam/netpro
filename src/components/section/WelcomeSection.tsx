@@ -59,16 +59,16 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
     src="/testbas.png"/>
 </div>
 
-<div className="relative w-full h-full order-2 hidden lg:flex flex items-center justify-center">
+<div className="relative  w-full h-full order-2 hidden lg:flex flex items-center justify-center">
 
-<div className="w-[600px] -rotate-45  
- overflow-hidden
-bg-white bg-opacity-10   h-[350px] rounded-full z-50 relative">
+<div className="w-[600px] overflow-hidden -rotate-45  
+ 
+  h-[450px] rounded-full z-50 relative">
 <img  
 
 src="/photo_welcome-min.jpeg" 
 
-className=" z-30  absolute  rotate-45 brightness-[45%] 
+className=" z-50     h-[450px]  rounded-full  w-[600px]    rotate-45 brightness-[45%] 
  "/>
 </div>
 
