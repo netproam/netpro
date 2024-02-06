@@ -10,19 +10,19 @@ import TestimonialSection from "@/components/section/TestimonialSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between  overflow-hidden w-screen  ">
+    <main className="flex min-h-screen lg:bg-slate-50  flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
-    <div className="w-full">
+    <div className="w-full bg-slate-50 lg:bg-transparent">
     <ServicesSection/>
     </div>
-    <div className="flex flex-col py-16 gap-8 bg-slate-50">
+    <div className="flex flex-col  gap-8 bg-slate-50">
     <ThirdSection/>
     <FifthSection/>
     </div>
     <FourthSection/>
-    <div className=" bg-[#F0F9F9] flex flex-col justify-center items-center ">
-    <p className="font-semibold text-3xl leading-relaxed  text-center lg:w-fit 
+    <div className=" bg-white  flex flex-col justify-center items-center ">
+    <p className="font-semibold text-3xl leading-relaxed  text-center pt-4 lg:pt-8 lg:w-fit 
 lg:text-5xl tracking-tighter">Ils nous ont fait confiance</p>
     <TestimonialSection/>
     </div>

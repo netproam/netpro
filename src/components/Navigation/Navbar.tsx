@@ -43,6 +43,7 @@ const [scope,animate]=useAnimate()
     console.log(scrollYProgress.get)
   return (
    <motion.nav 
+   initial={{background:path==="/"?"transparent" : "#F0F9F9",color: path==="/"?"white" :"black"}}
   ref={scope}
    className={`   w-full   justify-between     bg-opacity-50     
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16

@@ -63,7 +63,7 @@ const ServicesSection = () => {
   return (
    <section className="  flex flex-col justify-center items-center
    w-full 
-    py-4 lg:py-10 bg-slate-50
+    py-4 lg:py-10 bg-slate-white
     px-0    lg:gap-10  ">
 
 
