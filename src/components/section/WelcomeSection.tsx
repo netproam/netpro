@@ -55,7 +55,7 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 {/**mobile */   }
 <div className="w-full h-full z-20 absolute bottom-0">
     <img 
-    className="w-full h-full brightness-[50%] "
+    className="w-full h-full brightness-[45%] "
     src="/test-bas.jpg "/>
 </div>
 
