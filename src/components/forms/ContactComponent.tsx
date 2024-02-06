@@ -51,7 +51,7 @@ const ContactComponent = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  bg-white p-4 gap-8  flex flex-col w-full
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  bg-white p-4 gap-4  flex flex-col w-full
            shadow-xl rounded-xl  ">
                         <h2 className="text-2xl  pt-2  hidden lg:flex
                          font-stolzl leading-relaxed">Contactez nous</h2>
@@ -146,7 +146,7 @@ const ContactComponent = () => {
                  <FormControl>
                  <div className="flex gap-2 justify-center  bg-slate-50 p-4 rounded-md w-full">
                     <FaPen size={15} className="text-slate-600"/>
-                  <textarea rows={4}
+                  <textarea rows={3}
                     className="  w-full outline-none resize-none   bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
                     placeholder="Inscrire votre message, où appelez nous directement" {...field} />

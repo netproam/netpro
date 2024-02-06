@@ -34,7 +34,7 @@ else if((e>=0.2 &&e<0.8)&&refForm.current){
     refForm.current.style.position="fixed"
     refForm.current.style.top="0px"
     refForm.current.style.margin="0px"
-    refForm.current.style.right="20px"
+    refForm.current.style.right="40px"
 
    
 
