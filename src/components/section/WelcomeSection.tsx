@@ -50,16 +50,16 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
   <section 
   ref={refWelcome}
   className="w-full h-[700px] lg:h-screen lg:p-20  overflow-hidden bg-transparent
-    relative flex flex-col lg:flex-row  items-center justify-center">
+    relative  flex flex-col lg:flex-row z-20  items-center justify-center">
    
 {/**mobile */   }
 <div className="w-full h-full z-20 absolute bottom-0">
     <img 
-    className="w-full h-full brightness-50 "
+    className="w-full h-full brightness-[50%] "
     src="/test-bas.jpg "/>
 </div>
 
-<div className="relative -rotate-[35deg]  
+<div className="relative -rotate-[35deg]   backdrop-blur-sm
 z-50 
 w-full h-full order-2 hidden lg:flex flex items-center justify-center">
 
@@ -72,7 +72,7 @@ flex overflow-hidden
 
 src="/photo_welcome-min.jpeg" 
 
-className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-150      brightness-[45%] 
+className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-150      brightness-[85%] 
  "/>
 </div>
 
@@ -83,7 +83,7 @@ className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-
 
 </div>
 
-  <section className="flex flex-col     lg:pt-10
+  <section className="flex flex-col    my-auto  lg:pt-10 backdrop-md
   
   z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
     <div className="flex flex-col 
@@ -143,14 +143,15 @@ t  flex flex-col gap-0
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{duration:1.25,delay:2.25}}
-  className="  p-2 px-4 lg:hover:bg-slate-300
-  text-slate-100 cursor-pointer     w-full lg:w-fit
-  lg:hover:text-slate-800 duration-150  rounded-full  
-  items-center justify-center flex z-20   absolute bottom-20     lg:mt-10
-  lg:bg-amber-200  lg:bg-opacity-20 py-2 ">
-   <DialogEstimation styleBtn="bg-slate-300   
+  className="  p-2 px-4 
+  text-slate-100 cursor-pointer     w-full lg:w-full 
+  lg:hover:text-slate-800 duration-150   bg-black  
+  items-center justify-center flex z-20   absolute bottom-20 lg:justify-start zz-50     lg:mt-10
+ bg-transparent py-2 ">
+   <DialogEstimation styleBtn="bg-slate-200 
    
-   rounded-full py-6 lg:bg-transparent hover:bg-green-600 hover:bg-opacity-[30%] hover:text-slate-100   text-slate-800" />
+   rounded-full py-6  
+   hover:bg-green-600 hover:bg-opacity-[30%] hover:text-slate-100   text-slate-800" />
     </motion.div>
   </div>
 
