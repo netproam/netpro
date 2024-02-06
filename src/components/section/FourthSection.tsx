@@ -31,43 +31,43 @@ else {
   return (
     <section 
     ref={ref}
-    className="h-fit py-8 items-center  px-4 
+    className="h-fit py-8 items-center  px-4  lg:py-20
     lg:px-10 justify-center gap-20  lg:justify-between   bg-[#F0F9F9] w-full flex flex-col lg:flex-row">
 
 <div className="flex flex-col lg:px-8 justify-center items-center lg:items-start  w-full gap-10">
-<div className="flex flex-col gap-2 items-center justify-center lg:items-start ">
+<div className="flex flex-col  items-center justify-center lg:items-start ">
 <h4 className="text-sm font-semibold text-center  lg:text-start">Ce que nous apportons</h4>
 <h3 className="font-semibold tracking-tighter text-2xl w-4/5 lg:w-fit 
- lg:text-5xl leading-relaxed text-center lg:text-start">Des solutions adaptées à vos besoins</h3>
-<p className="pt-0 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
+ lg:text-5xl  text-center lg:text-start">Des solutions adaptées à vos besoins</h3>
+<p className="pt-1 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
 </div>
 
 {/**Version mobile */}
 <section className="w-full flex items-center justify-center lg:hidden  px-4 gap-4">
     <div className="w-full flex justify-end p-4">
 <div className="w-fit lg:hidden  items-center
- self-end lg:w-full gap-4 lg:gap-0 flex flex-col  lg:self-start relative ">
+ self-end lg:w-full  lg:gap-0 flex flex-col  lg:self-start relative ">
     <motion.p className="font-semibold text-5xl  lg:hidden tracking-tighter w-fit relative "><motion.span>{rounded}</motion.span>
     <motion.span className="-inset-y-4 absolute">+</motion.span>
     </motion.p>
 
-        <h3 className="font-semibold text-lg text-start relative  ">Clients</h3>
-        <p className=" whitespace-nowrap">Nous ont fais confiance</p>
+        <h3 className="font-semibold text-base text-start relative pt-2 ">Clients</h3>
+        <p className=" whitespace-nowrap text-sm">Nous ont fais confiance</p>
     </div>
 
     </div>
 
     <div className="w-full flex justify-center  ">
     <div className="w-full justify-center text-center  items-center
-    lg:w-full gap-4 lg:gap-0 flex flex-col  lg:self-start relative ">
+    lg:w-full gap-0 lg:gap-0 flex flex-col  lg:self-start relative ">
     <motion.p className="font-semibold text-5xl
     
     lg:hidden tracking-tighter w-fit "><motion.span>{roundedEmpl}</motion.span>
     
     </motion.p>
 
-        <h3 className="font-semibold text-lg text-start relative  ">{`Employés`}</h3>
-        <p className="">{`À votre services`}</p>
+        <h3 className="font-semibold text-base text-start relative pt-2  ">{`Employés`}</h3>
+        <p className="text-sm">{`À votre services`}</p>
     </div>
     </div>
 
