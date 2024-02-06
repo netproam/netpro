@@ -63,8 +63,8 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 z-50    
 w-full  order-2 hidden lg:flex flex items-center justify-center">
 
-<div className="w-[650px] 
- h-[250px] 
+<div className="w-[700px] 
+ h-[350px] 
 flex    
  overflow-hidden
  rounded-full  z-50 relative">
