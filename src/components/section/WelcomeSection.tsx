@@ -49,22 +49,37 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
   return (
   <section 
   ref={refWelcome}
-  className="w-full h-screen  overflow-hidden
-    relative flex flex-col  items-center justify-center">
+  className="w-full h-screen  overflow-hidden bg-[#29677b]
+    relative flex flex-col lg:flex-row  items-center justify-center">
    
 {/**mobile */   }
+<div className="w-full h-fit z-20 absolute bottom-0">
+    <img 
+    className="w-full "
+    src="/testbas.png"/>
+</div>
 
+<div className="relative w-full h-full order-2 hidden lg:flex flex items-center justify-center">
 
-<img 
+<div className="w-[600px] -rotate-45  
+ overflow-hidden
+bg-white bg-opacity-10   h-[350px] rounded-full z-50 relative">
+<img  
 
 src="/photo_welcome-min.jpeg" 
 
-className="object-cover  absolute  brightness-[45%] w-full  
-    h-full   "/>
+className=" z-30  absolute  rotate-45 brightness-[45%] 
+ "/>
+</div>
+
+ 
 
 
 
-  <section className="flex flex-col lg:flex-row  backdrop-blur-sm   lg:pt-10
+
+</div>
+
+  <section className="flex flex-col     lg:pt-10
   
   z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
     <div className="flex flex-col 
@@ -122,16 +137,16 @@ t  flex flex-col gap-0
     flex-col h-[250px]   items-center gap-2 ">
 
     <div className=" w-fit h-full    p-1 
-     lg:w-[300px] lg:h-[300px]  z-40 flex  gap-4
+     z-50 flex  gap-4
       relative  lg:rounded-full  items-center justify-e   flex flex-col">
   <motion.div 
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{duration:1.25,delay:2.25}}
   className="  p-2 px-4 lg:hover:bg-slate-300
-  text-slate-100 cursor-pointer
-  lg:hover:text-slate-800 duration-150  rounded-full  lg:h-[200px] lg:w-[200px] 
-  items-center justify-center flex
+  text-slate-100 cursor-pointer  
+  lg:hover:text-slate-800 duration-150  rounded-full  
+  items-center justify-center flex z-50 relative
   lg:bg-amber-200 w-full lg:bg-opacity-20 py-2 ">
    <DialogEstimation styleBtn="bg-[#7abebe] rounded-full py-6 lg:bg-transparent hover:bg-transparent  text-current" />
     </motion.div>
