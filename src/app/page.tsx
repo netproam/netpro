@@ -16,7 +16,7 @@ export default function Home() {
     <div className="w-full bg-slate-50 lg:bg-transparent">
     <ServicesSection/>
     </div>
-    <div className="flex flex-col  gap-8 bg-slate-50">
+    <div className="flex flex-col  gap-8 bg-slate-50 pt-4">
     <ThirdSection/>
     <FifthSection/>
     </div>
