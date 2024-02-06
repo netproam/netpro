@@ -23,63 +23,27 @@ const Navbar = () => {
     const [isOpen,setIsOpen]=useState(false)
     const router=useRouter()
     const {scrollYProgress}=useScroll()
-    const refNav =useRef<HTMLElement>(null)
-    const refServices =useRef<HTMLParagraphElement>(null)
-    const refAbout =useRef<HTMLParagraphElement>(null)
-
-    const refContact =useRef<HTMLParagraphElement>(null)
-    const refToggle =useRef<HTMLDivElement>(null)
-
-    
+  
 const [scope,animate]=useAnimate()
 
-    useMotionValueEvent(scrollYProgress,"change",(e)=>{
-        if(path==="/"&&refNav.current&&refAbout.current&&refContact.current&&refServices.current&&refToggle.current)
+    useMotionValueEvent(scrollYProgress,"change",async(e)=>{
+        if(path==="/")
         {
-        if(e>0.1)
-        {            
-            
-            
+     if(e>0.1)
+     {
+        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+     }
+     else {
+        animate(scope.current,{color:"white",backgroundColor:"transparent"})
 
-
-            console.log(e)
-            refNav.current.style.backgroundColor="#F0F9F9"
-
-            refAbout.current.style.color="black"
-            refServices.current.style.color="black"
-            refToggle.current.style.color="black"
-
-            refContact.current.style.color="black"
-            animate(scope.current,{color:"black"})
-
-        }
-        else {
-
-
-
-
-            refAbout.current.style.color="white"
-            refServices.current.style.color="white"
-            refContact.current.style.color="white"
-            refNav.current.style.backgroundColor="transparent"
-            refToggle.current.style.color="white"
-            animate(scope.current,{color:"white"})
-        }
+     }
     }
-    else if(refNav.current&&path!="/"&&refAbout.current&&refServices.current&&refToggle.current&&refContact.current) {
-        refNav.current.style.backgroundColor="#F0F9F9"
 
-        refAbout.current.style.color="black"
-        refServices.current.style.color="black"
-        refToggle.current.style.color="black"
-
-        refContact.current.style.color="black"
-    }
     })
     console.log(scrollYProgress.get)
   return (
-   <nav 
-  ref={refNav}
+   <motion.nav 
+  ref={scope}
    className={`   w-full   justify-between     bg-opacity-50     
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16
     text-current  gap-10 items-center 
@@ -95,24 +59,26 @@ width={70}
 src="/logo.png"/>
 </div>
 
-<div className={`  w-fit  mr-auto    relative z-50 items-center hidden lg:flex
-${path==="/"? "text-slate-800 " : "text-slate-900 bg-transparent"}
+<div className={`  w-fit  mr-auto  text-current   relative z-50 items-center hidden lg:flex
+${path==="/"? " " : " bg-transparent"}
 `}>
 
 <NavigationMenu className={`gap-10 hidden   lg:flex z-50 brightness-150  
-text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" : "text-slate-900"}`}>
+lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-800"}`}>
 
 
   <NavigationMenuList 
   
-  className={` ${path==="/"? "text-slate-100 " : "text-slate-900 bg-transparent"}`}>
+  className={` ${path==="/"? "text-current " : "text-slate-900 bg-transparent"}`}>
     <NavigationMenuItem className="text-current bg-transparent  " >
         <motion.div ref={scope}>
       <NavigationMenuTrigger
       id={"menutriggerid"}
       className={`bg-transparent  text-sm  font-semibold  text-current`}>
         
-        <p  className="text-current"ref={refServices}>SERVICES </p></NavigationMenuTrigger>
+        <p  className="text-current"
+        
+        >SERVICES </p></NavigationMenuTrigger>
         </motion.div>
       <NavigationMenuContent className=" flex justify-center relative z-50  ">
         <ul
@@ -136,14 +102,14 @@ text-current lg:w-full font-semibold relative   ${path==="/"? "text-slate-100" :
 <NavigationMenuItem className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
     <NavigationMenuLink className="text-sm">
-     <p  ref={refAbout}>FAQ</p>
+     <p  >FAQ</p>
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
   <NavigationMenuItem  className="list-none text-base">
   <Link href="/contact" passHref legacyBehavior>
     <NavigationMenuLink   className="text-sm" >
-     <p ref={refContact}>CONTACT</p>
+     <p >CONTACT</p>
     </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
@@ -182,12 +148,14 @@ color="rgb(248,250,252)"/>
 </div>
 
 
+<motion.div 
 
+className=" text-current lg:hidden ">
 <NavMobileMenu/>
-
+</motion.div>
 </div>
 
-   </nav>
+   </motion.nav>
   )
 }
 export default Navbar

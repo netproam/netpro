@@ -20,7 +20,7 @@ const NavMobileMenu = () => {
         {isSelectService&&<MdKeyboardArrowLeft 
         onClick={()=>setIsSelectService(false)}
         size={20} className=" absolute left-0 text-slate-800"/>}
-        <p className="font-semibold text-sm self-center  relative">Services</p>
+        <p className="font-semibold text-base self-center  relative">Services</p>
      <IoClose
      onClick={closeNavBar}
      size={20} className="absolute right-0   text-slate-800"/>
@@ -36,25 +36,26 @@ const NavMobileMenu = () => {
 <div className="w-full flex flex-col  p-10 gap-8">
 
 <p onClick={()=>{
-
-        closeNavBar()
         router.push("/services/menages")
 
+        closeNavBar()
+
         
       }}
        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-       hover:bg-[#EEF5FF] hover:text-slate-800   ">Nettoyages</p>
+       lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800   ">Nettoyages</p>
           <p onClick={()=>{
+                    router.push("/services/debaras")
+
            closeNavBar()
 
-        router.push("/services/debaras")
 
         
       }}
        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-       hover:bg-[#EEF5FF] hover:text-slate-800   ">{`Débarras`}</p>
+       lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800   ">{`Débarras`}</p>
   
      
  
@@ -64,15 +65,15 @@ const NavMobileMenu = () => {
 :<div className="w-full flex flex-col  p-10 gap-8">
 
 <p onClick={()=>{
+        router.push("/")
 
        closeNavBar()
-        router.push("/")
 
         
       }}
        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-       hover:bg-[#EEF5FF] hover:text-slate-800   ">Home</p>
+       lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800   ">Home</p>
           <p onClick={()=>{
                         setIsSelectService(true)
 
@@ -81,7 +82,7 @@ const NavMobileMenu = () => {
       }}
        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-       hover:bg-[#EEF5FF] hover:text-slate-800 flex justify-between    ">Services <span><MdOutlineKeyboardArrowRight size={20}/></span></p>
+       lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800 flex justify-between    ">Services <span><MdOutlineKeyboardArrowRight size={20}/></span></p>
   
           
   <p onClick={()=>{
@@ -93,19 +94,19 @@ const NavMobileMenu = () => {
       }}
        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-       hover:bg-[#EEF5FF] hover:text-slate-800   ">FAQ</p>
+       lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800   ">FAQ</p>
 
           
               <p onClick={()=>{
 
-      
-closeNavBar()
 router.push("/contact")
+
+closeNavBar()
         
       }}
        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-       hover:bg-[#EEF5FF] hover:text-slate-800   ">Contact</p>
+       lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800   ">Contact</p>
         
  
     
@@ -118,8 +119,8 @@ router.push("/contact")
 }
 else {
     return <IoMenu 
-    className="lg:hidden"
-    onClick={()=>setIsOpenMenu(true)} size={20}/>
+    className="text-current"
+    onClick={()=>setIsOpenMenu(true)} size={25}/>
 }
 }
 export default NavMobileMenu
