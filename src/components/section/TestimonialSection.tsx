@@ -34,11 +34,11 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
         )
     })
   return (
-   <section className=" h-[350px] lg:h-[440px] bg-white bg-gradient-to-b 
+   <section className=" h-[350px] lg:h-[420px] bg-white bg-gradient-to-b 
   overflow-auto w-screen
     flex flex-col gap-2 ">
 
-<div className="  gap-10 lg:gap-20 pl-10  w-max  items-center   flex pt-8 h-full  overflow-y-scroll">
+<div className="  gap-10 lg:gap-20 pl-10   w-max  items-center   flex  h-full  overflow-y-scroll">
 
 {allTemoignages}
 
