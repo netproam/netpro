@@ -18,7 +18,7 @@ import CommunSVG from "../../../public/SVG/partiecommune.svg"
 import ServiceComponent from "../services/ServiceComponent";
 
 const ServicesSection = () => {
-    const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Des services qui correspondent à vos besoins',
+    const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Des prestations adaptées',
     description:`Nous sommes connus pour nos services de qualité car nous allons dans chaque recoin et sommes dans la précision.
     `}]
 
@@ -87,7 +87,7 @@ const ServicesSection = () => {
 
 
     <div className="flex flex-col h-full  w-full text-center  gap-2 ">
-<h2 className=" font-semibold text-left self-center
+<h2 className=" font-semibold text-left self-center text-slate-500
  lg:self-center text-xl lg:text-3xl pb-2 pt-6">{`Nettoyages`}</h2>
 
 <div className=" grid grid-cols-3 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
@@ -96,7 +96,7 @@ const ServicesSection = () => {
 </div>
 
 <div className="flex flex-col w-full h-full   lg:w-9/12 gap-2 ">
-<h2 className=" relative  font-semibold text-xl lg:text-3xl self-center lg:self-center py-4 pt-6">{`Débarras`}</h2>
+<h2 className=" relative  text-slate-500 font-semibold text-xl lg:text-3xl self-center lg:self-center py-4 pt-6">{`Débarras`}</h2>
 
 <div className=" grid grid-cols-2  place-items-center">
 {allDataDisplay.slice(6)}

@@ -126,7 +126,7 @@ t  flex flex-col gap-0
       relative  lg:rounded-full  items-center justify-e   flex flex-col">
   <motion.div 
       initial={{opacity:0}}
-      animate={{opacity:[0,1],x:[-100,0]}}
+      animate={{opacity:[0,1],y:[100,0]}}
   transition={{duration:1.25,delay:2.25}}
   className="  p-2 px-4 lg:hover:bg-slate-300
   text-slate-100 cursor-pointer
@@ -135,15 +135,7 @@ t  flex flex-col gap-0
   lg:bg-amber-200 w-full lg:bg-opacity-20 py-2 ">
    <DialogEstimation styleBtn="bg-[#7abebe] rounded-full py-6 lg:bg-transparent hover:bg-transparent  text-current" />
     </motion.div>
-    <motion.div
-      initial={{opacity:0}}
 
-    animate={{opacity:[0,1],x:[100,0]}}
-    transition={{duration:1.25,delay:2.25}}
-    className="w-full h-full flex flex-col lg:hidden items-center">
-        <Link href={"/contact"} className="px-12 rounded-full 
-         text-sm font-semibold bg-[#0E2954] text-white w-fit py-3">Nous contacter</Link>
-    </motion.div>
     </div>
 
 
