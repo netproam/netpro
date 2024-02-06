@@ -49,26 +49,30 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
   return (
   <section 
   ref={refWelcome}
-  className="w-full h-[700px] lg:h-screen  overflow-hidden bg-[#29677b]
+  className="w-full h-[700px] lg:h-screen lg:p-20  overflow-hidden bg-transparent
     relative flex flex-col lg:flex-row  items-center justify-center">
    
 {/**mobile */   }
-<div className="w-full h-fit z-20 absolute bottom-0">
+<div className="w-full h-full z-20 absolute bottom-0">
     <img 
-    className="w-full "
-    src="/testbas.png"/>
+    className="w-full h-full brightness-50 "
+    src="/test-bas.jpg "/>
 </div>
 
-<div className="relative  w-full h-full order-2 hidden lg:flex flex items-center justify-center">
+<div className="relative -rotate-[35deg]  
+z-50 
+w-full h-full order-2 hidden lg:flex flex items-center justify-center">
 
-<div className="w-[600px] overflow-hidden -rotate-45  
+<div className="w-[700px] 
+
+flex overflow-hidden
  
-  h-[450px] rounded-full z-50 relative">
+  h-[300px] rounded-full  z-50 relative">
 <img  
 
 src="/photo_welcome-min.jpeg" 
 
-className=" z-50     h-[450px]  rounded-full  w-[600px]    rotate-45 brightness-[45%] 
+className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-150      brightness-[45%] 
  "/>
 </div>
 
@@ -83,10 +87,10 @@ className=" z-50     h-[450px]  rounded-full  w-[600px]    rotate-45 brightness-
   
   z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
     <div className="flex flex-col 
-      w-full lg:pl-10 h-full  relative   items-center justify-center">
+      w-full lg:pl-10 h-full  relative    items-center justify-center">
     <div 
     key={allText[0].id}
-    className="flex text-left flex-col     brightness-95
+    className="flex text-left flex-col     relative     brightness-95
      lg:text-left  lg:justify-center  lg:gap-0 px-10 lg:px-0">
      
     <motion.h3
@@ -121,7 +125,7 @@ t  flex flex-col gap-0
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:2}}}
-    className="text-slate-200  leading-relaxed  pt-4   lg:w-[600px]  text-left  lg:text-lg 
+    className="text-slate-200  leading-relaxed  pt-4   lg:w-3/5  text-left  lg:text-lg 
       lg:leading-tight  font-normal">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
@@ -131,30 +135,25 @@ t  flex flex-col gap-0
         <Button className="bg-[#39a2a7] p-4 rounded-full font-semibold ">Nous contacter</Button>
 
     </motion.div> */}
-    </div>
-  </div>
-  <div className=" w-full  flex justify-center 
-    flex-col h-[250px]   items-center gap-2 ">
 
-    <div className=" w-fit h-full    p-1 
-     z-50 flex  gap-4
-      relative  lg:rounded-full  items-center justify-e   flex flex-col">
-  <motion.div 
+
+
+    </div>
+    <motion.div 
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{duration:1.25,delay:2.25}}
   className="  p-2 px-4 lg:hover:bg-slate-300
-  text-slate-100 cursor-pointer  
+  text-slate-100 cursor-pointer     w-full lg:w-fit
   lg:hover:text-slate-800 duration-150  rounded-full  
-  items-center justify-center flex z-50 relative
-  lg:bg-amber-200 w-full lg:bg-opacity-20 py-2 ">
-   <DialogEstimation styleBtn="bg-[#7abebe] rounded-full py-6 lg:bg-transparent hover:bg-transparent  text-current" />
+  items-center justify-center flex z-20   absolute bottom-20     lg:mt-10
+  lg:bg-amber-200  lg:bg-opacity-20 py-2 ">
+   <DialogEstimation styleBtn="bg-slate-300   
+   
+   rounded-full py-6 lg:bg-transparent hover:bg-green-600 hover:bg-opacity-[30%] hover:text-slate-100   text-slate-800" />
     </motion.div>
-
-    </div>
-
-
   </div>
+
   </section>
 
   </section>
