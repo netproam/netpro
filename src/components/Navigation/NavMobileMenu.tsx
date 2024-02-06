@@ -1,112 +1,125 @@
-// import { useRouter } from "next/navigation"
-// import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
 
-// const NavMobileMenu = () => {
-//     const router=useRouter()
-//     const [isOpenMenu,setIsOpenMenu]=useState(false)
-//     if(isOpenMenu)
-//     {
-//   return (
-//    <div className="w-screen h-screen  inset-0 fixed z-40 flex flex-col  bg-slate-50 text-slate-800 p-4 gap-8">
-     
-//     <div className="flex flex-col  text-md relative z-50 cursor-pointer font-semibold text-md  text-left"
+import { IoClose, IoMenu } from "react-icons/io5"
+import { MdKeyboardArrowLeft,MdOutlineKeyboardArrowRight } from "react-icons/md"
+
+const NavMobileMenu = () => {
+    const router=useRouter()
+    const [isOpenMenu,setIsOpenMenu]=useState(false)
+    const [isSelectService,setIsSelectService]=useState(false)
+    function closeNavBar(){
+        setIsSelectService(false)
+        setIsOpenMenu(false)
+    }
+    if(isOpenMenu)
+    {
+  return (
+   <div className="w-screen h-screen  inset-0 fixed z-40 flex gap-4 flex-col  bg-slate-50 text-slate-800 p-4 gap-0">
+     <div className="w-full  justify-center  flex    relative  items-center p-4">
+        {isSelectService&&<MdKeyboardArrowLeft 
+        onClick={()=>setIsSelectService(false)}
+        size={20} className=" absolute left-0 text-slate-800"/>}
+        <p className="font-semibold text-sm self-center  relative">Services</p>
+     <IoClose
+     onClick={closeNavBar}
+     size={20} className="absolute right-0   text-slate-800"/>
+
+     </div>
+    <div className="flex flex-col  text-md relative z-50 cursor-pointer font-semibold text-md  text-left"
           
-//           onMouseLeave={()=>{
-          
-//             if(isClick)
-//             {
-//               // setAnimate(refcircle.current,{pathLength:[1,0]},{duration:0.5})
-//               setIsClick(false)
+      
+          >
 
-//             }
-//            }}
-//           >
+{isSelectService?
 
-// <p className=" border-b-2 border-slate-800 py-2 text-lg">Navigation</p>
+<div className="w-full flex flex-col  p-10 gap-8">
 
+<p onClick={()=>{
 
-// <p onClick={()=>{
-
-//         setIsOpenMenu(false)
-//         router.push("/")
+        closeNavBar()
+        router.push("/services/menages")
 
         
-//       }}
-//        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
+      }}
+       className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-//        hover:bg-[#EEF5FF] hover:text-slate-800  py-4 pr-40  pl-14 ">Home</p>
-//           <p onClick={()=>{
-//              setIsOpenMenu(false)
+       hover:bg-[#EEF5FF] hover:text-slate-800   ">Nettoyages</p>
+          <p onClick={()=>{
+           closeNavBar()
 
-//         router.push("/contact")
+        router.push("/services/debaras")
 
         
-//       }}
-//        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
+      }}
+       className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-//        hover:bg-[#EEF5FF] hover:text-slate-800  py-4 pr-40  pl-14 ">A propos</p>
+       hover:bg-[#EEF5FF] hover:text-slate-800   ">{`Débarras`}</p>
   
-//               <p onClick={()=>{
-//              setIsOpenMenu(false)
-
-//         router.push("/contact")
-
-        
-//       }}
-//        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
+     
+ 
+    
        
-//        hover:bg-[#EEF5FF] hover:text-slate-800  py-4 pr-40  pl-14 ">Contact</p>
-//             <p onClick={()=>{
-//             setIsOpenMenu(false)
+</div>
+:<div className="w-full flex flex-col  p-10 gap-8">
 
-//         router.push("/")
+<p onClick={()=>{
+
+       closeNavBar()
+        router.push("/")
 
         
-//       }}
-//        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
+      }}
+       className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-//        hover:bg-[#EEF5FF] hover:text-slate-800  py-4 pr-40  pl-14 ">Rejoignez-nous</p>
-//    <p className=" border-b-2 border-slate-800 py-2 text-lg">Expertises</p>
-//       <p onClick={()=>{
-//                  setIsOpenMenu(false)
+       hover:bg-[#EEF5FF] hover:text-slate-800   ">Home</p>
+          <p onClick={()=>{
+                        setIsSelectService(true)
 
-//         router.push("/services/robotique")
 
         
-//       }}
-//        className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
-//        hover:bg-[#EEF5FF] hover:text-slate-800  py-4 pr-40  pl-14 ">Robotique et Vision Industrielle</p>
-//       <p  onClick={()=>{
-//              setIsOpenMenu(false)
-
-//         router.push("/services/developpementweb")
-
-        
-//       }}
-//       className="whitespace-nowrap cursor-pointer z-50 relative   hover:bg-[#EEF5FF] hover:text-slate-800 
-//        pr-40  pl-14 py-4">{`Dévéloppement Web`}</p>
-//       <p  onClick={()=>{
-//                setIsOpenMenu(false)
-
-//         router.push("/services/automatisation")
-
-        
-//       }}
-//       className="whitespace-nowrap cursor-pointer z-50 relative   hover:bg-[#EEF5FF]
-//        hover:text-slate-800  pr-40  pl-14 py-4">Smart Automatisation</p>
+      }}
+       className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
        
-//       <p  onClick={()=>{
-//                setIsOpenMenu(false)
+       hover:bg-[#EEF5FF] hover:text-slate-800 flex justify-between    ">Services <span><MdOutlineKeyboardArrowRight size={20}/></span></p>
+  
+          
+  <p onClick={()=>{
 
-//         router.push("/services/researchetdeveloppement")
+
+       
 
         
-//       }}
-//       className="whitespace-nowrap cursor-pointer z-50 relative  
-//        rounded-b-md  hover:bg-[#EEF5FF] hover:text-slate-800  pr-40  pl-14 py-4">{`Recherche et Développement`}</p>
-//       </div>
-//       </div>
-//   )
-// }
-// }
-// export default NavMobileMenu
+      }}
+       className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
+       
+       hover:bg-[#EEF5FF] hover:text-slate-800   ">FAQ</p>
+
+          
+              <p onClick={()=>{
+
+      
+closeNavBar()
+router.push("/contact")
+        
+      }}
+       className="whitespace-nowrap cursor-pointer z-50 relative rounded-t-md
+       
+       hover:bg-[#EEF5FF] hover:text-slate-800   ">Contact</p>
+        
+ 
+    
+       
+</div>}
+      </div>
+      </div>
+  )
+
+}
+else {
+    return <IoMenu 
+    className="lg:hidden"
+    onClick={()=>setIsOpenMenu(true)} size={20}/>
+}
+}
+export default NavMobileMenu

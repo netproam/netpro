@@ -16,6 +16,7 @@ import { useRef, useState } from "react";
   import { IoIosClose } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useAnimate, useMotionValueEvent, useScroll ,motion} from "framer-motion";
+import NavMobileMenu from "./NavMobileMenu";
 
 const Navbar = () => {
     const path=usePathname()
@@ -182,41 +183,10 @@ color="rgb(248,250,252)"/>
 
 
 
-<div onClick={()=>{
-    setIsOpen(true)
-}} className={`lg:hidden cursor-pointer ${path==="/"? "text-slate-600" : "text-slate-800"}}`} ref={refToggle}>
-<IoMenu size={30} />
-</div>
+<NavMobileMenu/>
+
 </div>
 
-{isOpen&&<section className="flex flex-col fixed
-inset-0 z-50 w-screen h-screen bg-opacity-100
-bg-slate-100  text-slate-900 gap-10">
-
-<div 
-className="flex justify-end p-4"
-onClick={()=>{
-    setIsOpen(false)
-}} >
-    <IoIosClose size={30}/>
-</div>
-<ul className="flex flex-col font-semibold gap-4 text-lg pl-4">
-<Link onClick={()=>{
-    setIsOpen(false)
-}} href={"/"}>Accueil</Link>
-
-<Link  onClick={()=>{
-    setIsOpen(false)
-}} href={"/services/menage"}>{`Ménage`}</Link>
-<Link onClick={()=>{
-    setIsOpen(false)
-}} href={"/services/debaras"}>{`Débarras`}</Link>
-
-<Link onClick={()=>{
-    setIsOpen(false)
-}} href={"/contact"}>Contact</Link>
-</ul>
-</section>}
    </nav>
   )
 }
