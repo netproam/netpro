@@ -27,8 +27,9 @@ console.log(isInterValId,isInView)
 const allText=[{
 id:"idTest",
 firstTitle:"L'entretien réinventer",
-title:`NET'PROS le choix de la qualité
-`,
+title:`NET'PROS`,
+sousTitle:`La compagnie qu'il vous faut`
+,
 sousDescription:`car chaque entreprise à ses spécificités, nous vous offrons des services sur mesure, afin
 que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 ,{
@@ -84,14 +85,14 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
 
 </div>
 
-  <section className="flex flex-col  lg:pl-48   my-auto  backdrop-md
+  <section className="flex flex-col  lg:pl-48   backdrop-md
   
-  z-20 gap-0 text-left  items-center justify-center lg:w-[950px] h-full  ">
+  z-20 gap-0 text-left  items-center justify-center lg:w-[1000px] h-full  ">
     <div className="flex flex-col 
       w-full pl-0  h-full  relative    items-center justify-center">
     <div 
     key={allText[0].id}
-    className="flex text-left flex-col     relative     brightness-95
+    className="flex text-left flex-col      relative     brightness-95
      lg:text-right lg:justify-center  lg:gap-0 px-10 lg:px-0">
      
     <motion.h3
@@ -110,9 +111,10 @@ t  flex flex-col lg:gap-4
      font-semibold tracking-tighter"
     
     >{allText[0].title.split(" ")[0]} </span>
-    <span className="text-xs lg:text-6xl font-stolzl text-slate-300 inline-block 
-     tracking-tighter lg:order-2">{
-    allText[0].title.split(" ").slice(1).join(" ")}</span></motion.h3>
+    <span className="text-xs lg:text-6xl font-stolzl text-slate-300   lg:leading-relaxed tracking-tighter
+     h-full
+     lg:order-2">{
+    allText[0].sousTitle}</span></motion.h3>
 
 
 
@@ -127,7 +129,7 @@ t  flex flex-col lg:gap-4
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:2}}}
-    className="text-slate-200  leading-relaxed  pt-1  lg:hidden    text-left  lg:text-lg 
+    className="text-slate-200  leading-loose   pt-2  lg:hidden    text-left  lg:text-lg 
       lg:leading-normal  font-normal">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
