@@ -49,7 +49,7 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
   return (
   <section 
   ref={refWelcome}
-  className="w-full h-[700px] lg:h-screen lg:p-20  overflow-hidden bg-transparent
+  className="w-full h-[700px] lg:h-screen   overflow-hidden bg-transparent
     relative  flex flex-col lg:flex-row z-20  items-center justify-center">
    
 {/**mobile */   }
@@ -84,9 +84,9 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
 
 </div>
 
-  <section className="flex flex-col    my-auto  lg:pt-10 backdrop-md
+  <section className="flex flex-col  lg:pl-48   my-auto  backdrop-md
   
-  z-20 gap-0 text-left  items-center justify-center lg:w-[500px] h-full  ">
+  z-20 gap-0 text-left  items-center justify-center lg:w-[950px] h-full  ">
     <div className="flex flex-col 
       w-full pl-0  h-full  relative    items-center justify-center">
     <div 
@@ -102,15 +102,16 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:0.5,duration:1.5}}}
     className="     text-left 
-t  flex flex-col gap-0
+t  flex flex-col lg:gap-4
     "><span
     
-    className="text-slate-50 font-stolzl text-4xl  order-2   lg:text-4xl 
-    leading-none   lg:leading-tight  
+    className="text-slate-50 font-stolzl text-4xl  order-2 lg:order-1  lg:text-6xl
+    leading-none    lg:leading-relaxed   
      font-semibold tracking-tighter"
     
     >{allText[0].title.split(" ")[0]} </span>
-    <span className="text-xs text-slate-300 inline-block font-sans tracking-normal">{
+    <span className="text-xs lg:text-6xl font-stolzl text-slate-300 inline-block 
+     tracking-tighter lg:order-2">{
     allText[0].title.split(" ").slice(1).join(" ")}</span></motion.h3>
 
 
@@ -126,8 +127,8 @@ t  flex flex-col gap-0
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:2}}}
-    className="text-slate-200  leading-relaxed  pt-4     text-left  lg:text-lg 
-      lg:leading-tight  font-normal">{allText[0].sousDescription}</motion.p>
+    className="text-slate-200  leading-relaxed  pt-1  lg:hidden    text-left  lg:text-lg 
+      lg:leading-normal  font-normal">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
 
@@ -144,10 +145,10 @@ t  flex flex-col gap-0
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{duration:1.25,delay:2.25}}
-  className="  p-2 px-4 
-  text-slate-100 cursor-pointer     w-full lg:w-full 
+  className="  p-2 px-4  lg:p-0
+  text-slate-100 cursor-pointer  lg:relative   w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   bg-black  
-  items-center justify-center flex z-20   absolute bottom-20 lg:justify-start zz-50     lg:mt-10
+  items-center justify-center flex z-20   absolute bottom-20 lg:bottom-0 lg:justify-start zz-50    lg:pt-16
  bg-transparent py-2 ">
    <DialogEstimation styleBtn="bg-slate-200 
    
