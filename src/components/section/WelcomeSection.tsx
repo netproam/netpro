@@ -59,20 +59,21 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
     src="/test-bas.jpg "/>
 </div>
 
-<div className="relative -rotate-[35deg]   backdrop-blur-sm
-z-50 
-w-full h-full order-2 hidden lg:flex flex items-center justify-center">
+<div className="relative -rotate-[35deg]    backdrop-blur-sm
+z-50    
+w-full  order-2 hidden lg:flex flex items-center justify-center">
 
-<div className="w-[700px] 
-
-flex overflow-hidden
- 
-  h-[300px] rounded-full  z-50 relative">
+<div className="w-[650px] 
+ h-[250px] 
+flex    
+ overflow-hidden
+ rounded-full  z-50 relative">
 <img  
 
 src="/photo_welcome-min.jpeg" 
 
-className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-150      brightness-[85%] 
+className="   h-[600px]  inset-0 z-50 object-right w-full  
+ rotate-[35deg]   absolute  scale-150      brightness-[85%] 
  "/>
 </div>
 
@@ -85,13 +86,13 @@ className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-
 
   <section className="flex flex-col    my-auto  lg:pt-10 backdrop-md
   
-  z-20 gap-0 text-left  items-center justify-center w-full h-full  ">
+  z-20 gap-0 text-left  items-center justify-center lg:w-[500px] h-full  ">
     <div className="flex flex-col 
-      w-full lg:pl-10 h-full  relative    items-center justify-center">
+      w-full pl-0  h-full  relative    items-center justify-center">
     <div 
     key={allText[0].id}
     className="flex text-left flex-col     relative     brightness-95
-     lg:text-left  lg:justify-center  lg:gap-0 px-10 lg:px-0">
+     lg:text-right lg:justify-center  lg:gap-0 px-10 lg:px-0">
      
     <motion.h3
           initial={{opacity:0}}
@@ -100,7 +101,7 @@ className="  z-50 object-right w-full h-full   rotate-[35deg]   absolute  scale-
 
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:0.5,duration:1.5}}}
-    className="   n  lg:w-[600px]  text-left 
+    className="     text-left 
 t  flex flex-col gap-0
     "><span
     
@@ -125,7 +126,7 @@ t  flex flex-col gap-0
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:1.5,duration:2}}}
-    className="text-slate-200  leading-relaxed  pt-4   lg:w-3/5  text-left  lg:text-lg 
+    className="text-slate-200  leading-relaxed  pt-4     text-left  lg:text-lg 
       lg:leading-tight  font-normal">{allText[0].sousDescription}</motion.p>
     {/* <motion.div 
                   animate={{opacity:[0,1],transition:{duration:2,delay:2.25}}}
