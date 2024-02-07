@@ -7,6 +7,7 @@ import FourthSection from "@/components/section/FourthSection";
 import ContactSection from "../components/section/ContactSection";
 import FifthSection from "@/components/section/FithSection";
 import TestimonialSection from "@/components/section/TestimonialSection";
+import NewServicesSection from "@/components/section/NewServiceSection";
 
 export default function Home() {
   return (
@@ -14,18 +15,21 @@ export default function Home() {
    
     <WelcomeSection/>
     <div className="w-full bg-slate-50 lg:bg-transparent">
-    <ServicesSection/>
+    <NewServicesSection/>
     </div>
     <div className="flex flex-col  gap-8 bg-slate-50 pt-4">
     <ThirdSection/>
     <FifthSection/>
+
     </div>
     <FourthSection/>
+
     <div className=" bg-white  flex flex-col justify-center items-center ">
     <p className="font-semibold text-3xl leading-relaxed  text-center pt-8 lg:pt-16 lg:w-fit 
 lg:text-5xl tracking-tighter ">Ils nous ont fait confiance</p>
     <TestimonialSection/>
     </div>
+
     <ContactSection/>
     </main>
   );
