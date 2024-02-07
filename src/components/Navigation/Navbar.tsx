@@ -61,7 +61,7 @@ console.log("slt")
   return (
    <motion.nav 
   ref={scope}
-   className={`   w-full   justify-between bg-[#F0F9F9]     bg-opacity-50     
+   className={`   w-full   justify-between bg-transparent bg-opacity-50     
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16
     text-current  gap-10 items-center 
    ${path==="/"? "fixed text-slate-100  flex  ":"fixed lg:relative  bg-opacity-100 "}`}>

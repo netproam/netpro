@@ -1,3 +1,4 @@
+import { AnimatePresence,motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
@@ -12,10 +13,13 @@ const NavMobileMenu = () => {
         setIsSelectService(false)
         setIsOpenMenu(false)
     }
-    if(isOpenMenu)
-    {
+
   return (
-   <div className="w-screen h-screen  inset-0 fixed z-40 flex gap-4 flex-col  bg-slate-50 text-slate-800 p-4 gap-0">
+ <AnimatePresence>
+{isOpenMenu?   <motion.div transition={{duration:0.25}}
+initial={{opacity:0}} animate={{opacity:[0,1]}} exit={{opacity:[1,0]}}
+key={"navbar"}
+   className="w-screen h-screen  inset-0 fixed z-40 flex gap-4 flex-col  bg-slate-50 text-slate-800 p-4 gap-0">
      <div className="w-full  justify-center  flex    relative  items-center p-4">
         {isSelectService&&<MdKeyboardArrowLeft 
         onClick={()=>setIsSelectService(false)}
@@ -113,14 +117,15 @@ closeNavBar()
        
 </div>}
       </div>
-      </div>
-  )
+      </motion.div>
 
-}
-else {
-    return <IoMenu 
+      :  <IoMenu 
     className="text-current"
-    onClick={()=>setIsOpenMenu(true)} size={25}/>
-}
-}
+    onClick={()=>setIsOpenMenu(true)} size={25}/>}
+
+      </AnimatePresence>
+
+  )
+    }
+
 export default NavMobileMenu
