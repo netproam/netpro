@@ -24,7 +24,7 @@ const NewServicesSection = () => {
     `}]
 
     const allServices=[{
-       titre:`Parties communes`,svg:<CommunSVG style={{width:"100%",heigth:"100%"}}  />
+       titre:`Espace`,svg:<CommunSVG style={{width:"100%",heigth:"100%"}}  />
     },{
         titre:`Copropriétés`,description:"Désinfection",svg:<CoproprieteSVG style={{width:"100%",heigth:"100%"}}/>
     },{
@@ -39,7 +39,7 @@ const NewServicesSection = () => {
     },
 
     {
-        titre:`⁠⁠Décapage des sols`,description:"the best thing over",svg:<DecapSVG style={{width:"100%",heigth:"100%"}}/>
+        titre:`⁠⁠Décapage`,description:"the best thing over",svg:<DecapSVG style={{width:"100%",heigth:"100%"}}/>
     },
     {
         titre:`Débarras`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
@@ -86,7 +86,7 @@ const NewServicesSection = () => {
  lg:flex-row  w-full justify-start items-start  lg:gap-2  ">
 
 
-    <div className="flex flex-col h-full  w-full text-center  gap-2 pt-10 ">
+    <div className="flex flex-col h-full  w-full text-center  gap-2 pt-4 lg:pt-10 ">
 
 
 <div className=" grid grid-cols-4 lg:grid-cols-8 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
