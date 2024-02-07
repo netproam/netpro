@@ -29,7 +29,7 @@ const [scope,animate]=useAnimate()
     useMotionValueEvent(scrollYProgress,"change",async(e)=>{
         if(path==="/")
         {
-     if(e>0.2)
+     if(e>0.15)
      {
         animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
      }
