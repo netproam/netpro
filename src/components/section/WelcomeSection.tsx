@@ -144,7 +144,7 @@ t  flex flex-col lg:gap-4
     <motion.div 
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
-  transition={{duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
+  transition={{ease:"easeInOut",duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
   className="  p-2 px-4  lg:p-0
   text-slate-100 cursor-pointer  lg:relative   w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   bg-black  
