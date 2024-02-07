@@ -70,10 +70,10 @@ const NewServicesSection = () => {
 
  {/**Ceci c'est pour le texte qui s'affiche */}
 <div className="flex flex-col h-fit   w-full  justify-center items-center  lg:gap-0 lg:px-10">
-    <div className="flex text-sm px-4 text-center lg:px-0 flex-col
+    <div className="flex text-sm px-4  text-start lg:px-0 flex-col
      w-full gap-2 justify-center items-center lg:items-start ">
-    <h2 className="text-center lg:text-start text-3xl  pt-4  text-slate-400
-     lg:text-4xl font-semibold  tracking-tight ">{allData[0].soustitre}</h2>
+    <h2 className="text-start  w-full text-xl  pt-2  text-slate-400
+     lg:text-2xl font-semibold  tracking-tight ">{allData[0].soustitre}</h2>
 
     </div>
    
