@@ -89,7 +89,7 @@ const NewServicesSection = () => {
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-10 ">
 
 
-<div className=" grid grid-cols-3 lg:grid-cols-8 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
+<div className=" grid grid-cols-4 lg:grid-cols-8 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
 {allDataDisplay}
 </div>
 
