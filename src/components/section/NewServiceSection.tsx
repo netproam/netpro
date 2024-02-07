@@ -14,11 +14,12 @@ import ParkingSVG from "../../../public/SVG/parking.svg"
 import StoreSVG from "../../../public/SVG/commerce.svg"
 import DecapSVG from "../../../public/SVG/decapage.svg"
 import CommunSVG from "../../../public/SVG/partiecommune.svg"
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 import ServiceComponent from "../services/ServiceComponent";
 
 const NewServicesSection = () => {
-    const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Des prestations adaptées',
+    const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Découvrez nos services',
     description:`Nous sommes connus pour nos services de qualité car nous allons dans chaque recoin et sommes dans la précision.
     `}]
 
@@ -71,11 +72,9 @@ const NewServicesSection = () => {
 <div className="flex flex-col h-fit   w-full  justify-center items-center  lg:gap-0 lg:px-10">
     <div className="flex text-sm px-4 text-center lg:px-0 flex-col
      w-full gap-2 justify-center items-center lg:items-start ">
-    <h2 className="text-center lg:text-start text-3xl  pt-4 
-     lg:text-5xl font-semibold  tracking-tight ">{allData[0].soustitre}</h2>
+    <h2 className="text-center lg:text-start text-3xl  pt-4  text-slate-400
+     lg:text-4xl font-semibold  tracking-tight ">{allData[0].soustitre}</h2>
 
-    <h2 className="text-center lg:text-start  w-4/5 lg:w-3/5 
-     lg:text-2xl  ">{allData[0].description}</h2>
     </div>
    
 </div>
@@ -90,7 +89,7 @@ const NewServicesSection = () => {
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-10 ">
 
 
-<div className=" grid grid-cols-3 lg:grid-cols-8 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
+<div className=" grid grid-cols-4 lg:grid-cols-8 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
 {allDataDisplay}
 </div>
 
@@ -99,26 +98,28 @@ const NewServicesSection = () => {
 
 </div>
 <div className="flex flex-col w-full h-full gap-2  ">
-<h2 className="text-3xl  lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl text-slate-500">Partie communes</h2>
-<div className=" flex flex-col  items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:flex-row ">
-    <div className=" h-[125px] w-full lg:h-[200px] relative flex">
+<h2 className="text-3xl  lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl text-slate-600">Partie communes</h2>
+<div className=" grid grid-cols-2 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
+    <div className=" h-[125px]  lg:h-[200px] relative flex">
         <img 
         className="rounded-lg lg:rounded-2xl brightness-75  object-cover w-full h-full"
         src="/test-bas.jpg"/>
     </div>
-    <div className=" h-[125px] w-full lg:h-[200px] relative flex">
+    <div className=" h-[125px] lg:h-[200px] relative flex">
         <img 
         className="rounded-lg lg:rounded-2xl brightness-75  object-cover w-full h-full"
         src="/test-bas.jpg"/>
     </div>
-    <div className=" h-[125px] w-full lg:h-[200px] relative flex">
+    <div className=" h-[125px] w-full col-span-2 lg:col-span-1 lg:h-[200px] relative flex">
         <img 
         className="rounded-lg lg:rounded-2xl brightness-75  object-cover w-full h-full"
         src="/test-bas.jpg"/>
     </div>
 
 </div>
-<Button className="w-fit relative self-center mt-4 px-10 py-6 rounded-full bg-slate-200 text-slate-600">{`Découvrir`}</Button>
+<Button className="w-fit relative px-10
+ relative self-center  mt-4 py-6 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-200">{`Découvrir`}
+<span className="absolute right-3"><MdKeyboardArrowRight  className="" size={20}/></span></Button>
 </div>
 
 
