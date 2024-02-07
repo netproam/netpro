@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navigation/Navbar";
-import ServicesSection from "@/components/section/ServicesSection";
 import WelcomeSection from "@/components/section/WelcomeSection";
 import ThirdSection from "@/components/section/ThirdSection";
 import Image from "next/image";
