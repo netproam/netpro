@@ -106,7 +106,7 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
               viewport={{once:true}}
 
     key={allText[0].id+"title"}
-    animate={{opacity:[0,1],transition:{delay:0.25,duration:isTabletOrMobile? 1 :1.75}}}
+    animate={{opacity:[0,1],transition:{delay:0.25,duration:isTabletOrMobile? 1.5 :1.75}}}
     className="     text-left 
 t  flex flex-col lg:gap-4
     "><span
@@ -133,7 +133,7 @@ t  flex flex-col lg:gap-4
                   viewport={{once:true}}
 
         key={allText[0].id+"description"}
-    animate={{opacity:[0,1],transition:{delay:isTabletOrMobile? 0.75 :1,duration: isTabletOrMobile? 2.5 : 2}}}
+    animate={{opacity:[0,1],transition:{delay:isTabletOrMobile? 0.75 :1,duration: isTabletOrMobile? 3 : 2}}}
     className="text-slate-200  leading-loose   pt-2  lg:hidden    text-left  lg:text-lg 
       lg:leading-normal  font-normal">{allText[0].sousDescription}</motion.p>
 
@@ -144,7 +144,7 @@ t  flex flex-col lg:gap-4
     <motion.div 
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
-  transition={{duration:isTabletOrMobile? 1 : 1.5,delay: isTabletOrMobile? 1.25 : 1.5}}
+  transition={{duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.25 : 1.5}}
   className="  p-2 px-4  lg:p-0
   text-slate-100 cursor-pointer  lg:relative   w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   bg-black  
