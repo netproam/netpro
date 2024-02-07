@@ -62,9 +62,9 @@ const NewServicesSection = () => {
     })
   return (
    <section className="  flex flex-col justify-center items-center
-   w-full 
+   w-full  h-full  relative
     py-4 lg:py-10 bg-slate-white
-    px-0    lg:gap-10  ">
+    px-0   ">
 
 
  {/**Ceci c'est pour le texte qui s'affiche */}
@@ -83,7 +83,8 @@ const NewServicesSection = () => {
  {/**Ceci c'est pour les icones */}
 
 
-<div className="flex flex-col   lg:flex-row h-fit w-full justify-start items-start  lg:gap-2  ">
+<div className="flex flex-col   
+ lg:flex-row  w-full justify-start items-start  lg:gap-2  ">
 
 
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-10 ">
@@ -93,15 +94,32 @@ const NewServicesSection = () => {
 {allDataDisplay}
 </div>
 
-{/* <div className="flex flex-col">
-    <h2>Copropriéter</h2>
-
-</div> */}
 </div>
 
 
 </div>
+<div className="flex flex-col w-full h-full gap-2  ">
+<h2 className="text-3xl  lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl text-slate-500">Partie communes</h2>
+<div className=" flex flex-col  items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:flex-row ">
+    <div className=" h-[125px] w-full lg:h-[200px] relative flex">
+        <img 
+        className="rounded-lg lg:rounded-2xl brightness-75  object-cover w-full h-full"
+        src="/test-bas.jpg"/>
+    </div>
+    <div className=" h-[125px] w-full lg:h-[200px] relative flex">
+        <img 
+        className="rounded-lg lg:rounded-2xl brightness-75  object-cover w-full h-full"
+        src="/test-bas.jpg"/>
+    </div>
+    <div className=" h-[125px] w-full lg:h-[200px] relative flex">
+        <img 
+        className="rounded-lg lg:rounded-2xl brightness-75  object-cover w-full h-full"
+        src="/test-bas.jpg"/>
+    </div>
 
+</div>
+<Button className="w-fit relative self-center mt-4 px-10 py-6 rounded-full bg-slate-200 text-slate-600">{`Découvrir`}</Button>
+</div>
 
 
    </section>

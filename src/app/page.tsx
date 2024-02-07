@@ -14,12 +14,12 @@ export default function Home() {
     <main className="flex min-h-screen lg:bg-slate-50  flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
-    <div className="w-full bg-slate-50 lg:bg-transparent">
     <NewServicesSection/>
-    </div>
+
     <div className="flex flex-col  gap-8 bg-slate-50 pt-4">
     <ThirdSection/>
     <FifthSection/>
+
 
     </div>
     <FourthSection/>
