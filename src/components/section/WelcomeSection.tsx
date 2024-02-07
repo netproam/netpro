@@ -142,6 +142,8 @@ t  flex flex-col lg:gap-4
 
     </div>
     <motion.div 
+
+    key={"momoDtas"}
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{ease:"easeInOut",duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
