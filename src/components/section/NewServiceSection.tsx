@@ -17,42 +17,49 @@ import CommunSVG from "../../../public/SVG/partiecommune.svg"
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 import ServiceComponent from "../services/ServiceComponent";
+import { useState } from "react";
 
 const NewServicesSection = () => {
     const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Découvrez nos services',
     description:`Nous sommes connus pour nos services de qualité car nous allons dans chaque recoin et sommes dans la précision.
     `}]
 
-    const allServices=[{
+    const allServices=[{id:v4(),
        titre:`Espace`,svg:<CommunSVG style={{width:"100%",heigth:"100%"}}  />
-    },{
+    },{id:v4(),
         titre:`Copropriétés`,description:"Désinfection",svg:<CoproprieteSVG style={{width:"100%",heigth:"100%"}}/>
-    },{
+    },{id:v4(),
         titre:`⁠⁠Bureaux`,description:"the best thing over",svg:<OfficeSVG style={{width:"100%",heigth:"100%"}}/>
-    },{
+    },{id:v4(),
         titre:`Commerce`,description:"the best thing over",svg:<StoreSVG style={{width:"100%",heigth:"100%"}}/>
-    },{
+    },{id:v4(),
         titre:`Parking`,description:"the best thing over",svg:<ParkingSVG style={{width:"100%",heigth:"100%"}}/>
     },
-    {
+    {id:v4(),
         titre:`Déménagement`,description:"the best thing over",svg:<HouseMoveSVG style={{width:"100%",heigth:"100%"}}/>
     },
 
-    {
+    {id:v4(),
         titre:`⁠⁠Décapage`,description:"the best thing over",svg:<DecapSVG style={{width:"100%",heigth:"100%"}}/>
     },
-    {
+    {id:v4(),
         titre:`Débarras`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
     }
 
 
 ]
-    const allDataDisplay=allServices.map((e)=>{
+const [isTextSelected,setIsTextSelected]=useState(0)
+const selectionnedText=allServices[isTextSelected]
+    const allDataDisplay=allServices.map((e,i)=>{
        return <div 
+
+       onClick={()=>setIsTextSelected(i)}
        className="flex  flex-col w-full items-center justify-center"
        key={v4()}>
         
-        <ServiceComponent title={e.titre}>
+        <ServiceComponent
+        isSelected={i===isTextSelected}
+        title={e.titre}>
           <div className="text-current">
         {e.svg}
         </div>
@@ -98,7 +105,7 @@ const NewServicesSection = () => {
 
 </div>
 <div className="flex flex-col w-full h-full gap-2  ">
-<h2 className="text-3xl  lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl text-slate-600">Partie communes</h2>
+<h2 className="text-3xl  lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl text-slate-600">{selectionnedText.titre}</h2>
 <div className=" grid grid-cols-2 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
     <div className=" h-[125px]  lg:h-[200px] relative flex">
         <img 

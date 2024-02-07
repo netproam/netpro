@@ -6,12 +6,13 @@ import { useMediaQuery } from "react-responsive"
 import {ReactNode} from "react"
 interface ServiceComponentProps{
     title:string
+    isSelected:boolean
     children?: ReactNode; // Add a children prop
 
 }
 
 
-const ServiceComponent = ({title,children}:ServiceComponentProps) => {
+const ServiceComponent = ({title,children,isSelected}:ServiceComponentProps) => {
     const [isScope,setIsAnime]=useAnimate()
     const idHmtl=useId()
     console.log(idHmtl)
@@ -22,38 +23,16 @@ console.log(isTabletOrMobile)
    <motion.div  className="flex   text-center
     flex-col gap-4 cursor-pointer  items-center 
     justify-center lg:items-center lg:justify-start w-full"
-  onHoverStart={async()=>{
-   setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
-// setIsAnime(`#containerTest`,{x:[null,0]},{duration:0.5})
 
-// setIsAnime(`#explores`,{display:"flex",opacity:[0,1]},{duration:2})
-   }}
-   onTapStart={async()=>{
-   
-    if(isTouched===false)
-    {
-   setIsAnime(`#childrenHolder`,{color:"black"},{duration:1})
-setIsTouched(true)
-}
-else {
-    setIsAnime(`#childrenHolder`,{color:"#88CBCE"},{duration:1})
-    setIsTouched(false)
-}
-
-    }}
    ref={isScope}
- onHoverEnd={()=>{
-    setIsAnime(`#childrenHolder`,{color:"#88CBCE"},{duration:1})
 
-
-}}
 
   >
-    <div  className={`text-[#88CBCE] lg:justify-start 
+    <div  className={`${isSelected? "text-[#88CBCE]" : "text-slate-300"} lg:justify-start 
      w-[45px] lg:w-24  flex items-center justify-center `} id={"childrenHolder"}>
 {children}
 </div>
-<h2 className="font-semibold text-xs text-slate-600   self-center    ">{title}</h2>
+<h2 className={` text-xs text-slate-600   ${isSelected? "font-semibold" : ""}  self-center    `}>{title}</h2>
 
 <motion.div
 layout
