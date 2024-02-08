@@ -11,8 +11,12 @@ const ContactSection = () => {
     <div className="w-full hidden lg:flex flex-col gap-4   h-full   justify-center   ">
         
         <div className=" w-full  gap-4 flex flex-col text-center lg:text-start py-10">
-    <h3 className="text-3xl   self-center lg:self-start
-    leading-loose  lg:w-4/5 lg:text-5xl font-stolzl  text-slate-800">{`Besoin d'un`} <span className="text-[#88CBCE]">Nettoyage?</span>Prenez contact avec nous!</h3>
+    <h3 className="
+    text-[30px] leading-[40px] lg:text-[50px]  h-full  lg:leading-[48px]
+    lg:w-full  
+    font-semibold
+         text-[#3C4E5D]
+    ">{`Besoin d'un`} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">Nettoyage?</span><span className="block pt-2">Prenez contact avec nous!</span></h3>
     </div>
     <div className="p-4 h-[600px] w-[800px] relative rounded-lg">
       <img className="object-cover absolute w-full h-full rounded-lg"
