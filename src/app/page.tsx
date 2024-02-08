@@ -23,7 +23,10 @@ export default function Home() {
     </div>
     <FourthSection/>
 
-    <div className=" bg-slate-white  lg:px-48
+    <div 
+       style={{ scrollbarWidth: "none" }}
+
+    className=" bg-slate-white  lg:px-48
     w-full h-full
     flex flex-col justify-center items-center ">
 

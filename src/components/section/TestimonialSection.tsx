@@ -60,6 +60,7 @@ const text=`Ils sont + de 2 000 à avoir choisi Net'Pros pour le nettoyage de le
 
   return (
     <section
+    style={{ scrollbarWidth: "none" }}
 
     className="flex flex-col h-full  justify-center items-center w-full gap-0 pt-8 ">
           <p className=" text-3xl   h-full leading-relaxed lg:leading-relaxed 
