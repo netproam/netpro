@@ -23,8 +23,7 @@ url:`https://images.pexels.com/photos/258174/pexels-photo-258174.jpeg?auto=compr
 url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-une-tablette-3772510`}
 ,{name:"Raphael",description:"Magnifique compagnie",id:v4()
 ,url:`https://images.pexels.com/photos/3785424/pexels-photo-3785424.jpeg?auto=compress&cs=tinysrgb&w=800`}
-,{name:"Raphael",description:"Magnifique compagnie",id:v4()
-,url:`https://images.pexels.com/photos/3769706/pexels-photo-3769706.jpeg?auto=compress&cs=tinysrgb&w=800`}
+
 ]
     const allTemoignages=temoign.map((element)=>{
         return (
@@ -72,16 +71,44 @@ lg:text-[43px]   text-[#3C4E5D]">{text}</p>
    ref={refSect}
    style={{ scrollbarWidth: "none" }}
    className=" h-[300px] scrollba  relative  bg-gradient-to-b 
-  overflow-scroll w-screen lg:px-44 
+  overflow-scroll w-screen 
     flex flex-col gap-2 ">
+
+{/**Version mobile */}
 
 <div
 
-className="  gap-8  lg:gap-16  
+className="  gap-8  lg:gap-16   lg:hidden
  justify-center items-center
 pl-4 lg:pl-0 w-max  px-20   lg:px-0  flex  h-full  overflow-y-scroll">
 
 {allTemoignages}
+
+</div>
+
+<div className="w-max lg:flex flex-grow  hidden">
+
+{/**Version pcs */}
+
+
+<div
+
+className="  gap-8  lg:gap-2  
+ justify-center items-center
+pl-4 lg:pl-0 w-screen   relative self-center     flex  h-full  overflow-y-scroll">
+
+{allTemoignages.slice(0,3)}
+
+</div>
+<div
+
+className="  gap-8  lg:gap-16  
+ justify-center items-center
+pl-4 lg:pl-0 w-screen  px-20   lg:px-0  flex  h-full  overflow-y-scroll">
+
+{allTemoignages.slice(3,6)}
+
+</div>
 
 </div>
 
