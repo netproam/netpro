@@ -73,7 +73,7 @@ const dataTest={
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">
   {` déjà plus de 100 `}  
   </span>
-   à avoir choisi Net'Pros
+   {`à avoir choisi Net'Pros`}
           </p>
              <p className=" text-[30px] leading-[40px] lg:text-[50px]     h-full  lg:leading-[48px]
           px-14 lg:px-0  font-sans
