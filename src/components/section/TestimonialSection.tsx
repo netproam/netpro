@@ -39,7 +39,7 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
     const refSect=useRef(null)
     const {scrollXProgress}=useScroll({container:refSect})
 
-const text=`Ils sont + de 2 000 à avoir choisi pour le nettoyage de leur établissement. Ils témoignent.`
+const text=`Ils sont + de 2 000 à avoir choisi Net'Pros pour le nettoyage de leur établissement. Ils témoignent.`
 
 
     useMotionValueEvent(scrollXProgress,"change",(scrollP)=>{
