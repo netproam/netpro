@@ -2,8 +2,9 @@
 
 import { v4 } from "uuid"
 import { IoMdQuote } from "react-icons/io";
-import {motion} from "framer-motion"
+import {motion, useAnimate, useMotionValueEvent, useScroll} from "framer-motion"
 import CardTestimonialComponent from "../CardTestimonialComponent";
+import { useRef } from "react";
 const TestimonialSection = () => {
 
     const temoign=[{name:"Raphael morticis"
@@ -33,16 +34,77 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
           id={element.id} name={element.name}/>
         )
     })
+
+    const [scope,animate]=useAnimate()
+    const refSect=useRef(null)
+    const {scrollXProgress}=useScroll({container:refSect})
+
+const text=`Ils sont + de 2 000 à avoir choisi pour le nettoyage de leur établissement. Ils témoignent.`
+
+
+    useMotionValueEvent(scrollXProgress,"change",(scrollP)=>{
+      console.log("scrolling")
+
+      if(scrollP<0.05)
+      {
+        
+      }
+      else
+      {
+        animate(scope.current,{pathLength:scrollP})
+      }
+    })
+
+
+
+
   return (
-   <section className=" h-[350px] lg:h-[420px] bg-white bg-gradient-to-b 
-  overflow-auto w-screen
+    <section
+
+    className="flex flex-col h-full  justify-center items-center w-full gap-0 pt-8 ">
+          <p className=" text-3xl   h-full leading-relaxed lg:leading-relaxed 
+          px-4 lg:px-0
+         lg:w-4/5 font-poppins font-semibold
+          text-center 
+lg:text-[43px]   text-[#3C4E5D]">{text}</p>
+   <section
+   ref={refSect}
+   style={{ scrollbarWidth: "none" }}
+   className=" h-[300px] scrollba  relative  bg-gradient-to-b 
+  overflow-scroll w-screen
     flex flex-col gap-2 ">
 
-<div className="  gap-10 lg:gap-20 pl-10   w-max  items-center   flex  h-full  overflow-y-scroll">
+<div
+
+className="    gap-10  lg:px-28
+ justify-center items-center
+pl-4 lg:pl-0 w-max  items-center   flex  h-full  overflow-y-scroll">
 
 {allTemoignages}
 
 </div>
+
+   </section>
+   <p className="sticky w-screen  pb-4 ">
+
+
+<motion.svg className="w-screen" height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 20">
+     
+     
+<motion.path 
+          ref={scope}
+
+    d="M10 10 L200 10" // Path representing a line from (10,10) to (200,10)
+    strokeWidth={20}
+    strokeLinecap="round" // Make the line ends rounded
+    stroke="#58B4C3"
+    initial={{ pathLength: 0.05 }}
+    id="svgline"
+  />
+    
+    </motion.svg>
+
+</p>
    </section>
   )
 }

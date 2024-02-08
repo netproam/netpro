@@ -29,7 +29,7 @@ console.log(isTabletOrMobile)
 
   >
     <div  className={`${isSelected? "text-[#88CBCE]" : "text-slate-300"} lg:justify-start 
-     w-[45px] lg:w-24  flex items-center justify-center `} id={"childrenHolder"}>
+     w-[45px] lg:w-16  flex items-center justify-center `} id={"childrenHolder"}>
 {children}
 </div>
 <h2 className={` text-xs text-slate-600   ${isSelected? "font-semibold" : ""}  self-center    `}>{title}</h2>

@@ -20,7 +20,7 @@ const config = {
     extend: {
       fontFamily:{
      stolzl:["stolzl"],
-        test:["DM Sans"]
+        test:["DM Sans"],poppins:["Poppins"]
       },
       keyframes: {
         "accordion-down": {

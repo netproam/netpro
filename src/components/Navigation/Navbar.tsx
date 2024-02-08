@@ -150,7 +150,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 </div>
 <div className="flex gap-4 justify-center items-center   ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full bg-[#88CBCE]   gap-2  items-center justify-center
+rounded-full bg-[#59B4C3]   gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"

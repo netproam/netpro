@@ -23,9 +23,10 @@ export default function Home() {
     </div>
     <FourthSection/>
 
-    <div className=" bg-white  flex flex-col justify-center items-center ">
-    <p className="font-semibold text-3xl leading-relaxed  text-center pt-8 lg:pt-16 lg:w-fit 
-lg:text-5xl tracking-tighter ">Ils nous ont fait confiance</p>
+    <div className=" bg-slate-white  lg:px-48
+    w-full h-full
+    flex flex-col justify-center items-center ">
+
     <TestimonialSection/>
     </div>
 
