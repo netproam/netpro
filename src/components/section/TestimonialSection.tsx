@@ -71,12 +71,12 @@ lg:text-[43px]   text-[#3C4E5D]">{text}</p>
    ref={refSect}
    style={{ scrollbarWidth: "none" }}
    className=" h-[300px] scrollba  relative  bg-gradient-to-b 
-  overflow-scroll w-screen
+  overflow-scroll w-screen lg:px-48
     flex flex-col gap-2 ">
 
 <div
 
-className="    gap-10  lg:px-28
+className="    gap-10  
  justify-center items-center
 pl-4 lg:pl-0 w-max  items-center   flex  h-full  overflow-y-scroll">
 
