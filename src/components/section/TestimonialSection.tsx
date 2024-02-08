@@ -40,7 +40,7 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
 
 const text=`Ils sont + de 2 000 à avoir choisi Net'Pros pour le nettoyage de leur établissement. Ils témoignent.`
 const dataTest={
-  title :`Ils sont + de 2 000 à avoir choisi Net'Pros`,
+  title :``,
   sousTitle:`pour le nettoyage de leur établissement. Ils `
 }
 
@@ -69,7 +69,12 @@ const dataTest={
           <p className=" text-[30px] leading-[40px] lg:text-[50px]  h-full  lg:leading-[48px]
          lg:w-full 
          font-semibold
-          text-center   text-[#3C4E5D]">{dataTest.title}</p>
+          text-center   text-[#3C4E5D]">Ils sont
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">
+  {` déjà plus de 100 `}  
+  </span>
+   à avoir choisi Net'Pros
+          </p>
              <p className=" text-[30px] leading-[40px] lg:text-[50px]     h-full  lg:leading-[48px]
           px-14 lg:px-0  font-sans
           font-semibold 
