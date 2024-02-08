@@ -13,18 +13,18 @@ export default function Home() {
     <main className="flex min-h-screen lg:bg-white  flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
-    <NewServicesSection/>
 
 
     <div className="flex flex-col  gap-8  pt-4">
+    <NewServicesSection/>
     <ThirdSection/>
+    <FourthSection/>
 
     <FifthSection/>
 
 
 
     </div>
-    <FourthSection/>
 
     <div 
        style={{ scrollbarWidth: "none" }}
@@ -35,7 +35,6 @@ export default function Home() {
 
     <TestimonialSection/>
     </div>
-    <ThirdSection/>
 
     <ContactSection/>
 
