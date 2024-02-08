@@ -41,7 +41,7 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
 const text=`Ils sont + de 2 000 à avoir choisi Net'Pros pour le nettoyage de leur établissement. Ils témoignent.`
 const dataTest={
   title :`Ils sont + de 2 000 à avoir choisi Net'Pros`,
-  sousTitle:`pour le nettoyage de leur établissement. Ils témoignent.`
+  sousTitle:`pour le nettoyage de leur établissement.`
 }
 
     useMotionValueEvent(scrollXProgress,"change",(scrollP)=>{
@@ -66,7 +66,7 @@ const dataTest={
 
     className="flex flex-col h-full  justify-center items-center w-full gap-0 pt-8 ">
           <p className=" text-[30px] leading-[40px] lg:text-[43px]   h-full  lg:leading-[48px]
-         lg:w-full
+         lg:w-full mx-
         font-poppins font-semibold
           text-center   text-[#3C4E5D]">{dataTest.title}</p>
              <p className=" text-[30px] leading-[40px] lg:text-[43px]   h-full  lg:leading-[48px]
