@@ -13,7 +13,7 @@ const FourthSection = () => {
 const rounded = useTransform(count, latest => Math.round(latest))
 const roundedEmpl=useTransform(countEmployer,latest=>Math.round(latest))
 const ref = useRef(null)
-const isInView = useInView(ref,{once:true})
+const isInView = useInView(ref,{once:true,amount:0.8})
 
     useEffect(()=>{
         if(isInView)

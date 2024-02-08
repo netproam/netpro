@@ -1,7 +1,7 @@
 "use client"
 const FifthSection = () => {
   return (
-   <section className="w-full flex  bg-slate-50  p-4 lg:px-4 ">
+   <section className="w-full flex  bg-white  p-4 lg:px-4 ">
     <div className="hidden lg:flex flex-col w-full px-10  justify-center ">
         <div>
         <img className="object-cover rounded-lg" src={

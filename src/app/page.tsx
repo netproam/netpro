@@ -10,18 +10,21 @@ import NewServicesSection from "@/components/section/NewServiceSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen lg:bg-slate-50  flex-col items-center justify-between  overflow-hidden w-screen  ">
+    <main className="flex min-h-screen lg:bg-white  flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
     <NewServicesSection/>
 
-    <div className="flex flex-col  gap-8 bg-slate-50 pt-4">
+
+    <div className="flex flex-col  gap-8  pt-4">
     <ThirdSection/>
+
+    <FourthSection/>
     <FifthSection/>
 
 
+
     </div>
-    <FourthSection/>
 
     <div 
        style={{ scrollbarWidth: "none" }}
@@ -34,6 +37,7 @@ export default function Home() {
     </div>
 
     <ContactSection/>
+
     </main>
   );
 }
