@@ -26,7 +26,7 @@ export default function Home() {
     <div 
        style={{ scrollbarWidth: "none" }}
 
-    className=" bg-slate-white  lg:px-48
+    className=" bg-white  lg:px-48
     w-full h-full
     flex flex-col justify-center items-center ">
 
