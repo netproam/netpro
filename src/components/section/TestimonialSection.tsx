@@ -63,7 +63,7 @@ const text=`Ils sont + de 2 000 à avoir choisi Net'Pros pour le nettoyage de le
 
     className="flex flex-col h-full  justify-center items-center w-full gap-0 pt-8 ">
           <p className=" text-[30px] leading-[33px] lg:text-3xl   h-full  lg:leading-[48px]
-          px-4 lg:px-0
+          px-10 lg:px-0 
          lg:w-4/5 font-poppins font-semibold
           text-center 
 lg:text-[43px]   text-[#3C4E5D]">{text}</p>
