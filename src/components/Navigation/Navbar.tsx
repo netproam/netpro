@@ -31,7 +31,7 @@ const [scope,animate]=useAnimate()
         {
      if(e>0.15)
      {
-        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
+        animate(scope.current,{color:"black",backgroundColor:"white"})
      }
      else {
         animate(scope.current,{color:"white",backgroundColor:"transparent"})
