@@ -41,7 +41,7 @@ url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-
 const text=`Ils sont + de 2 000 à avoir choisi Net'Pros pour le nettoyage de leur établissement. Ils témoignent.`
 const dataTest={
   title :`Ils sont + de 2 000 à avoir choisi Net'Pros`,
-  sousTitle:`pour le nettoyage de leur établissement.`
+  sousTitle:`pour le nettoyage de leur établissement. Ils `
 }
 
     useMotionValueEvent(scrollXProgress,"change",(scrollP)=>{
@@ -64,7 +64,8 @@ const dataTest={
     <section
     style={{ scrollbarWidth: "none" }}
 
-    className="flex flex-col h-full  justify-center items-center w-full gap-0 pt-8 ">
+    className="flex flex-col h-full   justify-center items-center w-full gap-10 py-8 ">
+       <div className="flex flex-col">
           <p className=" text-[30px] leading-[40px] lg:text-[43px]   h-full  lg:leading-[48px]
          lg:w-full mx-
         font-poppins font-semibold
@@ -72,11 +73,12 @@ const dataTest={
              <p className=" text-[30px] leading-[40px] lg:text-[43px]   h-full  lg:leading-[48px]
           px-14 lg:px-0 
           font-poppins font-semibold
-          text-center   text-[#3C4E5D]">{dataTest.sousTitle}</p>
+          text-center   text-[#3C4E5D]">{dataTest.sousTitle} <span className="block">{}</span>{`témoignes.`}</p>
+          </div>
    <section
    ref={refSect}
    style={{ scrollbarWidth: "none" }}
-   className=" h-[300px] scrollba  relative  bg-gradient-to-b 
+   className=" h-[300px] scrollba   relative  bg-gradient-to-b 
   overflow-scroll w-screen 
     flex flex-col gap-2 ">
 
@@ -86,7 +88,7 @@ const dataTest={
 
 className="  gap-8  lg:gap-16   lg:hidden
  justify-center items-center
-pl-4 lg:pl-0 w-max  px-20   lg:px-0  flex  h-full  overflow-y-scroll">
+pl-4 lg:pl-0 w-max  px-20   lg:px-0  flex  h-full ">
 
 {allTemoignages}
 
@@ -101,7 +103,7 @@ pl-4 lg:pl-0 w-max  px-20   lg:px-0  flex  h-full  overflow-y-scroll">
 
 className="  gap-8  lg:gap-2  
  justify-center items-center
-pl-4 lg:pl-0 w-screen   relative self-center     flex  h-full  overflow-y-scroll">
+pl-4 lg:pl-0 w-screen   relative self-center     flex  h-full ">
 
 {allTemoignages.slice(0,3)}
 
@@ -110,7 +112,7 @@ pl-4 lg:pl-0 w-screen   relative self-center     flex  h-full  overflow-y-scroll
 
 className="  gap-8  lg:gap-16  
  justify-center items-center
-pl-4 lg:pl-0 w-screen  px-20   lg:px-0  flex  h-full  overflow-y-scroll">
+pl-4 lg:pl-0 w-screen  px-20   lg:px-0  flex  h-full ">
 
 {allTemoignages.slice(3,6)}
 
