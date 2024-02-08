@@ -48,7 +48,7 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
 
 </div>
 
-        <p id="paragraphe" className=" text-xs lg:text-sm text-center
+        <p id="paragraphe" className=" text-xs lg:text-sm text-left
          font-semibold text-slate-600">{description}</p>
  
         </motion.div>
