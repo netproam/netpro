@@ -18,6 +18,8 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 import ServiceComponent from "../services/ServiceComponent";
 import { useState } from "react";
+import MovingSvgComponent from "../SVG/MovingSvgComponent";
+import CommunSvgComponent from "../SVG/CommunSvgComponent";
 
 const NewServicesSection = () => {
     const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Découvrez nos services',
@@ -40,10 +42,10 @@ const NewServicesSection = () => {
     },
 
     {id:v4(),
-        titre:`⁠⁠Décapage`,description:"the best thing over",svg:<DecapSVG style={{width:"100%",heigth:"100%"}}/>
+        titre:`⁠⁠Décapage`,description:"the best thing over"
     },
     {id:v4(),
-        titre:`Débarras`,description:"the best thing over",svg:<MovinSvg style={{width:"100%",heigth:"100%"}}/>
+        titre:`Débarras`,description:"the best thing over",
     }
 
 
@@ -51,7 +53,12 @@ const NewServicesSection = () => {
 const [isTextSelected,setIsTextSelected]=useState(0)
 const selectionnedText=allServices[isTextSelected]
     const allDataDisplay=allServices.map((e,i)=>{
-       return <div 
+
+        switch(e.titre)
+        {
+            case "Débarras" :
+       return(
+        <div 
 
        onClick={()=>setIsTextSelected(i)}
        className="flex  flex-col w-full items-center justify-center"
@@ -61,12 +68,32 @@ const selectionnedText=allServices[isTextSelected]
         isSelected={i===isTextSelected}
         title={e.titre}>
           <div className="text-current">
-        {e.svg}
+        <MovingSvgComponent isSelected={i===isTextSelected}/>
         </div>
         </ServiceComponent>
       
       
-        </div>
+        </div>)
+        break;
+        default:
+            return(
+                <div 
+        
+               onClick={()=>setIsTextSelected(i)}
+               className="flex  flex-col w-full items-center justify-center"
+               key={v4()}>
+                
+                <ServiceComponent
+                isSelected={i===isTextSelected}
+                title={e.titre}>
+                  <div className="text-current">
+                  <MovingSvgComponent isSelected={i===isTextSelected}/>
+                </div>
+                </ServiceComponent>
+              
+              
+                </div>)
+        }
     })
   return (
    <section className="  flex flex-col justify-center items-center
@@ -105,7 +132,11 @@ const selectionnedText=allServices[isTextSelected]
 
 </div>
 <div className="flex flex-col w-full h-full gap-2  ">
-<h2 className="text-3xl  lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl text-slate-600">{selectionnedText.titre}</h2>
+<h2 className="text-3xl 
+
+bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
+
+lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{selectionnedText.titre}</h2>
 <div className=" grid grid-cols-2 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
     <div className=" h-[125px]  lg:h-[200px] relative flex">
         <img 
