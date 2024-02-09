@@ -69,8 +69,8 @@ const dataTest={
           <p className="  text-3xl leading-[40px] lg:text-4xl  h-full  lg:leading-[48px]
          lg:w-full   lg:whitespace-nowrap
          font-semibold
-          text-center   text-[#3C4E5D]">Ils sont
-            <span className="bg-clip-text inline-block text-transparent mr-2 bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">
+          text-center   text-[#3C4E5D] mr-2">Ils sont
+            <span className="bg-clip-text  inline-block text-transparent mr-2 bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">
   {` déjà plus de 100 `}  
   </span>
    {`à avoir choisi Net'Pros.`}
