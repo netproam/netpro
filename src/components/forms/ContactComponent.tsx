@@ -57,7 +57,7 @@ const ContactComponent = () => {
                          font-stolzl leading-relaxed">Contactez nous</h2>
  <div className=" w-full  gap-4 flex flex-col   py-10 lg:hidden">
     <h3 className="
-    text-5xl leading-[40px] lg:text-[50px]  h-full  lg:leading-[48px]
+    text-4xl leading-[40px] lg:text-[50px]  h-full  lg:leading-[48px]
     lg:w-full 
     font-semibold
        text-[#3C4E5D]
