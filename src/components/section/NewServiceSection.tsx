@@ -132,7 +132,7 @@ const selectionnedText=allServices[isTextSelected]
 
 </div>
 <div className="flex flex-col w-full h-full gap-2  ">
-<h2 className="text-3xl 
+<h2 className="text-4xl 
 
 bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
 

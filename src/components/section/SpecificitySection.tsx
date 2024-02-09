@@ -5,11 +5,11 @@ const SpecificitySection = () => {
 
     <div className="flex flex-col w-full px-2 lg:px-8 gap-8 ">
         <div className="flex flex-col   lg:items-center ">
-            <p className="text-sm font-hind font-light   pl-1  text-slate-400 
+            <p className="text-xs lg:text-sm  font-semibold  pl-1  text-slate-400 
             ">{"Une approche innovante".toLocaleUpperCase()}</p>
             <h3 className="tracking-tight 
             lg:pb-4
-            text-2xl lg:text-5xl font-semibold bg-clip-text text-transparent
+            text-3xl lg:text-5xl font-semibold bg-clip-text text-transparent
              bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">{`Ce qui fait notre différence`}</h3>
             <p className="tracking-wide  lg:text-center
             text-lg font-hind font-light pt-2">{`

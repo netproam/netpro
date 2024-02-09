@@ -66,7 +66,7 @@ const dataTest={
 
     className="flex flex-col h-full   justify-center items-center w-full gap-2 lg:gap-10 py-8 ">
        <div className="flex flex-col">
-          <p className=" text-[30px] leading-[40px] lg:text-[50px]  h-full  lg:leading-[48px]
+          <p className=" text-4xl leading-[40px] lg:text-[50px]  h-full  lg:leading-[48px]
          lg:w-full 
          font-semibold
           text-center   text-[#3C4E5D]">Ils sont

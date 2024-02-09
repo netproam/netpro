@@ -127,20 +127,20 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:0.25,duration:isTabletOrMobile? 2.5 :1.75}}}
     className="   bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
-    text-left 
+    text-left  
 t  flex flex-col lg:gap-4
     "><span
     
     className="
 
 
-    font-stolzl text-4xl  order-2 lg:order-1  lg:text-6xl
+    font-stolzl text-5xl  order-2 lg:order-1  lg:text-6xl
     leading-none    lg:leading-relaxed   
      font-semibold tracking-tighter"
     
     >{allText[0].title.split(" ")[0]} </span>
-    <span className="text-xs lg:text-6xl font-stolzl  lg:leading-relaxed tracking-tighter
-     h-full
+    <span className="text-xs lg:text-6xl font-stolzl  lg:leading-relaxed 
+     h-full text-slate-400 font-light pb-1
      lg:order-2">{
     allText[0].sousTitle}</span></motion.h3>
 
@@ -157,8 +157,9 @@ t  flex flex-col lg:gap-4
 
         key={allText[0].id+"description"}
     animate={{opacity:[0,1],transition:{delay:isTabletOrMobile? 0.85 :1,duration: isTabletOrMobile? 3: 2}}}
-    className="text-slate-800  leading-loose   pt-2  lg:hidden    text-left  lg:text-lg 
-      lg:leading-normal  font-normal">{allText[0].sousDescription}</motion.p>
+    className="text-slate-900   leading-normal
+      pt-2  lg:hidden font-hind font-light    text-left  lg:text-lg 
+      lg:leading-normal  f">{allText[0].sousDescription}</motion.p>
 
 
 
