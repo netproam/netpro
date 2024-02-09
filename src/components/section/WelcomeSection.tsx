@@ -55,7 +55,7 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 
   
   w-full h-[700px] lg:h-screen   overflow-hidden
-    relative  flex flex-col lg:flex-row z-20  items-center justify-center">
+ flex flex-col lg:flex-row  items-center justify-center">
    
 {/**mobile */   }
 
@@ -94,7 +94,7 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
   
   z-20 gap-0 text-left  items-center justify-center lg:w-[1000px] h-full  ">
     <div className="flex flex-col  
-      w-full pl-0  h-full  relative    items-center justify-center">
+      w-full pl-0  h-full      items-center justify-center">
     <div 
     key={allText[0].id}
     className="flex text-left flex-col   
@@ -154,12 +154,12 @@ t  flex flex-col lg:gap-4
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{ease:"easeInOut",duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
-  className="  p-2 px-4  lg:p-0 fixed
-  text-slate-100 cursor-pointer  lg:relative   w-full lg:w-full 
-  lg:hover:text-slate-800 duration-150   bg-black  
-  items-center justify-center flex  bottom-10 lg:bottom-0 lg:justify-start z-40    lg:pt-16
+  className="  p-2 px-4  lg:p-0  z-50
+  text-slate-100 cursor-pointer    w-full lg:w-full 
+  lg:hover:text-slate-800 duration-150   fixed 
+  items-center justify-center flex  bottom-0 lg:relative  lg:justify-start    lg:pt-16
  bg-transparent py-2 ">
-   <DialogEstimation styleBtn="text-slate-50 relative z-40
+   <DialogEstimation styleBtn="text-slate-50  
    
    rounded-full py-6  
    bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]" />
