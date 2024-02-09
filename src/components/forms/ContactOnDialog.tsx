@@ -52,7 +52,7 @@ const ContactOnDialog = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-4 p-4   w-full  flex flex-col
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-4 p-4    w-full  flex flex-col
            shadow-xl rounded-xl  ">
    
             <FormField 
@@ -61,7 +61,7 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                    <div className="flex gap-2  justify-center items-center bg-slate-100  pl-2  py-3  rounded-md
+                    <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
                      w-full">
                     <FaUser size={20} className="text-slate-600"/>
                   <input
@@ -81,7 +81,7 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                  <div className="flex gap-2  justify-center items-center bg-slate-100  pl-2  py-3 rounded-md
+                  <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3 rounded-md
                      w-full">
                                             <IoMail size={20} className="text-slate-600"/>
                   <input
@@ -101,7 +101,7 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                 <div className="flex gap-2  justify-center items-center bg-slate-100  pl-2  py-3  rounded-md
+                 <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
                      w-full">
                     <MdOutlinePhone size={20} className="text-slate-600"/>
                   <input
@@ -121,7 +121,7 @@ const ContactOnDialog = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                 <div className="flex gap-2  justify-center items-center bg-slate-100  pl-2  py-3  rounded-md
+                 <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
                      w-full">
                     <MdOutlineLocationCity size={20} className="text-slate-600"/>
                   <input
@@ -145,7 +145,7 @@ const ContactOnDialog = () => {
                  
                  <FormControl>
 
-                 <div className="flex gap-2  justify-center items-center bg-slate-100  pl-2  py-3  rounded-md
+                 <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
                      w-full">
                     <FaPen size={20} className="text-slate-600"/>
                   <textarea rows={4}

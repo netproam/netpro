@@ -28,7 +28,7 @@ export function DialogEstimation({styleBtn}:DialogProps) {
         <Button className={` text-center w-fit   relative flex items-center justify-center text-slate-200 px-8 py-0 rounded-lg
            font-semibold text-sm ${styleBtn}`} >Devis gratuit <span className=" absolute right-2"><MdKeyboardArrowRight size={20}/></span></Button>
       </DialogTrigger>
-      <DialogContent className="w-full h-full flex flex-col  p-0 overflow-scroll bg-white ">
+      <DialogContent className="w-full h-full flex flex-col  p-0 overflow-scroll bg-slate-50 ">
       
         <div className="flex  w-full justify-center p-0 pt-16 pb-8 ">
                 <div className="w-fit rounded-2xl   text-xl  text-slate-800 gap-10  ">
