@@ -7,6 +7,7 @@ import ContactSection from "../components/section/ContactSection";
 import FifthSection from "@/components/section/FithSection";
 import TestimonialSection from "@/components/section/TestimonialSection";
 import NewServicesSection from "@/components/section/NewServiceSection";
+import SpecificitySection from "@/components/section/SpecificitySection";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
 
     <div className="flex flex-col  gap-8  pt-4">
     <NewServicesSection/>
-    <ThirdSection/>
+   <SpecificitySection/>
     <FourthSection/>
 
     <FifthSection/>
