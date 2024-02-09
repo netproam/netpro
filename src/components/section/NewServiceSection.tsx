@@ -138,15 +138,17 @@ bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
 
 lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{selectionnedText.titre}</h2>
 <div className=" grid grid-cols-2 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
-<div className=" h-[125px] lg:h-[200px] rounded-lg relative flex bg-gradient-to-tr from-[#04A9F4] opacity-70 to-[#17CCCA]">
+<div className=" h-[125px] lg:h-[200px] rounded-lg relative flex
+bg-slate-200">
      
     </div>
-    <div className=" h-[125px] lg:h-[200px] rounded-lg relative flex bg-gradient-to-tr from-[#04A9F4] opacity-70 to-[#17CCCA]">
+    <div className=" h-[125px] lg:h-[200px] rounded-lg relative flex 
+   bg-slate-200">
         
     </div>
     <div className=" h-[125px] lg:h-[200px]
     col-span-2 lg:col-span-1
-    rounded-lg relative flex bg-gradient-to-tr from-[#04A9F4] opacity-70 to-[#17CCCA]">
+    rounded-lg relative flex bg-gradient-to-tr bg-slate-200">
 
    
     </div>
