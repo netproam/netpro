@@ -33,7 +33,7 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
 
    
          ref={scope}
-        className="bg-slate-50  p-4 flex flex-col cursor-pointer  
+        className="bg-white  p-4 flex flex-col cursor-pointer  
         text-black  
         shadow-md  select-none
         items-center  gap-4 rounded-xl  

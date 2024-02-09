@@ -31,15 +31,13 @@ const [scope,animate]=useAnimate()
         {
      if(e>0.15)
      {
-        animate(scope.current,{color:"black",backgroundColor:"white"})
      }
      else {
-        animate(scope.current,{color:"white",backgroundColor:"transparent"})
+        animate(scope.current,{color:"black",backgroundColor:"transparent"})
 
      }
     }
     else {
-        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
 
     }
     
@@ -49,7 +47,7 @@ const [scope,animate]=useAnimate()
 if(path==="/")
 {
 
-    animate(scope.current,{color:"white",backgroundColor:"transparent"})
+    animate(scope.current,{color:"black",backgroundColor:"transparent"})
 
 }
 else {
@@ -64,7 +62,7 @@ console.log("slt")
    className={`   w-full   justify-between bg-transparent bg-opacity-50     
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16
     text-current  gap-10 items-center 
-   ${path==="/"? "fixed text-slate-100  flex  ":"fixed lg:relative  bg-opacity-100 "}`}>
+   ${path==="/"? "fixed text-slate-800  flex  ":"fixed lg:relative  bg-opacity-100 "}`}>
 <div
 onClick={()=>{
     animate(scope.current,{color:"white",backgroundColor:"transparent"})

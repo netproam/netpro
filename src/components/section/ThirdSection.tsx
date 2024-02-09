@@ -1,7 +1,7 @@
 "use client"
 const thirdSection = () => {
   return (
-   <section className="w-full flex p-4  bg-white ">
+   <section className="w-full flex p-4   ">
     <div className="hidden justify-center   lg:flex flex-col w-full px-10 order-2">
         <div>
         <img className="object-cover rounded-lg" src={
