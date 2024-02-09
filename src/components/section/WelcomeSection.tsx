@@ -157,7 +157,7 @@ t  flex flex-col lg:gap-4
   className="  p-2 px-4  lg:p-0  z-50
   text-slate-100 cursor-pointer    w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   fixed 
-  items-center justify-center flex  bottom-0 lg:relative  lg:justify-start    lg:pt-16
+  items-center justify-center flex  bottom-8 lg:relative  lg:justify-start    lg:pt-16
  bg-transparent py-2 ">
    <DialogEstimation styleBtn="text-slate-50  
    
