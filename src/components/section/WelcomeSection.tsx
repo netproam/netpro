@@ -157,9 +157,9 @@ t  flex flex-col lg:gap-4
   className="  p-2 px-4  lg:p-0 fixed
   text-slate-100 cursor-pointer  lg:relative   w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   bg-black  
-  items-center justify-center flex z-20    bottom-20 lg:bottom-0 lg:justify-start zz-50    lg:pt-16
+  items-center justify-center flex z-40    bottom-20 lg:bottom-0 lg:justify-start z-40    lg:pt-16
  bg-transparent py-2 ">
-   <DialogEstimation styleBtn="text-slate-50
+   <DialogEstimation styleBtn="text-slate-50 z-40
    
    rounded-full py-6  
    bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]" />
