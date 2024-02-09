@@ -154,8 +154,8 @@ bg-slate-200">
     </div>
 
 </div>
-<Button className="w-fit relative px-10
- relative self-center  mt-4 py-6 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-200">{`Découvrir`}
+<Button className="w-fit relative px-10  bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
+ relative self-center  mt-4 py-6 rounded-full  text-white font-semibold hover:bg-slate-200">{`Découvrir`}
 <span className="absolute right-3"><MdKeyboardArrowRight  className="" size={20}/></span></Button>
 </div>
 
