@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label"
 import { useState } from "react"
 import ContactOnDialog from "../forms/ContactOnDialog"
 import EstimationForm from "../forms/EstimationForm"
+import { MdKeyboardArrowRight } from "react-icons/md"
 interface DialogProps{
     styleBtn:string
 }
@@ -24,8 +25,8 @@ export function DialogEstimation({styleBtn}:DialogProps) {
   return (
     <Dialog >
       <DialogTrigger asChild>
-        <Button className={`  text-slate-200 px-8 py-4 rounded-lg
-           font-semibold text-sm ${styleBtn}`} >Estimation gratuite</Button>
+        <Button className={` text-center w-fit   relative flex items-center justify-center text-slate-200 px-8 py-0 rounded-lg
+           font-semibold text-sm ${styleBtn}`} >Devis gratuit <span className=" absolute right-2"><MdKeyboardArrowRight size={20}/></span></Button>
       </DialogTrigger>
       <DialogContent className="w-full h-full p-0 overflow-scroll bg-white ">
         <DialogHeader>
