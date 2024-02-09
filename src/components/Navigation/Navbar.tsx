@@ -76,9 +76,7 @@ onClick={()=>{
 }}
 className=" cursor-pointer left-0 w-fit  relative ">
 
-<img  className=""
-width={70}
-src="/logo.png"/>
+<p className=" text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">{`NET'PROS`}</p>
 </div>
 
 <div className={`  w-fit  mr-auto  text-current   relative z-50 items-center hidden lg:flex
