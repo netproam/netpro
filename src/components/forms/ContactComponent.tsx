@@ -51,7 +51,7 @@ const ContactComponent = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  bg-white p-4 gap-6  flex flex-col w-full
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  bg-slate-50 lg:bg-white p-4 gap-6  flex flex-col w-full
            shadow-xl rounded-xl  ">
                         <h2 className="text-2xl  pt-2  hidden lg:flex
                          font-stolzl leading-relaxed">Contactez nous</h2>
@@ -70,7 +70,7 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                    <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                    <div className="flex gap-2 justify-center items-center bg-white lg:bg-slate-50 p-2 rounded-md w-full">
                     <FaUser size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
@@ -89,7 +89,7 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                  <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                  <div className="flex gap-2 justify-center items-center bg-white lg:bg-slate-50 p-2 rounded-md w-full">
                     <IoMail size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
@@ -108,7 +108,7 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                  <FormControl>
-                 <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                 <div className="flex gap-2 justify-center items-center bg-white lg:bg-slate-50 p-2 rounded-md w-full">
                     <MdOutlinePhone size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
@@ -129,7 +129,7 @@ const ContactComponent = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                  <div className="flex gap-2 justify-center items-center bg-slate-50 p-2 rounded-md w-full">
+                  <div className="flex gap-2 justify-center items-center bg-white lg:bg-slate-50 p-2 rounded-md w-full">
                     <GrCircleInformation size={15} className="text-slate-600"/>
                   <input
                     className="  w-full outline-none   bg-transparent 
@@ -149,10 +149,10 @@ const ContactComponent = () => {
                 <FormItem>
                  
                  <FormControl>
-                 <div className="flex gap-2 justify-center  bg-slate-50 p-4 rounded-md w-full">
+                 <div className="flex gap-2 justify-center  bg-white lg:bg-slate-50 p-4 rounded-md w-full">
                     <FaPen size={15} className="text-slate-600"/>
                   <textarea rows={3}
-                    className="  w-full outline-none resize-none   bg-transparent 
+                    className="  w-full outline-none resize-none    bg-transparent 
                      px-4 rounded-md  hover:border-slate-800 duration-500"
                     placeholder="Inscrire votre message, où appelez nous directement" {...field} />
                     </div>
