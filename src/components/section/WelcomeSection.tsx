@@ -28,11 +28,11 @@ console.log(isInterValId,isInView)
 const {scrollYProgress}=useScroll()
 const [scope,anime]=useAnimate()
 useMotionValueEvent(scrollYProgress,"change",(scrollProgress)=>{
-if(scrollProgress<0.6)
+if(scrollProgress<0.5)
 {
   anime(scope.current,{visibility:"visible"})
 }
-else if(scrollProgress>0.6&&scrollProgress<0.8)
+else if(scrollProgress>0.5)
 {
   anime(scope.current,{visibility:"hidden"})
 
