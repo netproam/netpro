@@ -50,6 +50,12 @@ if(path==="/")
     animate(scope.current,{color:"black",backgroundColor:"transparent"})
 
 }
+else if(path==="/contact")
+{
+  animate(scope.current,{color:"black",backgroundColor:"#f8fafc"})
+
+ 
+}
 else {
     animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
 
@@ -65,7 +71,7 @@ console.log("slt")
    ${path==="/"? "fixed text-slate-800  flex  ":"fixed lg:relative  bg-opacity-100 "}`}>
 <div
 onClick={()=>{
-    animate(scope.current,{color:"white",backgroundColor:"transparent"})
+   
     router.push("/")
 }}
 className=" cursor-pointer left-0 w-fit  relative ">
@@ -101,15 +107,12 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
         
         className="flex text-md bg-slate-300  relative z-50 flex-col gap-10 w-full
         text-current p-8">
-        <Link onClick={()=>        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
-} href="/services/menage" passHref legacyBehavior>
+        <Link href="/services/menage" passHref legacyBehavior>
     <NavigationMenuLink className="whitespace-nowrap " >
     {`Entretien Ménagés`}
     </NavigationMenuLink>
     </Link>
         <Link
-        onClick={()=>        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
-    } 
         href="/services/debaras" passHref legacyBehavior>
     <NavigationMenuLink >
     {`Débarras`}
