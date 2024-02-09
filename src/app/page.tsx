@@ -10,7 +10,7 @@ import NewServicesSection from "@/components/section/NewServiceSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen lg:bg-white  flex-col items-center justify-between  overflow-hidden w-screen  ">
+    <main className="flex min-h-screen bg-slate-50  flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
 

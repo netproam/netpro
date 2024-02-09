@@ -16,9 +16,9 @@ const MovingSvgComponent = ({isSelected}:MovingSvgProps) => {
       </defs>
       <g>
         <g>
-          <path 
+          <path  className=""
                     style={
-{fill: isSelected? "url(#gradient)" : "black"
+{fill: isSelected? "url(#gradient)" : "#e2e8f0"
 }
                     }  
           
