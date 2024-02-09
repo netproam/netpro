@@ -28,14 +28,17 @@ console.log(isInterValId,isInView)
 const {scrollYProgress}=useScroll()
 const [scope,anime]=useAnimate()
 useMotionValueEvent(scrollYProgress,"change",(scrollProgress)=>{
-if(scrollProgress>0.7)
+if(scrollProgress<0.6)
+{
+  anime(scope.current,{visibility:"visible"})
+}
+else if(scrollProgress>0.6&&scrollProgress<0.8)
 {
   anime(scope.current,{visibility:"hidden"})
-}
-else {
-  anime(scope.current,{visibility:"visible"})
 
 }
+
+
 })
 const allText=[{
 id:"idTest",
