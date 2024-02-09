@@ -2,7 +2,7 @@
 import { useEffect, useState ,useRef} from "react"
 import Navbar from "../Navigation/Navbar"
 import { Button } from "../ui/button"
-import {motion ,AnimatePresence,useInView} from "framer-motion"
+import {motion ,AnimatePresence,useInView, useScroll, useAnimate, useMotionValueEvent} from "framer-motion"
 import { v4 } from "uuid"
 import {useMediaQuery} from "react-responsive"
 import { isMobile } from "react-device-detect"
@@ -24,6 +24,19 @@ const refWelcome=useRef(null)
 const isInView=useInView(refWelcome,{amount:0.5})
 
 console.log(isInterValId,isInView)
+
+const {scrollYProgress}=useScroll()
+const [scope,anime]=useAnimate()
+useMotionValueEvent(scrollYProgress,"change",(scrollProgress)=>{
+if(scrollProgress>0.7)
+{
+  anime(scope.current,{visibility:"hidden"})
+}
+else {
+  anime(scope.current,{visibility:"visible"})
+
+}
+})
 const allText=[{
 id:"idTest",
 firstTitle:"L'entretien réinventer",
@@ -149,7 +162,7 @@ t  flex flex-col lg:gap-4
 
     </div>
     <motion.div 
-
+ref={scope}
     key={"momoDtas"}
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
