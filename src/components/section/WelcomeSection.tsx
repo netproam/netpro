@@ -168,8 +168,8 @@ t  flex flex-col lg:gap-4
     <motion.div 
 ref={scope}
     key={"momoDtas"}
-      initial={{opacity:0}}
-      animate={{opacity:[0,1],y:[100,0]}}
+      initial={{opacity:0,y:100}}
+      animate={{opacity:[null,1],y:[null,0]}}
   transition={{ease:"easeInOut",duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
   className="  p-2 px-4  lg:p-0  z-30
   text-slate-100 cursor-pointer    w-full lg:w-full 
