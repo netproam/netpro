@@ -144,7 +144,9 @@ lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{selectionnedTe
     <div className=" h-[125px] lg:h-[200px] rounded-lg relative flex bg-gradient-to-tr from-[#04A9F4] opacity-70 to-[#17CCCA]">
         
     </div>
-    <div className=" h-[125px] lg:h-[200px] rounded-lg relative flex bg-gradient-to-tr from-[#04A9F4] opacity-70 to-[#17CCCA]">
+    <div className=" h-[125px] lg:h-[200px]
+    col-span-2 lg:col-span-1
+    rounded-lg relative flex bg-gradient-to-tr from-[#04A9F4] opacity-70 to-[#17CCCA]">
 
    
     </div>

@@ -7,6 +7,7 @@
   font-family: "stolzl";
   src: url("/font/Stolzl/stolzl_medium.otf") format("opentype");
 }
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 * {
   min-width: 0px;

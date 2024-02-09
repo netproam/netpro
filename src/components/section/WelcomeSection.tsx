@@ -159,10 +159,10 @@ t  flex flex-col lg:gap-4
   lg:hover:text-slate-800 duration-150   bg-black  
   items-center justify-center flex z-20   absolute bottom-20 lg:bottom-0 lg:justify-start zz-50    lg:pt-16
  bg-transparent py-2 ">
-   <DialogEstimation styleBtn="bg-slate-200 
+   <DialogEstimation styleBtn="text-slate-50
    
    rounded-full py-6  
-   hover:bg-green-600 hover:bg-opacity-[30%] hover:text-slate-100   text-slate-800" />
+   bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]" />
     </motion.div>
   </div>
 

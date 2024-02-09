@@ -19,6 +19,7 @@ const config = {
     },
     extend: {
       fontFamily:{
+        hind:["Hind+Siliguri"],
      stolzl:["stolzl"],
         test:["DM Sans"],poppins:["Poppins"]
       },

@@ -33,7 +33,7 @@ const [scope,animate]=useAnimate()
      {
      }
      else {
-        animate(scope.current,{color:"black",backgroundColor:"transparent"})
+        animate(scope.current,{color:"black",backgroundColor:"#f8fafc"})
 
      }
     }
