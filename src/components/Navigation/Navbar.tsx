@@ -148,7 +148,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 </div>
 <div className="flex gap-4 justify-center items-center   z-50 relative ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md z-50 relative
-rounded-full bg-[#59B4C3]   gap-2  items-center justify-center
+rounded-full bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]   gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
@@ -161,7 +161,10 @@ className="text-slate-100"/>
 lg:flex w-fit h-fit  whitespace-nowrap " >+33 651 605 207</p>
 </div>
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full bg-[#0E2954]  gap-2
+rounded-full  bg-gradient-to-tr
+bg-[#17CCCA] 
+
+gap-2
 items-center justify-center">
     <a 
     href="mailto:sasu.netpros@gmail.com"

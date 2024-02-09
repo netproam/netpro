@@ -16,16 +16,17 @@ export default function Home() {
     <WelcomeSection/>
 
 
-    <div className="flex flex-col  gap-8  pt-4">
+    <div className="flex flex-col  gap-8 lg:gap-20 w-full h-full  pt-4">
+
     <NewServicesSection/>
-   <SpecificitySection/>
+    <ThirdSection/>
+    <SpecificitySection/>
+
     <FourthSection/>
 
-    <FifthSection/>
 
 
 
-    </div>
 
     <div 
        style={{ scrollbarWidth: "none" }}
@@ -36,6 +37,9 @@ export default function Home() {
 
     <TestimonialSection/>
     </div>
+    </div>
+
+  
 
     <ContactSection/>
 
