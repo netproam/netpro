@@ -62,8 +62,8 @@ que vous n'ayez à payer que pour ceux que vous auriez besoin`}
 
 <motion.div 
 
-className="relative -rotate-[35deg]    backdrop-blur-sm
-z-50    
+className="relative -rotate-[35deg]    
+z-30    
 w-full  order-2 hidden lg:flex flex items-center justify-center">
 
 <motion.div
@@ -73,7 +73,7 @@ className="w-[675px]
  h-[325px] 
 flex    
  overflow-hidden
- rounded-full  z-50 relative">
+ rounded-full  z-30 relative">
 <img  
 
 src="/photo_welcome-min.jpeg" 
@@ -154,7 +154,7 @@ t  flex flex-col lg:gap-4
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{ease:"easeInOut",duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
-  className="  p-2 px-4  lg:p-0  z-50
+  className="  p-2 px-4  lg:p-0  z-30
   text-slate-100 cursor-pointer    w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   fixed 
   items-center justify-center flex  bottom-8 lg:relative  lg:justify-start    lg:pt-16

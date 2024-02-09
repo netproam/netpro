@@ -146,8 +146,8 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 
 </NavigationMenu>
 </div>
-<div className="flex gap-4 justify-center items-center   ">
-<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
+<div className="flex gap-4 justify-center items-center   z-50 relative ">
+<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md z-50 relative
 rounded-full bg-[#59B4C3]   gap-2  items-center justify-center
 ">
     <a 
