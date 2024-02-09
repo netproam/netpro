@@ -154,10 +154,10 @@ t  flex flex-col lg:gap-4
       initial={{opacity:0}}
       animate={{opacity:[0,1],y:[100,0]}}
   transition={{ease:"easeInOut",duration:isTabletOrMobile? 1.25 : 1.5,delay: isTabletOrMobile? 1.65 : 1.5}}
-  className="  p-2 px-4  lg:p-0
+  className="  p-2 px-4  lg:p-0 fixed
   text-slate-100 cursor-pointer  lg:relative   w-full lg:w-full 
   lg:hover:text-slate-800 duration-150   bg-black  
-  items-center justify-center flex z-20   absolute bottom-20 lg:bottom-0 lg:justify-start zz-50    lg:pt-16
+  items-center justify-center flex z-20    bottom-20 lg:bottom-0 lg:justify-start zz-50    lg:pt-16
  bg-transparent py-2 ">
    <DialogEstimation styleBtn="text-slate-50
    
