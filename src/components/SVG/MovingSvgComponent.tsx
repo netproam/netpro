@@ -13,12 +13,16 @@ const MovingSvgComponent = ({isSelected}:MovingSvgProps) => {
           <stop offset="0%" stopColor="#04A9F4" />
           <stop offset="100%" stopColor="#17CCCA" />
         </linearGradient>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="black"  fillOpacity={0.5} />
+          <stop offset="100%" stopColor="#9BBEC8" fillOpacity={0.5}  />
+        </linearGradient>
       </defs>
       <g>
         <g>
           <path  className=""
                     style={
-{fill: isSelected? "url(#gradient)" : "#e2e8f0"
+{fill: isSelected? "url(#gradient)" : "#DDDDDD"
 }
                     }  
           
