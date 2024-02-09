@@ -47,13 +47,13 @@ const dataTest={
     useMotionValueEvent(scrollXProgress,"change",(scrollP)=>{
       console.log("scrolling")
 
-      if(scrollP<0.05)
+      if(scrollP<0.1)
       {
         
       }
       else
       {
-        animate(scope.current,{pathLength:scrollP})
+        animate(scope.current,{width:`${scrollP*100}%`})
       }
     })
 
@@ -131,21 +131,29 @@ pl-4 lg:pl-0 w-screen  px-20   lg:px-0  flex  h-full ">
    <p className="sticky w-screen  pb-4 ">
 
 
-<motion.svg className="w-screen" height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 20">
-     
-     
-<motion.path 
-          ref={scope}
 
-    d="M10 10 L200 10" // Path representing a line from (10,10) to (200,10)
-    strokeWidth={20}
-    strokeLinecap="round" // Make the line ends rounded
-    stroke="#58B4C3"
-    initial={{ pathLength: 0.05 }}
-    id="svgline"
+
+   <motion.svg className="w-screen" height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 20">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#04A9F4" />
+      <stop offset="100%" stopColor="#17CCCA" />
+    </linearGradient>
+  </defs>
+  <motion.rect
+    width={`100%`}
+    height="20"
+    className={""}
+    ref={scope}
+    rx="10" // Horizontal radius for rounded corners
+    ry="10"
+    initial={{width:"10%"}}
+    style={{ fill: "url(#gradient)" }} // Apply linear gradient to fill
+   
+   
+    id="svgrect"
   />
-    
-    </motion.svg>
+</motion.svg>
 
 </p>
    </section>
