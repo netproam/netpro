@@ -61,8 +61,8 @@ const ContactComponent = () => {
     lg:w-full 
     font-semibold
        text-[#3C4E5D]
-    ">{`Besoin d'un`} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA] pt-2">Nettoyage?</span> <span className="block">
-       Prenez contacte avec nous !</span></h3>
+    ">{`Notre équipe est à votre`} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA] pt-2">ecoute</span> <span className="block">
+      </span></h3>
     </div>
             <FormField 
               control={form.control}
