@@ -13,7 +13,7 @@ const thirdSection = () => {
    
     </div>
    
-    <div className="grid grid-cols-1 lg:grid-cols-2 w-full  gap-4 px-2   lg:px-10 lg:gap-10">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 w-full   gap-4 px-2   lg:px-10 lg:gap-10">
 
        <h2 className="col-span-2 racking-tight text-3xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">Nettoyages</h2> 
         <div className=" ">
@@ -32,9 +32,9 @@ const thirdSection = () => {
         
     </div> 
  
-    <div className="grid  grid-cols-1 lg:grid-cols-2 w-full  gap-4 px-2   lg:px-10 lg:gap-10">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 w-full   gap-4 px-2   lg:px-10 lg:gap-10">
 
-<h2 className="col-span-2 racking-tight text-3xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA] ">Debarras</h2> 
+<h2 className="col-span-2 racking-tight text-3xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">Nettoyages</h2> 
  <div className=" ">
  <img className="object-cover rounded-lg w-full" src={
          `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
