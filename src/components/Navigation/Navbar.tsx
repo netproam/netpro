@@ -165,9 +165,8 @@ lg:flex w-fit h-fit  whitespace-nowrap
  from-[#17CCCA]   to-emerald-400 bg-gradient-to-tr bg-clip-text
 " >+33 651 605 207</p>
 </div>
-<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full  bg-gradient-to-tr lg:hidden
- from-[#17CCCA] to-cyan-200
+<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md 
+rounded-full   from-[#17CCCA]   to-emerald-400 bg-gradient-to-tr  lg:hidden
 
 gap-2
 items-center justify-center">
