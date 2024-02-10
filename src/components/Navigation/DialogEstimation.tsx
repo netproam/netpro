@@ -34,18 +34,14 @@ export function DialogEstimation({styleBtn}:DialogProps) {
                 <div className="w-fit rounded-2xl  flex flex-col text-xl  text-slate-800 gap-2  ">
                 <button className={`${isChanging? " bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]   rounded-2xl font-semibold text-slate-white " : "bg-transparent text-sm text-slate-400"} p-2`} onClick={()=>setIsChanging(true)}>Estimation gratuite </button>
 
-                <button 
-                className={`${isChanging===false? "bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA] rounded-2xl font-semibold text-slate-white  " : "bg-transparent text-sm text-slate-400"} p-2`} 
-                onClick={()=>setIsChanging(false)}>Contactez nous </button>
+   
                 </div>
                 </div>
 
-       {isChanging? <div className="flex  flex-col h-full   w-full">
+     <div className="flex  flex-col h-full   w-full">
          
        <EstimationForm/>
-        </div> :<div className="flex h-full  flex-col  w-full">
-            <ContactOnDialog/>
-        </div> }
+        </div> 
 
       </DialogContent>
     </Dialog>
