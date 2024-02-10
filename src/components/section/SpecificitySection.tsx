@@ -10,7 +10,7 @@ const SpecificitySection = () => {
             <h3 className="tracking-tight 
             lg:pb-4
             text-3xl lg:text-5xl font-semibold bg-clip-text text-transparent
-             bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">{`Ce qui fait notre différence`}</h3>
+             bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">{`Ce qui fait notre différence`}</h3>
             <p className="tracking-wide  lg:text-center
             text-lg font-hind font-light pt-2">{`
            pour nous différencier nous nous basons sur plusieurs éléments clés`}</p>

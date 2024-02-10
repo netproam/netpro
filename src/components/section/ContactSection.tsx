@@ -16,7 +16,7 @@ const ContactSection = () => {
     lg:w-full  
     font-semibold
          text-[#3C4E5D]
-    ">{`Besoin d'un`} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">Nettoyage?</span><span className="block pt-2">Prenez contact avec nous!</span></h3>
+    ">{`Besoin d'un`} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">Nettoyage?</span><span className="block pt-2">Prenez contact avec nous!</span></h3>
     </div>
     <div className="p-4 h-[600px] w-[800px] relative rounded-lg">
       <img className="object-cover absolute w-full h-full rounded-lg"

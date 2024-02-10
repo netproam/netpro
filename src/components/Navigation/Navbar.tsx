@@ -76,7 +76,7 @@ onClick={()=>{
 }}
 className=" cursor-pointer left-0 w-fit  relative ">
 
-<p className=" text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">{`NET'PROS`}</p>
+<p className=" text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300">{`NET'PROS`}</p>
 </div>
 
 <div className={`  w-fit  mr-auto  text-current   relative z-50 items-center hidden lg:flex
@@ -149,7 +149,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 </div>
 <div className="flex gap-4 justify-center items-center   z-30 relative ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md z-30 relative
-rounded-full bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]   gap-2  items-center justify-center
+rounded-full bg-gradient-to-r  from-[#17CCCA]   to-emerald-400 gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
@@ -163,7 +163,7 @@ lg:flex w-fit h-fit  whitespace-nowrap " >+33 651 605 207</p>
 </div>
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
 rounded-full  bg-gradient-to-tr
-bg-[#17CCCA] 
+ from-[#17CCCA] to-cyan-200
 
 gap-2
 items-center justify-center">

@@ -134,7 +134,7 @@ const selectionnedText=allServices[isTextSelected]
 <div className="flex flex-col w-full h-full gap-2  ">
 <h2 className="text-4xl 
 
-bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
+bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 
 
 lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{selectionnedText.titre}</h2>
 <div className=" grid grid-cols-2 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
@@ -154,7 +154,7 @@ bg-slate-200">
     </div>
 
 </div>
-<Button className="w-fit relative px-10  bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
+<Button className="w-fit relative px-10  bg-gradient-to-r from-[#17CCCA] to-emerald-300 
  relative self-center  mt-4 py-6 rounded-full  text-white font-semibold hover:bg-slate-200">{`Découvrir`}
 <span className="absolute right-3"><MdKeyboardArrowRight  className="" size={20}/></span></Button>
 </div>

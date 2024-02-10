@@ -126,7 +126,7 @@ className="   h-[600px]  inset-0 z-50 object-right w-full
 
     key={allText[0].id+"title"}
     animate={{opacity:[0,1],transition:{delay:0.25,duration:isTabletOrMobile? 2.5 :1.75}}}
-    className="   bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
+    className="   bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300
     text-left  
 t  flex flex-col lg:gap-4
     "><span
@@ -179,7 +179,7 @@ ref={scope}
    <DialogEstimation styleBtn="text-slate-50  
    
    rounded-full py-6  
-   bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]" />
+   bg-gradient-to-r from-[#17CCCA] to-emerald-300 " />
     </motion.div>
   </div>
 

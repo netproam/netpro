@@ -38,7 +38,7 @@ else {
 <div className="flex flex-col  items-center justify-center lg:items-start ">
 <h4 className="text-sm font-semibold text-center pl-1 leading-[12px] text-slate-400 lg:text-start">Ce que nous apportons</h4>
 <h3 className="font-semibold tracking-tighter text-4xl pb-2 lg:pt-2 lg:w-fit  
- bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]
+ bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#17CCCA] to-emerald-300 
   lg:text-5xl   text-center lg:text-start ">{`Une équipe méticuleuse`}</h3>
 <p className="pt-1 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
 </div>
@@ -75,7 +75,7 @@ else {
 
     </section>
 <div className="flex gap-10 pb-8  flex-col lg:flex-row  lg:gap-20 items-center  lg:py-0 lg:pt0 ">
-<DialogEstimation styleBtn=" text-slate-100 bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]"/>
+<DialogEstimation styleBtn=" text-slate-100 bg-gradient-to-r from-[#17CCCA] to-emerald-300 "/>
 <div className="flex items-center gap-2">
     <div className="w-fit p-2 rounded-full border-2 border-slate-300">
         <TbPlayerPlayFilled size={20}/>

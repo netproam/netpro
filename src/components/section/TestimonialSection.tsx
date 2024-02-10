@@ -70,7 +70,7 @@ const dataTest={
          lg:w-full   lg:whitespace-nowrap
          font-semibold
           text-center   text-[#3C4E5D] mr-2">Ils sont
-            <span className="bg-clip-text  inline text-transparent  bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">
+            <span className="bg-clip-text  inline text-transparent  bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">
   {` déjà plus de 100 `}  
   </span>
     {`clients à être`}
@@ -79,7 +79,7 @@ const dataTest={
     text-3xl leading-[40px] lg:text-4xl  h-full  lg:leading-[48px]
          lg:w-full  
     whitespace-nowrap   bg-clip-text font-semibold
-     text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]">{` satisfait.`}</span>
+     text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">{` satisfait.`}</span>
           </p>
            
           </div>
