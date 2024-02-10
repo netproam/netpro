@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useAnimate, useMotionValueEvent, useScroll ,motion} from "framer-motion";
 import NavMobileMenu from "./NavMobileMenu";
+import { DialogEstimation } from "./DialogEstimation";
 
 const Navbar = () => {
     const path=usePathname()
@@ -148,21 +149,24 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 </NavigationMenu>
 </div>
 <div className="flex gap-4 justify-center items-center   z-30 relative ">
-<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md z-30 relative
-rounded-full bg-gradient-to-r  from-[#17CCCA]   to-emerald-400 gap-2  items-center justify-center
+<div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md z-30 relative 
+rounded-full bg-gradient-to-r  text-clip text-transparent
+ border-[1px] border-emerald-300 gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
     href="tel:+33651605207">
 <FaPhoneAlt
 size={15}
-className="text-slate-100"/>
+className="text-emerald-400 "/>
 </a>
-<p className="font-semibold text-sm text-slate-100  hidden  
-lg:flex w-fit h-fit  whitespace-nowrap " >+33 651 605 207</p>
+<p className="font-semibold text-sm   hidden  
+lg:flex w-fit h-fit  whitespace-nowrap 
+ from-[#17CCCA]   to-emerald-400 bg-gradient-to-tr bg-clip-text
+" >+33 651 605 207</p>
 </div>
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md
-rounded-full  bg-gradient-to-tr
+rounded-full  bg-gradient-to-tr lg:hidden
  from-[#17CCCA] to-cyan-200
 
 gap-2
@@ -177,6 +181,11 @@ color="rgb(248,250,252)"/>
 </a>
 <p className="font-semibold text-sm text-slate-100 hidden lg:flex" >sasu.netpros@gmail.com</p>
 </div>
+
+<DialogEstimation styleBtn="text-slate-50  
+   
+   rounded-full py-6   hidden lg:flex
+   bg-gradient-to-r from-[#17CCCA] to-emerald-300 "/>
 
 
 <motion.div 
