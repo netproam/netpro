@@ -15,41 +15,49 @@ const thirdSection = () => {
    
     <div className="flex flex-col lg:grid lg:grid-cols-2 w-full   gap-4 px-2   lg:px-10 lg:gap-10">
 
-       <h2 className="col-span-2 racking-tight text-3xl text-left font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">Nettoyages</h2> 
         <div className=" ">
-        <img className="object-cover rounded-lg w-full" src={
+        <img className="object-cover rounded-lg w-full lg:h-[375px]" src={
                 `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
 
          
         </div>
         <div className="  ">
-        <img className="object-cover rounded-lg  lg:px-0 w-full"
+        <img className="object-cover rounded-lg w-full lg:h-[375px]"
             src={
                 `https://img.freepik.com/photos-gratuite/plein-coup-homme-poussant-bouton-ascenseur_23-2149345535.jpg?w=1800&t=st=1705798707~exp=1705799307~hmac=dc88fdc5de25317284826a26180c27d5d1994703856501650956dddf178a50f5`
             }
             />
         </div>
-        
-    </div> 
- 
-    <div className="flex flex-col lg:grid lg:grid-cols-2 w-full   gap-4 px-2   lg:px-10 lg:gap-10">
-
-<h2 className="col-span-2 racking-tight text-3xl text-left font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">{`Débarras`}</h2> 
- <div className=" ">
- <img className="object-cover rounded-lg w-full" src={
+        <div className=" ">
+ <img className="object-cover rounded-lg w-full lg:h-[375px]" src={
          `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
 
   
  </div>
  <div className="  ">
- <img className="object-cover rounded-lg  lg:px-0 w-full"
+ <img className="object-cover rounded-lg w-full lg:h-[375px]"
      src={
          `https://img.freepik.com/photos-gratuite/plein-coup-homme-poussant-bouton-ascenseur_23-2149345535.jpg?w=1800&t=st=1705798707~exp=1705799307~hmac=dc88fdc5de25317284826a26180c27d5d1994703856501650956dddf178a50f5`
      }
      />
  </div>
+ <div className=" hidden lg:flex ">
+ <img className="object-cover rounded-lg w-full lg:h-[375px]" src={
+         `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
+
+  
+ </div>
+ <div className=" hidden lg:flex  ">
+ <img className="object-cover rounded-lg w-full lg:h-[375px]"
+     src={
+         `https://img.freepik.com/photos-gratuite/plein-coup-homme-poussant-bouton-ascenseur_23-2149345535.jpg?w=1800&t=st=1705798707~exp=1705799307~hmac=dc88fdc5de25317284826a26180c27d5d1994703856501650956dddf178a50f5`
+     }
+     />
+ </div>
+        
+    </div> 
  
-</div> 
+ 
    </section>
   )
 }
