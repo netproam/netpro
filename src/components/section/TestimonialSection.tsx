@@ -62,7 +62,7 @@ const dataTest={
 
   return (
     <section
-    style={{ scrollbarWidth: "none" }}
+    style={{ scrollbarWidth: "none",scrollbarColor:"#f8fafc" }}
 
     className="flex flex-col h-full    justify-center items-center w-full gap-2 lg:gap-10 py-8 ">
        <div className="flex  h-full  w-full  flex-col px-4 lg:px-0 gap-2">
@@ -85,7 +85,7 @@ const dataTest={
           </div>
    <section
    ref={refSect}
-   style={{ scrollbarWidth: "none" }}
+   style={{ scrollbarWidth: "none",scrollbarColor:"#f8fafc" }}
    className=" h-[300px] scrollba   relative  bg-gradient-to-b 
   overflow-scroll w-screen 
     flex flex-col gap-2 ">
