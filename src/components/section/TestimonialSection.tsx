@@ -137,8 +137,8 @@ pl-4 lg:pl-0 w-screen  px-20   lg:px-0  flex  h-full ">
    <motion.svg className="w-screen" height={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 20">
   <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="#04A9F4" />
-      <stop offset="100%" stopColor="#17CCCA" />
+    <stop offset="0%" stopColor="#17CCCA" />
+          <stop offset="100%" stopColor="#6ee7b7" />
     </linearGradient>
   </defs>
   <motion.rect
