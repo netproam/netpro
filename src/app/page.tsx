@@ -23,6 +23,17 @@ export default function Home() {
     <ThirdSection/>
 
 
+ 
+
+
+
+  
+    </div>
+
+    <SpecificitySection/>
+
+    <FourthSection/>
+
     <div 
        style={{ scrollbarWidth: "none" }}
 
@@ -32,16 +43,6 @@ export default function Home() {
 
     <TestimonialSection/>
     </div>
-
-
-
-  
-    </div>
-    <SpecificitySection/>
-
-
-    <FourthSection/>
-
 
     <ContactSection/>
 

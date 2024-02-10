@@ -94,7 +94,7 @@ else {
 
 <div className=" px-10 flex flex-row order-1  w-full
  justify-center items-center  gap-0 lg:gap-20 hidden lg:flex">
-<div className="flex flex-row  gap-6 lg:gap-2 w-fit  justify-center">
+<div className="flex flex-row  gap-6 lg:gap-2 w-full  justify-start">
     <div className="w-fit flex h-fit flex-col justify-end items-end lg:items-center lg:justify-center ">
     <motion.p className="font-semibold relative  h-fit
      bg-clip-text 
@@ -125,7 +125,7 @@ else {
 </div>
 
 {/**deuxieme section */}
-<div className="flex flex-col gap-6 lg:gap-0 w-fit  justify-end">
+<div className="flex flex-col gap-6 lg:gap-0 w-full  justify-end">
     <div className="w-fit flex flex-col justify-end items-end lg:items-start ">
     <motion.p className="font-semibold
      bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#17CCCA] to-emerald-300 
