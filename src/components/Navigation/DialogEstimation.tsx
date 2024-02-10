@@ -31,11 +31,11 @@ export function DialogEstimation({styleBtn}:DialogProps) {
       <DialogContent className="w-full h-full flex flex-col  p-0 overflow-scroll bg-slate-50 ">
       
         <div className="flex  w-full justify-center p-0 pt-16 pb-8 ">
-                <div className="w-fit rounded-2xl   text-xl  text-slate-800 gap-10  ">
-                <button className={`${isChanging? " bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]  rounded-2xl font-semibold text-slate-white " : "bg-transparent"} p-2`} onClick={()=>setIsChanging(true)}>Estimation gratuite </button>
+                <div className="w-fit rounded-2xl  flex flex-col text-xl  text-slate-800 gap-2  ">
+                <button className={`${isChanging? " bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]   rounded-2xl font-semibold text-slate-white " : "bg-transparent text-sm text-slate-400"} p-2`} onClick={()=>setIsChanging(true)}>Estimation gratuite </button>
 
                 <button 
-                className={`${isChanging===false? "bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA]  rounded-2xl font-semibold text-slate-white  " : "bg-transparent"} p-2`} 
+                className={`${isChanging===false? "bg-clip-text text-transparent bg-gradient-to-r from-[#04A9F4] to-[#17CCCA] rounded-2xl font-semibold text-slate-white  " : "bg-transparent text-sm text-slate-400"} p-2`} 
                 onClick={()=>setIsChanging(false)}>Contactez nous </button>
                 </div>
                 </div>
