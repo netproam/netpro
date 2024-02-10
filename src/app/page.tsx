@@ -11,28 +11,31 @@ import SpecificitySection from "@/components/section/SpecificitySection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-slate-50  flex-col items-center justify-between  overflow-hidden w-screen  ">
+    <main className="flex min-h-screen bg-slate-50 
+    lg:gap-10
+    flex-col items-center justify-between  overflow-hidden w-screen  ">
    
     <WelcomeSection/>
 
 
-    <div className="flex flex-col  gap-8 lg:gap-20 w-full h-full  pt-4">
 
     <NewServicesSection/>
-    
-    <ThirdSection/>
+ 
+  
 
+    <ThirdSection/>
 
  
 
 
 
   
-    </div>
+  
+
 
     <SpecificitySection/>
-
     <FourthSection/>
+
 
     <div 
        style={{ scrollbarWidth: "none" }}
