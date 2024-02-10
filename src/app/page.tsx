@@ -19,13 +19,8 @@ export default function Home() {
     <div className="flex flex-col  gap-8 lg:gap-20 w-full h-full  pt-4">
 
     <NewServicesSection/>
+    
     <ThirdSection/>
-    <SpecificitySection/>
-
-    <FourthSection/>
-
-
-
 
 
     <div 
@@ -37,9 +32,16 @@ export default function Home() {
 
     <TestimonialSection/>
     </div>
-    </div>
+
+
 
   
+    </div>
+    <SpecificitySection/>
+
+
+    <FourthSection/>
+
 
     <ContactSection/>
 
