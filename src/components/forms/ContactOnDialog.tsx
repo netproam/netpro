@@ -29,6 +29,7 @@ import * as z from "zod"
 import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPaperPlane, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
 import { FaPaperPlane, FaPen, FaRegPaperPlane, FaUser } from "react-icons/fa"
 import { format } from "date-fns"
+import CalendarInput from "./CalendarInput"
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -85,6 +86,7 @@ const ContactOnDialog = () => {
                 </FormItem>
               )}
             />
+            <CalendarInput/>
             {/* <FormItem>
             <FormLabel>Date of birth</FormLabel>
               <Popover>
