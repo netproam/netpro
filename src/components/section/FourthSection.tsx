@@ -45,9 +45,9 @@ else {
 
 {/**Version mobile */}
 <section className="w-full flex   items-center justify-center lg:hidden  px-4 gap-4">
-    <div className="w-full flex justify-end p-4">
-<div className="w-fit lg:hidden  items-center
- self-end lg:w-full  lg:gap-0 flex flex-col  lg:self-start relative ">
+    <div className="w-full flex lg:justify-end lg:p-4">
+<div className="w-fit lg:hidden   justify-start items-center
+ lg:w-full  lg:gap-0 flex flex-col  lg:self-start relative ">
     <motion.p className="font-semibold text-5xl  lg:hidden tracking-tighter w-fit relative 
      bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#17CCCA] to-emerald-300 
     
