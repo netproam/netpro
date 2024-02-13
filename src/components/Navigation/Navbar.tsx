@@ -121,17 +121,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
       </NavigationMenuContent>
     </NavigationMenuItem>
   </NavigationMenuList>
-<NavigationMenuItem className="list-none text-base">
-  <Link
-      
-  href="/contact" passHref legacyBehavior>
-    <NavigationMenuLink
 
-    className="text-sm">
-     <p  >FAQ</p>
-    </NavigationMenuLink>
-  </Link>
-</NavigationMenuItem>
   <NavigationMenuItem  className="list-none text-base">
   <Link
   onClick={()=>        animate(scope.current,{color:"black",backgroundColor:"#F0F9F9"})
@@ -151,7 +141,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
 <div className="flex gap-4 justify-center items-center   z-30 relative ">
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md z-30 relative 
 rounded-full bg-gradient-to-r  text-clip text-transparent
- border-[1px] border-emerald-300 gap-2  items-center justify-center
+ border-[1px] cursor-text border-emerald-300 gap-2  items-center justify-center
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
