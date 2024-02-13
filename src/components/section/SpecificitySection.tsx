@@ -8,8 +8,8 @@ const SpecificitySection = () => {
             <p className="text-xs lg:text-sm  font-semibold  pl-1  text-slate-400 
             ">{"Une approche innovante".toLocaleUpperCase()}</p>
             <h3 className="tracking-tight 
-            lg:pb-4
-            text-3xl lg:text-5xl font-semibold bg-clip-text text-transparent
+            lg:pb-4 font-hind
+            text-2xl lg:text-5xl font-semibold bg-clip-text text-transparent
              bg-gradient-to-r from-[#17CCCA] to-emerald-300 ">{`Ce qui fait notre différence`}</h3>
             <p className="tracking-wide  lg:text-center
             text-lg font-hind font-light pt-2">{`

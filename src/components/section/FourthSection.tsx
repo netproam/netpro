@@ -40,7 +40,7 @@ else {
 <h3 className="font-semibold tracking-tighter text-3xl pb-2 lg:pt-2 lg:w-fit  
  bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#17CCCA] to-emerald-300 
   lg:text-5xl   text-center lg:text-start ">{`Une équipe méticuleuse`}</h3>
-<p className="pt-1 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
+<p className=" text-sm lg:text-base pt-1 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
 </div>
 
 {/**Version mobile */}
