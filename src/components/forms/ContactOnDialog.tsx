@@ -69,26 +69,26 @@ const ContactOnDialog = () => {
            bg-slate-50  gap-8 px-4 p-4  lg:p-0
              w-full  flex flex-col 
          rounded-xl  ">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-4">
    <Label className="cursor-pointer" htmlFor="formMail">{`Email`}<span className="text-red-400">{"*"}</span></Label>
    <Input id="formMail" placeholder="Veuillez indiquer votre adresse email"/>
    </div>
-   <div className="flex flex-col gap-2">
+   <div className="flex flex-col gap-4">
    <Label className="cursor-pointer" htmlFor="companyName">{`Nom de votre entreprise`}<span className="text-red-400">{"*"}</span></Label>
    <Input id="companyName" placeholder="Veuillez indiquer le nom de votre entreprise"/>
    </div>
-   <div className="flex flex-col gap-2">
+   <div className="flex flex-col gap-4">
    <Label className="cursor-pointer" htmlFor="companyNumber">{`Numéro de téléphone`}</Label>
    <Input id="companyNumber" placeholder="Veuillez indiquer votre numéro de téléphone "/>
    </div>
  
-   <div className="flex flex-col gap-2">
-   <Label>{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
-   <Select 
+   <div className="flex flex-col gap-4">
+   <Label htmlFor="selectIdService">{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
+   <Select  
               >
              
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selectionner un service" />
+                  <SelectTrigger  id="selectIdService"  >
+                    <SelectValue  placeholder="Selectionner un service" />
                   </SelectTrigger>
               
                 <SelectContent className="overflow-y-auto">
@@ -112,7 +112,7 @@ const ContactOnDialog = () => {
               </Select>
               </div>
               <CalendarInput/>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-4">
    <Label className="cursor-pointer" htmlFor="messageToUs">Message<span className="text-red-400">{"*"}</span></Label>
  <Textarea
  rows={3} className="resize-none"
