@@ -31,8 +31,8 @@ export function DialogEstimation({styleBtn,isShowed}:DialogProps) {
            font-semibold text-sm ${styleBtn}`} >Devis gratuit <span className=" absolute right-2">
             {isShowed&&<MdKeyboardArrowRight size={20}/>}</span></Button>
       </DialogTrigger>
-
-      <DialogContent className="w-full h-fit flex flex-col  p-0 overflow-scroll
+      
+      <DialogContent className="w-full h-full flex flex-col  p-0 overflow-scroll
        bg-slate-50 ">
       
         <div className="flex  w-full justify-center p-0  ">
