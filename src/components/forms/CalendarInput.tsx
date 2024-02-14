@@ -7,14 +7,18 @@ import { Popover,PopoverContent,PopoverTrigger } from "../ui/popover"
 const CalendarInput = () => {
 
     const [date, setDate] = useState<Date | undefined>(new Date())
+    const [isOpen,setIsOpen]=useState(false)
 const refId=useId()
     return (
-        <Popover>
+        <Popover  
+        
+     >
         <PopoverTrigger id={refId} asChild>
           <div className="flex flex-col gap-2">
             <Label htmlFor={refId} className="font-semibold text-sm">{`Quand souhaitez vous qu'on vous rappel`}</Label>
         <Button 
         type="button"
+        onClick={()=>setIsOpen(true)}
                       variant={"outline"}
                       className={
                         "w-full pl-3 text-left font-normal"}
@@ -26,7 +30,9 @@ const refId=useId()
                     </div>
 
         </PopoverTrigger>
-        <PopoverContent className="relative z-50">
+        <PopoverContent
+        
+        className="relative z-50">
         <Calendar
             selected={date}
                     mode="single"
