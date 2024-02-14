@@ -7,7 +7,9 @@ import { Button } from "@/components/ui/button"
 import {MdOutlineLocalGasStation, MdOutlineLocationCity, MdOutlinePhone}from "react-icons/md"
 import { Textarea } from "../ui/textarea"
 import {Calendar,} from "@/components/ui/calendar"
+import { Label } from "../ui/label"
 
+import { Select,SelectContent,SelectGroup,SelectItem,SelectTrigger,SelectLabel,SelectValue } from "../ui/select"
 import {
   Form,
   FormControl,
@@ -63,178 +65,61 @@ const ContactOnDialog = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-4 p-4    w-full  flex flex-col
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-4 px-4    w-full  flex flex-col gap-4
            shadow-xl rounded-xl  ">
-   
-            <FormField 
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                 <FormControl>
-                    <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
-                     w-full">
-                    <FaUser size={20} className="text-slate-600"/>
-                  <input
-                    className="  w-full outline-none   bg-transparent 
-                     px-4 rounded-md  hover:border-slate-800 duration-500"
-                    placeholder="Nom" {...field} />
-                    </div>
-                  </FormControl>
-               
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <CalendarInput/>
-            {/* <FormItem>
-            <FormLabel>Date of birth</FormLabel>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
-                    <Button
-                      variant={"outline"}
-                      className={cn(
-                        "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
-                      )}
-                    >
-                      {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
-                        <span>Pick a date</span>
-                      )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="single"
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    disabled={(date) =>
-                      date > new Date() || date < new Date("1900-01-01")
-                    }
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-            </FormItem> */}
-                 <FormField
-              control={form.control}
-              name="adresseEmail"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                  <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3 rounded-md
-                     w-full">
-                                            <IoMail size={20} className="text-slate-600"/>
-                  <input
-                    className="  w-full outline-none   bg-transparent 
-                     px-4 rounded-md  hover:border-slate-800 duration-500"
-                    placeholder="Email" {...field} />
-                    </div>
-                  </FormControl>
-            
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-                 <FormField
-              control={form.control}
-              name="phoneNumber"
-              render={({ field }) => (
-                <FormItem>
-                 <FormControl>
-                 <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
-                     w-full">
-                    <MdOutlinePhone size={20} className="text-slate-600"/>
-                  <input
-                    className="  w-full outline-none   bg-transparent 
-                     px-4 rounded-md  hover:border-slate-800 duration-500"
-                    placeholder="Téléphone" {...field} />
-                    </div>
-                  </FormControl>
-                
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-           <FormField
-              control={form.control}
-              name="ville"
-              render={({ field }) => (
-                <FormItem>
-                 <FormControl>
-                 <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
-                     w-full">
-                    <MdOutlineLocationCity size={20} className="text-slate-600"/>
-                  <input
-                    className="  w-full outline-none   bg-transparent 
-                     px-4 rounded-md  hover:border-slate-800 duration-500"
-                    placeholder="ville" {...field} />
-                    </div>
-                  </FormControl>
-                
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-
-                 <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem>
-                 
-                 <FormControl>
-
-                 <div className="flex gap-2  justify-center items-center bg-white  pl-2  py-3  rounded-md
-                     w-full">
-                    <FaPen size={20} className="text-slate-600"/>
-                  <textarea rows={4}
-                    className="  w-full outline-none resize-none   bg-transparent 
-                     px-4 rounded-md  hover:border-slate-800 duration-500"
-                    placeholder="Inscrire votre message, où appelez nous directement" {...field} />
-                    </div>
-                  </FormControl>
+            <div className="flex flex-col gap-4">
+   <Label>{`Email *`}</Label>
+   <Input/>
+   </div>
+   <div className="flex flex-col gap-4">
+   <Label>{`Nom de l'entreprise*`}</Label>
+   <Input/>
+   </div>
+   <div className="flex flex-col gap-4">
+   <Label>{`Numéro de téléphone`}</Label>
+   <Input/>
+   </div>
+   <CalendarInput/>
+   <div className="flex flex-col gap-4">
+   <Label>{`Sélectionner un service*`}</Label>
+   <Select 
+              >
              
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="flex w-full justify-center ">
-            <button className="w-fit" type="submit"
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selectionner un service" />
+                  </SelectTrigger>
+              
+                <SelectContent className="overflow-y-auto">
+                    <SelectGroup>
+                        <SelectLabel className="font-semibold pl-8  py-2">Nettoyages</SelectLabel>
+                  <SelectItem value="parties communes">Partie commune</SelectItem>
+                  <SelectItem value="coproprieté">Coproprieté</SelectItem>
+                  <SelectItem value="bureaux">Bureaux</SelectItem>
+                  <SelectItem value="commerce">Commerce</SelectItem>
+                  <SelectItem value="parking">Parking</SelectItem>
+                  <SelectItem value="déménagement">{`Déménagement`}</SelectItem>
+                  </SelectGroup>
+                  <SelectGroup>
+                        <SelectLabel className="font-semibold pl-8  py-2">{`Débarras`}</SelectLabel>
+                  <SelectItem value="décapage">{`Décapages des sols`}</SelectItem>
+                  <SelectItem value="débarras">{`Débarras`}</SelectItem>
+         
+
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              </div>
+
+              <div className="flex flex-col gap-4">
+   <Label>Message</Label>
+ <Textarea/>
+   </div>
+
+            <button className="w-fit self-center h-fit p-2" type="submit"
             ><IoPaperPlane
-            color="" className=" text-slate-600 duration-500 hover:text-[#88CBCE]" size={30}/></button>
-            </div>
-            <div className="flex hidden flex-col w-full font-light text-slate-600  text-lg
-             h-fit gap-4  ">
-           
-            
-                <div className="flex flex-col w-full gap-4 ">
-                <div className="flex gap-4 w-full items-center ">
-                    <IoMail size={25} color="#88CBCE"/>
-                <p className="font  text-base">email@gmail.com</p>
-                </div>
-                <div className="flex gap-4 w-full items-center ">
-                    <IoPhonePortrait size={25} color="#88CBCE"/>
-                <p className="font-light text-base">+1 840 841 25 69</p>
-                </div>
-                
-                </div>
-                <div className="flex gap-4 w-full   ">
-                    <IoLocationSharp size={30} color="#88CBCE"/>
-                <p className=" text-base font-light w-1/2 ">785 20h Street, Office 478
-Berlin, De 82066</p>
-
-
-                </div>
-          </div>
-          </form>
-       
+            color="" className=" text-slate-700  duration-500 hover:text-[#88CBCE]" size={30}/></button>
+     
+      </form>
         </Form>
       )
   

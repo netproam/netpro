@@ -12,7 +12,7 @@ const CalendarInput = () => {
         <Popover>
         <PopoverTrigger asChild>
           <div className="flex flex-col gap-2">
-            <Label>{`Quand souhaitez vous qu'on vous rappel`}</Label>
+            <Label className="font-semibold text-sm">{`Quand souhaitez vous qu'on vous rappel`}</Label>
         <Button 
         type="button"
                       variant={"outline"}
@@ -31,7 +31,7 @@ const CalendarInput = () => {
             selected={date}
                     mode="single"
                     onSelect={setDate}
-                    
+                     
                     initialFocus/>
             </PopoverContent>
       </Popover>
