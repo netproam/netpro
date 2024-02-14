@@ -10,7 +10,7 @@ const CalendarInput = () => {
     const [isOpen,setIsOpen]=useState(false)
 const refId=useId()
     return (
-        <Popover  
+        <Popover   modal
         
      >
         <PopoverTrigger id={refId} asChild>
