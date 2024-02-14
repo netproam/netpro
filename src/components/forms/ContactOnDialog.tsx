@@ -115,7 +115,7 @@ const ContactOnDialog = () => {
  <Textarea/>
    </div>
 
-            <button className="w-fit self-center h-fit p-2" type="submit"
+            <button className="w-fit self-center h-fit " type="submit"
             ><IoPaperPlane
             color="" className=" text-slate-700  duration-500 hover:text-[#88CBCE]" size={30}/></button>
      
