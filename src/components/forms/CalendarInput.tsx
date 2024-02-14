@@ -2,6 +2,8 @@ import { Calendar } from "@/components/ui/calendar"
 import { Label } from "@radix-ui/react-label"
 import { useId, useState } from "react"
 import {AiFillCalendar} from "react-icons/ai"
+import { fr} from 'date-fns/locale';
+
 import { Button } from "../ui/button"
 import { Popover,PopoverContent,PopoverTrigger } from "../ui/popover"
 const CalendarInput = () => {
@@ -33,7 +35,7 @@ const refId=useId()
         <PopoverContent
         
         className="relative z-50">
-        <Calendar
+        <Calendar locale={fr}
             selected={date}
                     mode="single"
                     onSelect={setDate}
