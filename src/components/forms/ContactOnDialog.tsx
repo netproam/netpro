@@ -82,16 +82,16 @@ const ContactOnDialog = () => {
    <Input id="companyNumber" placeholder="Veuillez indiquer votre numéro de téléphone "/>
    </div>
  
-   <div className="flex flex-col gap-4">
+   <div className="flex flex-col gap-4 transition-all duration-1000">
    <Label htmlFor="selectIdService">{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
-   <Select   
+   <Select    
               >
              
                   <SelectTrigger  id="selectIdService"  >
                     <SelectValue  placeholder="Selectionner un service" />
                   </SelectTrigger>
               
-                <SelectContent  className="overflow-y-scroll">
+                <SelectContent  className="overflow-y-scroll transition-all duration-1000">
                     <SelectGroup>
                         <SelectLabel className="font-semibold pl-8  py-2">Nettoyages</SelectLabel>
                   <SelectItem value="parties communes">Partie commune</SelectItem>
