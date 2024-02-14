@@ -33,7 +33,7 @@ export function DialogEstimation({styleBtn,isShowed}:DialogProps) {
       <DialogContent className="w-full h-full flex flex-col  p-0 overflow-scroll
        bg-slate-50 ">
       
-        <div className="flex  w-full justify-center p-0 pt-4 pb-8 ">
+        <div className="flex  w-full justify-center p-0  ">
                 <div className="w-fit rounded-2xl  flex flex-col text-xl  text-slate-800 gap-2  ">
                 <button className={`${isChanging? " bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300    rounded-2xl font-semibold text-slate-white " : "bg-transparent text-sm text-slate-400"} p-2`} onClick={()=>setIsChanging(true)}>Estimation gratuite </button>
 
