@@ -65,23 +65,23 @@ const ContactOnDialog = () => {
 
     return (
         <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-4 px-4    w-full  flex flex-col gap-4
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full  gap-8 px-4    w-full  flex flex-col 
            shadow-xl rounded-xl  ">
-            <div className="flex flex-col gap-4">
-   <Label>{`Email *`}</Label>
-   <Input/>
+            <div className="flex flex-col gap-5">
+   <Label className="cursor-pointer" htmlFor="formMail">{`Email`}<span className="text-red-400">{"*"}</span></Label>
+   <Input id="formMail" placeholder="Veuillez indiquer votre adresse email"/>
    </div>
-   <div className="flex flex-col gap-4">
-   <Label>{`Nom de l'entreprise*`}</Label>
-   <Input/>
+   <div className="flex flex-col gap-5">
+   <Label className="cursor-pointer" htmlFor="companyName">{`Nom de l'entreprise`}<span className="text-red-400">{"*"}</span></Label>
+   <Input id="companyName" placeholder="Veuillez indiquer le nom de votre entreprise"/>
    </div>
-   <div className="flex flex-col gap-4">
-   <Label>{`Numéro de téléphone`}</Label>
-   <Input/>
+   <div className="flex flex-col gap-5">
+   <Label className="cursor-pointer" htmlFor="companyNumber">{`Numéro de téléphone`}</Label>
+   <Input id="companyNumber" placeholder="Veuillez indiquer votre numéro de téléphone "/>
    </div>
    <CalendarInput/>
-   <div className="flex flex-col gap-4">
-   <Label>{`Sélectionner un service*`}</Label>
+   <div className="flex flex-col gap-5">
+   <Label>{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
    <Select 
               >
              
@@ -110,9 +110,9 @@ const ContactOnDialog = () => {
               </Select>
               </div>
 
-              <div className="flex flex-col gap-4">
-   <Label>Message</Label>
- <Textarea/>
+              <div className="flex flex-col gap-5">
+   <Label className="cursor-pointer" htmlFor="messageToUs">Message<span className="text-red-400">{"*"}</span></Label>
+ <Textarea id="messageToUs" placeholder="Laissez nous message nous seront ravis d'y répondre "/>
    </div>
 
             <button className="w-fit self-center h-fit " type="submit"

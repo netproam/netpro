@@ -17,7 +17,8 @@ const refId=useId()
      >
         <PopoverTrigger id={refId} asChild>
           <div className="flex flex-col gap-2">
-            <Label htmlFor={refId} className="font-semibold text-sm">{`Quand souhaitez vous qu'on vous rappel`}</Label>
+            <Label htmlFor={refId} className=" cursor-pointer text-sm text-black font-medium
+            ">{`Quand souhaitez vous qu'on vous rappel`}</Label>
         <Button 
         type="button"
         onClick={()=>setIsOpen(true)}
