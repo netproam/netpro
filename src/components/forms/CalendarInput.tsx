@@ -1,18 +1,18 @@
 import { Calendar } from "@/components/ui/calendar"
 import { Label } from "@radix-ui/react-label"
-import { useState } from "react"
+import { useId, useState } from "react"
 import {AiFillCalendar} from "react-icons/ai"
 import { Button } from "../ui/button"
 import { Popover,PopoverContent,PopoverTrigger } from "../ui/popover"
 const CalendarInput = () => {
 
     const [date, setDate] = useState<Date | undefined>(new Date())
-
+const refId=useId()
     return (
         <Popover>
-        <PopoverTrigger asChild>
+        <PopoverTrigger id={refId} asChild>
           <div className="flex flex-col gap-2">
-            <Label className="font-semibold text-sm">{`Quand souhaitez vous qu'on vous rappel`}</Label>
+            <Label htmlFor={refId} className="font-semibold text-sm">{`Quand souhaitez vous qu'on vous rappel`}</Label>
         <Button 
         type="button"
                       variant={"outline"}
@@ -26,7 +26,7 @@ const CalendarInput = () => {
                     </div>
 
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent className="relative z-50">
         <Calendar
             selected={date}
                     mode="single"
