@@ -24,9 +24,10 @@ interface DialogProps{
 export function DialogEstimation({styleBtn,isShowed}:DialogProps) {
     const [isChanging,setIsChanging]=useState(true)
   return (
-    <Dialog >
+    <Dialog  >
       <DialogTrigger asChild>
-        <Button className={` text-center w-fit   relative flex items-center justify-center text-slate-200 px-8 py-0 rounded-lg
+        <Button className={` text-center w-fit   
+         relative flex items-center justify-center text-slate-200 px-8 py-0 rounded-lg
            font-semibold text-sm ${styleBtn}`} >Devis gratuit <span className=" absolute right-2">
             {isShowed&&<MdKeyboardArrowRight size={20}/>}</span></Button>
       </DialogTrigger>
@@ -41,7 +42,7 @@ export function DialogEstimation({styleBtn,isShowed}:DialogProps) {
                 </div>
                 </div>
 
-     <div className="flex  flex-col h-full   w-full">
+     <div className="flex  flex-col h-fit  p-4 bg-slate-50   w-full">
          
       <ContactOnDialog/>
         </div> 

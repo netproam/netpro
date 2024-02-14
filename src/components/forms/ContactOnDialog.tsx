@@ -64,10 +64,11 @@ const ContactOnDialog = () => {
     
 
     return (
-        <Form {...form} >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full bg-slate-50  gap-7 px-4 p-4 
+        <Form {...form}  >
+          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full
+           bg-slate-50  gap-7 px-4 p-4  lg:p-0
              w-full  flex flex-col 
-           shadow-xl rounded-xl  ">
+         rounded-xl  ">
             <div className="flex flex-col gap-2">
    <Label className="cursor-pointer" htmlFor="formMail">{`Email`}<span className="text-red-400">{"*"}</span></Label>
    <Input id="formMail" placeholder="Veuillez indiquer votre adresse email"/>
@@ -113,7 +114,9 @@ const ContactOnDialog = () => {
               <CalendarInput/>
               <div className="flex flex-col gap-2">
    <Label className="cursor-pointer" htmlFor="messageToUs">Message<span className="text-red-400">{"*"}</span></Label>
- <Textarea id="messageToUs" placeholder="Laissez nous message nous seront ravis d'y répondre "/>
+ <Textarea
+ rows={3} className="resize-none"
+ id="messageToUs" placeholder="Laissez nous message nous seront ravis d'y répondre "/>
    </div>
 
             <button className="w-fit self-center h-fit " type="submit"
