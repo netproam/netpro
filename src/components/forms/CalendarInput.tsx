@@ -25,7 +25,7 @@ const refId=useId()
                       className={
                         "w-full pl-3 text-left font-normal"}
                     >
-                        {date?.toDateString()}
+                        {date?.toLocaleDateString()}
                     
                       <AiFillCalendar className="ml-auto h-4 w-4 opacity-50" />
                     </Button>
