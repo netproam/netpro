@@ -84,14 +84,14 @@ const ContactOnDialog = () => {
  
    <div className="flex flex-col gap-4">
    <Label htmlFor="selectIdService">{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
-   <Select  
+   <Select   
               >
              
                   <SelectTrigger  id="selectIdService"  >
                     <SelectValue  placeholder="Selectionner un service" />
                   </SelectTrigger>
               
-                <SelectContent className="overflow-y-auto">
+                <SelectContent  className="overflow-y-scroll">
                     <SelectGroup>
                         <SelectLabel className="font-semibold pl-8  py-2">Nettoyages</SelectLabel>
                   <SelectItem value="parties communes">Partie commune</SelectItem>
