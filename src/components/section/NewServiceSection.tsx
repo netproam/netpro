@@ -19,7 +19,9 @@ const NewServicesSection = () => {
 const [isTextSelected,setIsTextSelected]=useState(0)
 const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e)=>{
     return (
-        <div className="  lg:text-center
+        <div
+        key={v4()}
+        className="  lg:text-center
          lg:h-fit min-h-[160px] rounded-lg relative flex  lg:gap-6
         shadow-md  lg:border-[1px] lg:border-[#4CDAC0]   flex-col p-4 gap-4 " >
              
