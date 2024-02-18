@@ -59,7 +59,7 @@ else {
     </div>
 
     </div>
-
+{/* 
     <div className="w-full flex justify-center  ">
     <div className="w-full justify-center text-center  items-center
     lg:w-full gap-0 lg:gap-0 flex flex-col  lg:self-start relative ">
@@ -73,7 +73,7 @@ else {
 
         <h3 className="font-semibold text-base text-start relative pt-2  ">{`Employés`}</h3>
     </div>
-    </div>
+    </div> */}
 
 
     </section>
@@ -125,7 +125,7 @@ else {
 </div>
 
 {/**deuxieme section */}
-<div className="flex flex-col gap-6 lg:gap-0 w-full  justify-end">
+{/* <div className="flex flex-col gap-6 lg:gap-0 w-full  justify-end">
     <div className="w-fit flex flex-col justify-end items-end lg:items-start ">
     <motion.p className="font-semibold
      bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#17CCCA] to-emerald-300 
@@ -134,7 +134,7 @@ else {
  
     <motion.span className="text-black relative  text-2xl lg:visible lg:text-2xl text-center w-fit ">{`Employés`}</motion.span>
 
-</div>
+</div> */}
 </div>
     </section>
   )

@@ -1,57 +1,37 @@
 "use client"
 import {v4} from "uuid"
 import { Button } from "../ui/button"
-import { FaArrowRight } from "react-icons/fa";
-import {motion } from "framer-motion"
-import YourSvg from '../../../public/cleaning-mop.svg'
-import MovinSvg from "../../../public/SVG/moving.svg"
-import DesinfectSVG from "../../../public/SVG/sanitaze.svg"
-import GlovesSVG from "../../../public/SVG/cleaning-gloves.svg"
-import OfficeSVG from "../../../public/SVG/office.svg"
-import CoproprieteSVG from "../../../public/SVG/copropriete.svg"
-import HouseMoveSVG from "../../../public/SVG/housemoving.svg"
-import ParkingSVG from "../../../public/SVG/parking.svg"
-import StoreSVG from "../../../public/SVG/commerce.svg"
-import DecapSVG from "../../../public/SVG/decapage.svg"
-import CommunSVG from "../../../public/SVG/partiecommune.svg"
-import { MdKeyboardArrowRight } from "react-icons/md";
 
+import {motion } from "framer-motion"
+
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { allServices } from "@/data/dataOfTheApp"
 import ServiceComponent from "../services/ServiceComponent";
 import { useState } from "react";
 import MovingSvgComponent from "../SVG/MovingSvgComponent";
-import CommunSvgComponent from "../SVG/CommunSvgComponent";
 
 const NewServicesSection = () => {
     const allData=[{titre:"Service de nettoyages commerciale",soustitre:'Découvrez nos services',
     description:`Nous sommes connus pour nos services de qualité car nous allons dans chaque recoin et sommes dans la précision.
     `}]
 
-    const allServices=[{id:v4(),
-       titre:`Espace`,svg:<CommunSVG style={{width:"100%",heigth:"100%"}}  />
-    },{id:v4(),
-        titre:`Copropriétés`,description:"Désinfection",svg:<CoproprieteSVG style={{width:"100%",heigth:"100%"}}/>
-    },{id:v4(),
-        titre:`⁠⁠Bureaux`,description:"the best thing over",svg:<OfficeSVG style={{width:"100%",heigth:"100%"}}/>
-    },{id:v4(),
-        titre:`Commerce`,description:"the best thing over",svg:<StoreSVG style={{width:"100%",heigth:"100%"}}/>
-    },{id:v4(),
-        titre:`Parking`,description:"the best thing over",svg:<ParkingSVG style={{width:"100%",heigth:"100%"}}/>
-    },
-    {id:v4(),
-        titre:`Déménagement`,description:"the best thing over",svg:<HouseMoveSVG style={{width:"100%",heigth:"100%"}}/>
-    },
 
-    {id:v4(),
-        titre:`⁠⁠Décapage`,description:"the best thing over"
-    },
-    {id:v4(),
-        titre:`Débarras`,description:"the best thing over",
-    }
-
-
-]
 const [isTextSelected,setIsTextSelected]=useState(0)
-const selectionnedText=allServices[isTextSelected]
+const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e)=>{
+    return (
+        <div className="  lg:text-center
+         lg:h-fit min-h-[200px] rounded-lg relative flex 
+        shadow-md  lg:border-[1px] lg:border-[#4CDAC0]   flex-col p-4 gap-4 " >
+             
+          <h3 className="text-xl
+       bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 
+
+            font-semibold">   {e.title}</h3>
+           <p className="text-sm lg:text-base">  {e.description}</p>
+            </div>
+
+    )
+})
     const allDataDisplay=allServices.map((e,i)=>{
 
         switch(e.titre)
@@ -95,6 +75,8 @@ const selectionnedText=allServices[isTextSelected]
                 </div>)
         }
     })
+
+
   return (
    <section className="  flex flex-col justify-center items-center
    w-full  h-full  relative
@@ -123,7 +105,7 @@ const selectionnedText=allServices[isTextSelected]
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-4 lg:pt-10 ">
 
 
-<div className=" grid grid-cols-4 lg:grid-cols-8 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
+<div className=" grid grid-cols-4 lg:grid-cols-7 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
 {allDataDisplay}
 </div>
 
@@ -136,22 +118,10 @@ const selectionnedText=allServices[isTextSelected]
 
 bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 
 
-lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{selectionnedText.titre}</h2>
-<div className=" grid grid-cols-2 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
-<div className=" h-[125px] lg:h-[200px] rounded-lg relative flex
-bg-slate-200">
-     
-    </div>
-    <div className=" h-[125px] lg:h-[200px] rounded-lg relative flex 
-   bg-slate-200">
-        
-    </div>
-    <div className=" h-[125px] lg:h-[200px]
-    col-span-2 lg:col-span-1
-    rounded-lg relative flex bg-gradient-to-tr bg-slate-200">
+lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{allServices[isTextSelected]?.titre}</h2>
+<div className=" grid grid-cols-1 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
 
-   
-    </div>
+{selectionnedTextComponent}
 
 </div>
 <Button className="w-fit relative px-10  bg-gradient-to-r from-[#17CCCA] to-emerald-300 

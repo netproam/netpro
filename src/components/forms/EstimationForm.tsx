@@ -61,11 +61,11 @@ const EstimationForm= () => {
               <FormLabel>Service</FormLabel>
               <Select 
                onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
+             
                   <SelectTrigger>
                     <SelectValue placeholder="Selectionner un service" />
                   </SelectTrigger>
-                </FormControl>
+              
                 <SelectContent className="overflow-y-auto">
                     <SelectGroup>
                         <SelectLabel className="font-semibold pl-8  py-2">Nettoyages</SelectLabel>
