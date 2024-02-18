@@ -34,13 +34,22 @@ else {
     className="h-fit py-8 items-center  px-4  lg:py-20 lg:flex-row
     lg:px-10 justify-center gap-20  lg:justify-between    w-full flex flex-col ">
 
-<div className="flex flex-col lg:px-8 justify-center items-center lg:items-start  order-1  w-full gap-10">
+<div className="flex flex-col lg:px-8 justify-center items-center lg:items-start 
+ order-1  w-full gap-10">
 <div className="flex flex-col  items-center justify-center lg:items-start ">
-<h4 className="text-sm font-semibold text-center pl-1 leading-[12px] text-slate-400 lg:text-start">Ce que nous apportons</h4>
+
+<h4 className="text-sm font-semibold text-center pl-1 leading-[12px] text-slate-400 lg:text-start">{`Nous sommes à votre écoute`}</h4>
 <h3 className="font-semibold tracking-tighter text-3xl pb-2 lg:pt-2 lg:w-fit  
  bg-clip-text text-transparent pt-1 bg-gradient-to-r from-[#17CCCA] to-emerald-300 
-  lg:text-5xl   text-center lg:text-start ">{`Une équipe méticuleuse`}</h3>
-<p className=" text-sm lg:text-base pt-1 text-center lg:text-start ">{`Nous sommes à votre écoute pour vous fournir des solutions personalisées et adaptées pour libérer votre temps. `}</p>
+  lg:text-5xl   text-center lg:text-start ">{`Contactez-nous dès aujourd'hui`}</h3>
+
+
+
+<p className=" text-sm lg:text-base pt-1 text-center lg:text-start ">{`
+Pour en savoir plus sur nos services de nettoyage et pour
+obtenir un devis personnalisé. Nous sommes là pour vous aider à maintenir une surface
+propre, sûr et accueillant pour vos clients et employés.
+`}</p>
 </div>
 
 {/**Version mobile */}

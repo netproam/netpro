@@ -6,22 +6,21 @@ export const allServices=[{id:v4(),
      title:"Nettoyage des locaux",
      description:`
      Nous assurons le nettoyage complet de tous les espaces de la base
-de vie, y compris les zones de repos, les bureaux, les salles de réunion, les vestiaires, les
-cuisines et les salles de bains.`,
+de vie, y compris les zones de repos, les salles de réunion, les
+cuisines etc...`,
     img:"",
  },
  {
      title:"Approvisionnement en fournitures",
      description:`
-     Nous nous chargeons de l'approvisionnement en
-fournitures de nettoyage et en produits d'hygiène pour garantir que la base de vie dispose
-toujours des équipements nécessaires.`,
+    Nous garantisons l'approvisionnement de la base de vie  que ce soit
+fournitures de nettoyage ou en produits d'hygiène.`,
     img:"",
  },
  {
      title:"Services spécifiques sur demande",
      description:`Nous sommes flexibles et pouvons répondre à des
-     demandes spécifiques telles que le nettoyage après des événements, le lavage des vitres, le
+     demandes spécifiques telles que le nettoyage après des événements, le
      nettoyage des véhicules, etc.`,
     img:"",
  }]
@@ -33,8 +32,7 @@ toujours des équipements nécessaires.`,
          title:"Entretien des parties communes",
          description:`
          Nous assurons le nettoyage régulier des parties communes
-telles que les halls d'entrée, les couloirs, les escaliers, les ascenseurs, les salles de réunion,
-les locaux poubelles, le décapage et lustrage des sols etc.`,
+telles que les halls d'entrée, les escaliers, les ascenseurs, le décapage et lustrage des sols etc.`,
         img:"",
      },
      {
@@ -49,9 +47,7 @@ balcons, etc.`,
          title:"Services supplémentaires sur demande",
          description:`
          Nous sommes à l'écoute des besoins spécifiques de
-la copropriété et pouvons fournir des services supplémentaires tels que le nettoyage après
-des événements, le lavage des tapis, le nettoyage des parties privatives sur demande des
-résidents, etc.`,
+la copropriété et pouvons fournir de nombreux services supplémentaires, contactez nous`,
         img:"",
      }]
  },{id:v4(),
