@@ -1,5 +1,5 @@
 import { v4 } from "uuid"
-
+import TeamWorkSvg from "../../public/SVG/icons/teamwork.svg"
 export const allServices=[{id:v4(),
     titre:`Base de vie`,
  description:[{
@@ -209,11 +209,9 @@ contraintes du client.`
     }, {
         id:v4(),
         title :"Coordination",
-        description:"La bonne coordination de nos équipe assure le succès et l'efficacité de nos projets"
-    }, {
-        id:v4(),
-        title :"",
-        description:""
-    }
+     description:"La bonne coordination de nos équipe assure le succès et l'efficacité de nos projets"
+        ,icon: TeamWorkSvg
+   
+    },
 
 ]
