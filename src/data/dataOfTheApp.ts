@@ -178,3 +178,42 @@ nettoyage des appareils électroménagers, etc.
 
 
 ]
+
+
+export const allQualities=[
+
+    {
+        id:v4(),
+        title :"Sens du détail",
+        description:`
+        Nous accordons une attention particulière aux détails, en veillant à ce que
+chaque tâche de nettoyage soit effectuée avec soin et minutie pour un résultat impeccable.`
+    }, {
+        id:v4(),
+        title :"Adaptation",
+        description:`NET’PROS s’engage à effectuer un rapide face à une situation acquise grâce à
+        notre expérience`
+    }, {
+        id:v4(),
+        title :"Transparence",
+        description:`Nous entretenons une relation transparente avec vos clients, en fournissant
+        des informations claires sur vos services, vos tarifs et vos procédures, et en communiquant
+        ouvertement sur tout aspect du service de nettoyage.`
+    }, {
+        id:v4(),
+        title :"Flexibilité",
+        description:`
+        Notre entreprise est flexible et s'adapte aux besoins spécifiques de chaque client,
+en proposant des services personnalisés et en ajustant les horaires en fonction des
+contraintes du client.`
+    }, {
+        id:v4(),
+        title :"Coordination",
+        description:"La bonne coordination de nos équipe assure le succès et l'efficacité de nos projets"
+    }, {
+        id:v4(),
+        title :"",
+        description:""
+    }
+
+]
