@@ -16,7 +16,7 @@ switch(e.title.toLocaleLowerCase())
     return (
         <div 
         key={e.id}
-        className="flex flex-col gap-4  lg:items-center justify-start lg:text-center">
+        className="flex flex-col gap-4 items-center text-center  lg:items-center justify-start lg:text-center">
         <h4 className="font-semibold text-lg lg:text-2xl font-hind">{e.title}
     </h4>
     
@@ -32,7 +32,7 @@ switch(e.title.toLocaleLowerCase())
         return (
             <div 
             key={e.id}
-            className="flex flex-col gap-4  lg:items-center justify-start lg:text-center">
+            className="flex flex-col gap-4 text-center items-center  lg:items-center lg:text-center">
             <h4 className="font-semibold text-lg lg:text-2xl font-hind">{e.title}
         </h4>
         
@@ -49,7 +49,7 @@ break;
 return (
     <div 
     key={e.id}
-    className="flex flex-col gap-4  lg:items-center justify-start lg:text-center">
+    className="flex flex-col gap-4  text-center items-center justify-start  lg:text-center">
     <h4 className="font-semibold text-lg lg:text-2xl font-hind">{e.title}
 </h4>
 
@@ -77,8 +77,8 @@ return (
           
 
         </div>
-        <div className="grid grid-cols-2  lg:grid-cols-3 text-base font-hind font-light  
-        gap-0  ">
+        <div className="grid grid-cols-2 gap-10  lg:grid-cols-3 text-base font-hind font-light  
+       lg:gap-0  ">
 
     
        
