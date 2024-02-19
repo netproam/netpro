@@ -21,12 +21,13 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
     return (
         <div
         key={v4()}
-        className="  lg:text-center
-         lg:h-fit min-h-[160px] rounded-lg relative flex  lg:gap-6
-        shadow-md  lg:border-[1px] lg:border-[#4CDAC0]   flex-col p-4 gap-4 " >
+        className="  lg:text-center border-b-[1px] border-slate-400
+         lg:h-fit min-h-[160px] lg:rounded-lg relative flex  lg:gap-6
+        lg:shadow-md  lg:border-[1px] lg:border-[#4CDAC0]   flex-col p-4 gap-4 " >
              
           <h3 className="text-xl
-       bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 
+       bg-clip-text text-transparent bg-gradient-to-r
+        from-[#17CCCA] to-emerald-300 
 
             font-semibold">   {e.title}</h3>
            <p className="text-sm lg:text-base">  {e.description}</p>
@@ -121,7 +122,11 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
 bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300 
 
 lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{allServices[isTextSelected]?.titre}</h2>
-<div className=" grid grid-cols-1 items-center justify-between  px-4  lg:px-10  w-full gap-10 lg:grid-cols-3 ">
+<div className=" flex flex-col  lg:grid lg:grid-cols-3 items-center justify-between 
+ 
+ 
+  
+  lg:px-10  w-full gap-10  ">
 
 {selectionnedTextComponent}
 
