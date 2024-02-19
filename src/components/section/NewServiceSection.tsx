@@ -50,9 +50,9 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
         <ServiceComponent
         isSelected={i===isTextSelected}
         title={e.titre}>
-          <div className="text-current">
+          {/* <div className="text-current">
         <MovingSvgComponent isSelected={i===isTextSelected}/>
-        </div>
+        </div> */}
         </ServiceComponent>
       
       
@@ -69,9 +69,9 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
                 <ServiceComponent
                 isSelected={i===isTextSelected}
                 title={e.titre}>
-                  <div className="text-current">
+                  {/* <div className="text-current">
                   <MovingSvgComponent isSelected={i===isTextSelected}/>
-                </div>
+                </div> */}
                 </ServiceComponent>
               
               
@@ -108,7 +108,8 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-4 lg:pt-10 ">
 
 
-<div className=" grid grid-cols-4 lg:grid-cols-7 gap-y-4 w-full place-items-center lg:place-items-start relative   ">
+<div className=" grid grid-cols-4 lg:grid-cols-7 gap-y-4 px-4 gap-4 lg:gap-10  lg:px-10
+ w-full place-items-center  relative   ">
 {allDataDisplay}
 </div>
 

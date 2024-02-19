@@ -32,8 +32,11 @@ console.log(isTabletOrMobile)
      w-[45px] lg:w-16  flex items-center justify-center `} id={"childrenHolder"}>
 {children}
 </div>
-<h2 className={` text-xs text-slate-600   ${isSelected? "font-semibold" : ""}  self-center    `}>{title}</h2>
-
+<div className={` text-base  w-full  p-2  rounded-full   ${isSelected? 
+  "font-semibold  bg-gradient-to-r from-[#17CCCA] to-emerald-300 text-slate-100 " 
+  : "bg-slate-200 text-slate-800"}  self-center    `}>
+<h2 className='whitespace-nowrap text-sm lg:text-base'>{title}</h2>
+</div>
 <motion.div
 layout
 className="flex justify-start  overflow-hidden ">
