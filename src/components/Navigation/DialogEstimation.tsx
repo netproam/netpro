@@ -43,7 +43,7 @@ export function DialogEstimation({styleBtn,isShowed}:DialogProps) {
                 </div>
                 </div>
 
-     <div className="flex  flex-col h-fit  p-4 bg-slate-50   w-full">
+     <div className="flex  flex-col h-fit  py-4 bg-slate-50   w-full">
          
       <ContactOnDialog/>
         </div> 
