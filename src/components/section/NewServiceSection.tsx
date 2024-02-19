@@ -108,7 +108,7 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-4 lg:pt-10 ">
 
 
-<div className=" grid grid-cols-3 lg:grid-cols-7 gap-y-4 px-4 gap-4 lg:gap-10  lg:px-10
+<div className=" grid grid-cols-3 lg:grid-cols-7  px-4 gap-6 gap  gap-y-0 lg:gap-10  lg:px-10
  w-full place-items-center  relative   ">
 {allDataDisplay}
 </div>

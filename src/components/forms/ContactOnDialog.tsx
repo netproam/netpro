@@ -66,7 +66,7 @@ const ContactOnDialog = () => {
     return (
         <Form {...form}  >
           <form onSubmit={form.handleSubmit(onSubmit)} className="h-full
-           bg-slate-50  gap-8 px-1 lg:px-4 p-0  lg:p-4
+           bg-slate-50  gap-8 px-0 lg:px-4 p-0  lg:p-4
              w-full  flex flex-col 
          rounded-xl  ">
             <div className="flex flex-col gap-4">
