@@ -3,7 +3,7 @@ import { Button } from "../ui/button"
 import { MdKeyboardArrowRight } from "react-icons/md"
 const thirdSection = () => {
   return (
-   <section className="w-full flex p-4  flex-col gap-6 lg:gap-10  ">
+   <section className="w-full flex p-4 h-fit relative flex-col gap-6 lg:gap-10  ">
   
     <div className="flex flex-col w-full px-2 lg:px-8 gap-4">
         <div className="flex flex-col gap-0  ">
@@ -15,20 +15,28 @@ const thirdSection = () => {
    
     </div>
    
-    <div className="flex flex-col lg:grid lg:grid-cols-2 w-full   gap-4 px-2   lg:px-10 lg:gap-10">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 w-full 
+    h-fit
+    gap-8 px-2   lg:px-10 lg:gap-10">
 
-        <div className=" ">
-        <img className="object-cover rounded-lg w-full lg:h-[375px]" src={
+        <div className=" w-full  h-[250px] lg:h-full ">
+        <img className="object-cover 
+  h-full
+        rounded-lg w-full lg:h-[375px]" src={
                 `/photos/before_1.jpeg`}/>
 
          
         </div>
-        <div className="  ">
-        <img className="object-cover rounded-lg w-full lg:h-[375px]"
+        <div className=" h-[250px] w-full   lg:h-full  ">
+        <img className="object-cover 
+   h-full
+        rounded-lg w-full lg:h-[375px]"
            src={
             `/photos/after_1.jpeg`}
             />
         </div>
+
+
         <div className=" hidden lg:flex">
  <img className="object-cover rounded-lg w-full lg:h-[375px]" 
  src={
