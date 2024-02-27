@@ -19,29 +19,27 @@ const thirdSection = () => {
 
         <div className=" ">
         <img className="object-cover rounded-lg w-full lg:h-[375px]" src={
-                `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
+                `/photos/before_1.jpeg`}/>
 
          
         </div>
         <div className="  ">
         <img className="object-cover rounded-lg w-full lg:h-[375px]"
-            src={
-                `https://img.freepik.com/photos-gratuite/plein-coup-homme-poussant-bouton-ascenseur_23-2149345535.jpg?w=1800&t=st=1705798707~exp=1705799307~hmac=dc88fdc5de25317284826a26180c27d5d1994703856501650956dddf178a50f5`
-            }
+           src={
+            `/photos/after_1.jpeg`}
             />
         </div>
         <div className=" hidden lg:flex">
- <img className="object-cover rounded-lg w-full lg:h-[375px]" src={
-         `https://img.freepik.com/photos-premium/desinfecter-pour-prevenir-covid19-serveur-nettoyant-table-spray-desinfectant_217236-6646.jpg?size=626&ext=jpg&ga=GA1.2.730868810.1700441007&semt=ais`}/>
+ <img className="object-cover rounded-lg w-full lg:h-[375px]" 
+ src={
+    `/photos/before_2.jpeg`}/>
 
   
  </div>
  <div className="  hidden lg:flex ">
  <img className="object-cover rounded-lg w-full lg:h-[375px]"
-     src={
-         `https://img.freepik.com/photos-gratuite/plein-coup-homme-poussant-bouton-ascenseur_23-2149345535.jpg?w=1800&t=st=1705798707~exp=1705799307~hmac=dc88fdc5de25317284826a26180c27d5d1994703856501650956dddf178a50f5`
-     }
-     />
+   src={
+    `/photos/after_2.jpeg`}/>
  </div>
 
         
