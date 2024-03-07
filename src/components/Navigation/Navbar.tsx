@@ -112,7 +112,7 @@ lg:w-full font-semibold relative   ${path==="/"? "text-current" : "text-slate-80
     </NavigationMenuLink>
     </Link>
         <Link
-        href="/services/debaras" passHref legacyBehavior>
+        href="/services/debarras" passHref legacyBehavior>
     <NavigationMenuLink >
     {`Débarras`}
     </NavigationMenuLink>

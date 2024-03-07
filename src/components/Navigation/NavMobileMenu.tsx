@@ -50,7 +50,7 @@ key={"navbar"}
        
        lg:hover:bg-[#EEF5FF] lg:hover:text-slate-800   ">Nettoyages</p>
           <p onClick={()=>{
-                    router.push("/services/debaras")
+                    router.push("/services/debarras")
 
            closeNavBar()
 

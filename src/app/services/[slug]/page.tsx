@@ -7,6 +7,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useMediaQuery } from "react-responsive";
 import {motion} from "framer-motion"
 import ContactComponent from "@/components/forms/ContactComponent";
+import { dataPages } from "@/data/dataPages";
 const Page = ({ params }: { params: { slug: string } }) => {
 
     const refForm=useRef<HTMLDivElement>(null)
@@ -16,6 +17,15 @@ const Page = ({ params }: { params: { slug: string } }) => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 804px)' })
 
   
+    let momo=0
+    if(params.slug==="debarras")
+    {
+      momo=1
+    }
+    console.log(momo)
+const correctData=dataPages[momo]
+
+
 useMotionValueEvent(scrollYProgress,"change",(e)=>{
     if(isTabletOrMobile===false)
     {
@@ -59,9 +69,11 @@ else if((e>=0.2 &&e<0.8)&&refForm.current){
     })
   return (
     <main 
-    className="flex  flex-col     w-full bg-[#F0F9F9]   ">
+    className="flex  flex-col pb-10     w-full bg-[#F0F9F9]   ">
         <div className="flex flex-col w-full items-center gap-4 py-10">
-        <h2 className=" text-4xl tracking-tighter lg:text-6xl font-semibold text-center  h-fit relative z-50">{params.slug==="debaras"? "Débarras" : "Entretien ménagés"}</h2>
+        <h2 className=" 
+       font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300
+        text-3xl tracking-tighter lg:text-5xl  h-fit py-2 text-center  h-fit relative z-50">{correctData.serviceName}</h2>
         <IoIosArrowDown size={30}/>
         </div>
 
@@ -75,16 +87,16 @@ else if((e>=0.2 &&e<0.8)&&refForm.current){
     <section className=" 
    gap-20  flex flex-col bg-[#F0F9F9]   
       ">
-<div className="h-full  flex flex-col gap-10 text-[#62656E] bg-[#F0F9F9] overscroll-auto ">
-<p>auris eu nisi eget nisi imperdiet vestibulum. Nunc sodales vehicula risus. Suspendisse id mauris sodales, blandit tortor eu, sodales justo. Morbi tincidunt, ante vel suscipit volutpat, turpis enim volutpSectetur adipiscing elit, sed do eiusm onsectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore. Ut vel placerat eros, eu tincidunt velit. Consectetur adipiscing elit, adipiscing elit, sed do.
-
+<div className="h-full  flex flex-col gap-3 text-[#62656E] bg-[#F0F9F9] overscroll-auto ">
+<p className="leading-relaxed font-poppins text-lg ">
+{correctData.title}
 </p>
-<h4 className="font-semibold text-slate-800 text-3xl">Sed ut perspiciatis unde omnis iste natus et
+<h4 className="
+text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300
+ font-semibold">Nous sommes à votre service
 </h4>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viverra erat bibendum. Cras turpis urna, vulputate at est vitae, posuere lobortis erat.</p>
-<div className="flex flex-col lg:flex-row gap-10 w-full   bg-[#F0F9F9]">
+<p className="leading-relaxed font-poppins text-lg ">{correctData.secondTitle}</p>
+<div className="flex my-2 flex-col lg:flex-row gap-10 w-full   bg-[#F0F9F9]">
     <div className=" rounded-lg lg:h-[300px] lg:w-[600px]">
 
     <img 
@@ -96,26 +108,14 @@ Aliquam laoreet sed neque ac vehicula. Cras congue eros nec quam laoreet, in viv
     <div className=" rounded-lg lg:h-[300px] lg:w-[600px] ">
     <img 
     className="object-cover rounded-lg"
-    src={`https://images.pexels.com/photos/625279/pexels-photo-625279.jpeg?auto=compress&cs=tinysrgb&w=800`}/>
+    src={correctData.imgUrl}/>
     </div>
 </div>
 <div className="flex flex-col gap-8 bg-[#F0F9F9] w-ful h-full">
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-     clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
-     <h3 className="font-semibold text-lg">
-     Aliquam quis lobortis quam
-
-     </h3>
-     <p>
-     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. S
-     tet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-     </p>
-     <div className="rounded-lg lg:h-[500px] lg:w-[700px] self-center">
-        <img 
-        className="rounded-lg object-cover"
-        src="https://images.pexels.com/photos/5331118/pexels-photo-5331118.jpeg?auto=compress&cs=tinysrgb&w=800"/>
-     </div>
+<p className="leading-relaxed font-poppins text-lg ">{correctData.thirdTitle}</p>
+  
+  
 </div>
 </div>
 
