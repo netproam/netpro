@@ -1,7 +1,7 @@
 "use client"
 import {v4} from "uuid"
 import { Button } from "../ui/button"
-
+import Link from "next/link"
 import {motion } from "framer-motion"
 
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -108,7 +108,7 @@ const selectionnedTextComponent=allServices[isTextSelected]?.description?.map((e
     <div className="flex flex-col h-full  w-full text-center  gap-2 pt-4 lg:pt-10 ">
 
 
-<div className=" grid grid-cols-3 lg:grid-cols-7  px-4 gap-6 gap  gap-y-0 lg:gap-10  lg:px-10
+<div className=" grid grid-cols-3 lg:grid-cols-6  px-4 gap-6 gap  gap-y-0 lg:gap-10  lg:px-10
  w-full place-items-center  relative   ">
 {allDataDisplay}
 </div>
@@ -132,9 +132,11 @@ lg:text-4xl  text-center pt-8 pb-4 tracking-tighter font-stolzl">{allServices[is
 {selectionnedTextComponent}
 
 </div>
-<Button className="w-fit relative px-10  bg-gradient-to-r from-[#17CCCA] to-emerald-300 
- relative self-center  mt-4 py-6 rounded-full  text-white font-semibold hover:bg-slate-200">{`Découvrir`}
-<span className="absolute right-3"><MdKeyboardArrowRight  className="" size={20}/></span></Button>
+<Link  href={"/services/entretien"}
+
+className="w-fit relative px-10  bg-gradient-to-r from-[#17CCCA] to-emerald-300 
+ relative self-center  mt-4 py-3 rounded-full  text-white font-semibold hover:bg-slate-200">{`Découvrir`}
+<span className="absolute right-3"><MdKeyboardArrowRight  className="" size={20}/></span></Link>
 </div>
 
 

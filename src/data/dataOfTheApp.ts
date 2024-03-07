@@ -67,8 +67,8 @@ dégraissage et nettoyage des surfaces touchés etc.
      {
          title:"Entretien des espaces communs",
          description:`
-         Nous veillons à ce que les espaces communs tels
-que les cuisines, les salles de réunion et les zones`,
+         Nous veillons à ce que les espaces communs tels que les cuisines, les salles de réunion et les
+zones de détente soient également maintenus propres et bien entretenus.`,
         img:"",
      },
      {
@@ -94,10 +94,9 @@ et des lavabos pour garantir un niveau élevé d'hygiène dans votre commerce.`,
         img:"",
      },
      {
-         title:"Gestion des déchets",
-         description:`Nous assurons la collecte et le tri sélectif des déchets dans votre
-         commerce, en veillant à ce que les poubelles soient vidées régulièrement et que les déchets
-         soient éliminés de manière responsable.`,
+         title:"Services supplémentaires sur demande",
+         description:`Nous sommes à l’écoute des besoins spécifique du
+         commerce et pouvons fournir de nombreux services supplémentaires.`,
         img:"",
      }]
  },{id:v4(),
@@ -157,24 +156,6 @@ nettoyage des appareils électroménagers, etc.
      }]
  },
 
- {id:v4(),
-     titre:`Débarras`
-     , description:[{
-         title:"",
-         description:"",
-        img:"",
-     },
-     {
-         title:"",
-         description:"",
-        img:"",
-     },
-     {
-         title:"",
-         description:"",
-        img:"",
-     }]
- }
 
 
 ]
@@ -213,5 +194,13 @@ contraintes du client.`
         ,icon: TeamWorkSvg
    
     },
-
+{
+    id:v4(),
+    title:`Réactivité`,
+    description:`
+    Nous nous engageons à répondre rapidement et efficacement à tous vos besoins,
+qu'il s'agisse d'une demande de service, d'une question ou d'une situation imprévue. Avec une
+équipe dédiée et proactive, nous sommes prêts à vous offrir une expérience client
+exceptionnelle.`,icon:TeamWorkSvg
+}
 ]
