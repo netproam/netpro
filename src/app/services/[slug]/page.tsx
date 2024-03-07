@@ -69,33 +69,35 @@ else if((e>=0.2 &&e<0.8)&&refForm.current){
     })
   return (
     <main 
-    className="flex  flex-col pb-10     w-full bg-[#F0F9F9]   ">
+    className="flex  flex-col   lg:pb-10    w-full bg-[#F0F9F9]   ">
         <div className="flex flex-col w-full items-center gap-4 py-10">
         <h2 className=" 
        font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300
-        text-3xl tracking-tighter lg:text-5xl  h-fit py-2 text-center  h-fit relative z-50">{correctData.serviceName}</h2>
+        text-4xl tracking-tighter lg:text-5xl  h-fit py-2 text-center  h-fit relative z-50">{correctData.serviceName}</h2>
         <IoIosArrowDown size={30}/>
         </div>
 
      <section 
 
      className="w-full flex flex-col lg:flex-row  relative">  
-<div className="flex  relative  pt-10  lg:w-2/3  bg-[#F0F9F9] 
-  px-10   ">
+<div className="flex  relative  lg:pt-10  lg:w-2/3  bg-[#F0F9F9] 
+  px-4 lg:px-10   ">
 
 
     <section className=" 
    gap-20  flex flex-col bg-[#F0F9F9]   
       ">
 <div className="h-full  flex flex-col gap-3 text-[#62656E] bg-[#F0F9F9] overscroll-auto ">
-<p className="leading-relaxed font-poppins text-lg ">
+<p className="leading-relaxed font-poppins text-lg  text-justify">
 {correctData.title}
 </p>
 <h4 className="
 text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300
  font-semibold">Nous sommes à votre service
 </h4>
-<p className="leading-relaxed font-poppins text-lg ">{correctData.secondTitle}</p>
+<p className="leading-relaxed font-poppins text-lg
+text-justify
+">{correctData.secondTitle}</p>
 <div className="flex my-2 flex-col lg:flex-row gap-10 w-full   bg-[#F0F9F9]">
     <div className=" rounded-lg lg:h-[300px] lg:w-[600px]">
 
@@ -113,7 +115,7 @@ text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCC
 </div>
 <div className="flex flex-col gap-8 bg-[#F0F9F9] w-ful h-full">
 
-<p className="leading-relaxed font-poppins text-lg ">{correctData.thirdTitle}</p>
+<p className="leading-relaxed font-poppins text-lg text-justify ">{correctData.thirdTitle}</p>
   
   
 </div>
@@ -125,8 +127,8 @@ text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCC
     </div>
     <motion.div
          ref={refForm}
-    className=" flex z-50 relative lg:absolute lg:p-2    
-     lg:w-[400px] lg:right-[40px]  h-fit">
+    className=" flex z-50  relative lg:absolute lg:p-2    
+     lg:w-[400px] lg:right-[40px]  h-full lg:h-fit">
 
 <ContactComponent/>
 
