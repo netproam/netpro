@@ -77,7 +77,9 @@ onClick={()=>{
 }}
 className=" cursor-pointer left-0 w-fit  relative  flex items-center justify-center">
 
-<Image  alt="logo" src={"/logo.png"} width={75} height={75}/>
+<Image  alt="logo" src={"/logo.png"}
+className=" scale-[80%] lg:scale-[90%]"
+width={75} height={75}/>
 </div>
 
 <div className={`  w-fit  mr-auto  text-current  
