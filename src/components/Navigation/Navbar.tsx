@@ -18,7 +18,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { useAnimate, useMotionValueEvent, useScroll ,motion} from "framer-motion";
 import NavMobileMenu from "./NavMobileMenu";
 import { DialogEstimation } from "./DialogEstimation";
-
+import Image from "next/image";
 const Navbar = () => {
     const path=usePathname()
     const [isOpen,setIsOpen]=useState(false)
@@ -66,7 +66,7 @@ console.log("slt")
   return (
    <motion.nav 
   ref={scope}
-   className={`   w-full   justify-between bg-transparent bg-opacity-50     
+   className={`   w-full   justify-between bg-transparent bg-opacity-50      
    px-8 lg:pl-48 py-10 top-0 z-50 flex   h-16
     text-current  gap-10 items-center 
    ${path==="/"? "fixed text-slate-800  flex  ":"fixed lg:relative  bg-opacity-100 "}`}>
@@ -75,12 +75,13 @@ onClick={()=>{
    
     router.push("/")
 }}
-className=" cursor-pointer left-0 w-fit  relative ">
+className=" cursor-pointer left-0 w-fit  relative  flex items-center justify-center">
 
-<p className=" text-2xl font-stolzl bg-clip-text text-transparent bg-gradient-to-r from-[#17CCCA] to-emerald-300">{`NET'PROS`}</p>
+<Image  alt="logo" src={"/logo.png"} width={75} height={75}/>
 </div>
 
-<div className={`  w-fit  mr-auto  text-current   relative z-50 items-center hidden lg:flex
+<div className={`  w-fit  mr-auto  text-current  
+ relative z-50 items-center hidden lg:flex
 ${path==="/"? " " : " bg-transparent"}
 `}>
 
