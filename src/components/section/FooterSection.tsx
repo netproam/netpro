@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa"
 import Link from "next/link"
 const FooterSection = () => {
   return (
-  <footer className="flex flex-col gap-8  lg:items-center p-4  pl-10 lg:pl-4 
+  <footer className="flex flex-col gap-8  h-full lg:items-center p-4  pl-10 lg:pl-4 
     bg-black lg:h-[300px] text-slate-100  lg:gap-8  lg:justify-center
    ">
 <div className="flex  flex-col   justify-start relative h-fit   
@@ -22,7 +22,7 @@ const FooterSection = () => {
 <div className="flex flex-col  text-slate-400 gap-4   relative h-fit  
 items-start lg:pl-8 relative ">
 
-<div className="flex flex-row justify-between   lg:gap-10 h-full w-full  px-4">
+<div className="flex flex-row justify-between  my-4  lg:gap-10 h-full w-full  px-4">
 <Link  target="_blank"
 href={`
 http://linkedin.com/in/net’pros-✨🧹-ab40332b9`}
