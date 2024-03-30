@@ -35,7 +35,8 @@ imgUrl:"/photos/photo_entretien.jpeg"
     `,
     thirdTitle:`
     Notre objectif est de rendre le processus de débarras aussi simple et transparent que possible pour vous. Nous nous occupons de tout, depuis la planification et l'organisation jusqu'au transport et à la disposition finale des biens. Vous n'avez qu'à nous indiquer ce que vous souhaitez garder et ce que vous souhaitez débarrasser, et nous nous occupons du reste.
-Faites-nous confiance pour vous fournir un service de débarras fiable, efficace et respectueux de l'environnement. Contactez-nous dès aujourd'hui pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous aider à vous débarrasser du désordre en toute tranquillité d'esprit.
+Faites-nous confiance pour vous fournir un service de débarras fiable, efficace et respectueux de l'environnement. Contactez-nous dès aujourd'hui pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous aider à vous débarrasser du désordre 
+en toute tranquillité d'esprit.
 `,
 imgUrl:"/photos/photo_entretien.jpeg"
 

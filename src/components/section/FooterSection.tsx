@@ -1,10 +1,13 @@
 "use client"
+
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa"
+import Link from "next/link"
 const FooterSection = () => {
   return (
-  <footer className="gap-4 flex flex-col lg:items-center p-4  pl-10 lg:pl-4 
-   lg:flex-row bg-black lg:h-[300px] text-slate-100  
+  <footer className="flex flex-col gap-8  lg:items-center p-4  pl-10 lg:pl-4 
+    bg-black lg:h-[300px] text-slate-100  lg:gap-8  lg:justify-center
    ">
-<div className="flex  flex-col  justify-start lg:self-end relative h-fit   
+<div className="flex  flex-col   justify-start relative h-fit   
   text-slate-400  gap-4 l  w-fit" >
 <h4 className="font-semibold text-slate-50 text-lg  lg:w-fit">Bureau</h4>
 <div className="flex flex-col  h-full text-sm lg:text-md gap-4  lg:w-fit">
@@ -16,15 +19,29 @@ const FooterSection = () => {
 </div>
 
 
-<div className="flex flex-col text-slate-400 gap-4  lg:self-end relative h-fit  
+<div className="flex flex-col  text-slate-400 gap-4   relative h-fit  
 items-start lg:pl-8 relative ">
-<p className="text-slate-50 font-semibold text-lg"> Liens</p>
-<div className="flex flex-col justify-between h-full gap-4">
-<p>Facebook</p>
-<p>Facebook</p>
+
+<div className="flex flex-row justify-between   lg:gap-10 h-full w-full  px-4">
+<Link  target="_blank"
+href={`
+http://linkedin.com/in/net’pros-✨🧹-ab40332b9`}
+><FaLinkedin size={35}/></Link>
+<Link
+ target="_blank"
+href={`
+https://www.instagram.com/net.pros1?igsh=MWp6ZGp0ajFvYXA0Zg%3D%3D&utm_source=qr`}>
+  <p><FaInstagram size={35}/></p>
+</Link>
+<Link  target="_blank"
+href={`https://www.tiktok.com/@net.pros?_t=8l3LTgpokcK&_r=1`}
+>
+<FaTiktok   size={35}/>
+</Link>
 
 
-<p>Facebook</p>
+
+
 </div>
 </div>
 
