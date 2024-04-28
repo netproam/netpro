@@ -14,7 +14,7 @@ const FooterSection = () => {
 
 <p className=" whitespace-nowrap w-full ">14 Avenue Lhomond - 93370 - Montfermeil</p>
 <p>sasu.netpros@gmail.com</p>
-<p className="font-bold">+33 651 605 207</p>
+<p className="font-bold">+33 668 460 402</p>
 </div>
 </div>
 

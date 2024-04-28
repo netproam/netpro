@@ -148,7 +148,7 @@ rounded-full bg-gradient-to-r  text-clip text-transparent
 ">
     <a 
     className="pointer-events-auto lg:pointer-events-none p-1 w-fit h-fit self-start"
-    href="tel:+33651605207">
+    href="tel:+33668460402">
 <FaPhoneAlt
 size={15}
 className="text-emerald-400 "/>
@@ -156,7 +156,7 @@ className="text-emerald-400 "/>
 <p className="font-semibold text-sm   hidden  
 lg:flex w-fit h-fit  whitespace-nowrap 
  from-[#17CCCA]   to-emerald-400 bg-gradient-to-tr bg-clip-text
-" >+33 651 605 207</p>
+" >+33 668 460 402</p>
 </div>
 <div className="flex w-fit p-2 lg:py-3 lg:px-5 shadow-md 
 rounded-full   from-[#17CCCA]   to-emerald-400 bg-gradient-to-tr  lg:hidden
