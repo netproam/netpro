@@ -14,13 +14,13 @@ export default function DevisEmail({companyName,serviceName,emailCompany,phoneCl
     
       <Text className="font-bold text-xl" >Bonjour, vous avez reçu une demande de devis ! </Text>
    <Section className="flex flex-row gap-2  " >
-   <Text className="text-lg" >Nom du client : <strong>{companyName}</strong> </Text>
-   <Text className="text-lg" >Le numéro du client : <strong>{phoneClient}</strong> </Text>
+   <Text className="text-lg" >{`Nom du client :`} <strong>{companyName}</strong> </Text>
+   <Text className="text-lg" >{`Le numéro du client`} : <strong>{phoneClient}</strong> </Text>
 
-      <Text className="text-lg" >L'adresse email du client : <strong>{emailCompany}</strong> </Text>
+      <Text className="text-lg" >{`L'adresse email du client `}: <strong>{emailCompany}</strong> </Text>
 
-      <Text className="text-lg" >Le service sélectionner : <strong >{serviceName}</strong> </Text>
-      <Text className="text-lg" >Le message du client :  </Text>
+      <Text className="text-lg" >{`Le service sélectionner :`} <strong >{serviceName}</strong> </Text>
+      <Text className="text-lg" >{`Le message du client :`}  </Text>
       <Hr className="w-full"/>
       <Text className="text-xl pt-2" >{messaggeClient} </Text>
 
