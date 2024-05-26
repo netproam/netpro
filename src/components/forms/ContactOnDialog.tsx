@@ -69,7 +69,7 @@ setIsSubmit(true)
     return (
        
           <form onSubmit={handleSubmit(onSubmit)} className="h-full
-           bg-slate-50  gap-2 px-0 lg:px-4 p-0  lg:p-4
+           bg-slate-50  gap-2 px-0 lg:px-4 p-0  lg:p-4 
              w-full  flex flex-col 
          rounded-xl  ">
             <div className="flex flex-col gap-2">
