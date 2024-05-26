@@ -22,7 +22,7 @@ description:z.string().min(10,{
     
 
     const {data,error}= await resend.emails.send({
-      from:"noreply@netpros.fr",to:["molome16@gmail.com","nor33abdel@gmail.com","sasu.netpros@gmail.com"],
+      from:"noreply@netpros.fr",to:["nor33abdel@gmail.com"],
       subject:`Demande de devis : ${dataToSend.nameCompany}`,react:DevisEmail({companyName:dataToSend.nameCompany,emailCompany:dataToSend.adresseEmail,messaggeClient:dataToSend.description,phoneClient:dataToSend.phoneNumber,serviceName:dataToSend.serviceChoisen})
     })
     if(error)
