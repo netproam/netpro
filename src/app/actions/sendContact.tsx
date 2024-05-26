@@ -17,7 +17,7 @@ const formSchema = z.object({
     
 
     const {data,error}= await resend.emails.send({
-      from:"noreply@netpros.fr",to:["nor33abdel@gmail.com"],
+      from:"noreply@netpros.fr",to:["sasu.netpros@gmail.com"],
       subject:`Nouvelle demande de contact`,react:DevisContact({companyName:dataToSend.name,emailCompany:dataToSend.adresseEmail
         ,messaggeClient:dataToSend.description,phoneClient:dataToSend.phoneNumber,subject:dataToSend.topic})
     })
