@@ -22,30 +22,44 @@ import { Input } from "@/components/ui/input"
 import * as z from "zod"
 import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPaperPlane, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
 import { FaPaperPlane, FaPen, FaRegPaperPlane, FaUser } from "react-icons/fa"
+import { useState } from "react"
+import { useToast } from "../ui/use-toast"
+import { sendContactAction } from "@/app/actions/sendContact"
 const formSchema = z.object({
-    name: z.string().min(2, {
-      message: "Vous devez indiquer un nom",
-    }),topic:z.string().min(2,{message:"Vous devez indiquez un objet"}),
-    phoneNumber:z.string().length(10,{message:"Numéro de téléphone invalide"}),
-    adresseEmail:z.string().email({message:"Adresse email non valide"}),
-    subject:z.string().min(2,{message:"Vous devez indiquez un sujet"}).max(100),description:z.string().min(10,{
-        message:"Message trop court"
-    }).max(1000)
+  name: z.string().min(2,"Vous devez indiquer un nom valide")
+  ,phoneNumber:z.string().length(10,"Numéro de téléphone non valide")
+  ,adresseEmail:z.string().email(),description:z.string().min(5,"Votre message est trop court").max(400),
+  topic:z.string().min(2,"Veuillez indiquez un objet").max(30)
   })
    
 const ContactComponent = () => {
+  const {toast}=useToast()
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-          name: "",phoneNumber:"",adresseEmail:"",subject:"",description:"",topic:""
+          name: "",phoneNumber:"",adresseEmail:"",description:"",topic:""
         },
       })
      
+      const [isSubmit,setIsSubmit]=useState(false)
       // 2. Define a submit handler.
-      function onSubmit(values: z.infer<typeof formSchema>) {
+      async function onSubmit(values: z.infer<typeof formSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
-        console.log(values)
+
+        setIsSubmit(true)
+       
+        const AnswerServer=await sendContactAction(values)
+       if(AnswerServer==="Erreur dans l'envoi d'email")
+       {
+        toast({title:"Une erreur est survenue veuillez réassayer",duration:5000,variant:"destructive"})
+       }
+       else {
+        form.reset()
+        toast({title:AnswerServer,duration:5000})
+        
+       }
+       setIsSubmit(false)
       }
     
 
@@ -163,10 +177,14 @@ const ContactComponent = () => {
               )}
             />
             <div className="flex w-full justify-center ">
-            <button className="w-fit" type="submit"
+            <button
+             disabled={isSubmit}
+            className="w-fit" type="submit"
             ><IoPaperPlane
             color="" className=" text-slate-700 duration-500 hover:text-[#88CBCE]" size={30}/></button>
             </div>
+
+
             <div className="flex hidden flex-col w-full font-light text-slate-600  text-lg
              h-fit gap-4  ">
            

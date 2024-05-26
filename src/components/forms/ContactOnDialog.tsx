@@ -8,87 +8,101 @@ import {MdOutlineLocalGasStation, MdOutlineLocationCity, MdOutlinePhone}from "re
 import { Textarea } from "../ui/textarea"
 import {Calendar,} from "@/components/ui/calendar"
 import { Label } from "../ui/label"
-
+import { sendDevisAction } from "@/app/actions/sendDevis"
 import { Select,SelectContent,SelectGroup,SelectItem,SelectTrigger,SelectLabel,SelectValue } from "../ui/select"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
+
 import { Toast} from "../ui/toast"
 import { Input } from "@/components/ui/input"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import { toast } from "@/components/ui/use-toast"
+
 import * as z from "zod"
 import { IoGlobe, IoLocate, IoLocationSharp, IoMail, IoPaperPlane, IoPhoneLandscape, IoPhonePortrait } from "react-icons/io5"
 import { FaPaperPlane, FaPen, FaRegPaperPlane, FaUser } from "react-icons/fa"
 import { format } from "date-fns"
 import CalendarInput from "./CalendarInput"
+import { useToast } from "../ui/use-toast"
+import { useState } from "react"
 
 const formSchema = z.object({
-    name: z.string().min(2, {
+    nameCompany: z.string().min(2, {
       message: "Vous devez indiquer un nom",
     }),
-    ville: z.string().min(2, {
-        message: "Vous devez indiquer votre ville",
-      }),
+  
+      serviceChoisen:z.string().min(2,{message:"Vous devez choisir un service"})
+      ,
     phoneNumber:z.string().length(10,{message:"Numéro de téléphone invalide"}),
     adresseEmail:z.string().email({message:"Adresse email non valide"}),
-    subject:z.string().min(2,{message:"Vous devez indiquez un sujet"}).max(100),description:z.string().min(10,{
+description:z.string().min(10,{
         message:"Message trop court"
     }).max(1000)
   })
    
 const ContactOnDialog = () => {
-    const form = useForm<z.infer<typeof formSchema>>({
+    const {reset,register,formState:{errors},handleSubmit,setValue,} = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-          name: "",phoneNumber:"",adresseEmail:"",subject:"",description:"",ville:""
+          nameCompany: "",phoneNumber:"",adresseEmail:"",description:"",serviceChoisen:""
         },
       })
      
+      const {toast}=useToast()
+      const [isSubmit,setIsSubmit]=useState(false)
       // 2. Define a submit handler.
-      function onSubmit(values: z.infer<typeof formSchema>) {
+      async function onSubmit(values: z.infer<typeof formSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
-        console.log(values)
+setIsSubmit(true)
+       
+        const AnswerServer=await sendDevisAction(values)
+       if(AnswerServer==="Erreur dans l'envoi d'email")
+       {
+        toast({title:"Une erreur est survenue veuillez réassayer",duration:5000,variant:"destructive"})
+       }
+       else {
+        reset()
+        toast({title:AnswerServer,duration:5000})
+        
+       }
+       setIsSubmit(false)
       }
     
 
     return (
-        <Form {...form}  >
-          <form onSubmit={form.handleSubmit(onSubmit)} className="h-full
-           bg-slate-50  gap-8 px-0 lg:px-4 p-0  lg:p-4
+       
+          <form onSubmit={handleSubmit(onSubmit)} className="h-full
+           bg-slate-50  gap-2 px-0 lg:px-4 p-0  lg:p-4
              w-full  flex flex-col 
          rounded-xl  ">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
    <Label className="cursor-pointer" htmlFor="formMail">{`Email`}<span className="text-red-400">{"*"}</span></Label>
-   <Input id="formMail" placeholder="Veuillez indiquer votre adresse email"/>
+   <Input {...register("adresseEmail")} id="formMail" placeholder="Veuillez indiquer votre adresse email"/>
+   <span className="text-red-500 text-sm font-semibold pt-1 pl-2 pb-2">{errors.adresseEmail?.message}</span>
+
    </div>
-   <div className="flex flex-col gap-4">
+   <div className="flex flex-col gap-2">
    <Label className="cursor-pointer" htmlFor="companyName">{`Nom de votre entreprise`}<span className="text-red-400">{"*"}</span></Label>
-   <Input id="companyName" placeholder="Veuillez indiquer le nom de votre entreprise"/>
+   <Input
+   {...register("nameCompany")}
+   id="companyName" placeholder="Veuillez indiquer le nom de votre entreprise"/>
+   <span className="text-red-500 text-sm font-semibold pt-1 pl-2 pb-2">{errors.nameCompany?.message}</span>
+
    </div>
-   <div className="flex flex-col gap-4">
+   <div className="flex flex-col gap-2">
    <Label className="cursor-pointer" htmlFor="companyNumber">{`Numéro de téléphone`}</Label>
-   <Input id="companyNumber" placeholder="Veuillez indiquer votre numéro de téléphone "/>
+   <Input {...register("phoneNumber")} id="companyNumber" placeholder="Veuillez indiquer votre numéro de téléphone "/>
+   <span className="text-red-500 text-sm font-semibold pt-1 pl-2 pb-2">{errors.phoneNumber?.message}</span>
+
    </div>
  
-   <div className="flex flex-col gap-4 transition-all duration-1000">
+   <div className="flex flex-col gap-2 transition-all duration-1000">
    <Label htmlFor="selectIdService">{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
-   <Select    
+   <Select  onValueChange={(data)=>{
+console.log(data)
+setValue("serviceChoisen",data)
+   }}   
               >
              
                   <SelectTrigger  id="selectIdService"  >
-                    <SelectValue  placeholder="Selectionner un service" />
+                    <SelectValue  placeholder="Sélectionner un service" />
                   </SelectTrigger>
               
                 <SelectContent  className="overflow-y-scroll transition-all duration-1000">
@@ -110,21 +124,25 @@ const ContactOnDialog = () => {
                   </SelectGroup>
                 </SelectContent>
               </Select>
+              <span className="text-red-500 text-sm font-semibold pt-1 pl-2 pb-2">{errors.serviceChoisen?.message}</span>
+
               </div>
-              <CalendarInput/>
-              <div className="flex flex-col gap-4">
+            
+              <div className="flex flex-col gap-2">
    <Label className="cursor-pointer" htmlFor="messageToUs">Message<span className="text-red-400">{"*"}</span></Label>
- <Textarea
+ <Textarea  {...register("description")}
  rows={3} className="resize-none"
  id="messageToUs" placeholder="Laissez nous message nous seront ravis d'y répondre "/>
+    <span className="text-red-500 text-sm font-semibold pt-1 pl-2 pb-2">{errors.description?.message}</span>
+
    </div>
 
-            <button className="w-fit self-center h-fit " type="submit"
+            <button disabled={isSubmit} className="w-fit self-center h-fit " type="submit"
             ><IoPaperPlane
             color="" className=" text-slate-700  duration-500 hover:text-[#88CBCE]" size={30}/></button>
      
       </form>
-        </Form>
+        
       )
   
 }
