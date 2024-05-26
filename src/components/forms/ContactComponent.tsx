@@ -27,7 +27,7 @@ import { useToast } from "../ui/use-toast"
 import { sendContactAction } from "@/app/actions/sendContact"
 const formSchema = z.object({
   name: z.string().min(2,"Vous devez indiquer un nom valide")
-  ,phoneNumber:z.string().length(10,"Numéro de téléphone non valide")
+  ,phoneNumber:z.string().min(7,"Numéro de téléphone non valide")
   ,adresseEmail:z.string().email("Adresse email non valide"),description:z.string().min(5,"Votre message est trop court").max(400),
   topic:z.string().min(2,"Veuillez indiquez un objet").max(30)
   })

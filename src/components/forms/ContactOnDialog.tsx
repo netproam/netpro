@@ -28,9 +28,9 @@ const formSchema = z.object({
     }),
   
       serviceChoisen:z.string().min(2,{message:"Vous devez choisir un service"})
-      ,
-    phoneNumber:z.string().length(10,{message:"Numéro de téléphone invalide"}),
-    adresseEmail:z.string().email({message:"Adresse email non valide"}),
+      
+      ,phoneNumber:z.string().min(7,"Numéro de téléphone non valide"),
+      adresseEmail:z.string().email({message:"Adresse email non valide"}),
 description:z.string().min(10,{
         message:"Message trop court"
     }).max(1000)
