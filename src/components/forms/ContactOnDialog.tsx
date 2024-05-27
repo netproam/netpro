@@ -37,7 +37,7 @@ description:z.string().min(10,{
   })
    
 const ContactOnDialog = () => {
-    const {reset,register,formState:{errors},handleSubmit,setValue,} = useForm<z.infer<typeof formSchema>>({
+    const {reset,register,formState:{errors},clearErrors,handleSubmit,setValue,} = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
           nameCompany: "",phoneNumber:"",adresseEmail:"",description:"",serviceChoisen:""
@@ -97,6 +97,10 @@ setIsSubmit(true)
    <Label htmlFor="selectIdService">{`Sélectionner un service`}<span className="text-red-400">{"*"}</span></Label>
    <Select  onValueChange={(data)=>{
 console.log(data)
+if(data.length>1)
+{
+  clearErrors("serviceChoisen")
+}
 setValue("serviceChoisen",data)
    }}   
               >
