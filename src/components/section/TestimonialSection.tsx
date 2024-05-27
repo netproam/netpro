@@ -7,21 +7,42 @@ import CardTestimonialComponent from "../CardTestimonialComponent";
 import { useRef } from "react";
 const TestimonialSection = () => {
 
-    const temoign=[{name:"Raphael morticis"
-    ,description:"Magnifique compagnie elle m'a permit de multiplier tout",id:v4(),
-url:`https://images.pexels.com/photos/258174/pexels-photo-258174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
-}
-,{name:"Raphael",description:"Magnifique compagnie je la recommande vivement",id:v4()
-,url:`https://www.pexels.com/fr-fr/photo/homme-en-chemise-boutonnee-marron-3785079`
-},
-{name:"Raphael",description:"Magnifique compagnie",id:v4()
-,url:`https://www.pexels.com/fr-fr/photo/photo-gros-plan-de-femme-avec-manteau-marron-et-haut-gris-733872/`},
-{name:"Raphael",description:"Magnifique compagnie",id:v4()
+    const temoign=[
+      
+      {name:"Raphael",description:`
+C’est une société de ménage très organisé et très propre. J’ai bien aimé leur travail . Je recommande 👍
+`,id:v4()
 ,url:`https://images.pexels.com/photos/3769706/pexels-photo-3769706.jpeg?auto=compress&cs=tinysrgb&w=800`
 }
-,{name:"Raphael",description:"Magnifique compagnie",id:v4(),
+ 
+,{name:"Raphael",description:`
+Un grand merci pour un nettoyage impeccable ! Travail soigné, équipe professionnelle et résultats au-delà de nos attentes. Nous sommes ravis et recommandons vivement cette entreprise pour tout besoin de nettoyage.
+`,id:v4()
+,url:`https://www.pexels.com/fr-fr/photo/homme-en-chemise-boutonnee-marron-3785079`
+},
+{name:``,
+description:`Madame Hammi et toute l'équipe de Net'Pros fournissent un travail minutieux et de grande qualité. Nous avons grâce à elles des locaux à la propreté irréprochable dans les moindres détails. La communication avec Madame Hammi est aisée et réactive. Je recommande sans réserve ses services.
+`,url:``,id:v4()
+},{name:"Raphael morticis"
+,description:`Service de nettoyage impeccable ! Professionnels compétents, 
+efficaces et ponctuels. Je recommande vivement leurs services pour un résultat parfait !`,id:v4(),
+url:`https://images.pexels.com/photos/258174/pexels-photo-258174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
+},
+{name:"Raphael",description:`
+Tres bonne prestation de leur part. J'ai beaucoup apprécié la prise en compte de notre demande. Un travail de qualité. Personnel souriant.
+`,id:v4()
+,url:`https://www.pexels.com/fr-fr/photo/photo-gros-plan-de-femme-avec-manteau-marron-et-haut-gris-733872/`}
+
+
+
+
+,{name:"Raphael",description:`Je vous recommande vivement Net’Pros.
+Travail de qualité !!
+J’en suis très satisfaite et je reviendrais certainement.`,id:v4(),
 url:`https://www.pexels.com/fr-fr/photo/femme-en-rouge-a-manches-longues-tenant-une-tablette-3772510`}
-,{name:"Raphael",description:"Magnifique compagnie",id:v4()
+,{name:"Raphael",description:`
+NET’PROS fourni les meilleures prestations de nettoyage. Équipe très minutieuse.
+`,id:v4()
 ,url:`https://images.pexels.com/photos/3785424/pexels-photo-3785424.jpeg?auto=compress&cs=tinysrgb&w=800`}
 
 ]

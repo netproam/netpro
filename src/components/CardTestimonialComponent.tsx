@@ -23,7 +23,7 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
             
  className="flex flex-col  justify-center 
      items-center gap-4 w-full
-   h-[190px] relative  
+    relative  
      
     border-none rounded-2xl">
 
@@ -34,19 +34,12 @@ const CardTestimonialComponent = ({id,name,description,url}:CardTestimonalProps)
    
          ref={scope}
         className="bg-white  p-4 flex flex-col cursor-pointer  
-        text-black  
-        shadow-md  select-none
+        text-black   justify-center
+        shadow-md  select-none  min-h-[100px] lg:min-h-[200px]
         items-center  gap-4 rounded-xl  
        w-[300px] lg:w-[350px]
        ">
-                    <div className="flex flex-col  w-full gap-2 pt-4 ">
 
-<div className="bg-slate-800 rounded-full h-20 w-20 relative">
-<img src={url} className="object-cover h-20 w-20 rounded-full absolute "/>
-</div>
-<p id="testname" className="font-semibold text-xs lg:text-sm">{name}</p>
-
-</div>
 
         <p id="paragraphe" className=" text-xs lg:text-sm text-left
          font-semibold text-slate-600">{description}</p>
